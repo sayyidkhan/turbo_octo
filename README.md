@@ -37,6 +37,13 @@ https://www.youtube.com/watch?v=hvbIGDlrGJk
 
 only 20 mins to learn mongoDB + Node.JS
 
+Also go and download:
+
+1. mongoDB compass (to view the database) (no setup is required, ard pre-configured)
+2. postman (to build the backend API to link with frontend)
+
+*batteries are included in the project*
+
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
