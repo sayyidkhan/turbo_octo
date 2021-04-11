@@ -26,7 +26,7 @@
 
 ## important information
 
-when developing your code,  run it in development mode so that you will have access to hot reload, otherwise you will need to restart the app every single time, changes are made on the development code.
+when developing your code,  run it in development mode so that you will have access to hot reload, otherwise you will need to restart the app every single time when changes are made on the development code.
 
 ```bash
 $ npm run dev
