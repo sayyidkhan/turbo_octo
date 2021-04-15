@@ -1,7 +1,7 @@
 # react-express-mongo-ts-boilerplate
-React(Front-End)
-NestJS (Back-End)
-MongoDB (Database)
+**React(Front-End)**<br/>
+**NestJS (Back-End)**<br/>
+**MongoDB (Database)**<br/>
 combined into a solid full stack boilerplate to kickstart your new projects
 
 ![Express 4](https://img.shields.io/badge/express-4.17.x-green.svg)
