@@ -1,5 +1,8 @@
 # react-express-mongo-ts-boilerplate
-React, Express and MongoDB combined into a solid full stack boilerplate to kickstart your new projects
+React(Front-End)
+NestJS (Back-End)
+MongoDB (Database)
+combined into a solid full stack boilerplate to kickstart your new projects
 
 ![Express 4](https://img.shields.io/badge/express-4.17.x-green.svg)
 ![React 16](https://img.shields.io/badge/reactjs-16.13.x-green.svg)
