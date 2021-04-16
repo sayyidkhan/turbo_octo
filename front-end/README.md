@@ -4,67 +4,29 @@ This frontend was bootstrapped with [Create React App](https://github.com/facebo
 
 Start development client:
 ```
-yarn start-client
+npm start
 ```
 
 Run client tests:
 ```
-yarn test-client
+
 ```
 
 Build client for production:
 ```
-yarn build-client
+npm build
 ```
 
+## Installation instructions
 
-## Backend instructions
+Read this steps first before starting the project. Node.Js needs to be installed before you can run the front-end.
 
-This backend uses PostgreSQL, make sure you have it installed in your system.
-
-Change `username`, `password`, and `database` in `server/db/config.js` according to your own PostgreSQL configurations.
-
-start the Postgres server (might change depeding on your configurations):
+Install packages before running the commands below:
 ```
-pg_ctl -D /usr/local/var/postgres start
+npm install
 ```
 
-Create the database:
+Install typescript globally in your computer:
 ```
-npx sequelize db:create
-```
-
-Migrate database:
-```
-npx sequelize-cli db:migrate
-```
-
-Seed database with sample data if you want:
-```
-npx sequelize-cli db:seed:all
-```
-
-Start development server:
-```
-yarn start-server
-```
-
-Run server tests:
-```
-yarn test-server
-```
-
-Build server for production:
-```
-yarn build-server
-```
-
-Start server in production environment:
-```
-yarn serve
-```
-
-When needed, you can stop the Postgres server using (might change depeding on your configurations):
-```
-pg_ctl -D /usr/local/var/postgres stop
+npm install -g typescript
 ```
