@@ -13,6 +13,39 @@
   }
 }
 
+/* =========================== Main page specific===================================== */
+
+.main-header {
+  background-color: #f7f7f7;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 18px;
+  color: #545454;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -5%);
+}
+
+.main-public-inputs-div {
+  background-color: #ffffff;
+  width: 650px;
+  height: 260px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 25px;
+}
+
+#enterLoc-img {
+  display: inline-block;
+}
+
+#checkVaccCert-img {
+  display: inline-block;
+}
+
+/* =========================== Main page specific end ================================== */
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
