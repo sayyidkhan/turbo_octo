@@ -3,12 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import MainContainer from "./components/MainContainer"
 
+import {BrowserRouter as Router, Link} from "react-router-dom";
+import MainContainer from "./components/MainContainer";
+import Routes from "./routes";
 
 ReactDOM.render(
   <React.StrictMode>
-    <MainContainer />
+    <Router>
+      <MainContainer />
+      <Routes />
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
