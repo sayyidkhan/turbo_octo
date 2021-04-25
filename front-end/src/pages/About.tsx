@@ -5,6 +5,6 @@ import {PostUserComponent} from "../components/about/PostUserComponent";
 
 export default function About() {
     return (
-        <div>hello from about page</div>
+        null
     )
 }
