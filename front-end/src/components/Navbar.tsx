@@ -13,13 +13,8 @@ const Navbar = () => {
         }, 
         {
           id: 2,
-          path: "/about",
-          text: "About",
-        },
-        {
-            id: 3,
-            path: "/test",
-            text: "Test",
+          path: "/Login",
+          text: "Login",
         }
     ]
 

@@ -1,10 +1,15 @@
 /* =========================== Content container div ===================================== */
 
-.content-container {
-  width: 100%;
-  display: block;
-  background-color: #000000;
+.container {
+  padding: 1rem 40px;
   display: flex;
+}
+
+/* =========================== Nav visible link div ===================================== */
+.nav-show {
+  min-width: 250px;
+  height: 100%;
+  margin-right: 15px;
 }
 
 /* =========================== Sidebar div ===================================== */
@@ -30,7 +35,7 @@
   list-style: none;
   position: fixed;
   top: 0;
-  background: #ff0000;
+  background: #000000;
   left: 0;
   bottom: 0;
   height: 100vh;
@@ -38,7 +43,7 @@
   overflow: hidden;
   max-width: 290px;
   z-index: 9;
-  display: block;
+  display: inline-block;
   /* rectify unknown margin and padding */
   margin-top: 0;
   padding-left: 0px;
@@ -48,11 +53,11 @@
   width: 100%;
 }
 
-.menuNav a:link {
+.menuNav a {
   display: block;
   padding: 10px 50px;
   text-decoration: none;
-  color: #3fffd2;
+  color: #ffffff;
   text-transform: uppercase;
   font-weight: bold;
   outline: none;
@@ -62,35 +67,64 @@
   margin-top: 7rem;
 }
 
-/* =========================== Main page specific===================================== */
+/* =========================== Home page specific===================================== */
 
-.main-header {
-  background-color: #f7f7f7;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 18px;
-  color: #545454;
-  position: absolute;
-  top: 5%;
-  left: 50%;
-  transform: translate(-50%, -5%);
+
+.home-container {
+  padding: 4rem;
+  position: relative;
 }
 
-.main-public-inputs-div {
+.home-public-header-div {
+  /* center */
+  display: table;
+  margin: 0px auto 0px auto;
+  /* end */
+}
+
+.home-public-header-div>h1 {
+  color: #7f7f7f;
+}
+
+.home-imgContainer-div {
   background-color: #ffffff;
-  width: 650px;
+  min-width: 450px;
   height: 260px;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
+  /* center */
+  display: table;
+  margin: 0px auto 0px auto;
+  /* end */
   border-radius: 25px;
 }
 
-#enterLoc-img {
-  display: inline-block;
+.home-tableContainer-div {
+  background-color: #ffffff;
+  min-width: 850px;
+  height: 100%;
+  /* center */
+  display: table;
+  margin: 20px auto 0px auto;
+  /* end */
+  border-radius: 25px;
 }
 
-#checkVaccCert-img {
+.home-tableContainer-div>h2 {
+  margin-left: 20px;
+  color: #ff0000;
+}
+
+.home-img {
   display: inline-block;
+  margin-top: 55px;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+#images{
+  text-align:center;
 }
 
 /* =========================== Main page specific end ================================== */

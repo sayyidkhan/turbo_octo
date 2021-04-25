@@ -14,7 +14,6 @@ ReactDOM.render(
     <Router>
       <Routes />
       <Navbar />
-      <MainContainer />
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
