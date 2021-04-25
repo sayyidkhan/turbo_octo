@@ -63,6 +63,11 @@
   outline: none;
 }
 
+.menuNav a:hover {
+  color: #f89933;
+}
+
+
 .menuNav li:first-child {
   margin-top: 7rem;
 }
