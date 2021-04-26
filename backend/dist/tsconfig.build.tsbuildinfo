@@ -1177,12 +1177,12 @@
         "affectsGlobalScope": false
       },
       "../src/app.service.ts": {
-        "version": "eaf8514ce110fa428a93a27408df4d06d133dbd9ed0a775c315ddfdd507853a9",
+        "version": "310618e8a26d75c2d6293036133f780eec38a889af4884ea02c64b37f4127de3",
         "signature": "653711fba8904aa27fd8911b63cf526e7b334e13a292da4cefdbbe179ac3f3f2",
         "affectsGlobalScope": false
       },
       "../src/app.controller.ts": {
-        "version": "260f889b9e2b69f77be1155348eb345166aec664b3efff6720053c6844a41f28",
+        "version": "55b1ad243ac29f960ec6ac939abf76d08e5580dae9d331b937f23b7684510898",
         "signature": "ef022c91ea9e75ab4082f2e881f9c4db7b346be2da706e876b253bebce5e6140",
         "affectsGlobalScope": false
       },
@@ -1202,8 +1202,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/@types/node/globals.d.ts": {
-        "version": "351b96fdcb04d10cbc5b06ba546ce2b4b30c146b9a6e677b194f34486fac3347",
-        "signature": "351b96fdcb04d10cbc5b06ba546ce2b4b30c146b9a6e677b194f34486fac3347",
+        "version": "c98a21476edf4bb50ee872b492e70f3a9c407778e276555ea0ee006983f350a8",
+        "signature": "c98a21476edf4bb50ee872b492e70f3a9c407778e276555ea0ee006983f350a8",
         "affectsGlobalScope": true
       },
       "../node_modules/@types/node/async_hooks.d.ts": {
@@ -1267,8 +1267,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/@types/node/http.d.ts": {
-        "version": "9bc5c3aebcd7d54d6ee6c269210453aa88bf847ab6bdfa6327784b2725eee87b",
-        "signature": "9bc5c3aebcd7d54d6ee6c269210453aa88bf847ab6bdfa6327784b2725eee87b",
+        "version": "67bacfb62a1a36d2000a407ff53f21fe621224315db0c65c709b24da4337513f",
+        "signature": "67bacfb62a1a36d2000a407ff53f21fe621224315db0c65c709b24da4337513f",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/node/http2.d.ts": {
@@ -1437,8 +1437,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/mongoose/index.d.ts": {
-        "version": "42dcad43f1bc26f310b10a2cf39ed8ddef825cad8f25fc2a39854a34faaf4e7a",
-        "signature": "42dcad43f1bc26f310b10a2cf39ed8ddef825cad8f25fc2a39854a34faaf4e7a",
+        "version": "2ebb4602fc0cebaaac74715571859b31bfffcc91f535db5336662d902a649137",
+        "signature": "2ebb4602fc0cebaaac74715571859b31bfffcc91f535db5336662d902a649137",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/mongoose/dist/decorators/prop.decorator.d.ts": {
@@ -1561,8 +1561,38 @@
         "signature": "aa1725e38b5a0b4009f6a74f296f173e7926c119a60454dbd2e523861735df69",
         "affectsGlobalScope": false
       },
+      "../src/location/schemas/location.schema.ts": {
+        "version": "924758b78b507c8c90426809507274fdcd62c666ed84f3d7945816c60d398fe2",
+        "signature": "9f8a2074f7458acb184f56fb5514d14eb6d8852b0d8758e0028ae4617d1b3ebc",
+        "affectsGlobalScope": false
+      },
+      "../src/location/location.repository.ts": {
+        "version": "22ba95a664c45f3605bae092f9fe9c6b1d7b9a8e57cab2c2fb6edaa95df98341",
+        "signature": "418c9a51f2719c4ae77e51aa506a8d8fa76f420376cd65815a93ba9ebec477f6",
+        "affectsGlobalScope": false
+      },
+      "../src/location/location.service.ts": {
+        "version": "0ff02baf59725407abf8773f9f29e1be43a12aa6e1d2b51e673753fc842a323a",
+        "signature": "8fb259a9971b3e2a8cf467806a86e8ae3cdd473566b9d999c8c35ab4c2da2243",
+        "affectsGlobalScope": false
+      },
+      "../src/location/dto/create-location.dto.ts": {
+        "version": "b19c37e3d53aec108376775dee8d950526494465be12ec1476f9e20e2d320920",
+        "signature": "4f1798edef662f2579897aa98039f8c54fab979c369d6e8ae656a6a0c2034b8a",
+        "affectsGlobalScope": false
+      },
+      "../src/location/location.controller.ts": {
+        "version": "f147c0c56e2219f6c35843b6674f9ace83beb5c5c52f0d1a6c35421b44779fd8",
+        "signature": "971eb3587e1a3a0c4dad711494e2ee4ce21aa5480db5bf1601728bd018d37d86",
+        "affectsGlobalScope": false
+      },
+      "../src/location/location.module.ts": {
+        "version": "f857387a48cd9a655ad51971f662b386df69afa4ebbccec52b900b523ae0d2ac",
+        "signature": "254b5c895f50f4b327ead38167e18b9efb690e1969b053471a9e40d6692ca5ab",
+        "affectsGlobalScope": false
+      },
       "../src/app.module.ts": {
-        "version": "8fa5c172304642faa41961596d34a90d012a222c8f0a9fc84aaf6d3ff67631cd",
+        "version": "4eb55c1c0741e3813c73b0698d25fc477606f0d9c2c8b3519c4b9ff658b469f2",
         "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
         "affectsGlobalScope": false
       },
@@ -1751,6 +1781,11 @@
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "affectsGlobalScope": false
       },
+      "../src/location/util/generatealllocations.ts": {
+        "version": "f37313e687aee2c0efa09ad27b5cf5c116e47312c12415c99aa42ddfca5a0b60",
+        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "affectsGlobalScope": false
+      },
       "../node_modules/@babel/types/lib/index.d.ts": {
         "version": "b668b7fb7c52a05fb9233a27ba5099a73cd8e157b037d67399336635495ab483",
         "signature": "b668b7fb7c52a05fb9233a27ba5099a73cd8e157b037d67399336635495ab483",
@@ -1817,8 +1852,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/@types/eslint/index.d.ts": {
-        "version": "9f35346cbe34231443eb5ab65c8afdf23e7f9d74faed7fcfb93c06488f3c28f0",
-        "signature": "9f35346cbe34231443eb5ab65c8afdf23e7f9d74faed7fcfb93c06488f3c28f0",
+        "version": "7f4366cd82a5391c7a1a196908c624c9415f731a57400ea1c3661041cab398a8",
+        "signature": "7f4366cd82a5391c7a1a196908c624c9415f731a57400ea1c3661041cab398a8",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/eslint-scope/index.d.ts": {
@@ -3272,10 +3307,40 @@
         "../node_modules/@nestjs/mongoose/index.d.ts",
         "../src/app.controller.ts",
         "../src/app.service.ts",
+        "../src/location/location.module.ts",
         "../src/users/users.module.ts"
       ],
       "../src/app.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../src/location/location.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/location/dto/create-location.dto.ts",
+        "../src/location/location.service.ts",
+        "../src/location/schemas/location.schema.ts"
+      ],
+      "../src/location/location.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../src/location/location.controller.ts",
+        "../src/location/location.repository.ts",
+        "../src/location/location.service.ts",
+        "../src/location/schemas/location.schema.ts"
+      ],
+      "../src/location/location.repository.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/mongoose/index.d.ts",
+        "../src/location/schemas/location.schema.ts"
+      ],
+      "../src/location/location.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/location/location.repository.ts",
+        "../src/location/schemas/location.schema.ts"
+      ],
+      "../src/location/schemas/location.schema.ts": [
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/mongoose/index.d.ts"
       ],
       "../src/main.ts": [
         "../node_modules/@nestjs/core/index.d.ts",
@@ -4582,6 +4647,22 @@
       ],
       "../src/app.controller.ts": [
         "../src/app.service.ts"
+      ],
+      "../src/location/location.controller.ts": [
+        "../src/location/dto/create-location.dto.ts",
+        "../src/location/location.service.ts",
+        "../src/location/schemas/location.schema.ts"
+      ],
+      "../src/location/location.repository.ts": [
+        "../node_modules/mongoose/index.d.ts",
+        "../src/location/schemas/location.schema.ts"
+      ],
+      "../src/location/location.service.ts": [
+        "../src/location/location.repository.ts",
+        "../src/location/schemas/location.schema.ts"
+      ],
+      "../src/location/schemas/location.schema.ts": [
+        "../node_modules/mongoose/index.d.ts"
       ],
       "../src/users/schemas/user.schema.ts": [
         "../node_modules/mongoose/index.d.ts"

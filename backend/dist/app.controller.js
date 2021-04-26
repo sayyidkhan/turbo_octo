@@ -21,7 +21,7 @@ let AppController = class AppController {
     }
 };
 __decorate([
-    common_1.Get(),
+    common_1.Get('/start'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", String)
