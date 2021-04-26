@@ -1,34 +1,39 @@
 import { Body, Controller, Get, Param, Patch, Post } from '@nestjs/common';
-import { CreateUserDto } from './dto/create-user.dto';
-import { UpdateUserDto } from './dto/update-user.dto';
+import { CreateVaccineDto } from './dto/create-vaccine.dto';
+import { v_cert} from './schemas/vaccine.schema';
+import { VaccineService } from './vaccine.service';
 
-import { User } from './schemas/user.schema';
-import { UsersService } from './users.service';
 
-@Controller('users')
-export class UsersController {
-  constructor(private readonly usersService: UsersService) {}
 
-  @Get(':userId')
-  async getUser(@Param('userId') userId: string): Promise<User> {
-    return this.usersService.getUserById(userId);
+
+@Controller('vaccines')
+export class VaccineController {
+  constructor(private readonly VaccineService: VaccineService) {}
+
+
+  // single row without 's'
+  @Get(':v_cert_id')
+  async getVaccine(@Param('v_cert_id') v_cert_id: string): Promise<v_cert> {
+    return this.VaccineService.getVaccineById(v_cert_id);
   }
 
+  //Multiple row with 's'
   @Get()
-  async getUsers(): Promise<User[]> {
-      console.log("get all users...");
-      return this.usersService.getUsers();
+  async getVaccines(): Promise<v_cert[]> {
+      console.log("get all vaccine...");
+      return this.VaccineService.getVaccine();
   }
 
+  //Take note two DTO varia with different cap
   @Post()
-  async createUser(@Body() createUserDto: CreateUserDto): Promise<User> {
-      console.log("user DTO received successfully...")
-      return this.usersService.createUser(createUserDto.email, createUserDto.age)
+  async createVaccine(@Body() createVaccineDto: CreateVaccineDto): Promise<v_cert> {
+      console.log("vaccine DTO received successfully...")
+      return this.VaccineService.createVaccine(createVaccineDto.v_cert_id, createVaccineDto.p_nric,
+        createVaccineDto.v_date,createVaccineDto.e_nric)
   }
 
-  @Patch(':userId')
-  async updateUser(@Param('userId') userId: string, @Body() updateUserDto: UpdateUserDto): Promise<User> {
-      return this.usersService.updateUser(userId, updateUserDto);
-  }
+
+
+
 
 }

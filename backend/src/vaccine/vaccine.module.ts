@@ -1,13 +1,13 @@
 import { Module } from "@nestjs/common";
 import { MongooseModule } from "@nestjs/mongoose";
-import { User, UserSchema } from "./schemas/user.schema";
-import { UsersController } from "./users.controller";
-import { UsersRepository } from "./users.repository";
-import { UsersService } from "./users.service";
+import { v_cert, VaccineSchema } from "./schemas/vaccine.schema";
+import { VaccineController } from "./vaccine.controller";
+import { VaccineRepository } from "./vaccine.repository";
+import { VaccineService } from "./vaccine.service";
 
 @Module({
-    imports: [MongooseModule.forFeature([{ name: User.name, schema: UserSchema }])],
-    controllers: [UsersController],
-    providers: [UsersService, UsersRepository]
+    imports: [MongooseModule.forFeature([{ name: v_cert.name, schema: VaccineSchema }])],
+    controllers: [VaccineController],
+    providers: [VaccineService, VaccineRepository]
 })
-export class UsersModule {}
+export class VaccineModule {}
