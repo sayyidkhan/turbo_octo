@@ -35,13 +35,13 @@ export class E_UserController {
 
     @Patch(':eNRIC')
     async updateEnterpriseUser(@Param('eNRIC') eNRIC: string, @Body() updateUserDto: UpdateEnterpriseUserDto): Promise<E_User> {
-        return this.e_UserService.updateUser(eNRIC, updateUserDto);
+        return this.e_UserService.updateEnterpriseUser(eNRIC, updateUserDto);
     }
 
     @Delete(':eNRIC')
-    async deleteUserByEnterpriseNRIC(@Param('eNRIC') eNRIC: string): Promise<string> {
+    async deleteEnterpriseUserByNRIC(@Param('eNRIC') eNRIC: string): Promise<string> {
         console.log("deleted eNRIC:" + eNRIC);
-        const eUser : E_User = await this.e_UserService.deleteUserById(eNRIC);
+        const eUser : E_User = await this.e_UserService.deleteEnterpriseUserById(eNRIC);
         if(eUser != null) {
             return  eUser.eNRIC;
         }

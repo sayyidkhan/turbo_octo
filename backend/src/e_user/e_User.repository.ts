@@ -7,25 +7,25 @@ import { E_User , E_UserDocument } from "./schemas/e_user.schema";
 export class E_UserRepository {
     constructor(@InjectModel(E_User.name) private eUserModel: Model<E_UserDocument>) {}
 
-    async findOne(eUserFilterQuery: FilterQuery<E_User>): Promise<E_User> {
-        return this.eUserModel.findOne(eUserFilterQuery);
+    async findOne(query: FilterQuery<E_User>): Promise<E_User> {
+        return this.eUserModel.findOne(query);
     }
 
-    async find(eUserFilterQuery: FilterQuery<E_User>): Promise<E_User[]> {
-        return this.eUserModel.find(eUserFilterQuery);
+    async find(query: FilterQuery<E_User>): Promise<E_User[]> {
+        return this.eUserModel.find(query);
     }
 
-    async create(eUser: E_User): Promise<E_User> {
-        const newUser = new this.eUserModel(eUser);
+    async create(myObj: E_User): Promise<E_User> {
+        const newUser = new this.eUserModel(myObj);
         return newUser.save();
     }
 
-    async findOneAndUpdate(eUserFilterQuery: FilterQuery<E_User>, user: Partial<E_User>): Promise<E_User> {
-        return this.eUserModel.findOneAndUpdate(eUserFilterQuery, user, { new: true });
+    async findOneAndUpdate(query: FilterQuery<E_User>, user: Partial<E_User>): Promise<E_User> {
+        return this.eUserModel.findOneAndUpdate(query, user, { new: true });
     }
 
-    async deleteUserById(eUserFilterQuery: FilterQuery<E_User>): Promise<E_User> {
-        return this.eUserModel.findByIdAndRemove(eUserFilterQuery);
+    async deleteEnterpriseUserById(query: FilterQuery<E_User>): Promise<E_User> {
+        return this.eUserModel.findByIdAndRemove(query);
     }
 
 }

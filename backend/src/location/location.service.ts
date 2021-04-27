@@ -1,6 +1,6 @@
 import { Injectable } from "@nestjs/common";
 // import { v4 as uuidv4 } from 'uuid';
-// import { UpdateUserDto } from "./dto/update-user.dto";
+// import { UpdateAlertListDto } from "./dto/update-user.dto";
 
 import { Location } from "./schemas/location.schema";
 import { LocationRepository } from "./location.repository";
@@ -24,7 +24,7 @@ export class LocationService {
         });
     }
 
-    // async updateUser(userId: string, userUpdates: UpdateUserDto): Promise<Location> {
+    // async updateEnterpriseUser(userId: string, userUpdates: UpdateAlertListDto): Promise<Location> {
     //     return this.locationRepository.findOneAndUpdate({ userId }, userUpdates);
     // }
 }

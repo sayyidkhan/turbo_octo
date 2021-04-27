@@ -1,11 +1,8 @@
-import { Injectable } from "@nestjs/common";
-// import { v4 as uuidv4 } from 'uuid';
-// import { UpdateUserDto } from "./dto/update-user.dto";
+import {Injectable} from "@nestjs/common";
 
 import { E_User } from "./schemas/e_user.schema";
 import { E_UserRepository } from "./e_User.repository";
 import {UpdateEnterpriseUserDto} from "./dto/update-eUser.dto";
-import {Types} from "mongoose";
 
 
 @Injectable()
@@ -35,17 +32,17 @@ export class E_UserService {
         });
     }
 
-    async updateUser(eNRIC: string, euserUpdates: UpdateEnterpriseUserDto): Promise<E_User> {
+    async updateEnterpriseUser(eNRIC: string, euserUpdates: UpdateEnterpriseUserDto): Promise<E_User> {
         return this.e_UserRepository.findOneAndUpdate({ eNRIC : eNRIC }, euserUpdates);
     }
 
-    async deleteUserById(eNRIC: string): Promise<E_User> {
+    async deleteEnterpriseUserById(eNRIC: string): Promise<E_User> {
         const findUser = await this.getEnterpriseUserById(eNRIC);
         //check user list in record, if not return null
         // only record exist then perform delete
         console.log(findUser);
         if(findUser != null) {
-            return this.e_UserRepository.deleteUserById({ _id : findUser['_id'] });
+            return this.e_UserRepository.deleteEnterpriseUserById({ _id : findUser['_id'] });
         }
         return null;
     }

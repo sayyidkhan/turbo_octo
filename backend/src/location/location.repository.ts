@@ -7,20 +7,21 @@ import { Location, LocationDocument} from "./schemas/location.schema";
 export class LocationRepository {
     constructor(@InjectModel(Location.name) private locationModel: Model<LocationDocument>) {}
 
-    async findOne(userFilterQuery: FilterQuery<Location>): Promise<Location> {
-        return this.locationModel.findOne(userFilterQuery);
+    async findOne(query: FilterQuery<Location>): Promise<Location> {
+        return this.locationModel.findOne(query);
     }
 
-    async find(usersFilterQuery: FilterQuery<Location>): Promise<Location[]> {
-        return this.locationModel.find(usersFilterQuery)
+    async find(query: FilterQuery<Location>): Promise<Location[]> {
+        return this.locationModel.find(query)
     }
 
-    async create(user: Location): Promise<Location> {
-        const newUser = new this.locationModel(user);
-        return newUser.save()
+    async create(myObj: Location): Promise<Location> {
+        const newObj = new this.locationModel(myObj);
+        return newObj.save()
     }
 
-    async findOneAndUpdate(userFilterQuery: FilterQuery<Location>, user: Partial<Location>): Promise<Location> {
-        return this.locationModel.findOneAndUpdate(userFilterQuery, user, { new: true });
+    async findOneAndUpdate(query: FilterQuery<Location>, user: Partial<Location>): Promise<Location> {
+        return this.locationModel.findOneAndUpdate(query, user, { new: true });
     }
+
 }

@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Param, Patch, Post } from '@nestjs/common';
 // import { CreateUserDto } from './dto/create-user.dto';
-// import { UpdateUserDto } from './dto/update-user.dto';
+// import { UpdateAlertListDto } from './dto/update-user.dto';
 
 import { Location } from './schemas/location.schema';
 import {LocationService} from "./location.service";
@@ -29,8 +29,8 @@ export class LocationController {
   }
 
   // @Patch(':userId')
-  // async updateUser(@Param('userId') userId: string, @Body() updateUserDto: UpdateUserDto): Promise<User> {
-  //     return this.locationService.updateUser(userId, updateUserDto);
+  // async updateEnterpriseUser(@Param('userId') userId: string, @Body() updateUserDto: UpdateAlertListDto): Promise<User> {
+  //     return this.locationService.updateEnterpriseUser(userId, updateUserDto);
   // }
 
 }

@@ -17,8 +17,8 @@ export class UsersRepository {
     }
 
     async create(user: User): Promise<User> {
-        const newUser = new this.userModel(user);
-        return newUser.save()
+        const newObj = new this.userModel(user);
+        return newObj.save()
     }
 
     async findOneAndUpdate(userFilterQuery: FilterQuery<User>, user: Partial<User>): Promise<User> {
