@@ -20,8 +20,9 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - name: Run backend Build
       - run: npm install
+        working-directory: backend
+      - run: npm build
         working-directory: backend
 #
 #     steps:
