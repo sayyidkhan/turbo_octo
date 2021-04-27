@@ -17,18 +17,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js
-        uses: actions/setup-node@v2
+      - uses: actions/setup-node@v2
         with:
           node-version: '14'
-        working-directory: backend
-      - run : |
-          ls -l
-          cd backend
-          npm ci
-          npm build
-          echo 'successfully setup my first github actions'
-        working-directory: backend
+      - run: npm install
+#      - run: npm test
 
 #     steps:
 #     - uses: actions/checkout@v2
