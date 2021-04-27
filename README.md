@@ -31,30 +31,4 @@ You need to run backend and frontend concurrently to be able to successfully run
 
 1. navigate into the backend folder and follow the instructions.
 2. navigate into the frontend folder and follow the instructions.
-
-## MongoDB
-
-### Installation for mac
-Tap the MongoDB Homebrew Tap to download the official Homebrew formula for MongoDB and the Database Tools, by running the following command in your macOS Terminal:
-```
-brew tap mongodb/brew
-```
-To install MongoDB, run the following command in your macOS Terminal application:
-```
-brew install mongodb-community@4.4
-```
-
-### Run for mac 
-To run MongoDB (i.e. the mongod process) as a macOS service, issue the following:
-```
-brew services start mongodb-community@4.4
-```
-To stop a mongod running as a macOS service, use the following command as needed:
-```
-brew services stop mongodb-community@4.4
-```
-
-more info: https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
-
-
-
+3. navigate to the README_MONGODB txt file and follow the instructions.
