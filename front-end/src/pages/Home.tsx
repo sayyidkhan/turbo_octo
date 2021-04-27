@@ -1,30 +1,32 @@
 import React from 'react';
-import logo from '../img/logo.svg';
-import {HelloWorldComponent} from "../components/home/HelloWorldComponent";
+import '../App.css';
+import Routes from "../routes";
+
+import enterLoc from '../img/EnterLoc.png';
+import checkVaccCert from '../img/CheckVaccCert.png';
 
 export default function Home() {
     return (
-        <div>
-            <h1>Home</h1>
-            <div>
-                <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo"/>
-                    <p>
-                        Edit <code>src/pages/Home.tsx</code> and save to reload.
-                    </p>
-                    <a
-                        className="App-link"
-                        href="https://reactjs.org"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Learn React (boilerplate)
-                    </a>
-                    <p><b>Using GET request below here:</b></p>
-                    <HelloWorldComponent />
-                </header>
+        <div className="home-container">
+            <div className="home-public-header-div">
+                <h1>Covid-19 TurboTrace</h1>
             </div>
+            
+            <div className="home-imgContainer-div">
+                <div id ="images">
+                    <a href="/EnterLocation">
+                        <img src={enterLoc} className="home-img" alt="Enter location"/>
+                    </a>
+                    <a href="/CheckVaccCert">
+                        <img src={checkVaccCert} className="home-img" alt="Check vaccination certificate"/>
+                    </a>
+                </div>
+            </div>
+
+            <div className="home-tableContainer-div">
+                <h2>Recent Covid-19 alerts</h2>
+            </div>
+
         </div>
     )
 }
-

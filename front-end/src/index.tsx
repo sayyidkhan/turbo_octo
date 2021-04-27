@@ -4,9 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import {BrowserRouter as Router, Link} from "react-router-dom";
+import MainContainer from "./components/MainContainer";
+import Navbar from "./components/Navbar";
+import Routes from "./routes";
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Routes />
+      <Navbar />
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -19,7 +19,7 @@ Full stack boilerplate built with React, Express and MongoDB at its core, with a
 
 **Client**
 - React
-- Material UI (*havent install yet)
+- Material UI
 - Axios
 
 
@@ -31,4 +31,5 @@ You need to run backend and frontend concurrently to be able to successfully run
 
 1. navigate into the backend folder and follow the instructions.
 2. navigate into the frontend folder and follow the instructions.
-
+3. navigate to the README_MONGODB txt file and follow the instructions.
+4. 
