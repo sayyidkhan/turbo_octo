@@ -87,7 +87,7 @@
   /* end */
 }
 
-.home-public-header-div>h1 {
+.home-public-header-div h1 {
   color: #7f7f7f;
 }
 
@@ -132,5 +132,8 @@
   text-align:center;
 }
 
+.toHide {
+  display: none;
+}
 /* =========================== Main page specific end ================================== */
 

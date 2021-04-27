@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {getHello_API} from "../../services/home/home_api";
+import {getHello_API} from "./api/home_api";
 
 export class HelloWorldComponent extends Component {
 

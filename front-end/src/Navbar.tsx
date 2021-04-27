@@ -2,23 +2,59 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom"
 import { MdClose } from "react-icons/md"
 import { FiMenu } from "react-icons/fi"
+import Login from './pages/Login';
 
-const Navbar = () => {
+export default function Navbar(){
 
     const links = [
         {
           id: 1,
-          path: "/",
+          path: "/Home",
           text: "Home",
         }, 
         {
           id: 2,
           path: "/Login",
           text: "Login",
+        },
+        {
+          id: 3,
+          path: "/Dashboard",
+          text: "Dashboard",
+        },
+        {
+          id: 4,
+          path: "/ContactTracing",
+          text: "Contact Tracing",
+        },
+        {
+          id: 5,
+          path: "/VaccinationRecords",
+          text: "Vaccination Records",
+        },
+        {
+          id: 6,
+          path: "/PublicAlerts",
+          text: "Public Alerts",
+        },
+        {
+          id: 7,
+          path: "/Reports",
+          text: "Reports",
+        },
+        {
+          id: 8,
+          path: "/ManageAccounts",
+          text: "Manage Accounts",
+        },
+        {
+          id: 9,
+          path: "/Home",
+          text: "Logout",
         }
     ]
 
-    const [navbarOpen, setNavbarOpen] = useState(false)
+    const [navbarOpen, setNavbarOpen] = useState(false);
 
     const handleToggle = () => {
         setNavbarOpen(prev => !prev)
@@ -60,4 +96,3 @@ const Navbar = () => {
       </nav>
     )
   }
-  export default Navbar
