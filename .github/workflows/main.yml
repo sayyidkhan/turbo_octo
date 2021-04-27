@@ -21,8 +21,12 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '14'
+      - name: run backend jobs
       - run : |
           ls -l
+          cd backend
+          npm ci
+          npm build
           echo 'successfully setup my first github actions'
 
 #     steps:
