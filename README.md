@@ -19,7 +19,7 @@ Full stack boilerplate built with React, Express and MongoDB at its core, with a
 
 **Client**
 - React
-- Material UI (*havent install yet)
+- Material UI
 - Axios
 
 
