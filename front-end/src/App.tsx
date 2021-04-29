@@ -3,9 +3,12 @@ import './App.css';
 import {BrowserRouter as Router, Link} from "react-router-dom";
 import Routes from "./routes";
 import Navbar from "./Navbar";
-//import useLocalStorage from './services/useLocalStorage';
 
 function App() {
+
+  if(sessionStorage.getItem('userType') === null){
+    sessionStorage.setItem('userType', "public");
+  }
 
   return (
     <Router>
