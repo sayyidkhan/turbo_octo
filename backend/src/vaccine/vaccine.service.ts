@@ -7,7 +7,7 @@ import { VaccineRepository } from "./vaccine.repository";
 export class VaccineService {
     constructor(private readonly vaccineRepository: VaccineRepository) {}
 
-    async getVaccineById(v_cert_id: string): Promise<v_cert> {
+    async getVaccineById(v_cert_id: number): Promise<v_cert> {
         return this.vaccineRepository.findOne({ v_cert_id })
     }
 
@@ -15,7 +15,7 @@ export class VaccineService {
         return this.vaccineRepository.find({});
     }
 
-    async createVaccine(v_cert_id: string, p_nric: string, v_date:number , e_nric : string): Promise<v_cert> {
+    async createVaccine(v_cert_id: number, p_nric: string, v_date:number , e_nric : string): Promise<v_cert> {
         return this.vaccineRepository.create({
             v_cert_id: uuidv4(),
             p_nric,

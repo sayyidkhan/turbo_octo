@@ -9,6 +9,7 @@ import {E_UserModule} from "./e_user/e_User.module";
 import {AlertListModule} from "./alert_list/alertlist.module";
 import {VaccineModule} from "./vaccine/vaccine.module";
 import {P_UserModule } from "./p_user/p_user.module";
+import {CtracingModule} from "./ctracing/ctracing.module";
 
 
 const DATABASE_NAME = "demo";
@@ -21,7 +22,8 @@ const DATABASE_NAME = "demo";
       E_UserModule,
       AlertListModule,
       VaccineModule,
-      P_UserModule
+      P_UserModule,
+      CtracingModule
       //add new modules below here
   ],
   controllers: [AppController],

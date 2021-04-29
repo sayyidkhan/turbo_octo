@@ -6,7 +6,7 @@ export type VaccineDocument = v_cert & Document;
 @Schema()
 export class v_cert {
     @Prop()
-    v_cert_id: string;
+    v_cert_id: number;
 
     @Prop()
     p_nric: string;

@@ -13,7 +13,7 @@ export class VaccineController {
 
   // single row without 's'
   @Get(':v_cert_id')
-  async getVaccine(@Param('v_cert_id') v_cert_id: string): Promise<v_cert> {
+  async getVaccine(@Param('v_cert_id') v_cert_id: number): Promise<v_cert> {
     return this.VaccineService.getVaccineById(v_cert_id);
   }
 
