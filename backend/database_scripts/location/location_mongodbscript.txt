@@ -1,4 +1,0 @@
-db.demo.insert({
-"_id":ObjectId(),
-"locations": REPLACE_OBJECT_HERE
-});
