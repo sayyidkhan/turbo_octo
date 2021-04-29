@@ -70,7 +70,6 @@ export class LoginFormComponent extends Component {
 
         history.push('/Dashboard');
         window.location.reload(false);
-        
     }
 
     render() {
