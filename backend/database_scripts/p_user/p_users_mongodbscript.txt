@@ -1,0 +1,5 @@
+//p_user records
+db = db.getSiblingDB('demo');
+db.p_users.insert({
+    REPLACE_OBJECT_HERE
+});
