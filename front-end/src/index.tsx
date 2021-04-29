@@ -3,16 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
 import {BrowserRouter as Router, Link} from "react-router-dom";
-import Navbar from "./Navbar";
-import Routes from "./routes";
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <Routes />
-      <Navbar />
+      <App />
     </Router>
   </React.StrictMode>,
   document.getElementById('root')

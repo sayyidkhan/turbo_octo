@@ -51,6 +51,7 @@
 
 .menuNav.showMenu {
   width: 100%;
+  padding-top: 80px;
 }
 
 .menuNav a {
@@ -135,5 +136,6 @@
 .toHide {
   display: none;
 }
+
 /* =========================== Main page specific end ================================== */
 
