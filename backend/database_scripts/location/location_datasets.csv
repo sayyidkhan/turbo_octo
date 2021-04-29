@@ -1,0 +1,501 @@
+location_id,location_name
+201634,Liam Shopping Centre
+701810,Noah Shopping Centre
+260702,Oliver Shopping Centre
+276282,William Shopping Centre
+222470,Elijah Shopping Centre
+371330,James Hospital
+620676,Benjamin Shopping Centre
+490748,Lucas Hospital
+271536,Mason Shopping Centre
+757467,Ethan MRT Station
+409165,Alexander Shopping Centre
+293841,Henry MRT Station
+224626,Jacob Shopping Centre
+712757,Michael Shopping Centre
+683601,Daniel MRT Station
+959395,Logan Shopping Centre
+658836,Jackson MRT Station
+325746,Sebastian Hospital
+499721,Jack MRT Station
+891208,Aiden MRT Station
+968423,Owen Shopping Centre
+487209,Samuel Shopping Centre
+101351,Matthew MRT Station
+777158,Joseph MRT Station
+318990,Levi Shopping Centre
+702810,Mateo Shopping Centre
+611843,David Shopping Centre
+822194,John Shopping Centre
+414292,Wyatt Hospital
+186907,Carter Hospital
+286567,Julian MRT Station
+448982,Luke MRT Station
+128830,Grayson MRT Station
+425370,Isaac Shopping Centre
+735224,Jayden MRT Station
+298360,Theodore Hospital
+630683,Gabriel Shopping Centre
+802499,Anthony Shopping Centre
+172681,Dylan Shopping Centre
+535661,Leo Shopping Centre
+456826,Lincoln MRT Station
+210630,Jaxon Shopping Centre
+241746,Asher Shopping Centre
+988171,Christopher Hospital
+176827,Josiah Shopping Centre
+856299,Andrew Hospital
+331618,Thomas Hospital
+911439,Joshua Hospital
+727423,Ezra MRT Station
+835308,Hudson MRT Station
+654044,Charles Shopping Centre
+567400,Caleb Hospital
+262489,Isaiah MRT Station
+141653,Ryan Hospital
+975880,Nathan Shopping Centre
+435390,Adrian MRT Station
+763344,Christian Hospital
+114336,Maverick Shopping Centre
+227137,Colton MRT Station
+868828,Elias Shopping Centre
+150148,Aaron Shopping Centre
+587055,Eli MRT Station
+109599,Landon MRT Station
+288006,Jonathan MRT Station
+665949,Nolan MRT Station
+855642,Hunter Hospital
+875628,Cameron Shopping Centre
+145644,Connor Shopping Centre
+541585,Santiago MRT Station
+436576,Jeremiah Shopping Centre
+435933,Ezekiel Hospital
+376978,Angel Shopping Centre
+409183,Roman Hospital
+923225,Easton Hospital
+526858,Miles MRT Station
+787899,Robert Shopping Centre
+848959,Jameson MRT Station
+345494,Nicholas Hospital
+698301,Greyson Hospital
+395038,Cooper Hospital
+891103,Ian Shopping Centre
+938520,Carson Shopping Centre
+394447,Axel Hospital
+588074,Jaxson Hospital
+162410,Dominic Shopping Centre
+198453,Leonardo MRT Station
+841919,Luca Shopping Centre
+272998,Austin Shopping Centre
+225193,Jordan MRT Station
+844362,Adam Hospital
+791093,Xavier Shopping Centre
+444999,Jose MRT Station
+400632,Jace MRT Station
+135195,Everett MRT Station
+121143,Declan Hospital
+937521,Evan Hospital
+179165,Kayden Shopping Centre
+310692,Parker MRT Station
+123853,Wesley MRT Station
+271003,Kai Hospital
+589268,Brayden MRT Station
+771208,Bryson Hospital
+990636,Weston Shopping Centre
+357858,Jason Shopping Centre
+805215,Emmett MRT Station
+957313,Sawyer Hospital
+945516,Silas MRT Station
+359856,Bennett MRT Station
+182197,Brooks Hospital
+165439,Micah Shopping Centre
+729202,Damian Hospital
+964887,Harrison Hospital
+958015,Waylon MRT Station
+944879,Ayden Shopping Centre
+591606,Vincent Shopping Centre
+592865,Ryder Shopping Centre
+101450,Kingston Hospital
+794466,Rowan Shopping Centre
+391635,George Shopping Centre
+121450,Luis Shopping Centre
+248075,Chase Hospital
+485306,Cole Hospital
+803812,Nathaniel Hospital
+157709,Zachary MRT Station
+993418,Ashton MRT Station
+860672,Braxton MRT Station
+440763,Gavin MRT Station
+909473,Tyler Shopping Centre
+471546,Diego Hospital
+119555,Bentley Hospital
+896178,Amir Hospital
+250850,Beau MRT Station
+533612,Gael MRT Station
+642159,Carlos Shopping Centre
+816617,Ryker MRT Station
+747078,Jasper MRT Station
+867021,Max Shopping Centre
+991215,Juan MRT Station
+119617,Ivan MRT Station
+974115,Brandon Hospital
+614876,Jonah Hospital
+867585,Giovanni Hospital
+511638,Kaiden Shopping Centre
+968095,Myles Hospital
+543749,Calvin MRT Station
+704070,Lorenzo Hospital
+129244,Maxwell MRT Station
+115465,Jayce MRT Station
+184834,Kevin Hospital
+583998,Legend Hospital
+667792,Tristan MRT Station
+255639,Jesus Hospital
+672690,Jude Shopping Centre
+427161,Zion Hospital
+145587,Justin Shopping Centre
+291620,Maddox Shopping Centre
+699428,Abel Hospital
+263271,King Shopping Centre
+758941,Camden Hospital
+278276,Elliott Hospital
+140074,Malachi Shopping Centre
+460928,Milo Shopping Centre
+914498,Emmanuel Shopping Centre
+590863,Karter Shopping Centre
+635329,Rhett Hospital
+676636,Alex Shopping Centre
+271534,August Hospital
+519475,River Hospital
+670580,Xander MRT Station
+931749,Antonio MRT Station
+337622,Brody Shopping Centre
+620977,Finn Shopping Centre
+839037,Elliot Hospital
+826200,Dean Shopping Centre
+720626,Emiliano MRT Station
+102028,Eric Hospital
+916699,Miguel Shopping Centre
+479302,Arthur MRT Station
+554294,Matteo Hospital
+681755,Graham Hospital
+842831,Alan MRT Station
+513611,Nicolas Shopping Centre
+707882,Blake Hospital
+746321,Thiago Hospital
+375339,Adriel Hospital
+386399,Victor MRT Station
+366627,Joel Shopping Centre
+975078,Timothy MRT Station
+237710,Hayden MRT Station
+242771,Judah Hospital
+724895,Abraham Shopping Centre
+618023,Edward Shopping Centre
+137088,Messiah MRT Station
+754586,Zayden MRT Station
+547214,Theo Shopping Centre
+685117,Tucker Shopping Centre
+343320,Grant Hospital
+955197,Richard MRT Station
+292745,Alejandro MRT Station
+762531,Steven Hospital
+769238,Jesse Hospital
+914681,Dawson MRT Station
+570889,Bryce MRT Station
+459821,Avery MRT Station
+147177,Oscar Hospital
+685577,Patrick MRT Station
+654479,Archer Hospital
+668715,Barrett MRT Station
+275092,Leon Hospital
+651814,Colt Shopping Centre
+566690,Charlie Shopping Centre
+265341,Peter Hospital
+721542,Kaleb Hospital
+918716,Lukas MRT Station
+576476,Beckett MRT Station
+920686,Jeremy Hospital
+548075,Preston MRT Station
+930480,Enzo Shopping Centre
+616005,Luka Shopping Centre
+202756,Andres Hospital
+255802,Marcus Shopping Centre
+861956,Felix MRT Station
+543687,Mark Shopping Centre
+977768,Ace MRT Station
+986544,Brantley Hospital
+550288,Atlas Hospital
+872676,Remington MRT Station
+539850,Maximus Shopping Centre
+476735,Matias Shopping Centre
+243464,Walker MRT Station
+667971,Kyrie Shopping Centre
+362382,Griffin Shopping Centre
+488908,Kenneth Shopping Centre
+764084,Israel Hospital
+775435,Javier Hospital
+164653,Kyler Shopping Centre
+571718,Jax Shopping Centre
+941846,Amari Shopping Centre
+180564,Zane Shopping Centre
+333235,Emilio Hospital
+674475,Knox Hospital
+406681,Adonis MRT Station
+980813,Aidan Hospital
+818895,Kaden MRT Station
+418930,Paul Hospital
+139353,Omar MRT Station
+178182,Brian Shopping Centre
+883542,Louis MRT Station
+133249,Caden Shopping Centre
+823008,Maximiliano MRT Station
+586878,Holden Hospital
+702547,Paxton MRT Station
+451190,Nash Hospital
+168054,Bradley MRT Station
+993075,Bryan Shopping Centre
+391565,Simon MRT Station
+448482,Phoenix Shopping Centre
+328272,Lane MRT Station
+302843,Josue MRT Station
+149345,Colin MRT Station
+529811,Rafael Shopping Centre
+473630,Kyle Hospital
+245021,Riley MRT Station
+711335,Jorge MRT Station
+879290,Beckham Hospital
+614100,Cayden Hospital
+960642,Jaden Hospital
+248258,Emerson Shopping Centre
+630024,Ronan Shopping Centre
+607906,Karson Shopping Centre
+832032,Arlo Shopping Centre
+442806,Tobias MRT Station
+388482,Brady MRT Station
+460273,Clayton MRT Station
+800870,Francisco Hospital
+513447,Zander MRT Station
+817688,Erick MRT Station
+397850,Walter Shopping Centre
+954572,Daxton Hospital
+563008,Cash Shopping Centre
+830736,Martin MRT Station
+735952,Damien Shopping Centre
+214662,Dallas Hospital
+329668,Cody MRT Station
+154161,Chance Shopping Centre
+805467,Jensen MRT Station
+254989,Finley Shopping Centre
+123040,Jett Shopping Centre
+787631,Corbin Shopping Centre
+853953,Kash Hospital
+669251,Reid Hospital
+356326,Kameron Hospital
+812704,Andre Shopping Centre
+919944,Gunner Shopping Centre
+636833,Jake Hospital
+117702,Hayes Shopping Centre
+723027,Manuel Shopping Centre
+928623,Prince MRT Station
+289062,Bodhi MRT Station
+721882,Cohen Hospital
+931036,Sean MRT Station
+396700,Khalil MRT Station
+470563,Hendrix Shopping Centre
+889773,Derek Hospital
+124226,Cristian Shopping Centre
+662724,Cruz Shopping Centre
+703292,Kairo Shopping Centre
+668626,Dante MRT Station
+874818,Atticus Hospital
+386124,Killian Shopping Centre
+354194,Stephen Shopping Centre
+234849,Orion Hospital
+495099,Malakai Shopping Centre
+627417,Ali MRT Station
+216569,Eduardo Shopping Centre
+802087,Fernando Shopping Centre
+546745,Anderson Hospital
+520796,Angelo Shopping Centre
+582558,Spencer Shopping Centre
+947075,Gideon MRT Station
+270659,Mario Hospital
+921341,Titus MRT Station
+673572,Travis Shopping Centre
+299470,Rylan MRT Station
+646104,Kayson Shopping Centre
+107202,Ricardo MRT Station
+685272,Tanner Hospital
+299826,Malcolm Shopping Centre
+734206,Raymond MRT Station
+464773,Odin Shopping Centre
+368208,Cesar Hospital
+749274,Lennox MRT Station
+365776,Joaquin MRT Station
+883792,Kane Shopping Centre
+332329,Wade Shopping Centre
+533225,Muhammad Hospital
+878870,Iker Hospital
+929149,Jaylen Hospital
+775470,Crew Shopping Centre
+624750,Zayn MRT Station
+646955,Hector MRT Station
+223752,Ellis Hospital
+127774,Leonel Hospital
+929233,Cairo Shopping Centre
+464752,Garrett MRT Station
+881534,Romeo Shopping Centre
+106178,Dakota MRT Station
+682996,Edwin Hospital
+353283,Warren Shopping Centre
+974813,Julius Hospital
+179822,Major Hospital
+163196,Donovan Shopping Centre
+859547,Caiden Hospital
+709313,Tyson MRT Station
+937732,Nico MRT Station
+859537,Sergio Shopping Centre
+687799,Nasir Shopping Centre
+276973,Rory Shopping Centre
+416449,Devin MRT Station
+244341,Jaiden MRT Station
+276020,Jared Hospital
+103295,Kason MRT Station
+386321,Malik Shopping Centre
+143825,Jeffrey MRT Station
+848324,Ismael MRT Station
+913550,Elian MRT Station
+954319,Marshall Hospital
+814387,Lawson MRT Station
+731351,Desmond Hospital
+277211,Winston Shopping Centre
+684758,Nehemiah MRT Station
+559861,Ari MRT Station
+326756,Conner MRT Station
+611026,Jay Shopping Centre
+730256,Kade Shopping Centre
+578088,Andy MRT Station
+339777,Johnny Hospital
+930672,Jayceon MRT Station
+404607,Marco MRT Station
+816822,Seth Hospital
+946557,Ibrahim Hospital
+259045,Raiden MRT Station
+501841,Collin Hospital
+869944,Edgar MRT Station
+967384,Erik MRT Station
+417766,Troy Hospital
+186882,Clark Hospital
+648906,Jaxton Hospital
+375036,Johnathan MRT Station
+924078,Gregory Hospital
+830502,Russell Hospital
+830818,Royce Hospital
+285488,Fabian MRT Station
+575073,Ezequiel MRT Station
+877630,Noel Shopping Centre
+240911,Pablo MRT Station
+114727,Cade Shopping Centre
+388545,Pedro Shopping Centre
+469694,Sullivan MRT Station
+689422,Trevor MRT Station
+689897,Reed Shopping Centre
+997365,Quinn Shopping Centre
+132921,Frank Hospital
+780620,Harvey MRT Station
+731271,Princeton Shopping Centre
+976336,Zayne MRT Station
+193176,Matthias Hospital
+916564,Conor Shopping Centre
+482154,Sterling MRT Station
+450428,Dax MRT Station
+215036,Grady Hospital
+298183,Cyrus Shopping Centre
+450748,Gage Shopping Centre
+747467,Leland Hospital
+769154,Solomon Shopping Centre
+802781,Emanuel Shopping Centre
+181253,Niko MRT Station
+360719,Ruben Hospital
+388933,Kasen Shopping Centre
+420570,Mathias MRT Station
+420652,Kashton Shopping Centre
+844189,Franklin MRT Station
+608355,Remy Shopping Centre
+546910,Shane Shopping Centre
+882220,Kendrick Shopping Centre
+825690,Shawn Hospital
+455424,Otto MRT Station
+774474,Armani Hospital
+647170,Keegan Hospital
+339640,Finnegan Shopping Centre
+852291,Memphis MRT Station
+944997,Bowen MRT Station
+536567,Dominick Hospital
+450320,Kolton Hospital
+649942,Jamison Shopping Centre
+561727,Allen MRT Station
+459948,Philip Shopping Centre
+277520,Tate MRT Station
+436033,Peyton Shopping Centre
+843680,Jase MRT Station
+111115,Oakley Hospital
+807184,Rhys Shopping Centre
+557104,Kyson MRT Station
+949854,Adan Hospital
+447495,Esteban Hospital
+330975,Dalton MRT Station
+408254,Gianni Hospital
+279157,Callum Hospital
+225497,Sage Hospital
+302860,Alexis MRT Station
+535076,Milan Shopping Centre
+667765,Moises Hospital
+933000,Jonas Hospital
+905550,Uriel Hospital
+845570,Colson Hospital
+740734,Marcos Shopping Centre
+509493,Zaiden MRT Station
+388587,Hank MRT Station
+507911,Damon Hospital
+803666,Hugo Shopping Centre
+779913,Ronin Hospital
+946929,Royal Hospital
+251524,Kamden Shopping Centre
+221306,Dexter Hospital
+457634,Luciano Hospital
+888910,Alonzo Hospital
+519054,Augustus Hospital
+637941,Kamari Shopping Centre
+108255,Eden Shopping Centre
+901165,Roberto Hospital
+743387,Baker MRT Station
+440681,Bruce Shopping Centre
+296435,Kian Hospital
+991253,Albert Hospital
+204346,Frederick MRT Station
+464761,Mohamed Hospital
+669743,Abram Hospital
+617044,Omari MRT Station
+552208,Porter Shopping Centre
+847180,Enrique Hospital
+325837,Alijah MRT Station
+949320,Francis Hospital
+188829,Leonidas Shopping Centre
+280254,Zachariah MRT Station
+158446,Landen Hospital
+934617,Wilder MRT Station
+911546,Apollo Shopping Centre
+886976,Santino Shopping Centre
+149272,Tatum Shopping Centre
+919565,Pierce MRT Station
+732853,Forrest MRT Station
+740143,Corey Hospital
+790265,Derrick Shopping Centre
+948397,Isaias Shopping Centre
+989412,Kaison Shopping Centre
+738426,Kieran MRT Station
+396937,Arjun MRT Station
+395373,Gunnar MRT Station
+822771,Rocco Shopping Centre
+421653,Emmitt Shopping Centre
