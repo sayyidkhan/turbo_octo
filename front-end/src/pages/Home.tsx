@@ -1,7 +1,9 @@
 import React from 'react';
 import '../App.css';
+
 import enterLoc from '../img/EnterLoc.png';
 import checkVaccCert from '../img/CheckVaccCert.png';
+import {AlertsTable} from '../components/home/AlertsTable';
 
 export default function Home() {
     return (
@@ -23,6 +25,7 @@ export default function Home() {
 
             <div className="home-tableContainer-div">
                 <h2>Recent Covid-19 alerts</h2>
+                <AlertsTable />
             </div>
 
         </div>
