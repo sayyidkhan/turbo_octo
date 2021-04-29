@@ -1,0 +1,3000 @@
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 201634, "location_name": "Liam Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 701810, "location_name": "Noah Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 260702, "location_name": "Oliver Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 276282, "location_name": "William Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 222470, "location_name": "Elijah Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 371330, "location_name": "James Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 620676, "location_name": "Benjamin Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 490748, "location_name": "Lucas Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 271536, "location_name": "Mason Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 757467, "location_name": "Ethan MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 409165, "location_name": "Alexander Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 293841, "location_name": "Henry MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 224626, "location_name": "Jacob Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 712757, "location_name": "Michael Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 683601, "location_name": "Daniel MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 959395, "location_name": "Logan Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 658836, "location_name": "Jackson MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 325746, "location_name": "Sebastian Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 499721, "location_name": "Jack MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 891208, "location_name": "Aiden MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 968423, "location_name": "Owen Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 487209, "location_name": "Samuel Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 101351, "location_name": "Matthew MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 777158, "location_name": "Joseph MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 318990, "location_name": "Levi Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 702810, "location_name": "Mateo Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 611843, "location_name": "David Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 822194, "location_name": "John Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 414292, "location_name": "Wyatt Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 186907, "location_name": "Carter Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 286567, "location_name": "Julian MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 448982, "location_name": "Luke MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 128830, "location_name": "Grayson MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 425370, "location_name": "Isaac Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 735224, "location_name": "Jayden MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 298360, "location_name": "Theodore Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 630683, "location_name": "Gabriel Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 802499, "location_name": "Anthony Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 172681, "location_name": "Dylan Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 535661, "location_name": "Leo Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 456826, "location_name": "Lincoln MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 210630, "location_name": "Jaxon Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 241746, "location_name": "Asher Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 988171, "location_name": "Christopher Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 176827, "location_name": "Josiah Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 856299, "location_name": "Andrew Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 331618, "location_name": "Thomas Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 911439, "location_name": "Joshua Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 727423, "location_name": "Ezra MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 835308, "location_name": "Hudson MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 654044, "location_name": "Charles Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 567400, "location_name": "Caleb Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 262489, "location_name": "Isaiah MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 141653, "location_name": "Ryan Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 975880, "location_name": "Nathan Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 435390, "location_name": "Adrian MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 763344, "location_name": "Christian Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 114336, "location_name": "Maverick Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 227137, "location_name": "Colton MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 868828, "location_name": "Elias Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 150148, "location_name": "Aaron Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 587055, "location_name": "Eli MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 109599, "location_name": "Landon MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 288006, "location_name": "Jonathan MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 665949, "location_name": "Nolan MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 855642, "location_name": "Hunter Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 875628, "location_name": "Cameron Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 145644, "location_name": "Connor Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 541585, "location_name": "Santiago MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 436576, "location_name": "Jeremiah Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 435933, "location_name": "Ezekiel Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 376978, "location_name": "Angel Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 409183, "location_name": "Roman Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 923225, "location_name": "Easton Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 526858, "location_name": "Miles MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 787899, "location_name": "Robert Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 848959, "location_name": "Jameson MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 345494, "location_name": "Nicholas Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 698301, "location_name": "Greyson Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 395038, "location_name": "Cooper Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 891103, "location_name": "Ian Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 938520, "location_name": "Carson Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 394447, "location_name": "Axel Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 588074, "location_name": "Jaxson Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 162410, "location_name": "Dominic Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 198453, "location_name": "Leonardo MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 841919, "location_name": "Luca Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 272998, "location_name": "Austin Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 225193, "location_name": "Jordan MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 844362, "location_name": "Adam Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 791093, "location_name": "Xavier Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 444999, "location_name": "Jose MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 400632, "location_name": "Jace MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 135195, "location_name": "Everett MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 121143, "location_name": "Declan Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 937521, "location_name": "Evan Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 179165, "location_name": "Kayden Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 310692, "location_name": "Parker MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 123853, "location_name": "Wesley MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 271003, "location_name": "Kai Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 589268, "location_name": "Brayden MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 771208, "location_name": "Bryson Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 990636, "location_name": "Weston Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 357858, "location_name": "Jason Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 805215, "location_name": "Emmett MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 957313, "location_name": "Sawyer Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 945516, "location_name": "Silas MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 359856, "location_name": "Bennett MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 182197, "location_name": "Brooks Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 165439, "location_name": "Micah Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 729202, "location_name": "Damian Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 964887, "location_name": "Harrison Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 958015, "location_name": "Waylon MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 944879, "location_name": "Ayden Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 591606, "location_name": "Vincent Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 592865, "location_name": "Ryder Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 101450, "location_name": "Kingston Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 794466, "location_name": "Rowan Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 391635, "location_name": "George Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 121450, "location_name": "Luis Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 248075, "location_name": "Chase Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 485306, "location_name": "Cole Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 803812, "location_name": "Nathaniel Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 157709, "location_name": "Zachary MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 993418, "location_name": "Ashton MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 860672, "location_name": "Braxton MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 440763, "location_name": "Gavin MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 909473, "location_name": "Tyler Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 471546, "location_name": "Diego Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 119555, "location_name": "Bentley Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 896178, "location_name": "Amir Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 250850, "location_name": "Beau MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 533612, "location_name": "Gael MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 642159, "location_name": "Carlos Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 816617, "location_name": "Ryker MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 747078, "location_name": "Jasper MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 867021, "location_name": "Max Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 991215, "location_name": "Juan MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 119617, "location_name": "Ivan MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 974115, "location_name": "Brandon Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 614876, "location_name": "Jonah Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 867585, "location_name": "Giovanni Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 511638, "location_name": "Kaiden Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 968095, "location_name": "Myles Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 543749, "location_name": "Calvin MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 704070, "location_name": "Lorenzo Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 129244, "location_name": "Maxwell MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 115465, "location_name": "Jayce MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 184834, "location_name": "Kevin Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 583998, "location_name": "Legend Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 667792, "location_name": "Tristan MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 255639, "location_name": "Jesus Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 672690, "location_name": "Jude Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 427161, "location_name": "Zion Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 145587, "location_name": "Justin Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 291620, "location_name": "Maddox Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 699428, "location_name": "Abel Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 263271, "location_name": "King Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 758941, "location_name": "Camden Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 278276, "location_name": "Elliott Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 140074, "location_name": "Malachi Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 460928, "location_name": "Milo Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 914498, "location_name": "Emmanuel Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 590863, "location_name": "Karter Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 635329, "location_name": "Rhett Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 676636, "location_name": "Alex Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 271534, "location_name": "August Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 519475, "location_name": "River Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 670580, "location_name": "Xander MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 931749, "location_name": "Antonio MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 337622, "location_name": "Brody Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 620977, "location_name": "Finn Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 839037, "location_name": "Elliot Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 826200, "location_name": "Dean Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 720626, "location_name": "Emiliano MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 102028, "location_name": "Eric Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 916699, "location_name": "Miguel Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 479302, "location_name": "Arthur MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 554294, "location_name": "Matteo Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 681755, "location_name": "Graham Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 842831, "location_name": "Alan MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 513611, "location_name": "Nicolas Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 707882, "location_name": "Blake Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 746321, "location_name": "Thiago Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 375339, "location_name": "Adriel Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 386399, "location_name": "Victor MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 366627, "location_name": "Joel Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 975078, "location_name": "Timothy MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 237710, "location_name": "Hayden MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 242771, "location_name": "Judah Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 724895, "location_name": "Abraham Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 618023, "location_name": "Edward Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 137088, "location_name": "Messiah MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 754586, "location_name": "Zayden MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 547214, "location_name": "Theo Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 685117, "location_name": "Tucker Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 343320, "location_name": "Grant Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 955197, "location_name": "Richard MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 292745, "location_name": "Alejandro MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 762531, "location_name": "Steven Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 769238, "location_name": "Jesse Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 914681, "location_name": "Dawson MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 570889, "location_name": "Bryce MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 459821, "location_name": "Avery MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 147177, "location_name": "Oscar Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 685577, "location_name": "Patrick MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 654479, "location_name": "Archer Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 668715, "location_name": "Barrett MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 275092, "location_name": "Leon Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 651814, "location_name": "Colt Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 566690, "location_name": "Charlie Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 265341, "location_name": "Peter Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 721542, "location_name": "Kaleb Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 918716, "location_name": "Lukas MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 576476, "location_name": "Beckett MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 920686, "location_name": "Jeremy Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 548075, "location_name": "Preston MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 930480, "location_name": "Enzo Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 616005, "location_name": "Luka Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 202756, "location_name": "Andres Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 255802, "location_name": "Marcus Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 861956, "location_name": "Felix MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 543687, "location_name": "Mark Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 977768, "location_name": "Ace MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 986544, "location_name": "Brantley Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 550288, "location_name": "Atlas Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 872676, "location_name": "Remington MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 539850, "location_name": "Maximus Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 476735, "location_name": "Matias Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 243464, "location_name": "Walker MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 667971, "location_name": "Kyrie Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 362382, "location_name": "Griffin Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 488908, "location_name": "Kenneth Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 764084, "location_name": "Israel Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 775435, "location_name": "Javier Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 164653, "location_name": "Kyler Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 571718, "location_name": "Jax Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 941846, "location_name": "Amari Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 180564, "location_name": "Zane Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 333235, "location_name": "Emilio Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 674475, "location_name": "Knox Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 406681, "location_name": "Adonis MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 980813, "location_name": "Aidan Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 818895, "location_name": "Kaden MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 418930, "location_name": "Paul Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 139353, "location_name": "Omar MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 178182, "location_name": "Brian Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 883542, "location_name": "Louis MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 133249, "location_name": "Caden Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 823008, "location_name": "Maximiliano MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 586878, "location_name": "Holden Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 702547, "location_name": "Paxton MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 451190, "location_name": "Nash Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 168054, "location_name": "Bradley MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 993075, "location_name": "Bryan Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 391565, "location_name": "Simon MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 448482, "location_name": "Phoenix Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 328272, "location_name": "Lane MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 302843, "location_name": "Josue MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 149345, "location_name": "Colin MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 529811, "location_name": "Rafael Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 473630, "location_name": "Kyle Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 245021, "location_name": "Riley MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 711335, "location_name": "Jorge MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 879290, "location_name": "Beckham Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 614100, "location_name": "Cayden Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 960642, "location_name": "Jaden Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 248258, "location_name": "Emerson Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 630024, "location_name": "Ronan Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 607906, "location_name": "Karson Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 832032, "location_name": "Arlo Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 442806, "location_name": "Tobias MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 388482, "location_name": "Brady MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 460273, "location_name": "Clayton MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 800870, "location_name": "Francisco Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 513447, "location_name": "Zander MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 817688, "location_name": "Erick MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 397850, "location_name": "Walter Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 954572, "location_name": "Daxton Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 563008, "location_name": "Cash Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 830736, "location_name": "Martin MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 735952, "location_name": "Damien Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 214662, "location_name": "Dallas Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 329668, "location_name": "Cody MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 154161, "location_name": "Chance Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 805467, "location_name": "Jensen MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 254989, "location_name": "Finley Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 123040, "location_name": "Jett Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 787631, "location_name": "Corbin Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 853953, "location_name": "Kash Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 669251, "location_name": "Reid Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 356326, "location_name": "Kameron Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 812704, "location_name": "Andre Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 919944, "location_name": "Gunner Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 636833, "location_name": "Jake Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 117702, "location_name": "Hayes Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 723027, "location_name": "Manuel Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 928623, "location_name": "Prince MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 289062, "location_name": "Bodhi MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 721882, "location_name": "Cohen Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 931036, "location_name": "Sean MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 396700, "location_name": "Khalil MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 470563, "location_name": "Hendrix Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 889773, "location_name": "Derek Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 124226, "location_name": "Cristian Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 662724, "location_name": "Cruz Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 703292, "location_name": "Kairo Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 668626, "location_name": "Dante MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 874818, "location_name": "Atticus Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 386124, "location_name": "Killian Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 354194, "location_name": "Stephen Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 234849, "location_name": "Orion Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 495099, "location_name": "Malakai Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 627417, "location_name": "Ali MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 216569, "location_name": "Eduardo Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 802087, "location_name": "Fernando Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 546745, "location_name": "Anderson Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 520796, "location_name": "Angelo Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 582558, "location_name": "Spencer Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 947075, "location_name": "Gideon MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 270659, "location_name": "Mario Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 921341, "location_name": "Titus MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 673572, "location_name": "Travis Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 299470, "location_name": "Rylan MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 646104, "location_name": "Kayson Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 107202, "location_name": "Ricardo MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 685272, "location_name": "Tanner Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 299826, "location_name": "Malcolm Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 734206, "location_name": "Raymond MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 464773, "location_name": "Odin Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 368208, "location_name": "Cesar Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 749274, "location_name": "Lennox MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 365776, "location_name": "Joaquin MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 883792, "location_name": "Kane Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 332329, "location_name": "Wade Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 533225, "location_name": "Muhammad Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 878870, "location_name": "Iker Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 929149, "location_name": "Jaylen Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 775470, "location_name": "Crew Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 624750, "location_name": "Zayn MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 646955, "location_name": "Hector MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 223752, "location_name": "Ellis Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 127774, "location_name": "Leonel Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 929233, "location_name": "Cairo Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 464752, "location_name": "Garrett MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 881534, "location_name": "Romeo Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 106178, "location_name": "Dakota MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 682996, "location_name": "Edwin Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 353283, "location_name": "Warren Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 974813, "location_name": "Julius Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 179822, "location_name": "Major Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 163196, "location_name": "Donovan Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 859547, "location_name": "Caiden Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 709313, "location_name": "Tyson MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 937732, "location_name": "Nico MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 859537, "location_name": "Sergio Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 687799, "location_name": "Nasir Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 276973, "location_name": "Rory Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 416449, "location_name": "Devin MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 244341, "location_name": "Jaiden MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 276020, "location_name": "Jared Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 103295, "location_name": "Kason MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 386321, "location_name": "Malik Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 143825, "location_name": "Jeffrey MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 848324, "location_name": "Ismael MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 913550, "location_name": "Elian MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 954319, "location_name": "Marshall Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 814387, "location_name": "Lawson MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 731351, "location_name": "Desmond Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 277211, "location_name": "Winston Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 684758, "location_name": "Nehemiah MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 559861, "location_name": "Ari MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 326756, "location_name": "Conner MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 611026, "location_name": "Jay Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 730256, "location_name": "Kade Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 578088, "location_name": "Andy MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 339777, "location_name": "Johnny Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 930672, "location_name": "Jayceon MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 404607, "location_name": "Marco MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 816822, "location_name": "Seth Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 946557, "location_name": "Ibrahim Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 259045, "location_name": "Raiden MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 501841, "location_name": "Collin Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 869944, "location_name": "Edgar MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 967384, "location_name": "Erik MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 417766, "location_name": "Troy Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 186882, "location_name": "Clark Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 648906, "location_name": "Jaxton Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 375036, "location_name": "Johnathan MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 924078, "location_name": "Gregory Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 830502, "location_name": "Russell Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 830818, "location_name": "Royce Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 285488, "location_name": "Fabian MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 575073, "location_name": "Ezequiel MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 877630, "location_name": "Noel Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 240911, "location_name": "Pablo MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 114727, "location_name": "Cade Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 388545, "location_name": "Pedro Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 469694, "location_name": "Sullivan MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 689422, "location_name": "Trevor MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 689897, "location_name": "Reed Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 997365, "location_name": "Quinn Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 132921, "location_name": "Frank Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 780620, "location_name": "Harvey MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 731271, "location_name": "Princeton Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 976336, "location_name": "Zayne MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 193176, "location_name": "Matthias Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 916564, "location_name": "Conor Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 482154, "location_name": "Sterling MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 450428, "location_name": "Dax MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 215036, "location_name": "Grady Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 298183, "location_name": "Cyrus Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 450748, "location_name": "Gage Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 747467, "location_name": "Leland Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 769154, "location_name": "Solomon Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 802781, "location_name": "Emanuel Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 181253, "location_name": "Niko MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 360719, "location_name": "Ruben Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 388933, "location_name": "Kasen Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 420570, "location_name": "Mathias MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 420652, "location_name": "Kashton Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 844189, "location_name": "Franklin MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 608355, "location_name": "Remy Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 546910, "location_name": "Shane Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 882220, "location_name": "Kendrick Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 825690, "location_name": "Shawn Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 455424, "location_name": "Otto MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 774474, "location_name": "Armani Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 647170, "location_name": "Keegan Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 339640, "location_name": "Finnegan Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 852291, "location_name": "Memphis MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 944997, "location_name": "Bowen MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 536567, "location_name": "Dominick Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 450320, "location_name": "Kolton Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 649942, "location_name": "Jamison Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 561727, "location_name": "Allen MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 459948, "location_name": "Philip Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 277520, "location_name": "Tate MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 436033, "location_name": "Peyton Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 843680, "location_name": "Jase MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 111115, "location_name": "Oakley Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 807184, "location_name": "Rhys Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 557104, "location_name": "Kyson MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 949854, "location_name": "Adan Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 447495, "location_name": "Esteban Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 330975, "location_name": "Dalton MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 408254, "location_name": "Gianni Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 279157, "location_name": "Callum Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 225497, "location_name": "Sage Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 302860, "location_name": "Alexis MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 535076, "location_name": "Milan Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 667765, "location_name": "Moises Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 933000, "location_name": "Jonas Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 905550, "location_name": "Uriel Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 845570, "location_name": "Colson Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 740734, "location_name": "Marcos Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 509493, "location_name": "Zaiden MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 388587, "location_name": "Hank MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 507911, "location_name": "Damon Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 803666, "location_name": "Hugo Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 779913, "location_name": "Ronin Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 946929, "location_name": "Royal Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 251524, "location_name": "Kamden Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 221306, "location_name": "Dexter Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 457634, "location_name": "Luciano Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 888910, "location_name": "Alonzo Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 519054, "location_name": "Augustus Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 637941, "location_name": "Kamari Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 108255, "location_name": "Eden Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 901165, "location_name": "Roberto Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 743387, "location_name": "Baker MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 440681, "location_name": "Bruce Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 296435, "location_name": "Kian Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 991253, "location_name": "Albert Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 204346, "location_name": "Frederick MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 464761, "location_name": "Mohamed Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 669743, "location_name": "Abram Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 617044, "location_name": "Omari MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 552208, "location_name": "Porter Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 847180, "location_name": "Enrique Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 325837, "location_name": "Alijah MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 949320, "location_name": "Francis Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 188829, "location_name": "Leonidas Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 280254, "location_name": "Zachariah MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 158446, "location_name": "Landen Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 934617, "location_name": "Wilder MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 911546, "location_name": "Apollo Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 886976, "location_name": "Santino Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 149272, "location_name": "Tatum Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 919565, "location_name": "Pierce MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 732853, "location_name": "Forrest MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 740143, "location_name": "Corey Hospital"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 790265, "location_name": "Derrick Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 948397, "location_name": "Isaias Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 989412, "location_name": "Kaison Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 738426, "location_name": "Kieran MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 396937, "location_name": "Arjun MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 395373, "location_name": "Gunnar MRT Station"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 822771, "location_name": "Rocco Shopping Centre"
+});
+//records
+db = db.getSiblingDB('demo');
+db.locations.insert({
+    "_id":  ObjectId() ,
+    "location_id": 421653, "location_name": "Emmitt Shopping Centre"
+});
