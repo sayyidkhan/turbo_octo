@@ -27,7 +27,6 @@ export default function Home() {
                 <h2>Recent Covid-19 alerts</h2>
                 <AlertsTable />
             </div>
-
         </div>
     )
 }
