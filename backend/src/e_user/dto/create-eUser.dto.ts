@@ -1,5 +1,5 @@
 export class CreateEnterpriseUserDto {
-    eNRIC : string;
+    e_nric : string;
     firstName : string;
     lastName : string;
     password : string;

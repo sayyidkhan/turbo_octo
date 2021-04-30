@@ -9,9 +9,9 @@ import {E_UserService} from "./e_User.service";
 export class E_UserController {
     constructor(private readonly e_UserService: E_UserService) {}
 
-    @Get(':eNRIC')
-    async getUserByEnterpriseNRIC(@Param('eNRIC') eNRIC: string): Promise<E_User> {
-        console.log("get eNRIC:" + eNRIC);
+    @Get(':e_nric')
+    async getUserByEnterpriseNRIC(@Param('e_nric') eNRIC: string): Promise<E_User> {
+        console.log("get e_nric:" + eNRIC);
         return this.e_UserService.getEnterpriseUserById(eNRIC);
     }
 
@@ -25,7 +25,7 @@ export class E_UserController {
     async createNewEnterpriseUser(@Body() createEnterpriseUserDto: CreateEnterpriseUserDto): Promise<E_User> {
         console.log("e_user DTO received successfully...");
         return this.e_UserService.createNewEnterpriseUser(
-            createEnterpriseUserDto.eNRIC,
+            createEnterpriseUserDto.e_nric,
             createEnterpriseUserDto.firstName,
             createEnterpriseUserDto.lastName,
             createEnterpriseUserDto.password,
@@ -33,17 +33,17 @@ export class E_UserController {
         );
     }
 
-    @Patch(':eNRIC')
-    async updateEnterpriseUser(@Param('eNRIC') eNRIC: string, @Body() updateUserDto: UpdateEnterpriseUserDto): Promise<E_User> {
+    @Patch(':e_nric')
+    async updateEnterpriseUser(@Param('e_nric') eNRIC: string, @Body() updateUserDto: UpdateEnterpriseUserDto): Promise<E_User> {
         return this.e_UserService.updateEnterpriseUser(eNRIC, updateUserDto);
     }
 
-    @Delete(':eNRIC')
-    async deleteEnterpriseUserByNRIC(@Param('eNRIC') eNRIC: string): Promise<string> {
-        console.log("deleted eNRIC:" + eNRIC);
+    @Delete(':e_nric')
+    async deleteEnterpriseUserByNRIC(@Param('e_nric') eNRIC: string): Promise<string> {
+        console.log("deleted e_nric:" + eNRIC);
         const eUser : E_User = await this.e_UserService.deleteEnterpriseUserById(eNRIC);
         if(eUser != null) {
-            return  eUser.eNRIC;
+            return  eUser.e_nric;
         }
         throw new HttpException("unable to find username to delete",HttpStatus.BAD_REQUEST);
     }

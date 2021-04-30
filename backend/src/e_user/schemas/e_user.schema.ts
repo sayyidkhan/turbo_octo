@@ -6,7 +6,7 @@ export type E_UserDocument = E_User & Document;
 @Schema()
 export class E_User {
     @Prop()
-    eNRIC: string;
+    e_nric: string;
 
     @Prop()
     firstName: string;

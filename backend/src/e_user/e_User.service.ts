@@ -10,7 +10,7 @@ export class E_UserService {
     constructor(private readonly e_UserRepository: E_UserRepository) {}
 
     async getEnterpriseUserById(eNRIC: string): Promise<E_User> {
-        return this.e_UserRepository.findOne({ eNRIC : eNRIC })
+        return this.e_UserRepository.findOne({ e_nric : eNRIC })
     }
 
     async getAllEnterpriseUser(): Promise<E_User[]> {
@@ -24,7 +24,7 @@ export class E_UserService {
         password: string,
         adminType: string,): Promise<E_User> {
         return this.e_UserRepository.create({
-            eNRIC : eNric,
+            e_nric : eNric,
             firstName : firstName,
             lastName : lastName,
             password : password,
@@ -33,7 +33,7 @@ export class E_UserService {
     }
 
     async updateEnterpriseUser(eNRIC: string, euserUpdates: UpdateEnterpriseUserDto): Promise<E_User> {
-        return this.e_UserRepository.findOneAndUpdate({ eNRIC : eNRIC }, euserUpdates);
+        return this.e_UserRepository.findOneAndUpdate({ e_nric : eNRIC }, euserUpdates);
     }
 
     async deleteEnterpriseUserById(eNRIC: string): Promise<E_User> {
