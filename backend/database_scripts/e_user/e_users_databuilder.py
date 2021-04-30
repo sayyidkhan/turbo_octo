@@ -11,7 +11,7 @@ def main():
     table_name = "e_users"
     csv_filepath = f"{table_name}_datasets.csv"
     mongodbtxt_filepath = f"{table_name}_mongodbscript.txt"
-    #name should be the table name in mongodb
+    #location_name should be the table location_name in mongodb
     js_filename = table_name
 
     #logic for the program

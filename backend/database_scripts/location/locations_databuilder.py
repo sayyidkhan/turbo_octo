@@ -10,7 +10,7 @@ def main():
     # Give the location of the file, must be stored in the sub-folder or the code will break
     csv_filepath = "locations_datasets.csv"
     mongodbtxt_filepath = "locations_mongodbscript.txt"
-    #name should be the table name in mongodb
+    #location_name should be the table location_name in mongodb
     js_filename = "locations"
 
     #logic for the program

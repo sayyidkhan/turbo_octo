@@ -1,4 +1,4 @@
-//demo is the name of our database
+//demo is the location_name of our database
 db = db.getSiblingDB('demo');
 db.e_users.insert({
     "_id":  ObjectId() ,
