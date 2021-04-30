@@ -1,6 +1,8 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
+# https://elanderson.net/2020/06/github-use-actions-to-run-multiple-jobs/
+
 name: Node.js CI
 
 on:
@@ -28,5 +30,6 @@ jobs:
         run: npm install
         working-directory: backend
 
+      - name: Build
       - run: npm run build
         working-directory: backend
