@@ -51,6 +51,7 @@
 
 .menuNav.showMenu {
   width: 100%;
+  padding-top: 80px;
 }
 
 .menuNav a {
@@ -87,7 +88,7 @@
   /* end */
 }
 
-.home-public-header-div>h1 {
+.home-public-header-div h1 {
   color: #7f7f7f;
 }
 
@@ -130,6 +131,10 @@
 
 #images{
   text-align:center;
+}
+
+.toHide {
+  display: none;
 }
 
 /* =========================== Main page specific end ================================== */
