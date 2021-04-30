@@ -9,16 +9,16 @@ export class E_User {
     e_nric: string;
 
     @Prop()
-    firstName: string;
+    firstname: string;
 
     @Prop()
-    lastName: string;
+    lastname: string;
 
     @Prop()
     password: string;
 
     @Prop()
-    adminType: string;
+    admintype: string;
 
 }
 

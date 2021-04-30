@@ -26,10 +26,10 @@ export class E_UserController {
         console.log("e_user DTO received successfully...");
         return this.e_UserService.createNewEnterpriseUser(
             createEnterpriseUserDto.e_nric,
-            createEnterpriseUserDto.firstName,
-            createEnterpriseUserDto.lastName,
+            createEnterpriseUserDto.firstname,
+            createEnterpriseUserDto.lastname,
             createEnterpriseUserDto.password,
-            createEnterpriseUserDto.adminType,
+            createEnterpriseUserDto.admintype,
         );
     }
 

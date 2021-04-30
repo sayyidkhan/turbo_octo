@@ -25,10 +25,10 @@ export class E_UserService {
         adminType: string,): Promise<E_User> {
         return this.e_UserRepository.create({
             e_nric : eNric,
-            firstName : firstName,
-            lastName : lastName,
+            firstname : firstName,
+            lastname : lastName,
             password : password,
-            adminType: adminType,
+            admintype: adminType,
         });
     }
 
