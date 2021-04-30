@@ -11,7 +11,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  #first job
+  build_backend:
+    name: Build backend
     runs-on: ubuntu-latest
 
     steps:
