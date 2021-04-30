@@ -73,5 +73,6 @@ export function LocationTable(props: any) {
             </Box>
         </Box>
     );
+    //return (listing.length !== 0 ) ? <TabularData myList={listing} /> : noItemToDisplay;
     return (listing.length !== 0 ) ? <TabularData myList={listing} /> : noItemToDisplay;
 }

@@ -3,6 +3,7 @@ import '../login/Login.css';
 import axios from "axios";
 import {getAllLocations} from "./api/location_api";
 import {LocationTable} from "./BasicTableComponent";
+import PaginationTableComponent from "./PaginationTableComponent";
 
 
 function DisplayLocationNo(props: { status: number, totalNoOfLocations: number }) {
@@ -39,7 +40,8 @@ export class LocationListComponent extends Component {
         return(
             <div>
                 <DisplayLocationNo status={this.state.status} totalNoOfLocations={this.state.totalNoOfLocations}/>
-                <LocationTable myList={this.state.result}/>
+                {/*<LocationTable myList={this.state.result}/>*/}
+                <PaginationTableComponent myList={this.state.result}/>
             </div>
         );
     }
