@@ -66,7 +66,7 @@ export default function Navbar(props : any){
       }
   ];
 
-  const [navbarOpen, setNavbarOpen] = useState(userType == "public"  || userType == "" ? false : true);
+  const [navbarOpen, setNavbarOpen] = useState(userType === "public"  || userType === "" ? false : true);
 
   const handleToggle = () => {
       setNavbarOpen(prev => !prev)
@@ -89,7 +89,7 @@ export default function Navbar(props : any){
 
   return (
       <nav className="navBar">
-      <button onClick={handleToggle} className={userType == "public" ? "toShow" : "toHide"}>
+      <button onClick={handleToggle} className={userType === "public" ? "toShow" : "toHide"}>
         {
           navbarOpen ? 
           <MdClose 
@@ -107,7 +107,7 @@ export default function Navbar(props : any){
               <NavLink 
                 to={link.path} 
                 activeClassName="active-link"
-                onClick={userType == "public" ? () => closeMenu() : link.text == "Logout" ? () => logoutAction() : () => doNothing()}
+                onClick={userType === "public" ? () => closeMenu() : link.text === "Logout" ? () => logoutAction() : () => doNothing()}
                 exact>
                 {link.text}
               </NavLink>

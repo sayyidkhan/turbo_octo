@@ -1,14 +1,11 @@
-import {Component, useState} from "react";
+import {Component} from "react";
 import axios from 'axios';
 import './Login.css';
 import history from '../../history';
+
 //import api
 
 export class LoginFormComponent extends Component {
-
-    constructor(props : any) {
-        super(props);
-    }
 
     state = {
         'username': '',

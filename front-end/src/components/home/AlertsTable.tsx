@@ -1,5 +1,4 @@
 import {Component} from "react";
-import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -22,10 +21,6 @@ const rows = [
 ];
 
 export class AlertsTable extends Component {
-
-    constructor(props : any) {
-        super(props);
-    }
 
     render () {
         return (
