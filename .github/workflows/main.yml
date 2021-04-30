@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  #first job
+  #first CI job
   build_backend:
     name: Build backend
     runs-on: ubuntu-latest
@@ -21,7 +21,10 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - run: npm install
+
+      - name: Install Dependencies
+        run: npm install
         working-directory: backend
+
       - run: npm run build
         working-directory: backend
