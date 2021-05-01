@@ -8,39 +8,25 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
-import './Home.css';
 
-interface AlertColumn {
-    id: 'alertTitle' | 'alertDetail' | 'alertDate' | 'active' | 'location_id';
+/* Checked-in table */ 
+interface CTraceColumn {
+    id: 'ct_id' | 'p_nric' | 'location_id' | 'date';
     label: string;
     minWidth?: number;
     align?: 'left';
     format?: (value: number) => string;
 }
 
-const columns: AlertColumn[] = [
-    { id: 'alertDate', label: 'Reported date', minWidth: 80 },
+const columns: CTraceColumn[] = [
+    { id: 'date', label: 'Checked-in date', minWidth: 80 },
     { id: 'location_id', label: 'Location', minWidth: 80 },
-    { id: 'alertDetail', label: 'Details', minWidth: 200 },
-    { id: 'alertTitle', label: 'Alert', minWidth: 60 },
-    { id: 'active', label: 'Active', minWidth: 80 },
+    { id: 'p_nric', label: 'NRIC', minWidth: 80 },
 ];
 
-function checkBoolean(x: string) {
-    if (x=="true")
-    {
-        return "Yes";
-    }
-    else
-    {
-        return "No";
-    }
-}
-
-function createData(parameters: { alertTitle: string, alertDetail: string, alertDate: number, active: string, location_id: number, alertListId: number }) {
-    let {alertTitle, alertDetail, alertDate, active, location_id, alertListId} = parameters;
-    active = active.toString();
-    return { alertTitle: alertTitle, alertDetail: alertDetail, alertDate: alertDate, active: checkBoolean(active), location_id: location_id, alertListId: alertListId };
+function createData(parameters: { ct_id: number, p_nric: string, location_id: number, date: number}) {
+    let {ct_id, p_nric, location_id, date} = parameters;
+    return { ct_id: ct_id, p_nric: p_nric, location_id: location_id, date: date };
 }
 
 const useStyles = makeStyles({
@@ -52,7 +38,7 @@ const useStyles = makeStyles({
     },
 });
 
-export default function AlertsPaginationTableComponent(props : any) {
+export default function CTPagination(props : any) {
     const classes = useStyles();
     const [page, setPage] = React.useState(0);
     const [rowsPerPage, setRowsPerPage] = React.useState(10);
@@ -66,16 +52,12 @@ export default function AlertsPaginationTableComponent(props : any) {
         setPage(0);
     };
 
-    function createRows() : { alertTitle: string, alertDetail: string, alertDate: number, active: string, location_id: number, alertListId: number }[] {
-        const myListing : any[] = props.myList;
-        const result = myListing.map(data => createData(data));
-        return (myListing.length !== 0) ? result : [];
+    function createRows() : { ct_id: number, p_nric: string, location_id: number, date: number }[] {
+        const myListing1 : any[] = props.myList;
+        const result = myListing1.map(data => createData(data));
+        return (myListing1.length !== 0) ? result : [];
     }
 
-    /*
-    {classes.root}
-    {classes.container}
-    */
     return (
         <Paper className={classes.root}>
             <TableContainer className={classes.container}>
@@ -96,7 +78,7 @@ export default function AlertsPaginationTableComponent(props : any) {
                     <TableBody>
                         {createRows().slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row ) => {
                             return (
-                                <TableRow hover role="checkbox" tabIndex={-1} key={row.alertListId}>
+                                <TableRow hover role="checkbox" tabIndex={-1} key={row.ct_id}>
                                     {columns.map((column) => {
                                         const value = row[column.id];
                                         return (

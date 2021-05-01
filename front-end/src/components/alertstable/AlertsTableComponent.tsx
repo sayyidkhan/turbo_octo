@@ -1,8 +1,7 @@
 import {Component} from "react";
-import {alertlisthome} from "./api/homealerts_api";
+import {alertlist} from "./api/alertstable_api";
 import axios from "axios";
 import AlertsPaginationTableComponent from "./AlertsPaginationTableComponent";
-import {HomeAlertsTable} from "./HomeBasicTableComponent";
 
 function DisplayAlertNo(props: { status: number, totalNoofAlerts: number }) {
     return <div>
@@ -21,7 +20,7 @@ export class AlertsTable extends Component {
     }
 
     async componentDidMount() {
-        await alertlisthome().then(res => {
+        await alertlist().then(res => {
             const totalNoofAlerts : number = this.gettotalNoofAlerts(res.data);
             this.setState({result : res.data , totalNoofAlerts : totalNoofAlerts, status : res.status });
         }).catch(err => {

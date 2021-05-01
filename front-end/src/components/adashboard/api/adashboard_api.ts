@@ -5,6 +5,11 @@ export const alertlistadmin: () => Promise<any> = async () => {
     return result;
 }
 
+export const ctracingadmin: () => Promise<any> = async () => {
+    const result = await API.get('/c_tracing' );
+    return result;
+}
+
 export const postNewUser_API: (stateObject : any) => Promise<any> = async (stateObject : any) => {
     const result = await API.post('/users' ,stateObject);
     return result;

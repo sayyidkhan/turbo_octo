@@ -1,11 +1,17 @@
-.root {
-    min-width: 300px;
-}
-
-.table-div {
-    padding-left: 50px;
-    padding-bottom: 50px;
-    z-index: 10;
-    overflow: auto;
-    max-width: 100%;
-}
+/* =========================== Admin page specific===================================== */
+.admin-container {
+    margin-right: 0px;
+  }
+  
+  .admin-tableContainer-div {
+    background-color: #ffffff;
+    min-width: 850px;
+    height: 100%;
+    /* end */
+    border-radius: 25px;
+  }
+  
+  .admin-tableContainer-div>h2 {
+    margin-left: 20px;
+    color: #ff0000;
+  }

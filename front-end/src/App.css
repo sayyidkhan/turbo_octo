@@ -74,7 +74,7 @@
 }
 
 /* =========================== Admin page specific===================================== */
-.admin-container {
+.admin-container-general {
   margin-left: 300px;
 }
 
@@ -88,9 +88,9 @@
 
 .admin-tableContainer-div>h2 {
   margin-left: 20px;
-  color: #ff0000;
+  color: #ff0000
+  ;
 }
-
 /* =========================== Home page specific===================================== */
 
 

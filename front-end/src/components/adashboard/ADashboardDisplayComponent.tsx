@@ -1,19 +1,12 @@
-import React from 'react';
-import '../App.css';
-import {AlertsTable} from '../components/adashboard/ADashboardTableComponent';
-import {CTTable} from '../components/adashboard/CTTableComponent';
+import {Component} from "react";
+import {AlertsTable} from './ADashboardTableComponent';
+import {CTTable} from './CTTableComponent';
 import {Box} from "@material-ui/core"
-/*
-import {AlertsTable} from '../components/adashboard/ADashboardTableComponent';
-import {Box} from "@material-ui/core";
-*/
-import {AdminDashboard} from '../components/adashboard/ADashboardDisplayComponent';
+import './adashboard.css';
 
-export default function Dashboard() {
-    return (
-        <div className="admin-container-general">
-            <h1>Dashboard</h1>
-            You are logged in XXXX.
+export class AdminDashboard extends Component {
+    render() {
+        return (
             <div className="admin-container">
                 <div className="admin-tableContainer-div">
                     <h2>Advisory from healthcare department</h2>
@@ -71,6 +64,6 @@ export default function Dashboard() {
                     {/*</Container>*/}
                 </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
