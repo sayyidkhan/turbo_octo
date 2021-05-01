@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import {getUsers_API} from "../../services/about/about_api";
+
 import {ScrollerComponent} from "./scroller/ScrollerComponent";
-
-
+import {getUsers_API} from "./api/about_api";
 
 
 export class UserListComponent extends Component {

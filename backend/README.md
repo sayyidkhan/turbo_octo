@@ -37,8 +37,7 @@ https://www.youtube.com/watch?v=hvbIGDlrGJk
 
 only 20 mins to learn mongoDB + Node.JS
 
-Also go and download:
-
+#### Programs Required to debug backend and work with backend API:
 1. mongoDB compass (to view the database) (no setup is required, ard pre-configured)
 2. postman (to build the backend API to link with frontend)
 
@@ -80,15 +79,14 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
+## Load Database Scripts
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+Database scripts are located in database_scripts folders.
+load your database scripts from this folder.
 
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+```$xslt
+describe steps to load scripts here
+```
 
 ## License
 

@@ -1,36 +1,28 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter as Router, Link} from "react-router-dom";
+import {BrowserRouter as Router} from "react-router-dom";
 import Routes from "./routes";
-
-import enterLoc from './img/EnterLoc.png';
-import checkVaccCert from './img/CheckVaccCert.png';
+import Navbar from "./Navbar";
 
 function App() {
 
+  if(sessionStorage.getItem('userType') === null){
+    sessionStorage.setItem('userType', "public");
+  }
+
   return (
     <Router>
-      <div className="container">
-        <Router>
-          <h1>COVID-19 TURBO TRACING APP</h1>
-          <div className="main-public-inputs-div">
-            <a href="/about">
-              <img src={enterLoc} id="enterLoc-img" alt="Enter location"/>
-            </a>
-
-              <img src={checkVaccCert} id="checkVaccCert-img" alt="Check vaccination certificate"/>
-            <div>
-              <Link to="/about">hello</Link>
-            </div>
-            <Routes/>
-
-          </div>
-        </Router>
-      </div>
+      <Routes />
+      <Navbar />
     </Router>
   );
+<<<<<<< HEAD
 }   
 
 
+=======
+  
+}
+>>>>>>> ca2b45f53eca75b687e526f478a8cae590c4212f
 
 export default App;

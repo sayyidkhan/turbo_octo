@@ -1,6 +1,5 @@
 import {Component, useState} from "react";
 import axios from 'axios';
-import {postNewUser_API} from "../../services/about/about_api";
 import * as React from "react";
 
 

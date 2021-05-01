@@ -1,0 +1,11 @@
+.root {
+    min-width: 300px;
+}
+
+.table-div {
+    padding-left: 50px;
+    padding-bottom: 50px;
+    z-index: 10;
+    overflow: auto;
+    max-width: 100%;
+}

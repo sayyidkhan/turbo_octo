@@ -1,71 +1,159 @@
-.App {
-  text-align: center;
+/* =========================== Content container div ===================================== */
+
+.container {
+  padding: 1rem 40px;
+  display: flex;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* =========================== Nav visible link div ===================================== */
+.nav-show {
+  min-width: 250px;
+  height: 100%;
+  margin-right: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* =========================== Sidebar div ===================================== */
+
+.navBar {
+  position: relative;
 }
 
-/* =========================== Main page specific===================================== */
-
-.main-header {
-  background-color: #f7f7f7;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 18px;
-  color: #545454;
-  position: absolute;
-  top: 5%;
-  left: 50%;
-  transform: translate(-50%, -5%);
+.navBar button {
+  position: fixed;
+  left: 40px;
+  top: 40px;
+  z-index: 10;
+  cursor: pointer;
+  /* addition */
+  background: transparent;
+  border: none;
+  outline: none;
 }
 
-.main-public-inputs-div {
+.menuNav {
+  overflow-y: scroll;
+  list-style: none;
+  position: fixed;
+  top: 0;
+  background: #000000;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 0;
+  overflow: hidden;
+  max-width: 290px;
+  z-index: 9;
+  display: inline-block;
+  /* rectify unknown margin and padding */
+  margin-top: 0;
+  padding-left: 0px;
+}
+
+.menuNav.showMenu {
+  width: 100%;
+  padding-top: 80px;
+}
+
+.menuNav a {
+  display: block;
+  padding: 10px 50px;
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  outline: none;
+}
+
+.menuNav a:hover {
+  color: #f89933;
+}
+
+
+.menuNav li:first-child {
+  margin-top: 7rem;
+}
+
+/* =========================== Admin page specific===================================== */
+.admin-container {
+  margin-left: 300px;
+}
+
+.admin-tableContainer-div {
   background-color: #ffffff;
-  width: 650px;
-  height: 260px;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
+  min-width: 850px;
+  height: 100%;
+  /* end */
   border-radius: 25px;
 }
 
-#enterLoc-img {
-  display: inline-block;
+.admin-tableContainer-div>h2 {
+  margin-left: 20px;
+  color: #ff0000;
 }
 
-#checkVaccCert-img {
+/* =========================== Home page specific===================================== */
+
+
+.home-container {
+  padding: 4rem;
+  position: relative;
+}
+
+.home-public-header-div {
+  /* center */
+  display: table;
+  margin: 0px auto 0px auto;
+  /* end */
+}
+
+.home-public-header-div h1 {
+  color: #7f7f7f;
+}
+
+.home-imgContainer-div {
+  background-color: #ffffff;
+  min-width: 450px;
+  height: 260px;
+  /* center */
+  display: table;
+  margin: 0px auto 0px auto;
+  /* end */
+  border-radius: 25px;
+}
+
+.home-tableContainer-div {
+  background-color: #ffffff;
+  min-width: 1200px;
+  height: 100%;
+  /* center */
+  display: table;
+  margin: 20px auto 0px auto;
+  /* end */
+  border-radius: 25px;
+}
+
+.home-tableContainer-div>h2 {
+  margin-left: 20px;
+  color: #ff0000;
+}
+
+.home-img {
   display: inline-block;
+  margin-top: 55px;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+#images{
+  text-align:center;
+}
+
+.toHide {
+  display: none;
 }
 
 /* =========================== Main page specific end ================================== */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

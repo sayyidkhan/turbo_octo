@@ -3,16 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
-import {BrowserRouter as Router, Link} from "react-router-dom";
-import MainContainer from "./components/MainContainer";
-import Routes from "./routes";
+import {BrowserRouter as Router} from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <MainContainer />
-      <Routes />
+      <App />
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
