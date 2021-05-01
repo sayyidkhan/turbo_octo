@@ -73,6 +73,24 @@
   margin-top: 7rem;
 }
 
+/* =========================== Admin page specific===================================== */
+.admin-container {
+  margin-left: 300px;
+}
+
+.admin-tableContainer-div {
+  background-color: #ffffff;
+  min-width: 850px;
+  height: 100%;
+  /* end */
+  border-radius: 25px;
+}
+
+.admin-tableContainer-div>h2 {
+  margin-left: 20px;
+  color: #ff0000;
+}
+
 /* =========================== Home page specific===================================== */
 
 

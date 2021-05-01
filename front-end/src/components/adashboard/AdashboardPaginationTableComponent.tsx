@@ -8,7 +8,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
-import './Home.css';
+import './ADashboard.css';
 
 interface AlertColumn {
     id: 'alertTitle' | 'alertDetail' | 'alertDate' | 'active' | 'location_id';
@@ -52,7 +52,7 @@ const useStyles = makeStyles({
     },
 });
 
-export default function AlertsPaginationTableComponent(props : any) {
+export default function AdashboardPaginationTableComponent(props : any) {
     const classes = useStyles();
     const [page, setPage] = React.useState(0);
     const [rowsPerPage, setRowsPerPage] = React.useState(10);

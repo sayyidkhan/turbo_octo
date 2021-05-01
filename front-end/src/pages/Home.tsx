@@ -26,8 +26,8 @@ export default function Home() {
 
             <div className="home-tableContainer-div">
                 <h2>Recent Covid-19 alerts</h2>
-                <Box justifyContent="center" m={1} p={1} bgcolor="background.paper">
-                    <Box p={1} m={1} bgcolor="grey.100">
+                <Box justifyContent="center" m={1} p={0} bgcolor="background.paper">
+                    <Box p={1} m={1} bgcolor="white.100">
                         <AlertsTable />
                     </Box>
                 </Box>

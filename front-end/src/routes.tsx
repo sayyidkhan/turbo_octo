@@ -5,6 +5,7 @@ import {Login} from "./pages/Login";
 import {LocationListComponent} from "./components/location/LocationListComponent";
 import LocationList from "./pages/LocationList";
 import About from "./pages/About";
+import Dashboard from "./pages/Dashboard";
 
 export default function Routes(props: any) {
 
@@ -17,7 +18,7 @@ export default function Routes(props: any) {
             <Route path="/EnterLocation" />
             <Route path="/locationList" component={LocationList} />
             <Route path="/CheckVaccCert" />
-            <Route path="/Dashboard" />
+            <Route path="/Dashboard" component={Dashboard} />
             <Route path="/ContactTracing" />
             <Route path="/VaccinationRecords" />
             <Route path="/PublicAlerts" />
