@@ -25,7 +25,10 @@ export class LocationController {
   @Post()
   async createNewLocation(@Body() createLocationDto: CreateLocationDto): Promise<Location> {
       console.log("user DTO received successfully...");
-      return this.locationService.createNewLocation(createLocationDto.locationId, createLocationDto.locationName);
+      return this.locationService.createNewLocation(
+          createLocationDto.locationId,
+          createLocationDto.locationName,
+          createLocationDto.district);
   }
 
   // @Patch(':userId')
