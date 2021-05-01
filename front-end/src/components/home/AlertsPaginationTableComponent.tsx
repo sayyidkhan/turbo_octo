@@ -32,10 +32,21 @@ const columns: AlertColumn[] = [
     { id: 'location_id', label: 'Location', minWidth: 80 },
 ];
 
+function checkBoolean(x: string) {
+    if (x=="true")
+    {
+        return "Yes";
+    }
+    else
+    {
+        return "No";
+    }
+}
+
 function createData(parameters: { alertTitle: string, alertDetail: string, alertDate: number, active: string, location_id: number, alertListId: number }) {
     let {alertTitle, alertDetail, alertDate, active, location_id, alertListId} = parameters;
     active = active.toString();
-    return { alertTitle: alertTitle, alertDetail: alertDetail, alertDate: alertDate, active: active, location_id: location_id, alertListId: alertListId };
+    return { alertTitle: alertTitle, alertDetail: alertDetail, alertDate: alertDate, active: checkBoolean(active), location_id: location_id, alertListId: alertListId };
 }
 
 const useStyles = makeStyles({
