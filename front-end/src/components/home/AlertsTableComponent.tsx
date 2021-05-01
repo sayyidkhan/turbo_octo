@@ -1,8 +1,8 @@
 import {Component} from "react";
 import {alertlisthome} from "./api/homealerts_api";
-import {HomeAlertsTable} from "./HomeBasicTableComponent";
 import axios from "axios";
-import PaginationTableComponent from "./AlertsTablePagination";
+import AlertsPaginationTableComponent from "./AlertsPaginationTableComponent";
+import {HomeAlertsTable} from "./HomeBasicTableComponent";
 
 function DisplayAlertNo(props: { status: number, totalNoofAlerts: number }) {
     return <div>
@@ -38,8 +38,8 @@ export class AlertsTable extends Component {
         return(
             <div>
                 <DisplayAlertNo status={this.state.status} totalNoofAlerts={this.state.totalNoofAlerts}/>
-                {/*<LocationTable myList={this.state.result}/>*/}
-                <PaginationTableComponent myList={this.state.result}/>
+                {/*<HomeAlertsTable myList={this.state.result}/>*/}
+                <AlertsPaginationTableComponent myList={this.state.result}/>
             </div>
         );
     }

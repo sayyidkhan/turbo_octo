@@ -8,41 +8,34 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
+import './Home.css';
 
 interface AlertColumn {
     id: 'alertTitle' | 'alertDetail' | 'alertDate' | 'active' | 'location_id';
     label: string;
     minWidth?: number;
-    align?: 'right';
+    align?: 'left';
     format?: (value: number) => string;
 }
 
 const columns: AlertColumn[] = [
-    { id: 'alertTitle', label: 'Name', minWidth: 170 },
-    { id: 'alertDetail', label: 'ISO\u00a0Code', minWidth: 100 },
+    { id: 'alertTitle', label: 'Alert', minWidth: 60 },
     {
         id: 'alertDetail',
-        label: 'Population',
-        minWidth: 170,
-        align: 'right',
+        label: 'Details',
+        minWidth: 200,
+        align: 'left',
         format: (value: number) => value.toLocaleString('en-US'),
     },
-    { id: 'alertDate', label: 'ISO\u00a0Code', minWidth: 100 },
-    { id: 'active', label: 'ISO\u00a0Code', minWidth: 100 },
-    { id: 'location_id', label: 'ISO\u00a0Code', minWidth: 100 },
+    { id: 'alertDate', label: 'Reported date', minWidth: 80 },
+    { id: 'active', label: 'Active', minWidth: 80 },
+    { id: 'location_id', label: 'Location', minWidth: 80 },
 ];
 
-// interface Data {
-//     name: string;
-//     code: string;
-//     population: number;
-//     size: number;
-//     density: number;
-// }
-
-function createData(parameters: { alertTitle: string, alertDetail: string, alertDate: number, active: boolean, location_id: number }) {
-    let {alertTitle, alertDetail, alertDate, active, location_id} = parameters;
-    return { alertTitle: alertTitle, alertDetail: alertDetail, alertDate: alertDate, active: active, location_id: location_id };
+function createData(parameters: { alertTitle: string, alertDetail: string, alertDate: number, active: string, location_id: number, alertListId: number }) {
+    let {alertTitle, alertDetail, alertDate, active, location_id, alertListId} = parameters;
+    active = active.toString();
+    return { alertTitle: alertTitle, alertDetail: alertDetail, alertDate: alertDate, active: active, location_id: location_id, alertListId: alertListId };
 }
 
 const useStyles = makeStyles({
@@ -54,7 +47,7 @@ const useStyles = makeStyles({
     },
 });
 
-export default function PaginationTableComponent(props : any) {
+export default function AlertsPaginationTableComponent(props : any) {
     const classes = useStyles();
     const [page, setPage] = React.useState(0);
     const [rowsPerPage, setRowsPerPage] = React.useState(10);
@@ -68,12 +61,16 @@ export default function PaginationTableComponent(props : any) {
         setPage(0);
     };
 
-    function createRows() : { alertTitle: string, alertDetail: string, alertDate: number, active: boolean, location_id: number }[] {
+    function createRows() : { alertTitle: string, alertDetail: string, alertDate: number, active: string, location_id: number, alertListId: number }[] {
         const myListing : any[] = props.myList;
         const result = myListing.map(data => createData(data));
         return (myListing.length !== 0) ? result : [];
     }
 
+    /*
+    {classes.root}
+    {classes.container}
+    */
     return (
         <Paper className={classes.root}>
             <TableContainer className={classes.container}>
@@ -94,7 +91,7 @@ export default function PaginationTableComponent(props : any) {
                     <TableBody>
                         {createRows().slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row ) => {
                             return (
-                                <TableRow hover role="checkbox" tabIndex={-1} key={row.location_id}>
+                                <TableRow hover role="checkbox" tabIndex={-1} key={row.alertListId}>
                                     {columns.map((column) => {
                                         const value = row[column.id];
                                         return (

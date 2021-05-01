@@ -3,7 +3,8 @@ import '../App.css';
 
 import enterLoc from '../img/EnterLoc.png';
 import checkVaccCert from '../img/CheckVaccCert.png';
-import {AlertsTable} from '../components/home/AlertsTable';
+import {AlertsTable} from '../components/home/AlertsTableComponent';
+import {Box} from "@material-ui/core";
 
 export default function Home() {
     return (
@@ -25,7 +26,16 @@ export default function Home() {
 
             <div className="home-tableContainer-div">
                 <h2>Recent Covid-19 alerts</h2>
-                <AlertsTable />
+                <Box justifyContent="center" m={1} p={1} bgcolor="background.paper">
+                    <Box p={1} m={1} bgcolor="grey.100">
+                        <AlertsTable />
+                    </Box>
+                </Box>
+                {/*<Container>*/}
+                    {/*<Paper variant="outlined" >*/}
+                        {/**/}
+                    {/*</Paper>*/}
+                {/*</Container>*/}
             </div>
         </div>
     )
