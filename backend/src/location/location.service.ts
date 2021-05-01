@@ -17,10 +17,11 @@ export class LocationService {
         return this.locationRepository.find({});
     }
 
-    async createNewLocation(locationId: number, locationName: string): Promise<Location> {
+    async createNewLocation(locationId: number, locationName: string, district : string): Promise<Location> {
         return this.locationRepository.create({
             location_id : locationId,
             location_name : locationName,
+            district : district
         });
     }
 
