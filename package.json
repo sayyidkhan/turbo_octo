@@ -1,0 +1,23 @@
+{
+  "name": "turbo_octo",
+  "version": "1.0.0",
+  "description": "**React(Front-End)**<br/> **NestJS (Back-End)**<br/> **MongoDB (Database)**<br/> combined into a solid full stack boilerplate to kickstart your new projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sayyidkhan/turbo_octo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sayyidkhan/turbo_octo/issues"
+  },
+  "homepage": "https://github.com/sayyidkhan/turbo_octo#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
