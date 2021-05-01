@@ -1,11 +1,6 @@
 import API from '../../../services/api';
 
-export const alertlistadmin: () => Promise<any> = async () => {
-    const result = await API.get('/alertlist' );
-    return result;
-}
-
-export const ctracingadmin: () => Promise<any> = async () => {
+export const ctracinglist: () => Promise<any> = async () => {
     const result = await API.get('/c_tracing' );
     return result;
 }

@@ -1,13 +1,8 @@
 import React from 'react';
 import '../App.css';
-import {AlertsTable} from '../components/adashboard/ADashboardTableComponent';
-import {CTTable} from '../components/adashboard/CTTableComponent';
+import {AlertsTable} from '../components/alertstable/AlertsTableComponent';
+import {CTTable} from '../components/ctracingtable/CTTableComponent';
 import {Box} from "@material-ui/core"
-/*
-import {AlertsTable} from '../components/adashboard/ADashboardTableComponent';
-import {Box} from "@material-ui/core";
-*/
-import {AdminDashboard} from '../components/adashboard/ADashboardDisplayComponent';
 
 export default function Dashboard() {
     return (

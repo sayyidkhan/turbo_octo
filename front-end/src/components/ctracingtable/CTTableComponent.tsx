@@ -1,7 +1,7 @@
 import {Component} from "react";
-import {alertlistadmin} from "./api/adashboard_api";
+import {ctracinglist} from "./api/cttable_api";
 import axios from "axios";
-import AdashboardPaginationTableComponent from "./AdashboardPaginationTableComponent";
+import CTPagination from "./CTPaginationComponent";
 
 function DisplayAlertNo(props: { status: number, totalNoofAlerts: number }) {
     return <div>
@@ -10,9 +10,7 @@ function DisplayAlertNo(props: { status: number, totalNoofAlerts: number }) {
     </div>;
 }
 
-/* Alerts table class */
-
-export class AlertsTable extends Component {
+export class CTTable extends Component {
 
     state = {
         loadingStatus : true,
@@ -22,7 +20,7 @@ export class AlertsTable extends Component {
     }
 
     async componentDidMount() {
-        await alertlistadmin().then(res => {
+        await ctracinglist().then(res => {
             const totalNoofAlerts : number = this.gettotalNoofAlerts(res.data);
             this.setState({result : res.data , totalNoofAlerts : totalNoofAlerts, status : res.status });
         }).catch(err => {
@@ -39,7 +37,7 @@ export class AlertsTable extends Component {
         return(
             <div>
                 {/*<HomeAlertsTable myList={this.state.result}/>*/}
-                <AdashboardPaginationTableComponent myList={this.state.result}/>
+                <CTPagination myList={this.state.result}/>
             </div>
         );
     }
