@@ -10,6 +10,7 @@ function DisplayAlertNo(props: { status: number, totalNoofAlerts: number }) {
     </div>;
 }
 
+
 export class AlertsTable extends Component {
 
     state = {
@@ -31,7 +32,7 @@ export class AlertsTable extends Component {
 
     gettotalNoofAlerts(myAlertList : any[]) : number {
         return myAlertList.length;
-    }
+    }    
 
     render() {
         return(

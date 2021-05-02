@@ -73,12 +73,12 @@
   margin-top: 7rem;
 }
 
-/* =========================== Admin page specific===================================== */
-.admin-container-general {
+/* =========================== dashboard page specific===================================== */
+.dashboard-container-general {
   margin-left: 300px;
 }
 
-.admin-tableContainer-div {
+.dashboard-tableContainer-div {
   background-color: #ffffff;
   min-width: 850px;
   height: 100%;
@@ -86,11 +86,33 @@
   border-radius: 25px;
 }
 
-.admin-tableContainer-div>h2 {
+.dashboard-content-div {
+  background-color: #ffffff;
+  min-width: 850px;
+  height: 100%;
+  /* end */
+  border-radius: 25px;
+  margin-left: 20px;
+  padding-bottom: 20px;
+}
+
+.dashboard-tableContainer-div>h2 {
   margin-left: 20px;
   color: #ff0000
   ;
 }
+
+.dashboardbusiness-img {
+  display: inline-block;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 48px;
+  height: 48px;
+  vertical-align: middle;
+}
+
 /* =========================== Home page specific===================================== */
 
 
