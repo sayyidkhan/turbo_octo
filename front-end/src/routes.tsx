@@ -9,10 +9,11 @@ import Dashboard from "./pages/Dashboard";
 import ContactTracing from "./pages/ContactTracing";
 import VaccinationRecords from "./pages/VaccinationRecords";
 import PublicAlerts from "./pages/PublicAlerts";
+import Reports from "./pages/Reports";
+import Accounts from "./pages/Accounts";
 
 export default function Routes(props: any) {
 
-    //add all new routing here
     return (
         <Switch>
             <Route path="/" exact component={Home} />
@@ -25,8 +26,8 @@ export default function Routes(props: any) {
             <Route path="/ContactTracing" component = {ContactTracing}/>
             <Route path="/VaccinationRecords" component = {VaccinationRecords} />
             <Route path="/PublicAlerts" component = {PublicAlerts} />
-            <Route path="/Reports" />
-            <Route path="/ManageAccounts" />
+            <Route path="/Reports" component={Reports}/>
+            <Route path="/ManageAccounts" component={Accounts}/>
         </Switch>
     )
 }

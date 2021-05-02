@@ -1,6 +1,5 @@
 import {Component} from "react";
 import {alertlist} from "./api/alertstable_api";
-import axios from "axios";
 import AlertsPaginationTableComponent from "./AlertsPaginationTableComponent";
 
 function DisplayAlertNo(props: { status: number, totalNoofAlerts: number }) {
@@ -9,7 +8,6 @@ function DisplayAlertNo(props: { status: number, totalNoofAlerts: number }) {
             alerts: {props.totalNoofAlerts}</p>
     </div>;
 }
-
 
 export class AlertsTable extends Component {
 
