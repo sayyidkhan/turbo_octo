@@ -6,6 +6,8 @@ import {LocationListComponent} from "./components/location/LocationListComponent
 import LocationList from "./pages/LocationList";
 import About from "./pages/About";
 import Dashboard from "./pages/Dashboard";
+import ContactTracing from "./pages/ContactTracing";
+import VaccinationRecords from "./pages/VaccinationRecords";
 
 export default function Routes(props: any) {
 
@@ -19,8 +21,8 @@ export default function Routes(props: any) {
             <Route path="/locationList" component={LocationList} />
             <Route path="/CheckVaccCert" />
             <Route path="/Dashboard" component={Dashboard} />
-            <Route path="/ContactTracing" />
-            <Route path="/VaccinationRecords" />
+            <Route path="/ContactTracing" component = {ContactTracing}/>
+            <Route path="/VaccinationRecords" component = {VaccinationRecords} />
             <Route path="/PublicAlerts" />
             <Route path="/Reports" />
             <Route path="/ManageAccounts" />

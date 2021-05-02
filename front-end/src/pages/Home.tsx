@@ -31,11 +31,6 @@ export default function Home() {
                         <AlertsTable />
                     </Box>
                 </Box>
-                {/*<Container>*/}
-                    {/*<Paper variant="outlined" >*/}
-                        {/**/}
-                    {/*</Paper>*/}
-                {/*</Container>*/}
             </div>
         </div>
     )

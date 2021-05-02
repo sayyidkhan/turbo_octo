@@ -15,7 +15,9 @@ export default function Dashboard() {
     return (
         <div className="dashboard-container-general">
             <h1>Dashboard</h1>
-            You are logged in XXXX.
+            <div className="under-page-title-div">
+                You are logged in XXXX.
+            </div>
             <div className="dashboard-container">
 
                 {/* THIS IS FOR ADMIN */}

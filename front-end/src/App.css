@@ -78,6 +78,11 @@
   margin-left: 300px;
 }
 
+.dashboard-container-general>h1 {
+  color: #000000;
+  margin: 0px;
+}
+
 .dashboard-tableContainer-div {
   background-color: #ffffff;
   min-width: 850px;
@@ -98,8 +103,7 @@
 
 .dashboard-tableContainer-div>h2 {
   margin-left: 20px;
-  color: #ff0000
-  ;
+  color: #ff0000;
 }
 
 .dashboardbusiness-img {
@@ -177,5 +181,17 @@
   display: none;
 }
 
-/* =========================== Main page specific end ================================== */
+/* =========================== General div ================================== */
 
+.account-typical-content-div {
+  background-color: #ffffff;
+  min-width: 850px;
+  height: 100%;
+  /* end */
+  border-radius: 25px;
+  margin-left: 20px;
+}
+
+.under-page-title-div {
+  margin-bottom: 40px;
+}
