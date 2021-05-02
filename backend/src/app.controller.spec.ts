@@ -1,27 +1,26 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { UsersController } from './users/users.controller';
+
 
 describe('AppController', () => {
-  let appController; AppController;
+  let AppController;
+  let AppService;
 
-  const mockAppService = {
 
-  }
-
-  beforeEach(async () => {
-    const app: TestingModule = await Test.createTestingModule({
-      controllers: [AppController],
-      providers: [AppService],
-    }).overrideProvider(AppService).useValue(mockAppService).compile();
-
-    appController = app.get<AppController>(AppController);
+  beforeEach(() => {
+    AppService = new AppService();
+    AppController = new AppController(AppService);
   });
 
-  describe('root', () => {
-    it('should return "Hello World!"', () => {
-      expect(appController.getHello()).toBe('Hello World!');
+  
+
+  describe('findAll', () => {
+    it('should return an array of cats', async () => {
+      const result = ['test'];
+      jest.spyOn(AppService, 'findAll').mockImplementation(() => result);
+
+      expect(await AppController.findAll()).toBe(result);
     });
   });
 });
