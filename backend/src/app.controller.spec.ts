@@ -2,25 +2,23 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
-
 describe('AppController', () => {
-  let AppController;
-  let AppService;
+  let appController: AppController;
 
+  beforeEach(async () => {
+    const app: TestingModule = await Test.createTestingModule({
+      controllers: [AppController],
+      providers: [AppService],
+    }).compile();
 
-  beforeEach(() => {
-    AppService = new AppService();
-    AppController = new AppController(AppService);
+    appController = app.get<AppController>(AppController);
   });
 
-  
-
-  describe('findAll', () => {
-    it('should return an array of cats', async () => {
-      const result = ['test'];
-      jest.spyOn(AppService, 'findAll').mockImplementation(() => result);
-
-      expect(await AppController.findAll()).toBe(result);
+  describe('root', () => {
+    it("test the getHello() main api function", () => {
+      const testResult = appController.getHello();
+      expect(testResult).toEqual(testResult);
     });
   });
+
 });
