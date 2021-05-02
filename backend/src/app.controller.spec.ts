@@ -1,15 +1,20 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { UsersController } from './users/users.controller';
 
 describe('AppController', () => {
-  let appController: AppController;
+  let appController; AppController;
+
+  const mockAppService = {
+
+  }
 
   beforeEach(async () => {
     const app: TestingModule = await Test.createTestingModule({
       controllers: [AppController],
       providers: [AppService],
-    }).compile();
+    }).overrideProvider(AppService).useValue(mockAppService).compile();
 
     appController = app.get<AppController>(AppController);
   });

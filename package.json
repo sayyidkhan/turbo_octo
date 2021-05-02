@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/sayyidkhan/turbo_octo#readme",
   "devDependencies": {
+    "@nestjs/testing": "^7.6.15",
     "jest": "^26.6.3"
   }
 }
