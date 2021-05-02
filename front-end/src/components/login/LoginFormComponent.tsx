@@ -75,11 +75,11 @@ export class LoginFormComponent extends Component {
             <div>
                 <form onSubmit={this.submitHandler_temp}>
                     <div>
-                        <label>Username</label>
+                        <label>Username:</label>
                         <input type="text" name="username" value={username} onChange={this.changeHandler}/>
                     </div>
                     <div>
-                        <label>Password</label>
+                        <label>Password:</label>
                         <input type="password" name="password" value={password} onChange={this.changeHandler}/>
                     </div>
                     <div>

@@ -26,18 +26,4 @@ describe('AlertListController', () =>{
         expect(controller).toBeDefined();
     })
 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+})
