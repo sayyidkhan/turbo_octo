@@ -3,6 +3,7 @@ import { InjectModel } from "@nestjs/mongoose";
 import { FilterQuery, Model } from "mongoose";
 
 import { c_tracing, CtracingDocument } from "./schemas/ctracing.schema";
+import {AlertList} from "../alert_list/schemas/alertList.schema";
 
 @Injectable()
 export class CtracingRepository {
@@ -14,6 +15,16 @@ export class CtracingRepository {
 
     async find(ctracingsFilterQuery: FilterQuery<c_tracing>): Promise<c_tracing[]> {
         return this.ctracingModel.find(ctracingsFilterQuery)
+    }
+
+    async getMaxCtracingId(): Promise<number> {
+        const alertList = await this.ctracingModel.find({}).sort({ ct_id : -1 }).limit(1);
+        console.log(alertList);
+        if(alertList.length > 0) {
+            const cTracing :c_tracing = alertList[0];
+            return cTracing.ct_id;
+        }
+        return 0;
     }
 
     async create(ctracing: c_tracing): Promise<c_tracing> {

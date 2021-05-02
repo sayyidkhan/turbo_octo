@@ -17,6 +17,11 @@ export class CtracingController {
     return this.CtracingService.getCtracingById(ct_id);
   }
 
+  @Get("searchbynric/:nric")
+  async getCtracingByNric(@Param('nric') nric : string) : Promise<c_tracing[]> {
+      return this.CtracingService.getCtracingByNric(nric);
+  }
+
   //Multiple row with 's'
   @Get()
   async getCtracings(): Promise<c_tracing[]> {
@@ -28,12 +33,10 @@ export class CtracingController {
   @Post()
   async createCtracing(@Body() createCtracingDto: CreateCtracingDto): Promise<c_tracing> {
       console.log("contact tracing DTO received successfully...")
-      return this.CtracingService.createCtracing(createCtracingDto.ct_id, createCtracingDto.p_nric,
-        createCtracingDto.location_id,createCtracingDto.date)
+      return this.CtracingService.createCtracing(
+          createCtracingDto.p_nric,
+          createCtracingDto.location_id,
+          createCtracingDto.date);
   }
-
-
-
-
 
 }
