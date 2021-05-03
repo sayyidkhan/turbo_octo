@@ -195,3 +195,11 @@
 .under-page-title-div {
   margin-bottom: 40px;
 }
+
+/* =========================== No Access Message ================================== */
+
+.message-container{
+  text-align: center;
+  padding-top: 300px;  
+  padding-left: 200px;
+}

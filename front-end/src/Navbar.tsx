@@ -26,43 +26,43 @@ export default function Navbar(props : any){
         id: 3,
         path: "/Dashboard",
         text: "Dashboard",
-        accessBy: ["admin", "business", "healthcare"],
+        accessBy: ["government", "business", "healthcare"],
       },
       {
         id: 4,
         path: "/ContactTracing",
         text: "Contact Tracing",
-        accessBy: ["admin", "healthcare"],
+        accessBy: ["government", "healthcare"],
       },
       {
         id: 5,
         path: "/VaccinationRecords",
         text: "Vaccination Records",
-        accessBy: ["admin", "healthcare"],
+        accessBy: ["government", "healthcare"],
       },
       {
         id: 6,
         path: "/PublicAlerts",
         text: "Public Alerts",
-        accessBy: ["admin", "business"],
+        accessBy: ["government", "business"],
       },
       {
         id: 7,
         path: "/Reports",
         text: "Reports",
-        accessBy: ["admin"],
+        accessBy: ["government"],
       },
       {
         id: 8,
         path: "/ManageAccounts",
         text: "Manage Accounts",
-        accessBy: ["admin"],
+        accessBy: ["government"],
       },
       {
         id: 9,
         path: "/",
         text: "Logout",
-        accessBy: ["admin", "business", "healthcare"],
+        accessBy: ["government", "business", "healthcare"],
       }
   ];
 
