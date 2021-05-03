@@ -54,7 +54,7 @@ export default function Navbar(props : any){
       },
       {
         id: 8,
-        path: "/ManageAccounts",
+        path: "/Accounts",
         text: "Manage Accounts",
         accessBy: ["government"],
       },

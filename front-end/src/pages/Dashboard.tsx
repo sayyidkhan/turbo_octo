@@ -3,7 +3,7 @@ import '../App.css';
 import {AlertsTable} from '../components/alertstable/AlertsTableComponent';
 import {CTTable} from '../components/ctracingtable/CTTableComponent';
 import {Box} from "@material-ui/core"
-
+import CurrentLoginUserComponent from '../components/CurrentLoginUserComponent';
 import mask from '../img/mask.png';
 import soap from '../img/soap.png';
 import distance from '../img/distance.png';
@@ -16,7 +16,7 @@ export default function Dashboard() {
         <div className="dashboard-container-general">
             <h1>Dashboard</h1>
             <div className="under-page-title-div">
-                You are logged in XXXX.
+                <CurrentLoginUserComponent/>
             </div>
             <div className="dashboard-container">
 

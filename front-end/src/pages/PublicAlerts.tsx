@@ -3,13 +3,14 @@ import '../App.css';
 import {IssueAlerts} from "../components/issuealerts/IssueAlertsComponent";
 import {AlertsTable} from '../components/alertstable/AlertsTableComponent';
 import {Box} from "@material-ui/core"
+import CurrentLoginUserComponent from '../components/CurrentLoginUserComponent';
 
 export default function Dashboard() {
     return (
         <div className="dashboard-container-general">
             <h1>Public alerts</h1>
             <div className="under-page-title-div">
-                You are logged in XXXX.
+                <CurrentLoginUserComponent/>
             </div>
             <div className="dashboard-container">
     

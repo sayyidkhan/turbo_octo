@@ -2,13 +2,14 @@ import React from 'react';
 import '../App.css';
 import {CTTable} from '../components/ctracingtable/CTTableComponent';
 import {Box} from "@material-ui/core"
+import CurrentLoginUserComponent from '../components/CurrentLoginUserComponent';
 
 export default function Dashboard() {
     return (
         <div className="dashboard-container-general">
             <h1>Contact tracing</h1>
             <div className="under-page-title-div">
-                You are logged in XXXX.
+                <CurrentLoginUserComponent/>
             </div>
             <div className="dashboard-container">
     
