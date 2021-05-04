@@ -14,6 +14,13 @@ export class AlertListController {
     return this.alertListService.getAlertById(alertId);
   }
 
+  //get only active list
+  @Get('/filterlist/true')
+  async getAllActiveAlertList(): Promise<AlertList[]> {
+      console.log("get only active alerts...");
+      return this.alertListService.getOnlyActiveAlerts();
+  }
+
   @Get()
   async getAllAlertList(): Promise<AlertList[]> {
       console.log("get all alerts...");

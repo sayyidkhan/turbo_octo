@@ -16,6 +16,10 @@ export class AlertListService {
         return this.alertListRepository.find({});
     }
 
+    async getOnlyActiveAlerts(): Promise<AlertList[]> {
+        return this.alertListRepository.find({active : true});
+    }
+
     async getMaxAlertListId() : Promise<number> {
         return this.alertListRepository.getMaxAlertListId();
     }
