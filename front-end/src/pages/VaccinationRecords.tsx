@@ -14,7 +14,7 @@ export default function Dashboard() {
             <div className="dashboard-container">
     
                 <div className="dashboard-tableContainer-div">
-                    <h2>User checked-in</h2>
+                    <h2>Vaccination records</h2>
                     <div className="account-typical-content-div">
                       <p>Search by NRIC:  NEED TO INSERT FEATURE TO FILTER TABLE</p>
                     </div>

@@ -14,6 +14,8 @@ export default function Dashboard() {
             </div>
             <div className="dashboard-container">
     
+                {/* THIS IS FOR ADMIN */}
+
                 <div className="dashboard-tableContainer-div">
                     <h2>Issue new alert</h2>
                     <div className="account-typical-content-div">
@@ -23,6 +25,15 @@ export default function Dashboard() {
 
                 <div className="dashboard-tableContainer-div">
                     <h2>Public alerts issued</h2>
+                    <div className="account-typical-content-div">
+                      <AlertsTable />
+                    </div>
+                </div>
+
+                {/* THIS IS FOR ADMIN */}
+
+                <div className="dashboard-tableContainer-div">
+                    <h2>Public alerts</h2>
                     <div className="account-typical-content-div">
                       <AlertsTable />
                     </div>
