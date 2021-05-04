@@ -30,7 +30,7 @@ export default function Dashboard() {
                     </div>
                 </div>
 
-                {/* THIS IS FOR ADMIN */}
+                {/* THIS IS FOR BUSINESS */}
 
                 <div className="dashboard-tableContainer-div">
                     <h2>Public alerts</h2>
