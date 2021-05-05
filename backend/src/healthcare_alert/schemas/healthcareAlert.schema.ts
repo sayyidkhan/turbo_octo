@@ -17,6 +17,9 @@ export class HealthcareAlert {
     @Prop()
     description: string;
 
+    @Prop()
+    e_nric : string;
+
 }
 
 export const HealthcareAlertSchema = SchemaFactory.createForClass(HealthcareAlert);

@@ -27,7 +27,8 @@ export class HealthcareAlertController {
           alertsDto.healthcareAlertId,
           alertsDto.date,
           alertsDto.location_id,
-          alertsDto.description
+          alertsDto.description,
+          alertsDto.e_nric,
       );
   }
 

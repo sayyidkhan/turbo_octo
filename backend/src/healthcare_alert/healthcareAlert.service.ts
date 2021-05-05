@@ -19,7 +19,12 @@ export class HealthcareAlertService {
         return this.healthCareAlertRepository.getMaxAlertListId();
     }
 
-    async createNewHealthcareAlerts(healthcareAlertId: number, date: number, location_id:number , description : string): Promise<HealthcareAlert> {
+    async createNewHealthcareAlerts(
+        healthcareAlertId: number,
+        date: number,
+        location_id:number,
+        description : string,
+        e_nric : string): Promise<HealthcareAlert> {
         const highestAlertListId : number = await this.getMaxAlertListId();
         const persistence = {
             //increment the id if there is an existing alertId, otherwise initalise at 1
@@ -27,12 +32,13 @@ export class HealthcareAlertService {
             date: date,
             location_id: location_id,
             description: description,
+            e_nric: e_nric,
         };
         return this.healthCareAlertRepository.create(persistence);
     }
 
     async updateHealthcareAlertByID(healthcareAlertId: string, updateDto: UpdateHealthcareAlertsDto): Promise<HealthcareAlert> {
-        return this.healthCareAlertRepository.findOneAndUpdate({ e_nric : healthcareAlertId }, updateDto);
+        return this.healthCareAlertRepository.findOneAndUpdate({ healthcareAlertId : healthcareAlertId }, updateDto);
     }
  
 }
