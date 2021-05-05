@@ -8,6 +8,7 @@ import { P_UserService } from "./p_user.service";
 @Module({
     imports: [MongooseModule.forFeature([{ name: p_user.name, schema: P_UserSchema }])],
     controllers: [P_UserController],
-    providers: [P_UserService, P_UserRepository]
+    providers: [P_UserService, P_UserRepository],
+    exports: [P_UserService, P_UserRepository],
 })
 export class P_UserModule {}
