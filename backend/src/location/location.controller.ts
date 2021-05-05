@@ -22,18 +22,4 @@ export class LocationController {
       return this.locationService.getAllLocation();
   }
 
-  @Post()
-  async createNewLocation(@Body() createLocationDto: CreateLocationDto): Promise<Location> {
-      console.log("user DTO received successfully...");
-      return this.locationService.createNewLocation(
-          createLocationDto.locationId,
-          createLocationDto.locationName,
-          createLocationDto.district);
-  }
-
-  // @Patch(':userId')
-  // async updateHealthcareAlerts(@Param('userId') userId: string, @Body() updateUserDto: UpdateAlertListDto): Promise<User> {
-  //     return this.locationService.updateHealthcareAlerts(userId, updateUserDto);
-  // }
-
 }

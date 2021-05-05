@@ -35,4 +35,5 @@ export class CtracingRepository {
     async findOneAndUpdate(ctracingFilterQuery: FilterQuery<c_tracing>, ctracing: Partial<c_tracing>): Promise<c_tracing> {
         return this.ctracingModel.findOneAndUpdate(ctracingFilterQuery, ctracing, { new: true });
     }
+
 }

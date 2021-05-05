@@ -4,8 +4,6 @@ import { v_cert} from './schemas/vaccine.schema';
 import { VaccineService } from './vaccine.service';
 
 
-
-
 @Controller('vaccines')
 export class VaccineController {
   constructor(private readonly VaccineService: VaccineService) {}

@@ -24,4 +24,6 @@ export class P_UserRepository {
     async findOneAndUpdate(p_userFilterQuery: FilterQuery<p_user>, p_user: Partial<p_user>): Promise<p_user> {
         return this.p_userModel.findOneAndUpdate(p_userFilterQuery, p_user, { new: true });
     }
+
+
 }

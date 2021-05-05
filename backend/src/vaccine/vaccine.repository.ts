@@ -33,4 +33,5 @@ export class VaccineRepository {
     async findOneAndUpdate(vaccineFilterQuery: FilterQuery<v_cert>, vaccine: Partial<v_cert>): Promise<v_cert> {
         return this.vaccineModel.findOneAndUpdate(vaccineFilterQuery, vaccine, { new: true });
     }
+
 }

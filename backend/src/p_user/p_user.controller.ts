@@ -8,21 +8,17 @@ import {P_UserService} from './p_user.service';
 export class P_UserController {
   constructor(private readonly P_UserService: P_UserService) {}
 
-
-  // single row without 's'
   @Get(':p_nric')
   async getP_User(@Param('p_nric') p_nric: string): Promise<p_user> {
     return this.P_UserService.getP_UserById(p_nric);
   }
 
-  //Multiple row with 's'
   @Get()
   async getP_Users(): Promise<p_user[]> {
       console.log("Retrieve public user information");
       return this.P_UserService.getP_User();
   }
 
-  //Take note two DTO varia with different cap
   @Post()
   async createP_User(@Body() createP_UserDto: CreateP_UserDto): Promise<p_user> {
       console.log("public user DTO received successfully...")

@@ -36,8 +36,4 @@ export class HealthcareAlertController {
       return this.healthcareAlertService.updateHealthcareAlertByID(healthcareAlertId, updateDto);
   }
 
-
-
-
-
 }

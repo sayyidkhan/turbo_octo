@@ -38,5 +38,4 @@ export class CtracingService {
         return this.ctracingRepository.create(persistence);
     }
 
- 
 }

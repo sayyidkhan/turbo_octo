@@ -29,6 +29,5 @@ export class VaccineService {
         };
         return this.vaccineRepository.create(persistence);
     }
-
  
 }
