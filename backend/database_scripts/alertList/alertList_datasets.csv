@@ -1,0 +1,10 @@
+location_id,alertListId,alertTitle,alertDetail,alertDate,active
+201634,1,InvalidLocationID,LocationIDnotValid,4/1/21,TRUE
+701810,2,InvalidLocationID,LocationIDnotValid,4/1/21,TRUE
+260702,3,InvalidLocationID,LocationIDnotValid,4/1/21,TRUE
+276282,4,InvalidLocationID,LocationIDnotValid,4/1/21,TRUE
+222470,5,InvalidLocationID,LocationIDnotValid,4/1/21,TRUE
+371330,6,InvalidLocationID,LocationIDnotValid,4/1/21,TRUE
+620676,7,InvalidLocationID,LocationIDnotValid,4/1/21,TRUE
+490748,8,InvalidLocationID,LocationIDnotValid,4/1/21,TRUE
+271536,9,InvalidLocationID,LocationIDnotValid,4/1/21,TRUE
