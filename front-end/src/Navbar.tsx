@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom"
-import { MdClose } from "react-icons/md"
-import { FiMenu } from "react-icons/fi"
 import './App.css';
 import history from './history';
+import CloseIcon from '@material-ui/icons/Close';
+import MenuIcon from '@material-ui/icons/Menu';
 
 export default function Navbar(props : any){
 
@@ -92,10 +92,10 @@ export default function Navbar(props : any){
       <button onClick={handleToggle} className={userType === "public" ? "toShow" : "toHide"}>
         {
           navbarOpen ? 
-          <MdClose 
+          <CloseIcon
             style={{color: "#fff", width: "40px", height: "40px" }} 
           /> : 
-          <FiMenu 
+          <MenuIcon
             style={{color: "#7b7b7b", width: "40px", height: "40px" }} 
           />
         }

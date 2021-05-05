@@ -3,11 +3,15 @@ import {AlertListDto} from "./dto/alert-list.dto";
 
 import { AlertList } from './schemas/alertList.schema';
 import { AlertListService } from './alertList.service';
+import {CompositeAlertListService} from "./compositeAlertList.service";
+import {UserAlertListDto} from "./dto/user-alert-list.dto";
 
 
 @Controller('alertlist')
 export class AlertListController {
-  constructor(private readonly alertListService: AlertListService) {}
+  constructor(
+      private readonly alertListService: AlertListService,
+      private readonly compositeAlertListService : CompositeAlertListService) {}
 
   @Get(':alert')
   async getAlertListById(@Param('alert') alertId: number): Promise<AlertList> {
@@ -16,9 +20,9 @@ export class AlertListController {
 
   //get only active list
   @Get('/filterlist/true')
-  async getAllActiveAlertList(): Promise<AlertList[]> {
+  async getAllActiveAlertList(): Promise<UserAlertListDto[]> {
       console.log("get only active alerts...");
-      return this.alertListService.getOnlyActiveAlerts();
+      return this.compositeAlertListService.getOnlyActiveAlerts();
   }
 
   @Get()

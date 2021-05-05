@@ -5,6 +5,7 @@ import enterLoc from '../img/EnterLoc.png';
 import checkVaccCert from '../img/CheckVaccCert.png';
 import {AlertsTable} from '../components/alertstable/AlertsTableComponent';
 import {Box} from "@material-ui/core";
+import AlertListComponent from "../components/listing/AlertListComponent";
 
 export default function Home() {
     return (
@@ -24,14 +25,18 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="home-tableContainer-div">
-                <h2>Recent Covid-19 alerts</h2>
-                <Box justifyContent="center" m={1} p={0} bgcolor="background.paper">
-                    <Box p={1} m={1} bgcolor="white.100">
-                        <AlertsTable />
-                    </Box>
-                </Box>
-            </div>
+
+            <AlertListComponent />
+
+            {/*<div className="home-tableContainer-div">*/}
+                {/*<h2>Recent Covid-19 alerts</h2>*/}
+                {/*<Box justifyContent="center" m={1} p={0} bgcolor="background.paper">*/}
+                    {/*<Box p={1} m={1} bgcolor="white.100">*/}
+                        {/*<AlertsTable />*/}
+                    {/*</Box>*/}
+                {/*</Box>*/}
+            {/*</div>*/}
+
         </div>
     )
 }

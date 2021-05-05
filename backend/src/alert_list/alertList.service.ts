@@ -6,7 +6,8 @@ import {AlertListRepository} from "./alertList.repository";
 
 @Injectable()
 export class AlertListService {
-    constructor(private readonly alertListRepository: AlertListRepository) {}
+    constructor(
+        private readonly alertListRepository: AlertListRepository,) {}
 
     async getAlertById(alertListId: number): Promise<AlertList> {
         return this.alertListRepository.findOne({ alertListId : alertListId })
@@ -16,8 +17,8 @@ export class AlertListService {
         return this.alertListRepository.find({});
     }
 
-    async getOnlyActiveAlerts(): Promise<AlertList[]> {
-        return this.alertListRepository.find({active : true});
+    async getAlertsWithQuery(query): Promise<AlertList[]> {
+        return this.alertListRepository.find(query);
     }
 
     async getMaxAlertListId() : Promise<number> {
@@ -58,5 +59,7 @@ export class AlertListService {
         }
         return null;
     }
+
+
 
 }
