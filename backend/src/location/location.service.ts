@@ -38,7 +38,7 @@ export class LocationService {
         });
     }
 
-    // async updateEnterpriseUser(userId: string, userUpdates: UpdateAlertListDto): Promise<Location> {
+    // async updateHealthcareAlerts(userId: string, userUpdates: UpdateAlertListDto): Promise<Location> {
     //     return this.locationRepository.findOneAndUpdate({ userId }, userUpdates);
     // }
 }

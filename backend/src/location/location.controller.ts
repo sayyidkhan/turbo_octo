@@ -32,8 +32,8 @@ export class LocationController {
   }
 
   // @Patch(':userId')
-  // async updateEnterpriseUser(@Param('userId') userId: string, @Body() updateUserDto: UpdateAlertListDto): Promise<User> {
-  //     return this.locationService.updateEnterpriseUser(userId, updateUserDto);
+  // async updateHealthcareAlerts(@Param('userId') userId: string, @Body() updateUserDto: UpdateAlertListDto): Promise<User> {
+  //     return this.locationService.updateHealthcareAlerts(userId, updateUserDto);
   // }
 
 }

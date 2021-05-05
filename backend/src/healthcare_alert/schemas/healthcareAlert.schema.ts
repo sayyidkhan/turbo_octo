@@ -1,10 +1,10 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 import { Document } from 'mongoose';
 
-export type HealthcareAlertDocument = HealthcareAlertList & Document;
+export type HealthcareAlertDocument = HealthcareAlert & Document;
 
 @Schema()
-export class HealthcareAlertList {
+export class HealthcareAlert {
     @Prop()
     healthcareAlertId: number;
 
@@ -19,4 +19,4 @@ export class HealthcareAlertList {
 
 }
 
-export const HealthcareAlertListSchema = SchemaFactory.createForClass(HealthcareAlertList);
+export const HealthcareAlertSchema = SchemaFactory.createForClass(HealthcareAlert);
