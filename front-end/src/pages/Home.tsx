@@ -3,8 +3,6 @@ import '../App.css';
 
 import enterLoc from '../img/EnterLoc.png';
 import checkVaccCert from '../img/CheckVaccCert.png';
-import {AlertsTable} from '../components/alertstable/AlertsTableComponent';
-import {Box} from "@material-ui/core";
 import AlertListComponent from "../components/listing/AlertListComponent";
 
 export default function Home() {
