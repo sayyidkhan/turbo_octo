@@ -1,10 +1,10 @@
 location_id,alertListId,alertTitle,alertDetail,alertDate,active
-201634,1,InvalidLocationID,LocationIDnotValid,4/1/21,TRUE
-701810,2,InvalidLocationID,LocationIDnotValid,4/1/21,TRUE
-260702,3,InvalidLocationID,LocationIDnotValid,4/1/21,TRUE
-276282,4,InvalidLocationID,LocationIDnotValid,4/1/21,TRUE
-222470,5,InvalidLocationID,LocationIDnotValid,4/1/21,TRUE
-371330,6,InvalidLocationID,LocationIDnotValid,4/1/21,TRUE
-620676,7,InvalidLocationID,LocationIDnotValid,4/1/21,TRUE
-490748,8,InvalidLocationID,LocationIDnotValid,4/1/21,TRUE
-271536,9,InvalidLocationID,LocationIDnotValid,4/1/21,TRUE
+201634,1,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",4/1/21,TRUE
+701810,2,"""New In""","""Covid19 Entry Requirements for Travellers to China""",4/1/21,TRUE
+260702,3,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",4/1/21,TRUE
+276282,4,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",4/1/21,TRUE
+222470,5,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",4/1/21,TRUE
+371330,6,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",4/1/21,TRUE
+620676,7,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",4/1/21,TRUE
+490748,8,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",4/1/21,TRUE
+271536,9,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",4/1/21,TRUE

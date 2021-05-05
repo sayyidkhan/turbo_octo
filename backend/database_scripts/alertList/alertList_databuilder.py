@@ -7,11 +7,11 @@ import os
 script_dir = os.path.dirname(__file__)
 
 def main():
-    # Give the location of the file, must be stored in the sub-folder or the code will break
-    csv_filepath = "locations_datasets.csv"
-    mongodbtxt_filepath = "locations_mongodbscript.txt"
-    #location_name should be the table location_name in mongodb
-    js_filename = "locations"
+    # Give the alertList of the file, must be stored in the sub-folder or the code will break
+    csv_filepath = "alertList_datasets.csv"
+    mongodbtxt_filepath = "alertList_mongodbscript.txt"
+    #alertList_name should be the table alertList_name in mongodb
+    js_filename = "alertList"
 
     #logic for the program
     my_output = read_csvfile(csv_filepath, mongodbtxt_filepath)
@@ -58,9 +58,9 @@ def read_csvfile(csv_filepath, mongodbtxt_filepath):
         myDict = transformToDict(reader)
         ########################################
         '''do the converting of the data over here '''
-        #convert location_id from string to int
+        #convert alertListId from string to int
         for row in myDict:
-            row['location_id'] = int(row['location_id'])
+            row['alertListId'] = int(row['alertListId'])
         #readList(myDict)
         ########################################
         #2. transform dict into lines of string (to be inserted into template)
