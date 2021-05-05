@@ -33,7 +33,7 @@ export class HealthcareAlertController {
   }
 
   @Patch(':healthcareAlertId')
-  async updateHealthcareAlerts(@Param('healthcareAlertId') healthcareAlertId: string, @Body() updateDto: UpdateHealthcareAlertsDto): Promise<HealthcareAlert> {
+  async updateHealthcareAlerts(@Param('healthcareAlertId') healthcareAlertId: number, @Body() updateDto: UpdateHealthcareAlertsDto): Promise<HealthcareAlert> {
       return this.healthcareAlertService.updateHealthcareAlertByID(healthcareAlertId, updateDto);
   }
 
