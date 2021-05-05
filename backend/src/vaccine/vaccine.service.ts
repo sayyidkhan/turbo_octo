@@ -15,7 +15,7 @@ export class VaccineService {
     }
 
     async getMaxAlertListId() : Promise<number> {
-        return this.vaccineRepository.getMaxAlertListId();
+        return this.vaccineRepository.getMaxVaccineListId();
     }
 
     async createVaccine(p_nric: string, v_date:number , e_nric : string): Promise<v_cert> {
