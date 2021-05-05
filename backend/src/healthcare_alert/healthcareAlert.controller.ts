@@ -22,7 +22,7 @@ export class HealthcareAlertController {
 
   @Post()
   async createNewHealthcareAlerts(@Body() alertsDto: CreateHealthcareAlertsDto): Promise<HealthcareAlert> {
-      console.log("vaccine DTO received successfully...")
+      console.log("healthcare DTO received successfully...")
       return this.healthcareAlertService.createNewHealthcareAlerts(
           alertsDto.healthcareAlertId,
           alertsDto.date,
