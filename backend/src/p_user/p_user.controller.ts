@@ -1,7 +1,11 @@
-import {Body, Controller, Get, Param, Post} from '@nestjs/common';
+import {Body, Controller, Get, HttpException, HttpStatus, Param, Patch, Post} from '@nestjs/common';
 import {CreateP_UserDto} from './dto/create-p_user.dto';
 import {p_user} from './schemas/p_user.schema';
 import {P_UserService} from './p_user.service';
+import {UpdateEnterpriseUserDto} from "../e_user/dto/update-eUser.dto";
+import {E_User} from "../e_user/schemas/e_user.schema";
+import {UpdateUserDto} from "../users/dto/update-user.dto";
+import {UpdatePublicUserDto} from "./dto/update_public_user_dto";
 
 
 @Controller('p_user')
@@ -29,5 +33,20 @@ export class P_UserController {
           createP_UserDto.covid_status
       );
   }
+
+    @Patch(':e_nric')
+    async updateEnterpriseUser(@Param('e_nric') eNRIC: string, @Body() dto: UpdatePublicUserDto): Promise<p_user> {
+        const p_user :p_user = await this.P_UserService.getP_UserById(eNRIC);
+        //if e_user returns null, user is trying to update record that does not exist in db
+        if(p_user === null) {
+            const errorMsg : string = "public nric does not exist.";
+            throw new HttpException(
+                errorMsg,
+                HttpStatus.BAD_REQUEST);
+        }
+        else {
+             return this.P_UserService.updatePublicUser(eNRIC, dto);
+        }
+    }
 
 }

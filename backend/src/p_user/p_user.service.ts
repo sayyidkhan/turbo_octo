@@ -1,6 +1,7 @@
 import {Injectable} from "@nestjs/common";
 import {p_user} from "./schemas/p_user.schema";
 import {P_UserRepository} from "./p_user.repository";
+import {UpdatePublicUserDto} from "./dto/update_public_user_dto";
 
 @Injectable()
 export class P_UserService {
@@ -21,6 +22,10 @@ export class P_UserService {
             lastname,
             covid_status,
         })
+    }
+
+    async updatePublicUser(pNRIC: string, dto: UpdatePublicUserDto): Promise<p_user> {
+        return this.p_userRepository.findOneAndUpdate({ p_nric : pNRIC }, dto);
     }
 
 }

@@ -25,5 +25,4 @@ export class P_UserRepository {
         return this.p_userModel.findOneAndUpdate(p_userFilterQuery, p_user, { new: true });
     }
 
-
 }
