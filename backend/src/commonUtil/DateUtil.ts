@@ -5,5 +5,4 @@ export abstract class DateUtil {
         return newDate;
     }
 
-
 }
