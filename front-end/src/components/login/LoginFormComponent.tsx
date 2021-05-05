@@ -59,8 +59,14 @@ export class LoginFormComponent extends Component {
     submitHandler_temp = (e: any) => {
         e.preventDefault();
 
-        this.setState({'userType' : this.state.username});
-        sessionStorage.setItem('userType', this.state.username);
+        var temp_userType = this.state.username;
+        const adminTypes = ["government", "business", "healthcare"];
+        if(!adminTypes.includes(temp_userType)){
+            temp_userType = "public";
+        }
+
+        this.setState({'userType' : temp_userType});
+        sessionStorage.setItem('userType', temp_userType);
         //checking use
         //this.setState({'userType' : this.state.username}, () => {alert(this.state.userType);}); 
         //alert(sessionStorage.getItem('userType'));
