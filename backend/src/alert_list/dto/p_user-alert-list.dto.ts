@@ -1,4 +1,4 @@
-export class UserAlertListDto {
+export class P_userAlertListDto {
 
     constructor(alertListId: number, alertTitle: string, alertDetail: string, alertDate: string, location_name: string) {
         this.alertListId = alertListId;

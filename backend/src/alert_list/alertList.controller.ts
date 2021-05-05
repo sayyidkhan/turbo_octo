@@ -4,13 +4,16 @@ import {AlertListDto} from "./dto/alert-list.dto";
 import { AlertList } from './schemas/alertList.schema';
 import { AlertListService } from './alertList.service';
 import {CompositeAlertListService} from "./compositeAlertList.service";
-import {UserAlertListDto} from "./dto/user-alert-list.dto";
+import {P_userAlertListDto} from "./dto/p_user-alert-list.dto";
+import {LocationService} from "../location/location.service";
+import {Location} from "../location/schemas/location.schema";
 
 
 @Controller('alertlist')
 export class AlertListController {
   constructor(
       private readonly alertListService: AlertListService,
+      private readonly locationService : LocationService,
       private readonly compositeAlertListService : CompositeAlertListService) {}
 
   @Get(':alert')
@@ -20,7 +23,7 @@ export class AlertListController {
 
   //get only active list
   @Get('/filterlist/true')
-  async getAllActiveAlertList(): Promise<UserAlertListDto[]> {
+  async getAllActiveAlertList(): Promise<P_userAlertListDto[]> {
       console.log("get only active alerts...");
       return this.compositeAlertListService.getOnlyActiveAlerts();
   }
@@ -32,19 +35,53 @@ export class AlertListController {
   }
 
   @Post()
-  async createAlert(@Body() createAlertListDto: AlertListDto): Promise<AlertList> {
-      console.log("alertList DTO received successfully...");
-      return this.alertListService.createAlert(
-          createAlertListDto.alertTitle,
-          createAlertListDto.alertDetail,
-          createAlertListDto.alertDate,
-          createAlertListDto.active,
-          createAlertListDto.location_id);
+  async createAlert(@Body() dto: AlertListDto): Promise<AlertList> {
+      const locationId : number = dto.location_id;
+      //check if location_id is valid first
+      const location: Location = await this.locationService.getLocationById(locationId);
+      if(location === null) {
+          const errorMsg = "location id is invalid. user is trying to enter a location which doesnt exist in record.";
+          console.log(errorMsg);
+          throw new HttpException(
+              errorMsg,
+              HttpStatus.BAD_REQUEST);
+      }
+      else {
+          console.log("alertList DTO received successfully...");
+          return this.alertListService.createAlert(
+              dto.alertTitle,
+              dto.alertDetail,
+              dto.alertDate,
+              dto.active,
+              dto.location_id,
+          );
+      }
   }
 
   @Patch(':alert')
-  async updateAlertListById(@Param('alert') alertId : number, @Body() alertListDto: AlertListDto): Promise<AlertList> {
-      return this.alertListService.updateAlertById(alertId, alertListDto);
+  async updateAlertListById(@Param('alert') alertId : number, @Body() dto: AlertListDto): Promise<AlertList> {
+      const locationId : number = dto.location_id;
+      //check if location_id is valid first
+      const location: Location = await this.locationService.getLocationById(locationId);
+      const alert : AlertList = await this.alertListService.getAlertById(alertId);
+      if(alert === null){
+          const errorMsg = "alert id is invalid. user is trying to update a alertId which doesnt exist in record.";
+          console.log(errorMsg);
+          throw new HttpException(
+              errorMsg,
+              HttpStatus.BAD_REQUEST);
+      }
+      else if(location === null) {
+          const errorMsg = "location id is invalid. user is trying to update a location which doesnt exist in record.";
+          console.log(errorMsg);
+          throw new HttpException(
+              errorMsg,
+              HttpStatus.BAD_REQUEST);
+      }
+      else {
+          console.log("alertList DTO received successfully...");
+          return this.alertListService.updateAlertById(alertId, dto);
+      }
   }
 
   @Delete(':alert')

@@ -4,7 +4,7 @@ import {AlertList} from "./schemas/alertList.schema";
 import {AlertListService} from "./alertList.service";
 import {LocationService} from "../location/location.service";
 import {DateUtil} from "../commonUtil/DateUtil";
-import {UserAlertListDto} from "./dto/user-alert-list.dto";
+import {P_userAlertListDto} from "./dto/p_user-alert-list.dto";
 
 @Injectable()
 export class CompositeAlertListService {
@@ -13,7 +13,7 @@ export class CompositeAlertListService {
         private readonly locationService : LocationService,
     ) {}
 
-    async getOnlyActiveAlerts(): Promise<UserAlertListDto[]> {
+    async getOnlyActiveAlerts(): Promise<P_userAlertListDto[]> {
         const alertList : AlertList[] = await this.alertListService.getAlertsWithQuery({active : true});
         const locationList: {} = await this.locationService.getAllLocationDict();
 
@@ -29,14 +29,14 @@ export class CompositeAlertListService {
         }
 
         //convert alertList to activeOnly list
-        const userAlertList : UserAlertListDto[] = alertList.map((alertList : AlertList) => {
+        const userAlertList : P_userAlertListDto[] = alertList.map((alertList : AlertList) => {
             const id = alertList.alertListId;
             const alertTitle = alertList.alertTitle;
             const alertDetail = alertList.alertDetail;
             const alertDate = DateUtil.convertDateToString(alertList.alertDate);
             const location_name = filterLocation(alertList.location_id);
 
-            return new UserAlertListDto(id, alertTitle, alertDetail, alertDate, location_name);
+            return new P_userAlertListDto(id, alertTitle, alertDetail, alertDate, location_name);
         });
         return userAlertList;
     }
