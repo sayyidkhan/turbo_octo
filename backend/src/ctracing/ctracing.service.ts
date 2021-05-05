@@ -35,7 +35,6 @@ export class CtracingService {
             location_id : location_id,
             date : date,
         };
-        console.log(persistence.ct_id);
         return this.ctracingRepository.create(persistence);
     }
 

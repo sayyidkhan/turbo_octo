@@ -11,29 +11,25 @@ export class VaccineController {
   constructor(private readonly VaccineService: VaccineService) {}
 
 
-  // single row without 's'
   @Get(':v_cert_id')
-  async getVaccine(@Param('v_cert_id') v_cert_id: number): Promise<v_cert> {
+  async getVaccineById(@Param('v_cert_id') v_cert_id: number): Promise<v_cert> {
     return this.VaccineService.getVaccineById(v_cert_id);
   }
 
-  //Multiple row with 's'
   @Get()
-  async getVaccines(): Promise<v_cert[]> {
+  async getAllVaccinationList(): Promise<v_cert[]> {
       console.log("get all vaccine...");
-      return this.VaccineService.getVaccine();
+      return this.VaccineService.getAllVaccinationList();
   }
 
-  //Take note two DTO varia with different cap
   @Post()
   async createVaccine(@Body() createVaccineDto: CreateVaccineDto): Promise<v_cert> {
       console.log("vaccine DTO received successfully...")
-      return this.VaccineService.createVaccine(createVaccineDto.v_cert_id, createVaccineDto.p_nric,
-        createVaccineDto.v_date,createVaccineDto.e_nric)
+      return this.VaccineService.createVaccine(
+          createVaccineDto.p_nric,
+          createVaccineDto.v_date,
+          createVaccineDto.e_nric
+      );
   }
-
-
-
-
 
 }

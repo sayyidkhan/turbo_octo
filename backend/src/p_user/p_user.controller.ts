@@ -1,9 +1,7 @@
-import { Body, Controller, Get, Param, Patch, Post } from '@nestjs/common';
-import { CreateP_UserDto } from './dto/create-p_user.dto';
-import { p_user} from './schemas/p_user.schema';
-import { P_UserService } from './p_user.service';
-
-
+import {Body, Controller, Get, Param, Post} from '@nestjs/common';
+import {CreateP_UserDto} from './dto/create-p_user.dto';
+import {p_user} from './schemas/p_user.schema';
+import {P_UserService} from './p_user.service';
 
 
 @Controller('p_user')
@@ -28,11 +26,12 @@ export class P_UserController {
   @Post()
   async createP_User(@Body() createP_UserDto: CreateP_UserDto): Promise<p_user> {
       console.log("public user DTO received successfully...")
-      return this.P_UserService.createP_User(createP_UserDto.p_nric,createP_UserDto.firstname,createP_UserDto.lastname,createP_UserDto.covid_status)
+      return this.P_UserService.createP_User(
+          createP_UserDto.p_nric,
+          createP_UserDto.firstname,
+          createP_UserDto.lastname,
+          createP_UserDto.covid_status
+      );
   }
-
-
-
-
 
 }
