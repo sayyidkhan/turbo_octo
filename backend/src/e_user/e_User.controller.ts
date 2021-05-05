@@ -35,6 +35,14 @@ export class E_UserController {
 
     @Patch(':e_nric')
     async updateEnterpriseUser(@Param('e_nric') eNRIC: string, @Body() updateUserDto: UpdateEnterpriseUserDto): Promise<E_User> {
+        const e_user :E_User = await this.e_UserService.getEnterpriseUserById(eNRIC);
+        //if e_user returns null, user is trying to update record that does not exist in db
+        if(e_user === null) {
+            const errorMsg : string = "eNRIC does not exist.";
+            throw new HttpException(
+                errorMsg,
+                HttpStatus.BAD_REQUEST);
+        }
         return this.e_UserService.updateEnterpriseUser(eNRIC, updateUserDto);
     }
 
