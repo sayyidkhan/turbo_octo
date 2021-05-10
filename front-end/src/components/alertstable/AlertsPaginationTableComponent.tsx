@@ -39,7 +39,7 @@ function checkBoolean(x: string) {
 
 function createData(parameters: { alertTitle: string, alertDetail: string, alertDate: number, active: string, location_id: number, alertListId: number }) {
     let {alertTitle, alertDetail, alertDate, active, location_id, alertListId} = parameters;
-    active = active.toString();
+    /*{active = active.toString();}*/
     return { alertTitle: alertTitle, alertDetail: alertDetail, alertDate: alertDate, active: checkBoolean(active), location_id: location_id, alertListId: alertListId };
 }
 
