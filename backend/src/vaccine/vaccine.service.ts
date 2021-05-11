@@ -10,6 +10,14 @@ export class VaccineService {
         return this.vaccineRepository.findOne({ v_cert_id : v_cert_id })
     }
 
+    async getVaccineByp_nric(p_nric: string): Promise<v_cert[]> {
+        return this.vaccineRepository.find({ p_nric : p_nric })
+    }
+
+    async getVaccineBye_nric(e_nric: string): Promise<v_cert[]> {
+        return this.vaccineRepository.find({ e_nric : e_nric })
+    }
+
     async getAllVaccinationList(): Promise<v_cert[]> {
         return this.vaccineRepository.find({});
     }
