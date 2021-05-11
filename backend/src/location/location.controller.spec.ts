@@ -1,23 +1,50 @@
-import {LocationController} from "./location.controller";
+import {HttpModule, HttpService, INestApplication} from "@nestjs/common";
+import {Test, TestingModule} from "@nestjs/testing";
+import {AppModule} from "../app.module";
 import {LocationService} from "./location.service";
-import {Location} from "./schemas/location.schema";
+import * as request from 'supertest';
+import {LocationModule} from "./location.module";
+import {LocationController} from "./location.controller";
+import {Location} from './schemas/location.schema';
 
+describe('locationController',() => {
+    let app : INestApplication;
+    let httpService : HttpService;
 
-describe('LocationController', ()=> {
-    let locationController : LocationController;
-    let spyService : LocationService;
+    const mockData: () => Location[] = () => {
+        const location = new Location();
+        location.location_id = 123456;
+        location.location_name = "location_name_1";
+        location.district = "west";
 
-    beforeEach(async () => {
-        //api service provider
-       const APIServiceProvider = {
-            provider: LocationService,
-           useFactory: () => ({
-               getAllLocation: jest.fn(() => [new Location()]),
-           })
-       };
+        return [location];
+    }
+
+    beforeAll(async () => {
+        const testAppModule : TestingModule = await Test.createTestingModule({
+            imports : [LocationModule, AppModule, HttpModule],
+            controllers: [LocationController],
+            providers : [
+                {provide : LocationService,
+                useValue : {
+                    getAllLocation : jest.fn(mockData)
+                }}
+            ]
+        }).compile();
+
+        app = testAppModule.createNestApplication();
+        httpService = testAppModule.get<HttpService>(HttpService);
+        await app.init();
     });
 
 
-});
+    it("LocationController - GET all location", async () => {
 
-//https://nishabe.medium.com/unit-testing-a-nestjs-app-in-shortest-steps-bbe83da6408
+       const res = await request(app.getHttpServer())
+           .get("/locations/")
+           .expect(200);
+       let result = res.status;
+       expect(result).toBe(200);
+    });
+
+});
