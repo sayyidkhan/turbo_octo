@@ -4,6 +4,7 @@ import {UpdateEnterpriseUserDto} from "./dto/update-eUser.dto";
 
 import { E_User } from './schemas/e_user.schema';
 import {E_UserService} from "./e_User.service";
+import {LoginEnterpriseUserDto} from "./dto/login-eUser.dto";
 
 @Controller('e_user')
 export class E_UserController {
@@ -13,6 +14,32 @@ export class E_UserController {
     async getUserByEnterpriseNRIC(@Param('e_nric') eNRIC: string): Promise<E_User> {
         console.log("get e_nric:" + eNRIC);
         return this.e_UserService.getEnterpriseUserById(eNRIC);
+    }
+
+    @Post("/login")
+    async validateLogin(@Body() userLoginDto : LoginEnterpriseUserDto) : Promise<E_User> {
+        const eNRIC = userLoginDto.e_nric;
+        const password = userLoginDto.password;
+        const e_user :E_User = await this.e_UserService.getEnterpriseUserById(eNRIC);
+        //if e_user returns null, user is trying to update record that does not exist in db
+        if(e_user === null) {
+            const errorMsg : string = "eNRIC does not exist.";
+            console.log("login failed." + errorMsg);
+            throw new HttpException(
+                errorMsg,
+                HttpStatus.BAD_REQUEST);
+        }
+        else if(e_user.password !== password) {
+            const errorMsg : string = "incorrect password.";
+            console.log("login failed." + errorMsg);
+            throw new HttpException(
+                errorMsg,
+                HttpStatus.BAD_REQUEST);
+        }
+        else {
+            console.log("login successful.");
+            return e_user;
+        }
     }
 
     @Get()

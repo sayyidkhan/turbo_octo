@@ -24,6 +24,16 @@ export class VaccineController {
     return this.VaccineService.getVaccineById(v_cert_id);
   }
 
+  @Get('/p_user/:p_nric')
+  async getVaccineByp_nric(@Param('p_nric') p_nric: string) : Promise<v_cert[]> {
+      return this.VaccineService.getVaccineByp_nric(p_nric);
+  }
+
+  @Get('/e_user/:e_nric')
+  async getVaccineBye_nric(@Param('e_nric') e_nric: string) : Promise<v_cert[]> {
+      return this.VaccineService.getVaccineBye_nric(e_nric);
+  }
+
   @Get()
   async getAllVaccinationList(): Promise<v_cert[]> {
       console.log("get all vaccine...");

@@ -1,7 +1,7 @@
 import API from '../../../services/api';
 
 export const alertlist: () => Promise<any> = async () => {
-    const result = await API.get('/alertlist' );
+    const result = await API.get('/alertlist/filterlist/true' );
     return result;
 }
 

@@ -8,7 +8,7 @@ export class RecentAlertsTable extends Component {
     render(){
         return(
             <div className="dashboard-tableContainer-div">
-                <h2>Recent issued public alerts</h2>
+                <h2>Recent public alerts</h2>
                 <Box justifyContent="center" m={1} p={0} bgcolor="background.paper">
                     <Box p={1} m={1} bgcolor="white.100">
                         <AlertsTable />
