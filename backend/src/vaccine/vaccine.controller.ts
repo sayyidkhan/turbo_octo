@@ -6,6 +6,7 @@ import {P_UserService} from "../p_user/p_user.service";
 import {E_UserService} from "../e_user/e_User.service";
 import {p_user} from "../p_user/schemas/p_user.schema";
 import {E_User} from "../e_user/schemas/e_user.schema";
+import {DateUtil} from "../commonUtil/DateUtil";
 
 
 @Controller('vaccines')
@@ -44,6 +45,7 @@ export class VaccineController {
   async createVaccine(@Body() createVaccineDto: CreateVaccineDto): Promise<v_cert> {
       const publicNric: string = createVaccineDto.p_nric;
       const enterpriseNric: string = createVaccineDto.e_nric;
+      const date : Date = DateUtil.convertStrToDate(createVaccineDto.v_date);
       //check if public / enterprise is valid first
       const p_user: p_user = await this.p_UserService.getP_UserById(publicNric);
       const e_user: E_User = await this.e_UserService.getEnterpriseUserById(enterpriseNric);
@@ -61,11 +63,18 @@ export class VaccineController {
               errorMsg,
               HttpStatus.BAD_REQUEST);
       }
+      else if(date === null){
+          const errorMsg = "date is invalid. please review the date string before sending.";
+          console.log(errorMsg);
+          throw new HttpException(
+              errorMsg,
+              HttpStatus.BAD_REQUEST);
+      }
       else {
           console.log("vaccine DTO received successfully...");
           return this.VaccineService.createVaccine(
               publicNric,
-              createVaccineDto.v_date,
+              date,
               enterpriseNric
           );
       }

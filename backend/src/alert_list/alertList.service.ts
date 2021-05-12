@@ -1,5 +1,5 @@
 import {Injectable} from "@nestjs/common";
-import {AlertListDto} from "./dto/alert-list.dto";
+import {AlertListDto, PersistAlertListDto} from "./dto/alert-list.dto";
 
 import {AlertList} from "./schemas/alertList.schema";
 import {AlertListRepository} from "./alertList.repository";
@@ -45,8 +45,8 @@ export class AlertListService {
         return this.alertListRepository.create(persistence);
     }
 
-    async updateAlertById(alertListId: number, alertListDto: AlertListDto): Promise<AlertList> {
-        return this.alertListRepository.findOneAndUpdate({ alertListId : alertListId }, alertListDto);
+    async updateAlertById(alertListId: number, dto: PersistAlertListDto): Promise<AlertList> {
+        return this.alertListRepository.findOneAndUpdate({ alertListId : alertListId }, dto);
     }
 
     async deleteAlertListById(alertId: number): Promise<AlertList> {

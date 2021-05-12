@@ -1,5 +1,5 @@
 export class CreateVaccineDto {
     p_nric: string;
-    v_date: Date;
+    v_date: string;
     e_nric: string;
 }

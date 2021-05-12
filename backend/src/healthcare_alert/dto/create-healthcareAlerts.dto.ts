@@ -1,6 +1,6 @@
 export class CreateHealthcareAlertsDto {
     healthcareAlertId: number;
-    date: Date;
+    date: string;
     location_id: number;
     description: string;
     e_nric: string;

@@ -1,8 +1,9 @@
-import {Body, Controller, Get, Param, Patch, Post} from '@nestjs/common';
+import {Body, Controller, Get, HttpException, HttpStatus, Param, Patch, Post} from '@nestjs/common';
 import {HealthcareAlertService} from "./healthcareAlert.service";
 import {HealthcareAlert} from "./schemas/healthcareAlert.schema";
 import {CreateHealthcareAlertsDto} from "./dto/create-healthcareAlerts.dto";
 import {UpdateHealthcareAlertsDto} from "./dto/update-healthcareAlerts.dto";
+import {DateUtil} from "../commonUtil/DateUtil";
 
 
 @Controller('healthcare_alert')
@@ -21,20 +22,40 @@ export class HealthcareAlertController {
   }
 
   @Post()
-  async createNewHealthcareAlerts(@Body() alertsDto: CreateHealthcareAlertsDto): Promise<HealthcareAlert> {
-      console.log("healthcare DTO received successfully...")
-      return this.healthcareAlertService.createNewHealthcareAlerts(
-          alertsDto.healthcareAlertId,
-          alertsDto.date,
-          alertsDto.location_id,
-          alertsDto.description,
-          alertsDto.e_nric,
-      );
+  async createNewHealthcareAlerts(@Body() dto: CreateHealthcareAlertsDto): Promise<HealthcareAlert> {
+      const date : Date = DateUtil.convertStrToDate(dto.date);
+      if(date === null){
+          const errorMsg = "date is invalid. please review the date string before sending.";
+          console.log(errorMsg);
+          throw new HttpException(
+              errorMsg,
+              HttpStatus.BAD_REQUEST);
+      }
+      else {
+          console.log("healthcare DTO received successfully...")
+          return this.healthcareAlertService.createNewHealthcareAlerts(
+              dto.healthcareAlertId,
+              date,
+              dto.location_id,
+              dto.description,
+              dto.e_nric,
+          );
+      }
   }
 
   @Patch(':healthcareAlertId')
   async updateHealthcareAlerts(@Param('healthcareAlertId') healthcareAlertId: number, @Body() updateDto: UpdateHealthcareAlertsDto): Promise<HealthcareAlert> {
-      return this.healthcareAlertService.updateHealthcareAlertByID(healthcareAlertId, updateDto);
+      const date : Date = DateUtil.convertStrToDate(updateDto.date);
+      if(date === null){
+          const errorMsg = "date is invalid. please review the date string before sending.";
+          console.log(errorMsg);
+          throw new HttpException(
+              errorMsg,
+              HttpStatus.BAD_REQUEST);
+      }
+      else {
+          return this.healthcareAlertService.updateHealthcareAlertByID(healthcareAlertId, updateDto);
+      }
   }
 
 }
