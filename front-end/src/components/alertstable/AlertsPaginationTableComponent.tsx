@@ -37,6 +37,18 @@ function checkBoolean(x: string) {
     }
 }
 
+/* slice and get top 20 only */
+function sliceArray(arr1: any[]) {
+    if(arr1.length > 20)
+    {
+        return arr1.slice(1).slice(-20);
+    }
+    else 
+    {
+        return arr1;
+    }
+}
+
 function createData(parameters: { alertTitle: string, alertDetail: string, alertDate: number, active: string, location_id: number, alertListId: number }) {
     let {alertTitle, alertDetail, alertDate, active, location_id, alertListId} = parameters;
     /*{active = active.toString();}*/
@@ -69,7 +81,8 @@ export default function AlertsPaginationTableComponent(props : any) {
     function createRows() : { alertTitle: string, alertDetail: string, alertDate: number, active: string, location_id: number, alertListId: number }[] {
         const myListing : any[] = props.myList;
         const result = myListing.map(data => createData(data));
-        return (myListing.length !== 0) ? result : [];
+        const slicedResults = sliceArray(result);
+        return (myListing.length !== 0) ? slicedResults : [];
     }
 
     /*
