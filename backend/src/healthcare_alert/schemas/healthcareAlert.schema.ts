@@ -9,7 +9,7 @@ export class HealthcareAlert {
     healthcareAlertId: number;
 
     @Prop()
-    date: number;
+    date: Date;
 
     @Prop()
     location_id: number;

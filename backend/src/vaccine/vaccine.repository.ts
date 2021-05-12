@@ -16,6 +16,7 @@ export class VaccineRepository {
         return this.vaccineModel.find(vaccinesFilterQuery)
     }
 
+
     async getMaxVaccineListId(): Promise<number> {
         //Assume vaccine ID is assigned by system all the time,max ID will always be number of object in the table 
         const vaccineList = await this.vaccineModel.find({}).sort({ v_cert : -1 });

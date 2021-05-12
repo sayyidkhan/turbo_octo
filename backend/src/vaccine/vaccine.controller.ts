@@ -19,7 +19,9 @@ export class VaccineController {
 
   @Get(':v_cert_id')
   async getVaccineById(@Param('v_cert_id') v_cert_id: number): Promise<v_cert> {
-      return this.VaccineService.getVaccineById(v_cert_id);
+    console.log(v_cert_id);
+    console.log("get by ID...");
+    return this.VaccineService.getVaccineById(v_cert_id);
   }
 
   @Get('/p_user/:p_nric')

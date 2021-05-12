@@ -33,7 +33,7 @@ export class CompositeAlertListService {
             const id = alertList.alertListId;
             const alertTitle = alertList.alertTitle;
             const alertDetail = alertList.alertDetail;
-            const alertDate = DateUtil.convertDateToString(alertList.alertDate);
+            const alertDate = alertList.alertDate.toLocaleString();
             const location_name = filterLocation(alertList.location_id);
 
             return new P_userAlertListDto(id, alertTitle, alertDetail, alertDate, location_name);

@@ -10,6 +10,11 @@ export class VaccineService {
         return this.vaccineRepository.findOne({ v_cert_id : v_cert_id })
     }
 
+    //get by date 
+    async getVaccineByDate(v_date : Date): Promise<v_cert> {
+        return this.vaccineRepository.findOne({ v_date : new Date })
+    }
+  
     async getVaccineByp_nric(p_nric: string): Promise<v_cert[]> {
         return this.vaccineRepository.find({ p_nric : p_nric })
     }
@@ -26,7 +31,7 @@ export class VaccineService {
         return this.vaccineRepository.getMaxVaccineListId();
     }
 
-    async createVaccine(p_nric: string, v_date:number , e_nric : string): Promise<v_cert> {
+    async createVaccine(p_nric: string, v_date :Date , e_nric : string): Promise<v_cert> {
         const highestAlertListId : number = await this.getMaxAlertListId();
         const persistence = {
             //increment the id if there is an existing alertId, otherwise initalise at 1

@@ -21,7 +21,7 @@ export class HealthcareAlertService {
 
     async createNewHealthcareAlerts(
         healthcareAlertId: number,
-        date: number,
+        date: Date,
         location_id:number,
         description : string,
         e_nric : string): Promise<HealthcareAlert> {
