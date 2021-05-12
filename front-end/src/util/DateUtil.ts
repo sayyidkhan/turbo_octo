@@ -1,7 +1,5 @@
 export abstract class DateUtil {
 
-    public static convertDateToInt = (dateString : string) : number => {
-        return new Date(dateString).getTime();
-    }
+    public static convertDateToString: (dateObj: string) => string = (dateObj : string) => JSON.stringify(dateObj);
 
 }
