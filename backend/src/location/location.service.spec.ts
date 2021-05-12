@@ -6,13 +6,20 @@ import {AppModule} from "../app.module";
 import {LocationRepository} from "./location.repository";
 
 class LocationServiceMock {
-    getAllLocation() {
+    getAllLocation() : Location[] {
+        const location_id = this.getLocationId();
+        const location = this.getLocationById(location_id);
+        return [location];
+    }
+    getLocationById(location_id : number) : Location {
         const location = new Location();
-        location.location_id = 123456;
+        location.location_id = location_id;
         location.location_name = "location_name_1";
         location.district = "west";
-
-        return [location];
+        return location;
+    }
+    getLocationId() : number {
+        return 123456;
     }
 }
 
@@ -27,7 +34,8 @@ describe('LocationService', () => {
                {
                    provide : LocationRepository,
                    useValue : {
-                       find : jest.fn()
+                       find : jest.fn(),
+                       findOne : jest.fn(),
                    }
                },
                LocationService,
@@ -47,6 +55,14 @@ describe('LocationService', () => {
         locationRepository.find = jest.fn().mockReturnValue(new LocationServiceMock().getAllLocation());
         const result = await locationService.getAllLocation();
         expect(result).toEqual(new LocationServiceMock().getAllLocation());
+    });
+
+    it('test - getLocationById()', async () => {
+        const location_id = new LocationServiceMock().getLocationId();
+
+        locationRepository.findOne = jest.fn().mockReturnValue(new LocationServiceMock().getLocationById(location_id));
+        const result = await locationService.getLocationById(location_id);
+        expect(result).toEqual(new LocationServiceMock().getLocationById(location_id));
     });
 
 });
