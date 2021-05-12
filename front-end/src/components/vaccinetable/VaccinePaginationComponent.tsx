@@ -10,23 +10,23 @@ import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
 
 /* Checked-in table */ 
-interface CTraceColumn {
-    id: 'ct_id' | 'p_nric' | 'location_id' | 'date';
+interface VaccineColumn {
+    id: 'p_nric' | 'v_date' | 'e_nric';
     label: string;
     minWidth?: number;
     align?: 'left';
     format?: (value: number) => string;
 }
 
-const columns: CTraceColumn[] = [
-    { id: 'date', label: 'Checked-in date', minWidth: 80 },
-    { id: 'location_id', label: 'Location', minWidth: 80 },
-    { id: 'p_nric', label: 'NRIC', minWidth: 80 },
+const columns: VaccineColumn[] = [
+    { id: 'p_nric', label: 'Citizen NRIC', minWidth: 80 },
+    { id: 'v_date', label: 'Vaccinated date', minWidth: 80 },
+    { id: 'e_nric', label: 'Vaccinated by', minWidth: 80 },
 ];
 
-function createData(parameters: { ct_id: number, p_nric: string, location_id: number, date: number}) {
-    let {ct_id, p_nric, location_id, date} = parameters;
-    return { ct_id: ct_id, p_nric: p_nric, location_id: location_id, date: date };
+function createData(parameters: { p_nric: string, v_date: Date, e_nric: string }) {
+    let {p_nric, v_date, e_nric} = parameters;
+    return { p_nric: p_nric, v_date: v_date, e_nric: e_nric};
 }
 
 const useStyles = makeStyles({
@@ -38,11 +38,11 @@ const useStyles = makeStyles({
     },
 });
 
-/* get top 200 rows only */
+/* get top 50 rows only */
 function sliceArray(arr1: any[]) {
-    if(arr1.length > 200)
+    if(arr1.length > 50)
     {
-        return arr1.slice(1).slice(-200);
+        return arr1.slice(1).slice(-50);
     }
     else 
     {
@@ -50,7 +50,7 @@ function sliceArray(arr1: any[]) {
     }
 }
 
-export default function CTPagination(props : any) {
+export default function VaccinePagination(props : any) {
     const classes = useStyles();
     const [page, setPage] = React.useState(0);
     const [rowsPerPage, setRowsPerPage] = React.useState(10);
@@ -64,7 +64,7 @@ export default function CTPagination(props : any) {
         setPage(0);
     };
 
-    function createRows() : { ct_id: number, p_nric: string, location_id: number, date: number }[] {
+    function createRows() : { p_nric: string, v_date: Date, e_nric: string }[] {
         const myListing1 : any[] = props.myList;
         const result = myListing1.map(data => createData(data));
         const slicedResults = sliceArray(result);
@@ -91,7 +91,7 @@ export default function CTPagination(props : any) {
                     <TableBody>
                         {createRows().slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row ) => {
                             return (
-                                <TableRow hover role="checkbox" tabIndex={-1} key={row.ct_id}>
+                                <TableRow hover role="checkbox" tabIndex={-1} key={row.p_nric}>
                                     {columns.map((column) => {
                                         const value = row[column.id];
                                         return (

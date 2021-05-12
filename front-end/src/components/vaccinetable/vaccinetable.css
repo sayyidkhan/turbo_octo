@@ -1,0 +1,17 @@
+/* =========================== Vaccine page specific===================================== */
+.vaccine-container {
+    margin-right: 0px;
+  }
+  
+  .vaccine-tableContainer-div {
+    background-color: #ffffff;
+    min-width: 850px;
+    height: 100%;
+    /* end */
+    border-radius: 25px;
+  }
+  
+  .vaccine-tableContainer-div>h2 {
+    margin-left: 20px;
+    color: #ff0000;
+  }
