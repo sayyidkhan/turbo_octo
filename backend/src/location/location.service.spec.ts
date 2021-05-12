@@ -42,7 +42,10 @@ describe('LocationService', () => {
 
     beforeEach(async () => {
        const module: TestingModule = await Test.createTestingModule({
-           imports : [LocationModule, AppModule],
+           imports : [
+               LocationModule,
+               AppModule,
+           ],
            providers : [
                {
                    provide : LocationRepository,
