@@ -7,6 +7,7 @@ import {LocationService} from "../location/location.service";
 import {p_user} from "../p_user/schemas/p_user.schema";
 import {Location} from "../location/schemas/location.schema";
 import {ViewCtracingDto} from "./dto/view-ctracing.dto";
+import {DateUtil} from "../commonUtil/DateUtil";
 
 
 @Controller('c_tracing')
@@ -38,6 +39,8 @@ export class CtracingController {
   async createCtracing(@Body() dto: CreateCtracingDto): Promise<c_tracing> {
       const locationId : number = dto.location_id;
       const p_nric : string = dto.p_nric;
+      console.log(dto.date);
+      const v_date : Date = DateUtil.convertStrToDate(dto.date);
       //check if public / location_id is valid first
       const p_user: p_user = await this.p_UserService.getP_UserById(p_nric);
       const location: Location = await this.locationService.getLocationById(locationId);
@@ -55,12 +58,19 @@ export class CtracingController {
               errorMsg,
               HttpStatus.BAD_REQUEST);
       }
+      else if(v_date === null){
+          const errorMsg = "date is invalid. please review the date string before sending.";
+          console.log(errorMsg);
+          throw new HttpException(
+              errorMsg,
+              HttpStatus.BAD_REQUEST);
+      }
       else {
           console.log("contact tracing DTO received successfully...");
           return this.CtracingService.createCtracing(
               dto.p_nric,
               dto.location_id,
-              dto.date);
+              v_date);
       }
   }
 

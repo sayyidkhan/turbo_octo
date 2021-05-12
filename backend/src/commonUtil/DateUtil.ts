@@ -1,8 +1,13 @@
 export abstract class DateUtil {
 
-    public static convertDateToString = (dateInt : number) : string => {
-        const newDate = new Date(dateInt). toLocaleDateString("en-US");
-        return newDate;
+    public static convertStrToDate = (dateString : string) : Date => {
+        try {
+            return new Date(dateString);
+        }
+        catch (e) {
+            console.log("invalid date format");
+            return null;
+        }
     }
 
 }
