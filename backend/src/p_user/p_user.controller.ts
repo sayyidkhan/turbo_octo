@@ -2,9 +2,6 @@ import {Body, Controller, Get, HttpException, HttpStatus, Param, Patch, Post} fr
 import {CreateP_UserDto} from './dto/create-p_user.dto';
 import {p_user} from './schemas/p_user.schema';
 import {P_UserService} from './p_user.service';
-import {UpdateEnterpriseUserDto} from "../e_user/dto/update-eUser.dto";
-import {E_User} from "../e_user/schemas/e_user.schema";
-import {UpdateUserDto} from "../users/dto/update-user.dto";
 import {UpdatePublicUserDto} from "./dto/update_public_user_dto";
 
 

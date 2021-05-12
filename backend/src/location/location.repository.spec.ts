@@ -6,7 +6,7 @@ import {AppModule} from "../app.module";
 import {LocationRepository} from "./location.repository";
 import {MongooseModule} from "@nestjs/mongoose";
 
-describe('LocationService', () => {
+describe('LocationRepository', () => {
     let locationRepository : LocationRepository;
     let locationService : LocationService;
 
@@ -31,7 +31,7 @@ describe('LocationService', () => {
 
        locationService = module.get<LocationService>(LocationService);
        locationRepository = module.get<LocationRepository>(LocationRepository);
-    })
+    });
 
     it('test - find()', async () => {
         await locationService.getAllLocation();
