@@ -1,17 +1,13 @@
-import { Body, Controller, Get, Param, Patch, Post } from '@nestjs/common';
-// import { CreateUserDto } from './dto/create-user.dto';
-// import { UpdateAlertListDto } from './dto/update-user.dto';
-
-import { Location } from './schemas/location.schema';
+import {Controller, Get, Param} from '@nestjs/common';
+import {Location} from './schemas/location.schema';
 import {LocationService} from "./location.service";
-import {CreateLocationDto} from "./dto/create-location.dto";
 
 @Controller('locations')
 export class LocationController {
   constructor(private readonly locationService: LocationService) {}
 
   @Get(':locationId')
-  async getUser(@Param('locationId') locationId: number): Promise<Location> {
+  async getLocationById(@Param('locationId') locationId: number): Promise<Location> {
       console.log("get location id:" + locationId);
       return this.locationService.getLocationById(locationId);
   }

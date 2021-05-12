@@ -1,37 +1,37 @@
-// import {Test, TestingModule} from '@nestjs/testing';
-// import {AlertListController} from './alertList.controller';
-// import {AlertListService} from './alertList.service';
-// import {AlertListRepository} from "./alertList.repository";
+// // import {Test, TestingModule} from '@nestjs/testing';
+// // import {AlertListController} from './alertList.controller';
+// // import {AlertListService} from './alertList.service';
+// // import {AlertListRepository} from "./alertList.repository";
+// //
+// //
+// // describe('AlertListController', () =>{
+// //
+// //     let alertListController: AlertListController;
+// //
+// //     beforeEach(async () => {
+// //         const module: TestingModule = await Test.createTestingModule({
+// //             controllers: [AlertListController],
+// //             providers: [AlertListService, AlertListRepository],
+// //         }).compile();
+// //
+// //         alertListController = module.get<AlertListController>(AlertListController);
+// //     });
+// //
+// //
+// //     describe("root",() => {
+// //         it('test getAllAlertsList()', async () => {
+// //
+// //
+// //             const testResult = await alertListController.getAllAlertList();
+// //             console.log(testResult);
+// //             expect(testResult !== null).toBeTruthy();
+// //         });
+// //     });
+// //
+// // });
 //
 //
-// describe('AlertListController', () =>{
 //
-//     let alertListController: AlertListController;
-//
-//     beforeEach(async () => {
-//         const module: TestingModule = await Test.createTestingModule({
-//             controllers: [AlertListController],
-//             providers: [AlertListService, AlertListRepository],
-//         }).compile();
-//
-//         alertListController = module.get<AlertListController>(AlertListController);
-//     });
-//
-//
-//     describe("root",() => {
-//         it('test getAllAlertsList()', async () => {
-//
-//
-//             const testResult = await alertListController.getAllAlertList();
-//             console.log(testResult);
-//             expect(testResult !== null).toBeTruthy();
-//         });
-//     });
-//
-// });
-
-
-
 import {AlertListController} from "./alertList.controller";
 import {AlertListService} from "./alertList.service";
 import {AlertListRepository} from "./alertList.repository";
@@ -44,7 +44,7 @@ describe('CatsController', () => {
 
     beforeEach(() => {
         alertListService = new AlertListService(null);
-        alertListController = new AlertListController(alertListService);
+        alertListController = new AlertListController(alertListService,null,null);
     });
 
     describe('findAll', () => {

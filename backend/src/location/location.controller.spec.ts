@@ -7,27 +7,35 @@ import {LocationModule} from "./location.module";
 import {LocationController} from "./location.controller";
 import {Location} from './schemas/location.schema';
 
-describe('locationController',() => {
-    let app : INestApplication;
-    let httpService : HttpService;
-
-    const mockData: () => Location[] = () => {
+class LocationControllerMock {
+    mockGetAllLocation: () => Location[] = () => {
+        return [this.mockOneLocation()];
+    }
+    mockOneLocation : () => Location = () => {
         const location = new Location();
         location.location_id = 123456;
         location.location_name = "location_name_1";
         location.district = "west";
 
-        return [location];
-    }
+        return location;
+    };
+}
+
+describe('locationController',() => {
+    let app : INestApplication;
+    let httpService : HttpService;
 
     beforeAll(async () => {
+        const controllerMock = new LocationControllerMock();
+
         const testAppModule : TestingModule = await Test.createTestingModule({
             imports : [LocationModule, AppModule, HttpModule],
             controllers: [LocationController],
             providers : [
                 {provide : LocationService,
                 useValue : {
-                    getAllLocation : jest.fn(mockData)
+                    getAllLocation : jest.fn(controllerMock.mockGetAllLocation),
+                    getLocationById : jest.fn(controllerMock.mockOneLocation),
                 }}
             ]
         }).compile();
@@ -35,6 +43,11 @@ describe('locationController',() => {
         app = testAppModule.createNestApplication();
         httpService = testAppModule.get<HttpService>(HttpService);
         await app.init();
+    });
+
+    afterAll(async () => {
+       app = null;
+       httpService = null;
     });
 
 
@@ -45,6 +58,16 @@ describe('locationController',() => {
            .expect(200);
        let result = res.status;
        expect(result).toBe(200);
+    });
+
+    it("LocationController - GET all location by Id", async () => {
+        const location_id = 123456;
+
+        const res = await request(app.getHttpServer())
+            .get(`/locations/${location_id}`)
+            .expect(200);
+        let result = res.status;
+        expect(result).toBe(200);
     });
 
 });

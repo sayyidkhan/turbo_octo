@@ -18,6 +18,19 @@ class LocationServiceMock {
         location.district = "west";
         return location;
     }
+    getAllLocationDict() : {} {
+        const location_id = this.getLocationId();
+        const location = this.getLocationById(location_id);
+
+        const myDict = {};
+        const locationDict = {
+                "locationId": location.location_id,
+                "location_name": location.location_name,
+                "district": location.district,
+        };
+        myDict[location_id] = locationDict;
+        return myDict;
+    }
     getLocationId() : number {
         return 123456;
     }
@@ -63,6 +76,12 @@ describe('LocationService', () => {
         locationRepository.findOne = jest.fn().mockReturnValue(new LocationServiceMock().getLocationById(location_id));
         const result = await locationService.getLocationById(location_id);
         expect(result).toEqual(new LocationServiceMock().getLocationById(location_id));
+    });
+
+    it('test - getAllLocationDict()', async () => {
+        locationRepository.find = jest.fn().mockReturnValue(new LocationServiceMock().getAllLocation());
+        const result = await locationService.getAllLocationDict();
+        expect(result).toEqual(new LocationServiceMock().getAllLocationDict());
     });
 
 });
