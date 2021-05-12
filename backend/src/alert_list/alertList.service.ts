@@ -28,7 +28,7 @@ export class AlertListService {
     async createAlert(
         alertTitle: string,
         alertDetail: string,
-        alertDate : number,
+        alertDate : Date,
         active : boolean,
         location_id : number,
         ): Promise<AlertList> {

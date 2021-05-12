@@ -12,7 +12,7 @@ export class v_cert {
     p_nric: string;
 
     @Prop()
-    v_date: number;
+    v_date: Date;
 
     @Prop()
     e_nric: string;

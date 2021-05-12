@@ -12,7 +12,7 @@ export class c_tracing {
     @Prop()
     location_id: number;
     @Prop()
-    date: number;
+    date: Date;
 }
 
 export const CtracingSchema = SchemaFactory.createForClass(c_tracing);
