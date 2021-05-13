@@ -29,20 +29,9 @@ export class SearchNRIC extends Component {
         this.setState({[e.target.name] : e.target.value});
     }
 
-    mapDTO = () => {
-        //backend only accept this data shape
-        const dto = {'p_nric': this.state.p_nric};
-        //purge any existing data, if there is any
-        this.setState({'p_nric' : ''});
-        return dto;
-    }
-
     submitHandler = (e: any) => {
         e.preventDefault();
-        //map data to DTO object for sending //
-        const dto  = this.mapDTO();
-        //map data to DTO object for sending //
-        axios.get("http://localhost:5000/searchbynric/:nric",dto)
+        axios.get("http://localhost:5000/searchbynric/:nric")
             .then(res=> {
                 console.log(res);
                 this.onSearchResultID(res.data);
