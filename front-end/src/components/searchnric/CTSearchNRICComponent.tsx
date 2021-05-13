@@ -64,7 +64,7 @@ export class SearchNRIC extends Component {
                         <label>Search NRIC: </label>
                         <input type="text" name="p_nric" value={p_nric} onChange={this.changeHandler}/>
                     </div>
-                    <button type="submit">Issue alert</button>
+                    <button type="submit">Search</button>
                     <div>{this.state.result_statement}</div>
                 </form>
             </div>

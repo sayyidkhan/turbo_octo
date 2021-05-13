@@ -16,7 +16,10 @@ export default function Dashboard() {
             <div className="dashboard-container">
     
                 <div className="dashboard-tableContainer-div">
+                    <div className="account-typical-content-div">
+                        <h2>Search citizen</h2>
                         <SearchNRIC />
+                    </div>
                 </div>
 
                 <div className="dashboard-tableContainer-div">
