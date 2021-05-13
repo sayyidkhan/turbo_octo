@@ -33,19 +33,7 @@ function checkBoolean(x: boolean) {
     }
     else
     {
-        return "Yes";
-    }
-}
-
-/* slice and get top 20 only */
-function sliceArray(arr1: any[]) {
-    if(arr1.length > 20)
-    {
-        return arr1.slice(1).slice(-20);
-    }
-    else 
-    {
-        return arr1;
+        return "No";
     }
 }
 
@@ -64,7 +52,7 @@ const useStyles = makeStyles({
     },
 });
 
-export default function AlertsPaginationTableComponent(props : any) {
+export default function IndivAlertsPaginationTableComponent(props : any) {
     const classes = useStyles();
     const [page, setPage] = React.useState(0);
     const [rowsPerPage, setRowsPerPage] = React.useState(10);
@@ -81,8 +69,7 @@ export default function AlertsPaginationTableComponent(props : any) {
     function createRows() : { alertTitle: string, alertDetail: string, alertDate: number, active: string, location_id: number, alertListId: number }[] {
         const myListing : any[] = props.myList;
         const result = myListing.map(data => createData(data));
-        const slicedResults = sliceArray(result);
-        return (myListing.length !== 0) ? slicedResults : [];
+        return (myListing.length !== 0) ? result : [];
     }
 
     /*

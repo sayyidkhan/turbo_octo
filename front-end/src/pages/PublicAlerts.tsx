@@ -1,6 +1,6 @@
 import '../App.css';
 import {IssueAlerts} from "../components/issuealerts/IssueAlertsComponent";
-import {AlertsTable} from '../components/alertstable/AlertsTableComponent';
+import {AlertsTable} from '../components/alertstable/IndivAlertsTableComponent';
 import CurrentLoginUserComponent from '../components/CurrentLoginUserComponent';
 
 export default function Dashboard() {

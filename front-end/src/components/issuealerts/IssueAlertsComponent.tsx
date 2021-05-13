@@ -13,16 +13,23 @@ export class IssueAlerts extends Component {
     state = {
         'alertTitle': '',
         'alertDetail': '',
-        'alertDate': 0,
+        'alertDate': '',
         'active': '',
         'location_id': 0,
         //only will be used to hold the outcome of the data
         'createdAlert' : ''
     }
 
+    /*
+    const result = (
+        <p style={{'fontSize' : 14}}>Issue ID {updatedInfo.alertListId} added successfully.<br/>
+        Please refresh page to see updated table.
+        </p>
+    );*/
+
     onUpdateAlertListID = (updatedInfo : any) => {
         const result = (
-            <p style={{'fontSize' : 14}}>ID {updatedInfo.alertListId} added successfully.<br/>
+            <p style={{'fontSize' : 14}}>Issue ID {updatedInfo.alertListId} added successfully.<br/>
             Please refresh page to see updated table.
             </p>
         );
@@ -54,6 +61,7 @@ export class IssueAlerts extends Component {
             })
             .catch(err => {
                 console.log(err);
+                alert("Incomplete form! Please complete the form and submit again!")
             });
          //const outcome = postIssueAlerts_API(this.state);
          //outcome.then(res => {
@@ -61,7 +69,7 @@ export class IssueAlerts extends Component {
          //}).catch(err => {
           //  console.log(err);
          //});
-        this.setState({alertTitle: '', alertDetail: '', alertDate: 0, active: '', location_id: ''});
+        this.setState({alertTitle: '', alertDetail: '', alertDate: '', active: '', location_id: ''});
     }
 
     render() {
@@ -71,7 +79,7 @@ export class IssueAlerts extends Component {
                 <form onSubmit={this.submitHandler}>
                     <div>
                         <label>Date: </label>
-                        <input type="number" name="alertDate" value={alertDate} onChange={this.changeHandler}/>
+                        <input type="text" name="alertDate" value={alertDate} onChange={this.changeHandler}/>
                     </div>
                     <div>
                         <label>Location: </label>
@@ -89,7 +97,7 @@ export class IssueAlerts extends Component {
                         <label>Status: </label>
                         <input type="text" name="active" value={active} onChange={this.changeHandler}/>
                     </div>
-                    <button type="submit">Create New User</button>
+                    <button type="submit">Issue alert</button>
                     <div>{this.state.createdAlert}</div>
                 </form>
             </div>
