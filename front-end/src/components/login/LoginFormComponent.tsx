@@ -38,6 +38,18 @@ export class LoginFormComponent extends Component {
         e.preventDefault();
         const dto  = this.mapDTO();
 
+        try {
+            const res = await axios({
+              method: 'PATCH',
+              url: 'http://localhost:5000/e_users',
+              params: { this.state.username },
+              data: { completed: checked }
+            });
+            return res;
+        } catch (err) {
+        throw new Error(err.response?.data.message);
+        }
+
         //map data to DTO object for sending to backend //
         axios.post("http://localhost:5000/users", dto)
             .then(res => {
