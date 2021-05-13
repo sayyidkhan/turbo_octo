@@ -11,53 +11,55 @@ export default function Dashboard() {
 
     const userType = sessionStorage.getItem("userType");
 
-    //use switch when there is more than 2 options, if else will validate on each if else
-    //while switch case will directly go to the case and ignore the other options (faster ui loading)
-    switch (userType) {
-        case "government":
-            return (
-                <div className="dashboard-container-general">
-                    <h1>Dashboard</h1>
-                    <div className="under-page-title-div">
-                        <CurrentLoginUserComponent />
-                    </div>
-                    <div className="dashboard-container">
-                        <AdvisoryFromHealthcareTable />
-                        <RecentCheckedinTable />
-                        <RecentVaccinatedTable />
-                        <RecentAlertsTable />
-                    </div>
+    if(userType === "government"){
+        return (
+            <div className="dashboard-container-general">
+                <h1>Dashboard</h1>
+                <div className="under-page-title-div">
+                    <CurrentLoginUserComponent />
                 </div>
-            );
-        case "healthcare":
-            return (
-                <div className="dashboard-container-general">
-                    <h1>Dashboard</h1>
-                    <div className="under-page-title-div">
-                        <CurrentLoginUserComponent />
-                    </div>
-                    <div className="dashboard-container">
-                        <RecentCheckedinTable />
-                        <RecentVaccinatedTable />
-                        <RecentAlertsTable />
-                    </div>
+                <div className="dashboard-container">
+                    <AdvisoryFromHealthcareTable />
+                    <RecentCheckedinTable />
+                    <RecentVaccinatedTable />
+                    <RecentAlertsTable />
                 </div>
-            );
-        case "business":
-            return (
-                <div className="dashboard-container-general">
-                    <h1>Dashboard</h1>
-                    <div className="under-page-title-div">
-                        <CurrentLoginUserComponent />
-                    </div>
-                    <div className="dashboard-container">
-                        <Covid19TipsComponent />
-                        <RecentAlertsTable />
-                    </div>
+            </div>
+        );
+
+    }else if(userType === "healthcare"){
+        return (
+            <div className="dashboard-container-general">
+                <h1>Dashboard</h1>
+                <div className="under-page-title-div">
+                    <CurrentLoginUserComponent />
                 </div>
-            );
-        default:
-            <div></div>;
+                <div className="dashboard-container">
+                    <RecentCheckedinTable />
+                    <RecentVaccinatedTable />
+                    <RecentAlertsTable />
+                </div>
+            </div>
+        );
+
+    } else if(userType === "business"){
+        return (
+            <div className="dashboard-container-general">
+                <h1>Dashboard</h1>
+                <div className="under-page-title-div">
+                    <CurrentLoginUserComponent />
+                </div>
+                <div className="dashboard-container">
+                    <Covid19TipsComponent />
+                    <RecentAlertsTable />
+                </div>
+            </div>
+        );
+
+    }else{
+        return(
+            <div></div>
+        );
     }
 
 }
