@@ -20,19 +20,12 @@ export class VaccineRepository {
     async getMaxVaccineListId(): Promise<number> {
         //Assume vaccine ID is assigned by system all the time,max ID will always be number of object in the table 
         const vaccineList = await this.vaccineModel.find({}).sort({ v_cert : -1 });
-        if(vaccineList.length > 0) {
-            return vaccineList.length ;
-        }
-        return 0;
+        return (vaccineList.length > 0) ? vaccineList.length : 0;
     }
 
     async create(vaccine: v_cert): Promise<v_cert> {
         const newVaccine = new this.vaccineModel(vaccine);
         return newVaccine.save()
-    }
-
-    async findOneAndUpdate(vaccineFilterQuery: FilterQuery<v_cert>, vaccine: Partial<v_cert>): Promise<v_cert> {
-        return this.vaccineModel.findOneAndUpdate(vaccineFilterQuery, vaccine, { new: true });
     }
 
 }
