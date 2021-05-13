@@ -3,6 +3,7 @@ import '../App.css';
 import {CTTable} from '../components/ctracingtable/CTTableComponent';
 import {Box} from "@material-ui/core"
 import CurrentLoginUserComponent from '../components/CurrentLoginUserComponent';
+import {SearchNRIC} from "../components/searchnric/CTSearchNRICComponent";
 
 export default function Dashboard() {
     return (
@@ -11,13 +12,14 @@ export default function Dashboard() {
             <div className="under-page-title-div">
                 <CurrentLoginUserComponent/>
             </div>
+
             <div className="dashboard-container">
     
                 <div className="dashboard-tableContainer-div">
-                        <h2>Search for citizen</h2>
-                        <div className="account-typical-content-div">
-
-                        </div>
+                    <div className="account-typical-content-div">
+                        <h2>Search citizen</h2>
+                        <SearchNRIC />
+                    </div>
                 </div>
 
                 <div className="dashboard-tableContainer-div">
@@ -31,6 +33,8 @@ export default function Dashboard() {
                     </Box>
                 </div>
             </div>
+
+
         </div>
     )
 }

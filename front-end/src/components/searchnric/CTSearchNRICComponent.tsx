@@ -11,18 +11,14 @@ export class SearchNRIC extends Component {
     }
 
     state = {
-        'p_nric': '',
+        p_nric: '',
         //only will be used to hold the outcome of the data
-        'inputNRIC' : ''
+        result : [],
+        result_statement : '',
     }
 
     onSearchResultID = (updatedInfo : any) => {
-        const result = (
-            <p style={{'fontSize' : 14}}>Successfully searched!
-            </p>
-        );
-        this.setState({'inputNRIC' : result});
-        console.log(updatedInfo);
+        this.setState({result : updatedInfo});
     }
 
     changeHandler = (e : any) => {
@@ -31,14 +27,16 @@ export class SearchNRIC extends Component {
 
     submitHandler = (e: any) => {
         e.preventDefault();
-        axios.get("http://localhost:5000/searchbynric/:nric")
-            .then(res=> {
+        const p_nric = this.state.p_nric;
+        searchnric_API(p_nric).then(res => {
                 console.log(res);
                 this.onSearchResultID(res.data);
+                this.updateStatement();
             })
             .catch(err => {
                 console.log(err);
-                alert("Incomplete form! Please complete the form and submit again!")
+                this.updateStatement();
+                alert("Incorrect NRIC! please fill up again.")
             });
          //const outcome = postIssueAlerts_API(this.state);
          //outcome.then(res => {
@@ -46,8 +44,16 @@ export class SearchNRIC extends Component {
          //}).catch(err => {
           //  console.log(err);
          //});
-        this.setState({p_nric: ''});
     }
+
+    updateStatement = () => {
+      if(this.state.result.length === 0) {
+          this.setState({'result_statement' :  "No Result Found"});
+      }
+      else {
+          this.setState({'result_statement' :  `successfully obtained ${this.state.result.length} records.`});
+      }
+    };
 
     render() {
         const {p_nric} = this.state;
@@ -56,10 +62,10 @@ export class SearchNRIC extends Component {
                 <form onSubmit={this.submitHandler}>
                     <div>
                         <label>Search NRIC: </label>
-                        <input type="text" name="NRIC" value={p_nric} onChange={this.changeHandler}/>
+                        <input type="text" name="p_nric" value={p_nric} onChange={this.changeHandler}/>
                     </div>
-                    <button type="submit">Issue alert</button>
-                    <div>{this.state.inputNRIC}</div>
+                    <button type="submit">Search</button>
+                    <div>{this.state.result_statement}</div>
                 </form>
             </div>
         );

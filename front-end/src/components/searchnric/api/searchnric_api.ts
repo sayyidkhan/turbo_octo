@@ -1,12 +1,7 @@
 import API from '../../../services/api';
 
-export const searchnric_API: () => Promise<any> = async () => {
-    const result = await API.get('searchbynric/:nric' );
-    return result;
-}
-
-export const postIssueAlerts_API: (stateObject : any) => Promise<any> = async (stateObject : any) => {
-    const result = await API.post('/alertlist' ,stateObject);
+export const searchnric_API: (nric : string) => Promise<any> = async (nric : string) => {
+    const result = await API.get(`c_tracing/searchbynric/${nric}`);
     return result;
 }
 
