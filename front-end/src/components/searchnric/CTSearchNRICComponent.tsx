@@ -60,7 +60,7 @@ export default class SearchNRIC extends Component<SearchNricProps> {
       }
       else {
           this.update_list(this.state.result);
-          this.setState({'result_statement' :  `successfully obtained ${this.state.result.length} records.`});
+          this.setState({'result_statement' :  `Successfully obtained ${this.state.result.length} records.`});
       }
     };
 

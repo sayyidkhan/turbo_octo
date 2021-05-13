@@ -10,9 +10,7 @@ export default function Dashboard() {
             <div className="under-page-title-div">
                 <CurrentLoginUserComponent/>
             </div>
-
             <CTMainComponent />
-
         </div>
     )
 }
