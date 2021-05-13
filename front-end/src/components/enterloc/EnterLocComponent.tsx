@@ -1,6 +1,7 @@
 import {Component, useState} from "react";
 import axios from 'axios';
 import * as React from "react";
+import {postEnterLoc_API} from "./api/enterloc_api"
 
 export class EnterLocComponent extends Component {
 
@@ -9,8 +10,8 @@ export class EnterLocComponent extends Component {
     }
 
     state = {
-        'nric':0,
-        'location_id': 0,
+        'p_nric':'',
+        'location_id': '',
         //only will be used to hold the outcome of the data
         'createdAlert' : ''
     }
@@ -30,7 +31,9 @@ export class EnterLocComponent extends Component {
 
     mapDTO = () => {
         //backend only accept this data shape
-        const dto = {'nric' : this.state.nric, 'location_id': this.state.location_id};
+        const dto = {'nric' : this.state.p_nric, 'location_id': this.state.location_id};
+        //purge any existing data, if there is any
+        this.setState({'createdAlert' : ''})
         return dto;
     }
 
@@ -46,6 +49,7 @@ export class EnterLocComponent extends Component {
             })
             .catch(err => {
                 console.log(err);
+                alert("NRIC/ Location not found")
             });
          //const outcome = postIssueAlerts_API(this.state);
          //outcome.then(res => {
@@ -53,17 +57,17 @@ export class EnterLocComponent extends Component {
          //}).catch(err => {
           //  console.log(err);
          //});
-        this.setState({nric: '', location_id: ''});
+        this.setState({p_nric: '', location_id: ''});
     }
 
     render() {
-        const {nric, location_id} = this.state;
+        const {p_nric, location_id} = this.state;
         return (
             <div>
                 <form onSubmit={this.submitHandler}>
                     <div>
                         <label>NRIC: </label>
-                        <input type="text" name='nric' value={nric} onChange={this.changeHandler}/>
+                        <input type="text" name='p_nric' value={p_nric} onChange={this.changeHandler}/>
                     </div>
                     <div>
                         <label>Location: </label>
