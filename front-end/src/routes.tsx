@@ -12,6 +12,8 @@ import PublicAlerts from "./pages/PublicAlerts";
 import Reports from "./pages/Reports";
 import Accounts from "./pages/Accounts";
 import NoAccessMsg from "./pages/NoAccessMsg";
+import { EnterLoc } from "./pages/EnterLoc";
+import { EnterLocComponent } from "./components/enterloc/EnterLocComponent";
 
 export default function Routes(props: any) {
 
@@ -41,7 +43,7 @@ export default function Routes(props: any) {
             <Route path="/" exact render= {() => {return isUserAuthenticated("Home") ? <Home/> : <NoAccessMsg/>}}/>
             <Route path="/Login" render= {() => {return isUserAuthenticated("Login") ? <Login/> : <NoAccessMsg/>}}/>
             <Route path="/about" component={About} />
-            <Route path="/EnterLocation" />
+            <Route path="/EnterLocation"  component={EnterLoc}/>
             <Route path="/locationList" component={LocationList}/>
             <Route path="/CheckVaccCert" />
             <Route path="/Dashboard" render= {() => {return isUserAuthenticated("Dashboard") ? <Dashboard/> : <NoAccessMsg />}} />
