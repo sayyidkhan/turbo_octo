@@ -13,7 +13,7 @@ export class VaccineRepository {
     }
 
     async find(vaccinesFilterQuery: FilterQuery<v_cert>): Promise<v_cert[]> {
-        return this.vaccineModel.find(vaccinesFilterQuery)
+        return this.vaccineModel.find(vaccinesFilterQuery).sort({ v_cert : -1 });
     }
 
 

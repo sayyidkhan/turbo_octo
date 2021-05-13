@@ -14,7 +14,7 @@ export class AlertListRepository {
     }
 
     async find(query: FilterQuery<AlertList>): Promise<AlertList[]> {
-        return this.alertListModel.find(query)
+        return this.alertListModel.find(query).sort({ alertListId : -1 });
     }
 
     async getMaxAlertListId(): Promise<number> {

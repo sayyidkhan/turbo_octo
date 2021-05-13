@@ -13,7 +13,7 @@ export class HealthCareAlertRepository {
     }
 
     async find(vaccinesFilterQuery: FilterQuery<HealthcareAlert>): Promise<HealthcareAlert[]> {
-        return this.healthcareAlert.find(vaccinesFilterQuery)
+        return this.healthcareAlert.find(vaccinesFilterQuery).sort({ healthcareAlertId : -1 });
     }
 
     async getMaxAlertListId(): Promise<number> {

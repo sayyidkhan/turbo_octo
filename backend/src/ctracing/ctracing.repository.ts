@@ -14,7 +14,7 @@ export class CtracingRepository {
     }
 
     async find(ctracingsFilterQuery: FilterQuery<c_tracing>): Promise<c_tracing[]> {
-        return this.ctracingModel.find(ctracingsFilterQuery)
+        return this.ctracingModel.find(ctracingsFilterQuery).sort({ ct_id : -1 });
     }
 
     async getMaxCtracingId(): Promise<number> {
