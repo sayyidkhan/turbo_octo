@@ -1,7 +1,8 @@
 import {Injectable} from "@nestjs/common";
 import {HealthCareAlertRepository} from "./healthcareAlert.repository";
 import {HealthcareAlert} from "./schemas/healthcareAlert.schema";
-import {UpdateHealthcareAlertsDto} from "./dto/update-healthcareAlerts.dto";
+import {PersistUpdateHealthcareAlertsDto, UpdateHealthcareAlertsDto} from "./dto/update-healthcareAlerts.dto";
+import {PersistAlertListDto} from "../alert_list/dto/alert-list.dto";
 
 @Injectable()
 export class HealthcareAlertService {
@@ -37,8 +38,9 @@ export class HealthcareAlertService {
         return this.healthCareAlertRepository.create(persistence);
     }
 
-    async updateHealthcareAlertByID(healthcareAlertId: number, updateDto: UpdateHealthcareAlertsDto): Promise<HealthcareAlert> {
-        return this.healthCareAlertRepository.findOneAndUpdate({ healthcareAlertId : healthcareAlertId}, {});
+    async updateHealthcareAlertByID(healthcareAlertId: number, dto: UpdateHealthcareAlertsDto): Promise<HealthcareAlert> {
+        const persistence = new PersistUpdateHealthcareAlertsDto(dto);
+        return this.healthCareAlertRepository.findOneAndUpdate({ healthcareAlertId : healthcareAlertId}, persistence);
     }
 
 
