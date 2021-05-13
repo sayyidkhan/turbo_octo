@@ -38,7 +38,7 @@ export class HealthcareAlertService {
     }
 
     async updateHealthcareAlertByID(healthcareAlertId: number, updateDto: UpdateHealthcareAlertsDto): Promise<HealthcareAlert> {
-        return this.healthCareAlertRepository.findOneAndUpdate({ healthcareAlertId : healthcareAlertId}, updateDto);
+        return this.healthCareAlertRepository.findOneAndUpdate({ healthcareAlertId : healthcareAlertId}, {});
     }
 
 
