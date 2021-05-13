@@ -1,13 +1,19 @@
-import {Component, useState} from "react";
-import axios from 'axios';
 import * as React from "react";
+import {Component} from "react";
 import {searchnric_API} from "./api/searchnric_api";
 import './SearchNRICComponent.css';
 
-export class SearchNRIC extends Component {
+interface SearchNricProps {
+    callback_function : Function;
+}
 
-    constructor(props : any) {
+export default class SearchNRIC extends Component<SearchNricProps> {
+
+    update_list : Function;
+
+    constructor(props: SearchNricProps) {
         super(props);
+        this.update_list = this.props.callback_function;
     }
 
     state = {
@@ -17,8 +23,9 @@ export class SearchNRIC extends Component {
         result_statement : '',
     }
 
-    onSearchResultID = (updatedInfo : any) => {
-        this.setState({result : updatedInfo});
+    onSearchResultID = async (updatedInfo : any) => {
+        await this.setState({result : updatedInfo});
+        await this.update_list(updatedInfo);
     }
 
     changeHandler = (e : any) => {
@@ -44,6 +51,7 @@ export class SearchNRIC extends Component {
          //}).catch(err => {
           //  console.log(err);
          //});
+
     }
 
     updateStatement = () => {
@@ -51,6 +59,7 @@ export class SearchNRIC extends Component {
           this.setState({'result_statement' :  "No Result Found"});
       }
       else {
+          this.update_list(this.state.result);
           this.setState({'result_statement' :  `successfully obtained ${this.state.result.length} records.`});
       }
     };
