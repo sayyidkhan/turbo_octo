@@ -69,7 +69,7 @@ describe('P_User Service', () => {
         expect(result).toEqual(new P_UserServiceMock().getP_User());
     });
 
-    it('test - getP_UserById()', async () => {
+    it('test - getE_UserById()', async () => {
         const nric =  new P_UserServiceMock().getP_nric();
         const p_nric = new P_UserServiceMock().getP_UserById(nric).p_nric;
 
