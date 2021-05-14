@@ -19,7 +19,7 @@ export default function Dashboard() {
                     <div className="dashboard-tableContainer-div">
                         <h2>Issue new alert</h2>
                         <div className="account-typical-content-div">
-                        <IssueAlerts />
+                            <IssueAlerts />
                         </div>
                     </div>
 

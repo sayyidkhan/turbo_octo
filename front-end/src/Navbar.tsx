@@ -37,7 +37,7 @@ export default function Navbar(props : any){
       {
         id: 5,
         path: "/VaccinationRecords",
-        text: "Vaccination Records",
+        text: "Vaccination",
         accessBy: ["government", "healthcare"],
       },
       {
