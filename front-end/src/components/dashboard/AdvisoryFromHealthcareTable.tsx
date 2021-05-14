@@ -1,6 +1,6 @@
 import {Component} from "react";
 import {Box} from "@material-ui/core"
-import {AlertsTable} from '../alertstable/AlertsTableComponent';
+import {HealthAdviseTable} from '../healthadvisetable/HealthAdviseTableComponent';
 import '../../App.css';
 
 export class AdvisoryFromHealthcareTable extends Component {
@@ -11,7 +11,7 @@ export class AdvisoryFromHealthcareTable extends Component {
                 <h2>Advisory from healthcare department</h2>
                 <Box justifyContent="center" m={1} p={0} bgcolor="background.paper">
                     <Box p={1} m={1} bgcolor="white.100">
-                        <AlertsTable />
+                        <HealthAdviseTable />
                     </Box>
                 </Box>
             </div>
