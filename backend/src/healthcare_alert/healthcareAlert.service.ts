@@ -21,7 +21,6 @@ export class HealthcareAlertService {
     }
 
     async createNewHealthcareAlerts(
-        healthcareAlertId: number,
         date: Date,
         location_id:number,
         description : string,
