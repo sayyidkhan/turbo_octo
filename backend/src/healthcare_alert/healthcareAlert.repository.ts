@@ -16,13 +16,18 @@ export class HealthCareAlertRepository {
         return this.healthcareAlert.find(vaccinesFilterQuery).sort({ healthcareAlertId : -1 });
     }
 
-    async getMaxAlertListId(): Promise<number> {
-        const alertList = await this.healthcareAlert.find({}).sort({ healthcareAlertId : -1 }).limit(1);
-        if(alertList.length > 0) {
-            const alert :HealthcareAlert = alertList[0];
+    checkEmptyArray: (healthcareAlertList: HealthcareAlert[]) => (number | number) = (healthcareAlertList : HealthcareAlert[]) => {
+        if(healthcareAlertList.length > 0) {
+            const alert :HealthcareAlert = healthcareAlertList[0];
             return alert.healthcareAlertId;
         }
         return 0;
+    }
+
+    async getMaxAlertListId(): Promise<number> {
+        const healthcareAlertList = await this.healthcareAlert.find({}).sort({ healthcareAlertId : -1 }).limit(1);
+        const result = this.checkEmptyArray(healthcareAlertList);
+        return result;
     }
 
     async create(vaccine: HealthcareAlert): Promise<HealthcareAlert> {

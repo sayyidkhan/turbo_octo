@@ -1,5 +1,5 @@
 import {Injectable} from "@nestjs/common";
-import {AlertListDto, PersistAlertListDto} from "./dto/alert-list.dto";
+import {PersistAlertListDto} from "./dto/alert-list.dto";
 
 import {AlertList} from "./schemas/alertList.schema";
 import {AlertListRepository} from "./alertList.repository";
@@ -55,7 +55,8 @@ export class AlertListService {
         // only record exist then perform delete
         console.log(findAlertId);
         if(findAlertId != null) {
-            return this.alertListRepository.deleteAlertListById({ _id : findAlertId['_id'] });
+            const result = this.alertListRepository.deleteAlertListById({ _id : findAlertId['_id'] });
+            return result;
         }
         return null;
     }

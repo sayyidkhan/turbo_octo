@@ -36,6 +36,11 @@ describe("vaccine repository", () => {
         service = module.get<VaccineService>(VaccineService);
     });
 
+    afterEach(async () => {
+        service = null;
+        repository = null;
+    });
+
     it('test - find()', async () => {
         await service.getAllVaccinationList();
         expect(repository.find({})).toBeDefined();

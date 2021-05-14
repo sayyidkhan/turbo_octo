@@ -7,8 +7,8 @@ import {LocationRepository} from "./location.repository";
 import {MongooseModule} from "@nestjs/mongoose";
 
 describe('LocationRepository', () => {
-    let locationRepository : LocationRepository;
-    let locationService : LocationService;
+    let repository : LocationRepository;
+    let service : LocationService;
 
     beforeEach(async () => {
        const module: TestingModule = await Test.createTestingModule({
@@ -29,20 +29,25 @@ describe('LocationRepository', () => {
            ]
        }).compile();
 
-       locationService = module.get<LocationService>(LocationService);
-       locationRepository = module.get<LocationRepository>(LocationRepository);
+       service = module.get<LocationService>(LocationService);
+       repository = module.get<LocationRepository>(LocationRepository);
+    });
+
+    afterEach(async () => {
+        service = null;
+        repository = null;
     });
 
     it('test - find()', async () => {
-        await locationService.getAllLocation();
-        expect(locationRepository.find({})).toBeDefined();
+        await service.getAllLocation();
+        expect(repository.find({})).toBeDefined();
     });
 
     it('test - fineOne()', async () => {
         const location_id = 123456;
 
-        await locationService.getLocationById(location_id);
-        expect(locationRepository.findOne({})).toBeDefined();
+        await service.getLocationById(location_id);
+        expect(repository.findOne({})).toBeDefined();
     });
 
 });

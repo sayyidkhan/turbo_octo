@@ -34,6 +34,11 @@ describe('E_UserRepository', () => {
         repository = module.get<E_UserRepository>(E_UserRepository);
     });
 
+    afterEach(async () => {
+        service = null;
+        repository = null;
+    });
+
     it('test - find()', async () => {
         await service.getAllEnterpriseUser();
         expect(repository.find({})).toBeDefined();

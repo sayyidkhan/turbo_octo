@@ -2,7 +2,6 @@ import {Injectable} from "@nestjs/common";
 import {HealthCareAlertRepository} from "./healthcareAlert.repository";
 import {HealthcareAlert} from "./schemas/healthcareAlert.schema";
 import {PersistUpdateHealthcareAlertsDto, UpdateHealthcareAlertsDto} from "./dto/update-healthcareAlerts.dto";
-import {PersistAlertListDto} from "../alert_list/dto/alert-list.dto";
 
 @Injectable()
 export class HealthcareAlertService {

@@ -33,6 +33,11 @@ describe("c_tracing Repository", () => {
         repository = module.get<CtracingRepository>(CtracingRepository);
     });
 
+    afterEach(async () => {
+        service = null;
+        repository = null;
+    });
+
     it('test - find()', async () => {
         await service.getCtracing();
         expect(repository.find({})).toBeDefined();
