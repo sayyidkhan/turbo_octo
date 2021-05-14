@@ -26,6 +26,7 @@ export default function Home() {
 
             <AlertListComponent />
 
+
             {/*<div className="home-tableContainer-div">*/}
                 {/*<h2>Recent Covid-19 alerts</h2>*/}
                 {/*<Box justifyContent="center" m={1} p={0} bgcolor="background.paper">*/}

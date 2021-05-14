@@ -15,3 +15,60 @@
     margin-left: 20px;
     color: #ff0000;
   }
+
+  .account-typical-content-div label{
+    padding-right: 0px;
+    font-size: 14;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    width: 120px;
+}
+
+.account-typical-content-div input{
+    height: 40px;
+    width: 250px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.account-typical-content-div input:focus {
+    border: 1px solid #555;
+    background-color: floralwhite;
+  }
+
+.account-typical-content-div button{
+    border-radius: 4px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    height: 40px;
+    width: 150px;
+    font-size: 16px;
+    font-weight: 300;
+    transition-duration: 0.3s;
+    background-color: gainsboro;
+    border: none;
+}
+
+.account-typical-content-div button:hover {
+    background-color: #4CAF50; 
+    border: #4CAF50;
+    color: white;
+  }
+
+  .account-typical-content-div {
+    background-color: #ffffff;
+    min-width: 850px;
+    height: 100%;
+    /* end */
+    border-radius: 25px;
+    margin-left: 20px;
+  }
+
+.searchtable-typical-content-div {
+    background-color: #ffffff;
+    min-width: 850px;
+    height: 100%;
+    /* end */
+    border-radius: 25px;
+    margin-left: 0px;
+  }

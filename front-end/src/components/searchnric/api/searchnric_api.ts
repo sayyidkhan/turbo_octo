@@ -5,6 +5,11 @@ export const searchnric_API: (nric : string) => Promise<any> = async (nric : str
     return result;
 }
 
+export const VTsearchnric_API: (nric : string) => Promise<any> = async (nric : string) => {
+    const result = await API.get(`vaccines/p_user/${nric}`);
+    return result;
+}
+
 /* sample code to construct API (FOR : GET, POST ):
 https://github.com/nadavpodjarski/postgres-nest-react-typescript-boilerplate/blob/master/client/src/api/todo/index.ts
  */

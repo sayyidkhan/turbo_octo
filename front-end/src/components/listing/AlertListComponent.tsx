@@ -11,21 +11,23 @@ import {Box, Paper} from "@material-ui/core";
 import {activeAlertListOnly} from "./api/activealertstable_api";
 import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
 import IconButton from "@material-ui/core/IconButton";
+import './AlertListComponent.css';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
             flexGrow: 1,
-            maxWidth: '50%',
+            maxWidth: '60%',
             // backgroundColor: 'white',
         },
         demo: {
-            maxHeight: 200,
+            maxHeight: 500,
             overflow: 'auto',
             backgroundColor: theme.palette.background.paper,
         },
         title: {
-            margin: theme.spacing(1, 0, 1),
+            /*margin: theme.spacing(1, 1, 1),*/
+            marginTop: 40,
         },
         fontText: {
             color: theme.palette.secondary.main,
