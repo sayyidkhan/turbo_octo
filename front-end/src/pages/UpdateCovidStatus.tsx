@@ -5,13 +5,13 @@ import CurrentLoginUserComponent from '../components/CurrentLoginUserComponent';
 export default function CovidStatus() {
     return (
         <div className="dashboard-container-general">
-            <h1>Trigger alerts</h1>
+            <h1>Update Covid status</h1>
             <div className="under-page-title-div">
                 <CurrentLoginUserComponent/>
             </div>
             <div className="dashboard-container">
                 <div className="dashboard-tableContainer-div">
-                    <h2>Trigger alert to government</h2>
+                    <h2>Citizen Covid-19 status update</h2>
                     <div className="account-typical-content-div">
                         <UpdateCovidStatus />
                     </div>
