@@ -5,8 +5,7 @@ import {LocationService} from "./location.service";
 import * as request from 'supertest';
 import {LocationModule} from "./location.module";
 import {LocationController} from "./location.controller";
-import {Location, LocationSchema} from './schemas/location.schema';
-import {MongooseModule} from "@nestjs/mongoose";
+import {Location} from './schemas/location.schema';
 
 class LocationControllerMock {
     mockGetAllLocation: () => Location[] = () => {

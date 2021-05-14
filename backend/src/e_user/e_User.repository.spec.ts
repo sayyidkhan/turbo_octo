@@ -68,7 +68,7 @@ describe('E_UserRepository', () => {
         expect(repository.create(persistence)).toBeDefined();
     });
 
-    it("test - updateEnterpriseUser()", async () => {
+    it("test - updatePublicUser()", async () => {
         const persistence = new UpdateEnterpriseUserDto();
         await service.updateEnterpriseUser("e_nric",persistence);
         expect(repository.findOneAndUpdate({ e_nric : "e_nric" },persistence)).toBeDefined();

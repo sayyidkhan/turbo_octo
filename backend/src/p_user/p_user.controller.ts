@@ -31,19 +31,20 @@ export class P_UserController {
       );
   }
 
-    @Patch(':e_nric')
-    async updateEnterpriseUser(@Param('e_nric') eNRIC: string, @Body() dto: UpdatePublicUserDto): Promise<p_user> {
-        const p_user :p_user = await this.P_UserService.getP_UserById(eNRIC);
-        //if e_user returns null, user is trying to update record that does not exist in db
-        if(p_user === null) {
-            const errorMsg : string = "public nric does not exist.";
-            throw new HttpException(
-                errorMsg,
-                HttpStatus.BAD_REQUEST);
+  @Patch(':e_nric')
+  async updatePublicUser(@Param('e_nric') eNRIC: string, @Body() dto: UpdatePublicUserDto): Promise<p_user> {
+      const p_user :p_user = await this.P_UserService.getP_UserById(eNRIC);
+      //if e_user returns null, user is trying to update record that does not exist in db
+      if(p_user === null) {
+          const errorMsg : string = "public nric does not exist.";
+          throw new HttpException(
+              errorMsg,
+              HttpStatus.BAD_REQUEST
+          );
         }
-        else {
-             return this.P_UserService.updatePublicUser(eNRIC, dto);
-        }
+      else {
+          return this.P_UserService.updatePublicUser(eNRIC, dto);
+      }
     }
 
 }
