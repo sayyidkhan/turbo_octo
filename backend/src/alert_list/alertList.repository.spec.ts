@@ -5,9 +5,6 @@ import {AlertListRepository} from "./alertList.repository";
 import {AlertListService} from "./alertList.service";
 import {AlertListModule} from "./alertlist.module";
 import {AlertList, AlertListSchema} from "./schemas/alertList.schema";
-import {Schema, Types} from "mongoose";
-import * as mongoose from "mongoose";
-
 
 
 describe("alertList Repository", () => {

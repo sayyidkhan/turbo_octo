@@ -17,17 +17,9 @@ export class AlertListRepository {
         return this.alertListModel.find(query).sort({ alertListId : -1 });
     }
 
-    checkEmptyArray: (alertList: AlertList[]) => (number | number) = (alertList : AlertList[]) => {
-        if(alertList.length > 0) {
-            const alert :AlertList = alertList[0];
-            return alert.alertListId;
-        }
-        return 0;
-    }
-
     async getMaxAlertListId(): Promise<number> {
         const alertList = await this.alertListModel.find({}).sort({ alertListId : -1 }).limit(1);
-        const result = this.checkEmptyArray(alertList);
+        const result = (alertList.length > 0) ? alertList[0].alertListId : 0;;
         return result;
     }
 
