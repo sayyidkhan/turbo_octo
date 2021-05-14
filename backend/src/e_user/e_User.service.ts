@@ -41,10 +41,7 @@ export class E_UserService {
         //check user list in record, if not return null
         // only record exist then perform delete
         console.log(findUser);
-        if(findUser != null) {
-            return this.e_UserRepository.deleteEnterpriseUserById({ _id : findUser['_id'] });
-        }
-        return null;
+        return (findUser != null) ? this.e_UserRepository.deleteEnterpriseUserById({ _id : findUser['_id'] }) : null;
     }
 
 }

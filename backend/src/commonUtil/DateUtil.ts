@@ -1,10 +1,13 @@
 export abstract class DateUtil {
 
     public static convertStrToDate = (dateString : string) : Date => {
-        try {
-            return new Date(dateString);
+        const result = new Date(dateString);
+        const validate = result.toString();
+        const error = 'Invalid Date';
+        if(validate !== error) {
+            return result;
         }
-        catch (e) {
+        else {
             console.log("invalid date format");
             return null;
         }

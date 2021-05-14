@@ -9,8 +9,8 @@ import {UpdatePublicUserDto} from "./dto/update_public_user_dto";
 
 
 describe("p_user Repository", () => {
-   let pUserRepository : P_UserRepository;
-   let pUserService : P_UserService;
+   let repository : P_UserRepository;
+   let service : P_UserService;
 
     beforeEach(async () => {
         const module: TestingModule = await Test.createTestingModule({
@@ -31,30 +31,30 @@ describe("p_user Repository", () => {
             ]
         }).compile();
 
-        pUserService = module.get<P_UserService>(P_UserService);
-        pUserRepository = module.get<P_UserRepository>(P_UserRepository);
+        service = module.get<P_UserService>(P_UserService);
+        repository = module.get<P_UserRepository>(P_UserRepository);
     });
 
     it('test - find()', async () => {
-       await pUserService.getP_User();
-        expect(pUserRepository.find({})).toBeDefined();
+       await service.getP_User();
+        expect(repository.find({})).toBeDefined();
     });
 
     it('test - findOne()', async () => {
-        await pUserService.getP_UserById("p_nric");
-        expect(pUserRepository.findOne({})).toBeDefined();
+        await service.getP_UserById("p_nric");
+        expect(repository.findOne({})).toBeDefined();
     });
 
     it('test - create()', async () => {
-        await pUserService.createP_User("p_nric","firstname","lastname", true);
+        await service.createP_User("p_nric","firstname","lastname", true);
         const user = new p_user();
-        expect(pUserRepository.create(user)).toBeDefined();
+        expect(repository.create(user)).toBeDefined();
     });
 
-    it('test - create()', async () => {
-        await pUserService.updatePublicUser("p_nric",new UpdatePublicUserDto());
+    it('test - findOneAndUpdate()', async () => {
+        await service.updatePublicUser("p_nric",new UpdatePublicUserDto());
         const user = new p_user();
-        expect(pUserRepository.findOneAndUpdate({},user)).toBeDefined();
+        expect(repository.findOneAndUpdate({},user)).toBeDefined();
     });
 
 });
