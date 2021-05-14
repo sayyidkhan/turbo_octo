@@ -9,6 +9,8 @@ import Dashboard from "./pages/Dashboard";
 import ContactTracing from "./pages/ContactTracing";
 import VaccinationRecords from "./pages/VaccinationRecords";
 import PublicAlerts from "./pages/PublicAlerts";
+import TriggerAlert from "./pages/TriggerAlert";
+import UpdateCovidStatus from "./pages/UpdateCovidStatus";
 import Reports from "./pages/Reports";
 import Accounts from "./pages/Accounts";
 import NoAccessMsg from "./pages/NoAccessMsg";
@@ -23,7 +25,7 @@ export default function Routes(props: any) {
         const publicAccess = ["Home", "Login"];
         const governmentAccess = ["Dashboard", "ContactTracing", "VaccinationRecords", "PublicAlerts", "Reports", "Accounts"];
         const businessAccess = ["Dashboard", "PublicAlerts"];
-        const healthcareAccess = ["Dashboard", "ContactTracing", "VaccinationRecords"];
+        const healthcareAccess = ["Dashboard", "ContactTracing", "VaccinationRecords", "TriggerAlert", "UpdateCovidStatus"];
 
         if(userType == "public" && publicAccess.includes(page)){
             return true;
@@ -50,6 +52,8 @@ export default function Routes(props: any) {
             <Route path="/ContactTracing" render= {() => {return isUserAuthenticated("ContactTracing") ? <ContactTracing/> : <NoAccessMsg/>}} />
             <Route path="/VaccinationRecords" render= {() => {return isUserAuthenticated("VaccinationRecords") ? <VaccinationRecords/> : <NoAccessMsg/>}} />
             <Route path="/PublicAlerts" render= {() => {return isUserAuthenticated("PublicAlerts") ? <PublicAlerts/> : <NoAccessMsg/>}} />
+            <Route path="/TriggerAlert" render= {() => {return isUserAuthenticated("TriggerAlert") ? <TriggerAlert/> : <NoAccessMsg/>}} />
+            <Route path="/UpdateCovidStatus" render= {() => {return isUserAuthenticated("UpdateCovidStatus") ? <UpdateCovidStatus/> : <NoAccessMsg/>}} />
             <Route path="/Reports" render= {() => {return isUserAuthenticated("Reports") ? <Reports/> : <NoAccessMsg/>}} />
             <Route path="/Accounts" render= {() => {return isUserAuthenticated("Accounts") ? <Accounts/> : <NoAccessMsg/>}} />
         </Switch>

@@ -48,18 +48,30 @@ export default function Navbar(props : any){
       },
       {
         id: 7,
+        path: "/TriggerAlert",
+        text: "Trigger Alert",
+        accessBy: ["healthcare"],
+      },
+      {
+        id: 8,
+        path: "/UpdateCovidStatus",
+        text: "Update Covid Status",
+        accessBy: ["healthcare"],
+      },
+      {
+        id: 9,
         path: "/Reports",
         text: "Reports",
         accessBy: ["government"],
       },
       {
-        id: 8,
+        id: 10,
         path: "/Accounts",
         text: "Manage Accounts",
         accessBy: ["government"],
       },
       {
-        id: 9,
+        id: 11,
         path: "/",
         text: "Logout",
         accessBy: ["government", "business", "healthcare"],

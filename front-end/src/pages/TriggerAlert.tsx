@@ -2,7 +2,7 @@ import '../App.css';
 import {TriggerAlerts} from "../components/triggeralerts/TriggerAlertsComponent";
 import CurrentLoginUserComponent from '../components/CurrentLoginUserComponent';
 
-export default function Dashboard() {
+export default function TriggerAlert() {
     return (
         <div className="dashboard-container-general">
             <h1>Trigger alerts</h1>
