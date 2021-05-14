@@ -10,7 +10,7 @@ import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
 import './healthadvisetable.css';
 
-interface AlertColumn {
+interface HealthAviseColumn {
     id: 'date' | 'location_id' | 'description' | 'e_nric';
     label: string;
     minWidth?: number;
@@ -18,11 +18,11 @@ interface AlertColumn {
     format?: (value: number) => string;
 }
 
-const columns: AlertColumn[] = [
+const columns: HealthAviseColumn[] = [
     { id: 'date', label: 'Reported date', minWidth: 80 },
     { id: 'location_id', label: 'Location', minWidth: 80 },
     { id: 'description', label: 'Details', minWidth: 200 },
-    { id: 'e_nric', label: 'Reported by', minWidth: 60 },
+    { id: 'e_nric', label: 'Triggered by', minWidth: 60 },
 ];
 
 function checkBoolean(x: boolean) {

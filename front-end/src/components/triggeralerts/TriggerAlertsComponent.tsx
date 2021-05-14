@@ -21,8 +21,7 @@ export class TriggerAlerts extends Component {
 
     onUpdateTriggerAlertListID = (updatedInfo : any) => {
         const result = (
-            <p style={{'fontSize' : 14}}>Issue alert to government {updatedInfo.triggerAlertListId} added successfully.<br/>
-            Please refresh page to see updated table.
+            <p style={{'fontSize' : 14}}>Issue alert trigger to government added successfully.<br/>
             </p>
         );
         this.setState({'triggerAlert' : result});
@@ -53,7 +52,7 @@ export class TriggerAlerts extends Component {
             })
             .catch(err => {
                 console.log(err);
-                alert("Incomplete form! Please complete the form and submit again!")
+                alert("Incomplete form or incorrect input! Please check and submit again!")
             });
          //const outcome = postIssueAlerts_API(this.state);
          //outcome.then(res => {
@@ -82,7 +81,7 @@ export class TriggerAlerts extends Component {
                         <input type="text" name="description" value={description} onChange={this.changeHandler}/>
                     </div>
                     <div>
-                        <label>e_nric: </label>
+                        <label>Triggered by: </label>
                         <input type="text" name="e_nric" value={e_nric} onChange={this.changeHandler}/>
                     </div>
                     <button type="submit">Trigger alert</button>
