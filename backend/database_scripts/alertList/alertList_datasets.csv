@@ -8,3 +8,994 @@ location_id,alertListId,alertTitle,alertDetail,alertDate,active
 620676,7,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",4/1/21,TRUE
 490748,8,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",4/1/21,TRUE
 271536,9,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",4/1/21,TRUE
+757467,10,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",5/1/21,TRUE
+409165,11,"""New In""","""Covid19 Entry Requirements for Travellers to China""",6/1/21,TRUE
+293841,12,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",7/1/21,TRUE
+224626,13,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",8/1/21,TRUE
+712757,14,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",9/1/21,TRUE
+683601,15,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",10/1/21,TRUE
+959395,16,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",11/1/21,TRUE
+658836,17,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",12/1/21,TRUE
+325746,18,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",13/1/21,TRUE
+499721,19,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",14/1/21,TRUE
+891208,20,"""New In""","""Covid19 Entry Requirements for Travellers to China""",15/1/21,TRUE
+968423,21,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",16/1/21,TRUE
+487209,22,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",17/1/21,TRUE
+101351,23,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",18/1/21,TRUE
+777158,24,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",19/1/21,TRUE
+318990,25,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",20/1/21,TRUE
+702810,26,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",21/1/21,TRUE
+611843,27,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",22/1/21,TRUE
+822194,28,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",23/1/21,TRUE
+414292,29,"""New In""","""Covid19 Entry Requirements for Travellers to China""",24/1/21,TRUE
+186907,30,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",25/1/21,TRUE
+286567,31,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",26/1/21,TRUE
+448982,32,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",27/1/21,TRUE
+128830,33,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",28/1/21,TRUE
+425370,34,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",29/1/21,TRUE
+735224,35,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",30/1/21,TRUE
+298360,36,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",31/1/21,TRUE
+630683,37,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",1/2/21,TRUE
+802499,38,"""New In""","""Covid19 Entry Requirements for Travellers to China""",2/2/21,TRUE
+172681,39,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",3/2/21,TRUE
+535661,40,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",4/2/21,TRUE
+456826,41,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",5/2/21,TRUE
+210630,42,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",6/2/21,TRUE
+241746,43,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",7/2/21,TRUE
+988171,44,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",8/2/21,TRUE
+176827,45,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",9/2/21,TRUE
+856299,46,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",10/2/21,TRUE
+331618,47,"""New In""","""Covid19 Entry Requirements for Travellers to China""",11/2/21,TRUE
+911439,48,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",12/2/21,TRUE
+727423,49,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",13/2/21,TRUE
+835308,50,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",14/2/21,TRUE
+654044,51,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",15/2/21,TRUE
+567400,52,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",16/2/21,TRUE
+262489,53,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",17/2/21,TRUE
+141653,54,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",18/2/21,TRUE
+975880,55,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",19/2/21,TRUE
+435390,56,"""New In""","""Covid19 Entry Requirements for Travellers to China""",20/2/21,TRUE
+763344,57,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",21/2/21,TRUE
+114336,58,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",22/2/21,TRUE
+227137,59,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",23/2/21,TRUE
+868828,60,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",24/2/21,TRUE
+150148,61,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",25/2/21,TRUE
+587055,62,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",26/2/21,TRUE
+109599,63,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",27/2/21,TRUE
+288006,64,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",28/2/21,TRUE
+665949,65,"""New In""","""Covid19 Entry Requirements for Travellers to China""",1/3/21,TRUE
+855642,66,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",2/3/21,TRUE
+875628,67,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",3/3/21,TRUE
+145644,68,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",4/3/21,TRUE
+541585,69,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",5/3/21,TRUE
+436576,70,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",6/3/21,TRUE
+435933,71,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",7/3/21,TRUE
+376978,72,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",8/3/21,TRUE
+409183,73,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",9/3/21,TRUE
+923225,74,"""New In""","""Covid19 Entry Requirements for Travellers to China""",10/3/21,TRUE
+526858,75,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",11/3/21,TRUE
+787899,76,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",12/3/21,TRUE
+848959,77,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",13/3/21,TRUE
+345494,78,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",14/3/21,TRUE
+698301,79,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",15/3/21,TRUE
+395038,80,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",16/3/21,TRUE
+891103,81,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",17/3/21,TRUE
+938520,82,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",18/3/21,TRUE
+394447,83,"""New In""","""Covid19 Entry Requirements for Travellers to China""",19/3/21,TRUE
+588074,84,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",20/3/21,TRUE
+162410,85,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",21/3/21,TRUE
+198453,86,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",22/3/21,TRUE
+841919,87,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",23/3/21,TRUE
+272998,88,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",24/3/21,TRUE
+225193,89,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",25/3/21,TRUE
+844362,90,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",26/3/21,TRUE
+791093,91,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",27/3/21,TRUE
+444999,92,"""New In""","""Covid19 Entry Requirements for Travellers to China""",28/3/21,TRUE
+400632,93,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",29/3/21,TRUE
+135195,94,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",30/3/21,TRUE
+121143,95,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",31/3/21,TRUE
+937521,96,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",1/4/21,TRUE
+179165,97,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",2/4/21,TRUE
+310692,98,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",3/4/21,TRUE
+123853,99,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",4/4/21,TRUE
+271003,100,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",5/4/21,TRUE
+589268,101,"""New In""","""Covid19 Entry Requirements for Travellers to China""",6/4/21,TRUE
+771208,102,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",7/4/21,TRUE
+990636,103,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",8/4/21,TRUE
+357858,104,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",9/4/21,TRUE
+805215,105,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",10/4/21,TRUE
+957313,106,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",11/4/21,TRUE
+945516,107,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",12/4/21,TRUE
+359856,108,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",13/4/21,TRUE
+182197,109,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",14/4/21,TRUE
+165439,110,"""New In""","""Covid19 Entry Requirements for Travellers to China""",15/4/21,TRUE
+729202,111,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",16/4/21,TRUE
+964887,112,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",17/4/21,TRUE
+958015,113,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",18/4/21,TRUE
+944879,114,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",19/4/21,TRUE
+591606,115,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",20/4/21,TRUE
+592865,116,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",21/4/21,TRUE
+101450,117,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",22/4/21,TRUE
+794466,118,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",23/4/21,TRUE
+391635,119,"""New In""","""Covid19 Entry Requirements for Travellers to China""",24/4/21,TRUE
+121450,120,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",25/4/21,TRUE
+248075,121,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",26/4/21,TRUE
+485306,122,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",27/4/21,TRUE
+803812,123,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",28/4/21,TRUE
+157709,124,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",29/4/21,TRUE
+993418,125,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",30/4/21,TRUE
+860672,126,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",1/5/21,TRUE
+440763,127,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",2/5/21,TRUE
+909473,128,"""New In""","""Covid19 Entry Requirements for Travellers to China""",3/5/21,TRUE
+471546,129,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",4/5/21,TRUE
+119555,130,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",5/5/21,TRUE
+896178,131,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",6/5/21,TRUE
+250850,132,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",7/5/21,TRUE
+533612,133,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",8/5/21,TRUE
+642159,134,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",9/5/21,TRUE
+816617,135,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",10/5/21,TRUE
+747078,136,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",11/5/21,TRUE
+867021,137,"""New In""","""Covid19 Entry Requirements for Travellers to China""",12/5/21,TRUE
+991215,138,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",13/5/21,TRUE
+119617,139,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",14/5/21,TRUE
+974115,140,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",15/5/21,TRUE
+614876,141,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",16/5/21,TRUE
+867585,142,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",17/5/21,TRUE
+511638,143,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",18/5/21,TRUE
+968095,144,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",19/5/21,TRUE
+543749,145,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",20/5/21,TRUE
+704070,146,"""New In""","""Covid19 Entry Requirements for Travellers to China""",21/5/21,TRUE
+129244,147,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",22/5/21,TRUE
+115465,148,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",23/5/21,TRUE
+184834,149,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",24/5/21,TRUE
+583998,150,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",25/5/21,TRUE
+667792,151,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",26/5/21,TRUE
+255639,152,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",27/5/21,TRUE
+672690,153,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",28/5/21,TRUE
+427161,154,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",29/5/21,TRUE
+145587,155,"""New In""","""Covid19 Entry Requirements for Travellers to China""",30/5/21,TRUE
+291620,156,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",31/5/21,TRUE
+699428,157,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",1/6/21,TRUE
+263271,158,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",2/6/21,TRUE
+758941,159,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",3/6/21,TRUE
+278276,160,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",4/6/21,TRUE
+140074,161,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",5/6/21,TRUE
+460928,162,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",6/6/21,TRUE
+914498,163,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",7/6/21,TRUE
+590863,164,"""New In""","""Covid19 Entry Requirements for Travellers to China""",8/6/21,TRUE
+635329,165,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",9/6/21,TRUE
+676636,166,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",10/6/21,TRUE
+271534,167,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",11/6/21,TRUE
+519475,168,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",12/6/21,TRUE
+670580,169,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",13/6/21,TRUE
+931749,170,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",14/6/21,TRUE
+337622,171,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",15/6/21,TRUE
+620977,172,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",16/6/21,TRUE
+839037,173,"""New In""","""Covid19 Entry Requirements for Travellers to China""",17/6/21,TRUE
+826200,174,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",18/6/21,TRUE
+720626,175,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",19/6/21,TRUE
+102028,176,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",20/6/21,TRUE
+916699,177,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",21/6/21,TRUE
+479302,178,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",22/6/21,TRUE
+554294,179,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",23/6/21,TRUE
+681755,180,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",24/6/21,TRUE
+842831,181,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",25/6/21,TRUE
+513611,182,"""New In""","""Covid19 Entry Requirements for Travellers to China""",26/6/21,TRUE
+707882,183,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",27/6/21,TRUE
+746321,184,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",28/6/21,TRUE
+375339,185,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",29/6/21,TRUE
+386399,186,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",30/6/21,TRUE
+366627,187,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",1/7/21,TRUE
+975078,188,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",2/7/21,TRUE
+237710,189,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",3/7/21,TRUE
+242771,190,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",4/7/21,TRUE
+724895,191,"""New In""","""Covid19 Entry Requirements for Travellers to China""",5/7/21,TRUE
+618023,192,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",6/7/21,TRUE
+137088,193,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",7/7/21,TRUE
+754586,194,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",8/7/21,TRUE
+547214,195,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",9/7/21,TRUE
+685117,196,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",10/7/21,TRUE
+343320,197,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",11/7/21,TRUE
+955197,198,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",12/7/21,TRUE
+292745,199,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",13/7/21,TRUE
+762531,200,"""New In""","""Covid19 Entry Requirements for Travellers to China""",14/7/21,TRUE
+769238,201,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",15/7/21,TRUE
+914681,202,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",16/7/21,TRUE
+570889,203,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",17/7/21,TRUE
+459821,204,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",18/7/21,TRUE
+147177,205,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",19/7/21,TRUE
+685577,206,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",20/7/21,TRUE
+654479,207,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",21/7/21,TRUE
+668715,208,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",22/7/21,TRUE
+275092,209,"""New In""","""Covid19 Entry Requirements for Travellers to China""",23/7/21,TRUE
+651814,210,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",24/7/21,TRUE
+566690,211,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",25/7/21,TRUE
+265341,212,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",26/7/21,TRUE
+721542,213,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",27/7/21,TRUE
+918716,214,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",28/7/21,TRUE
+576476,215,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",29/7/21,TRUE
+920686,216,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",30/7/21,TRUE
+548075,217,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",31/7/21,TRUE
+930480,218,"""New In""","""Covid19 Entry Requirements for Travellers to China""",1/8/21,TRUE
+616005,219,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",2/8/21,TRUE
+202756,220,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",3/8/21,TRUE
+255802,221,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",4/8/21,TRUE
+861956,222,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",5/8/21,TRUE
+543687,223,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",6/8/21,TRUE
+977768,224,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",7/8/21,TRUE
+986544,225,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",8/8/21,TRUE
+550288,226,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",9/8/21,TRUE
+872676,227,"""New In""","""Covid19 Entry Requirements for Travellers to China""",10/8/21,TRUE
+539850,228,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",11/8/21,TRUE
+476735,229,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",12/8/21,TRUE
+243464,230,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",13/8/21,TRUE
+667971,231,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",14/8/21,TRUE
+362382,232,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",15/8/21,TRUE
+488908,233,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",16/8/21,TRUE
+764084,234,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",17/8/21,TRUE
+775435,235,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",18/8/21,TRUE
+164653,236,"""New In""","""Covid19 Entry Requirements for Travellers to China""",19/8/21,TRUE
+571718,237,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",20/8/21,TRUE
+941846,238,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",21/8/21,TRUE
+180564,239,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",22/8/21,TRUE
+333235,240,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",23/8/21,TRUE
+674475,241,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",24/8/21,TRUE
+406681,242,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",25/8/21,TRUE
+980813,243,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",26/8/21,TRUE
+818895,244,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",27/8/21,TRUE
+418930,245,"""New In""","""Covid19 Entry Requirements for Travellers to China""",28/8/21,TRUE
+139353,246,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",29/8/21,TRUE
+178182,247,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",30/8/21,TRUE
+883542,248,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",31/8/21,TRUE
+133249,249,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",1/9/21,TRUE
+823008,250,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",2/9/21,TRUE
+586878,251,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",3/9/21,TRUE
+702547,252,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",4/9/21,TRUE
+451190,253,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",5/9/21,TRUE
+168054,254,"""New In""","""Covid19 Entry Requirements for Travellers to China""",6/9/21,TRUE
+993075,255,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",7/9/21,TRUE
+391565,256,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",8/9/21,TRUE
+448482,257,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",9/9/21,TRUE
+328272,258,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",10/9/21,TRUE
+302843,259,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",11/9/21,TRUE
+149345,260,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",12/9/21,TRUE
+529811,261,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",13/9/21,TRUE
+473630,262,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",14/9/21,TRUE
+245021,263,"""New In""","""Covid19 Entry Requirements for Travellers to China""",15/9/21,TRUE
+711335,264,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",16/9/21,TRUE
+879290,265,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",17/9/21,TRUE
+614100,266,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",18/9/21,TRUE
+960642,267,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",19/9/21,TRUE
+248258,268,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",20/9/21,TRUE
+630024,269,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",21/9/21,TRUE
+607906,270,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",22/9/21,TRUE
+832032,271,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",23/9/21,TRUE
+442806,272,"""New In""","""Covid19 Entry Requirements for Travellers to China""",24/9/21,TRUE
+388482,273,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",25/9/21,TRUE
+460273,274,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",26/9/21,TRUE
+800870,275,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",27/9/21,TRUE
+513447,276,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",28/9/21,TRUE
+817688,277,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",29/9/21,TRUE
+397850,278,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",30/9/21,TRUE
+954572,279,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",1/10/21,TRUE
+563008,280,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",2/10/21,TRUE
+830736,281,"""New In""","""Covid19 Entry Requirements for Travellers to China""",3/10/21,TRUE
+735952,282,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",4/10/21,TRUE
+214662,283,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",5/10/21,TRUE
+329668,284,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",6/10/21,TRUE
+154161,285,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",7/10/21,TRUE
+805467,286,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",8/10/21,TRUE
+254989,287,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",9/10/21,TRUE
+123040,288,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",10/10/21,TRUE
+787631,289,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",11/10/21,TRUE
+853953,290,"""New In""","""Covid19 Entry Requirements for Travellers to China""",12/10/21,TRUE
+669251,291,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",13/10/21,TRUE
+356326,292,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",14/10/21,TRUE
+812704,293,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",15/10/21,TRUE
+919944,294,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",16/10/21,TRUE
+636833,295,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",17/10/21,TRUE
+117702,296,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",18/10/21,TRUE
+723027,297,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",19/10/21,TRUE
+928623,298,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",20/10/21,TRUE
+289062,299,"""New In""","""Covid19 Entry Requirements for Travellers to China""",21/10/21,TRUE
+721882,300,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",22/10/21,TRUE
+931036,301,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",23/10/21,TRUE
+396700,302,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",24/10/21,TRUE
+470563,303,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",25/10/21,TRUE
+889773,304,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",26/10/21,TRUE
+124226,305,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",27/10/21,TRUE
+662724,306,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",28/10/21,TRUE
+703292,307,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",29/10/21,TRUE
+668626,308,"""New In""","""Covid19 Entry Requirements for Travellers to China""",30/10/21,TRUE
+874818,309,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",31/10/21,TRUE
+386124,310,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",1/11/21,TRUE
+354194,311,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",2/11/21,TRUE
+234849,312,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",3/11/21,TRUE
+495099,313,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",4/11/21,TRUE
+627417,314,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",5/11/21,TRUE
+216569,315,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",6/11/21,TRUE
+802087,316,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",7/11/21,TRUE
+546745,317,"""New In""","""Covid19 Entry Requirements for Travellers to China""",8/11/21,TRUE
+520796,318,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",9/11/21,TRUE
+582558,319,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",10/11/21,TRUE
+947075,320,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",11/11/21,TRUE
+270659,321,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",12/11/21,TRUE
+921341,322,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",13/11/21,TRUE
+673572,323,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",14/11/21,TRUE
+299470,324,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",15/11/21,TRUE
+646104,325,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",16/11/21,TRUE
+107202,326,"""New In""","""Covid19 Entry Requirements for Travellers to China""",17/11/21,TRUE
+685272,327,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",18/11/21,TRUE
+299826,328,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",19/11/21,TRUE
+734206,329,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",20/11/21,TRUE
+464773,330,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",21/11/21,TRUE
+368208,331,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",22/11/21,TRUE
+749274,332,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",23/11/21,TRUE
+365776,333,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",24/11/21,TRUE
+883792,334,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",25/11/21,TRUE
+332329,335,"""New In""","""Covid19 Entry Requirements for Travellers to China""",26/11/21,TRUE
+533225,336,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",27/11/21,TRUE
+878870,337,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",28/11/21,TRUE
+929149,338,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",29/11/21,TRUE
+775470,339,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",30/11/21,TRUE
+624750,340,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",1/12/21,TRUE
+646955,341,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",2/12/21,TRUE
+223752,342,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",3/12/21,TRUE
+127774,343,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",4/12/21,TRUE
+929233,344,"""New In""","""Covid19 Entry Requirements for Travellers to China""",5/12/21,TRUE
+464752,345,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",6/12/21,TRUE
+881534,346,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",7/12/21,TRUE
+106178,347,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",8/12/21,TRUE
+682996,348,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",9/12/21,TRUE
+353283,349,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",10/12/21,TRUE
+974813,350,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",11/12/21,TRUE
+179822,351,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",12/12/21,TRUE
+163196,352,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",13/12/21,TRUE
+859547,353,"""New In""","""Covid19 Entry Requirements for Travellers to China""",14/12/21,TRUE
+709313,354,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",15/12/21,TRUE
+937732,355,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",16/12/21,TRUE
+859537,356,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",17/12/21,TRUE
+687799,357,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",18/12/21,TRUE
+276973,358,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",19/12/21,TRUE
+416449,359,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",20/12/21,TRUE
+244341,360,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",21/12/21,TRUE
+276020,361,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",22/12/21,TRUE
+103295,362,"""New In""","""Covid19 Entry Requirements for Travellers to China""",23/12/21,TRUE
+386321,363,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",24/12/21,TRUE
+143825,364,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",25/12/21,TRUE
+848324,365,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",26/12/21,TRUE
+913550,366,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",27/12/21,TRUE
+954319,367,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",28/12/21,TRUE
+814387,368,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",29/12/21,TRUE
+731351,369,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",30/12/21,TRUE
+277211,370,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",31/12/21,TRUE
+684758,371,"""New In""","""Covid19 Entry Requirements for Travellers to China""",1/1/22,TRUE
+559861,372,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",2/1/22,TRUE
+326756,373,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",3/1/22,TRUE
+611026,374,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",4/1/22,TRUE
+730256,375,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",5/1/22,TRUE
+578088,376,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",6/1/22,TRUE
+339777,377,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",7/1/22,TRUE
+930672,378,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",8/1/22,TRUE
+404607,379,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",9/1/22,TRUE
+816822,380,"""New In""","""Covid19 Entry Requirements for Travellers to China""",10/1/22,TRUE
+946557,381,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",11/1/22,TRUE
+259045,382,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",12/1/22,TRUE
+501841,383,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",13/1/22,TRUE
+869944,384,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",14/1/22,TRUE
+967384,385,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",15/1/22,TRUE
+417766,386,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",16/1/22,TRUE
+186882,387,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",17/1/22,TRUE
+648906,388,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",18/1/22,TRUE
+375036,389,"""New In""","""Covid19 Entry Requirements for Travellers to China""",19/1/22,TRUE
+924078,390,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",20/1/22,TRUE
+830502,391,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",21/1/22,TRUE
+830818,392,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",22/1/22,TRUE
+285488,393,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",23/1/22,TRUE
+575073,394,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",24/1/22,TRUE
+877630,395,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",25/1/22,TRUE
+240911,396,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",26/1/22,TRUE
+114727,397,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",27/1/22,TRUE
+388545,398,"""New In""","""Covid19 Entry Requirements for Travellers to China""",28/1/22,TRUE
+469694,399,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",29/1/22,TRUE
+689422,400,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",30/1/22,TRUE
+689897,401,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",31/1/22,TRUE
+997365,402,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",1/2/22,TRUE
+132921,403,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",2/2/22,TRUE
+780620,404,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",3/2/22,TRUE
+731271,405,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",4/2/22,TRUE
+976336,406,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",5/2/22,TRUE
+193176,407,"""New In""","""Covid19 Entry Requirements for Travellers to China""",6/2/22,TRUE
+916564,408,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",7/2/22,TRUE
+482154,409,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",8/2/22,TRUE
+450428,410,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",9/2/22,TRUE
+215036,411,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",10/2/22,TRUE
+298183,412,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",11/2/22,TRUE
+450748,413,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",12/2/22,TRUE
+747467,414,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",13/2/22,TRUE
+769154,415,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",14/2/22,TRUE
+802781,416,"""New In""","""Covid19 Entry Requirements for Travellers to China""",15/2/22,TRUE
+181253,417,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",16/2/22,TRUE
+360719,418,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",17/2/22,TRUE
+388933,419,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",18/2/22,TRUE
+420570,420,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",19/2/22,TRUE
+420652,421,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",20/2/22,TRUE
+844189,422,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",21/2/22,TRUE
+608355,423,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",22/2/22,TRUE
+546910,424,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",23/2/22,TRUE
+882220,425,"""New In""","""Covid19 Entry Requirements for Travellers to China""",24/2/22,TRUE
+825690,426,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",25/2/22,TRUE
+455424,427,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",26/2/22,TRUE
+774474,428,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",27/2/22,TRUE
+647170,429,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",28/2/22,TRUE
+339640,430,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",1/3/22,TRUE
+852291,431,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",2/3/22,TRUE
+944997,432,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",3/3/22,TRUE
+536567,433,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",4/3/22,TRUE
+450320,434,"""New In""","""Covid19 Entry Requirements for Travellers to China""",5/3/22,TRUE
+649942,435,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",6/3/22,TRUE
+561727,436,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",7/3/22,TRUE
+459948,437,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",8/3/22,TRUE
+277520,438,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",9/3/22,TRUE
+436033,439,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",10/3/22,TRUE
+843680,440,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",11/3/22,TRUE
+111115,441,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",12/3/22,TRUE
+807184,442,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",13/3/22,TRUE
+557104,443,"""New In""","""Covid19 Entry Requirements for Travellers to China""",14/3/22,TRUE
+949854,444,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",15/3/22,TRUE
+447495,445,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",16/3/22,TRUE
+330975,446,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",17/3/22,TRUE
+408254,447,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",18/3/22,TRUE
+279157,448,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",19/3/22,TRUE
+225497,449,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",20/3/22,TRUE
+302860,450,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",21/3/22,TRUE
+535076,451,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",22/3/22,TRUE
+667765,452,"""New In""","""Covid19 Entry Requirements for Travellers to China""",23/3/22,TRUE
+933000,453,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",24/3/22,TRUE
+905550,454,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",25/3/22,TRUE
+845570,455,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",26/3/22,TRUE
+740734,456,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",27/3/22,TRUE
+509493,457,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",28/3/22,TRUE
+388587,458,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",29/3/22,TRUE
+507911,459,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",30/3/22,TRUE
+803666,460,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",31/3/22,TRUE
+779913,461,"""New In""","""Covid19 Entry Requirements for Travellers to China""",1/4/22,TRUE
+946929,462,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",2/4/22,TRUE
+251524,463,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",3/4/22,TRUE
+221306,464,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",4/4/22,TRUE
+457634,465,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",5/4/22,TRUE
+888910,466,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",6/4/22,TRUE
+519054,467,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",7/4/22,TRUE
+637941,468,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",8/4/22,TRUE
+108255,469,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",9/4/22,TRUE
+901165,470,"""New In""","""Covid19 Entry Requirements for Travellers to China""",10/4/22,TRUE
+743387,471,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",11/4/22,TRUE
+440681,472,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",12/4/22,TRUE
+296435,473,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",13/4/22,TRUE
+991253,474,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",14/4/22,TRUE
+204346,475,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",15/4/22,TRUE
+464761,476,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",16/4/22,TRUE
+669743,477,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",17/4/22,TRUE
+617044,478,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",18/4/22,TRUE
+552208,479,"""New In""","""Covid19 Entry Requirements for Travellers to China""",19/4/22,TRUE
+847180,480,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",20/4/22,TRUE
+325837,481,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",21/4/22,TRUE
+949320,482,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",22/4/22,TRUE
+188829,483,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",23/4/22,TRUE
+280254,484,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",24/4/22,TRUE
+158446,485,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",25/4/22,TRUE
+934617,486,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",26/4/22,TRUE
+911546,487,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",27/4/22,TRUE
+886976,488,"""New In""","""Covid19 Entry Requirements for Travellers to China""",28/4/22,TRUE
+149272,489,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",29/4/22,TRUE
+919565,490,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",30/4/22,TRUE
+732853,491,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",1/5/22,TRUE
+740143,492,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",2/5/22,TRUE
+790265,493,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",3/5/22,TRUE
+948397,494,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",4/5/22,TRUE
+989412,495,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",5/5/22,TRUE
+738426,496,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",6/5/22,TRUE
+396937,497,"""New In""","""Covid19 Entry Requirements for Travellers to China""",7/5/22,TRUE
+395373,498,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",8/5/22,TRUE
+822771,499,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",9/5/22,TRUE
+421653,500,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",10/5/22,TRUE
+201634,501,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",11/5/22,TRUE
+701810,502,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",12/5/22,TRUE
+260702,503,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",13/5/22,TRUE
+276282,504,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",14/5/22,TRUE
+222470,505,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",15/5/22,TRUE
+371330,506,"""New In""","""Covid19 Entry Requirements for Travellers to China""",16/5/22,TRUE
+620676,507,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",17/5/22,TRUE
+490748,508,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",18/5/22,TRUE
+271536,509,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",19/5/22,TRUE
+757467,510,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",20/5/22,TRUE
+409165,511,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",21/5/22,TRUE
+293841,512,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",22/5/22,TRUE
+224626,513,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",23/5/22,TRUE
+712757,514,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",24/5/22,TRUE
+683601,515,"""New In""","""Covid19 Entry Requirements for Travellers to China""",25/5/22,TRUE
+959395,516,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",26/5/22,TRUE
+658836,517,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",27/5/22,TRUE
+325746,518,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",28/5/22,TRUE
+499721,519,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",29/5/22,TRUE
+891208,520,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",30/5/22,TRUE
+968423,521,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",31/5/22,TRUE
+487209,522,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",1/6/22,TRUE
+101351,523,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",2/6/22,TRUE
+777158,524,"""New In""","""Covid19 Entry Requirements for Travellers to China""",3/6/22,TRUE
+318990,525,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",4/6/22,TRUE
+702810,526,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",5/6/22,TRUE
+611843,527,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",6/6/22,TRUE
+822194,528,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",7/6/22,TRUE
+414292,529,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",8/6/22,TRUE
+186907,530,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",9/6/22,TRUE
+286567,531,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",10/6/22,TRUE
+448982,532,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",11/6/22,TRUE
+128830,533,"""New In""","""Covid19 Entry Requirements for Travellers to China""",12/6/22,TRUE
+425370,534,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",13/6/22,TRUE
+735224,535,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",14/6/22,TRUE
+298360,536,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",15/6/22,TRUE
+630683,537,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",16/6/22,TRUE
+802499,538,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",17/6/22,TRUE
+172681,539,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",18/6/22,TRUE
+535661,540,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",19/6/22,TRUE
+456826,541,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",20/6/22,TRUE
+210630,542,"""New In""","""Covid19 Entry Requirements for Travellers to China""",21/6/22,TRUE
+241746,543,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",22/6/22,TRUE
+988171,544,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",23/6/22,TRUE
+176827,545,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",24/6/22,TRUE
+856299,546,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",25/6/22,TRUE
+331618,547,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",26/6/22,TRUE
+911439,548,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",27/6/22,TRUE
+727423,549,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",28/6/22,TRUE
+835308,550,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",29/6/22,TRUE
+654044,551,"""New In""","""Covid19 Entry Requirements for Travellers to China""",30/6/22,TRUE
+567400,552,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",1/7/22,TRUE
+262489,553,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",2/7/22,TRUE
+141653,554,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",3/7/22,TRUE
+975880,555,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",4/7/22,TRUE
+435390,556,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",5/7/22,TRUE
+763344,557,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",6/7/22,TRUE
+114336,558,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",7/7/22,TRUE
+227137,559,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",8/7/22,TRUE
+868828,560,"""New In""","""Covid19 Entry Requirements for Travellers to China""",9/7/22,TRUE
+150148,561,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",10/7/22,TRUE
+587055,562,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",11/7/22,TRUE
+109599,563,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",12/7/22,TRUE
+288006,564,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",13/7/22,TRUE
+665949,565,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",14/7/22,TRUE
+855642,566,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",15/7/22,TRUE
+875628,567,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",16/7/22,TRUE
+145644,568,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",17/7/22,TRUE
+541585,569,"""New In""","""Covid19 Entry Requirements for Travellers to China""",18/7/22,TRUE
+436576,570,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",19/7/22,TRUE
+435933,571,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",20/7/22,TRUE
+376978,572,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",21/7/22,TRUE
+409183,573,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",22/7/22,TRUE
+923225,574,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",23/7/22,TRUE
+526858,575,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",24/7/22,TRUE
+787899,576,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",25/7/22,TRUE
+848959,577,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",26/7/22,TRUE
+345494,578,"""New In""","""Covid19 Entry Requirements for Travellers to China""",27/7/22,TRUE
+698301,579,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",28/7/22,TRUE
+395038,580,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",29/7/22,TRUE
+891103,581,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",30/7/22,TRUE
+938520,582,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",31/7/22,TRUE
+394447,583,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",1/8/22,TRUE
+588074,584,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",2/8/22,TRUE
+162410,585,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",3/8/22,TRUE
+198453,586,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",4/8/22,TRUE
+841919,587,"""New In""","""Covid19 Entry Requirements for Travellers to China""",5/8/22,TRUE
+272998,588,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",6/8/22,TRUE
+225193,589,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",7/8/22,TRUE
+844362,590,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",8/8/22,TRUE
+791093,591,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",9/8/22,TRUE
+444999,592,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",10/8/22,TRUE
+400632,593,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",11/8/22,TRUE
+135195,594,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",12/8/22,TRUE
+121143,595,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",13/8/22,TRUE
+937521,596,"""New In""","""Covid19 Entry Requirements for Travellers to China""",14/8/22,TRUE
+179165,597,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",15/8/22,TRUE
+310692,598,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",16/8/22,TRUE
+123853,599,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",17/8/22,TRUE
+271003,600,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",18/8/22,TRUE
+589268,601,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",19/8/22,TRUE
+771208,602,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",20/8/22,TRUE
+990636,603,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",21/8/22,TRUE
+357858,604,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",22/8/22,TRUE
+805215,605,"""New In""","""Covid19 Entry Requirements for Travellers to China""",23/8/22,TRUE
+957313,606,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",24/8/22,TRUE
+945516,607,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",25/8/22,TRUE
+359856,608,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",26/8/22,TRUE
+182197,609,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",27/8/22,TRUE
+165439,610,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",28/8/22,TRUE
+729202,611,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",29/8/22,TRUE
+964887,612,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",30/8/22,TRUE
+958015,613,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",31/8/22,TRUE
+944879,614,"""New In""","""Covid19 Entry Requirements for Travellers to China""",1/9/22,TRUE
+591606,615,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",2/9/22,TRUE
+592865,616,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",3/9/22,TRUE
+101450,617,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",4/9/22,TRUE
+794466,618,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",5/9/22,TRUE
+391635,619,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",6/9/22,TRUE
+121450,620,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",7/9/22,TRUE
+248075,621,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",8/9/22,TRUE
+485306,622,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",9/9/22,TRUE
+803812,623,"""New In""","""Covid19 Entry Requirements for Travellers to China""",10/9/22,TRUE
+157709,624,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",11/9/22,TRUE
+993418,625,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",12/9/22,TRUE
+860672,626,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",13/9/22,TRUE
+440763,627,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",14/9/22,TRUE
+909473,628,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",15/9/22,TRUE
+471546,629,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",16/9/22,TRUE
+119555,630,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",17/9/22,TRUE
+896178,631,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",18/9/22,TRUE
+250850,632,"""New In""","""Covid19 Entry Requirements for Travellers to China""",19/9/22,TRUE
+533612,633,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",20/9/22,TRUE
+642159,634,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",21/9/22,TRUE
+816617,635,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",22/9/22,TRUE
+747078,636,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",23/9/22,TRUE
+867021,637,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",24/9/22,TRUE
+991215,638,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",25/9/22,TRUE
+119617,639,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",26/9/22,TRUE
+974115,640,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",27/9/22,TRUE
+614876,641,"""New In""","""Covid19 Entry Requirements for Travellers to China""",28/9/22,TRUE
+867585,642,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",29/9/22,TRUE
+511638,643,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",30/9/22,TRUE
+968095,644,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",1/10/22,TRUE
+543749,645,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",2/10/22,TRUE
+704070,646,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",3/10/22,TRUE
+129244,647,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",4/10/22,TRUE
+115465,648,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",5/10/22,TRUE
+184834,649,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",6/10/22,TRUE
+583998,650,"""New In""","""Covid19 Entry Requirements for Travellers to China""",7/10/22,TRUE
+667792,651,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",8/10/22,TRUE
+255639,652,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",9/10/22,TRUE
+672690,653,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",10/10/22,TRUE
+427161,654,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",11/10/22,TRUE
+145587,655,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",12/10/22,TRUE
+291620,656,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",13/10/22,TRUE
+699428,657,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",14/10/22,TRUE
+263271,658,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",15/10/22,TRUE
+758941,659,"""New In""","""Covid19 Entry Requirements for Travellers to China""",16/10/22,TRUE
+278276,660,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",17/10/22,TRUE
+140074,661,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",18/10/22,TRUE
+460928,662,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",19/10/22,TRUE
+914498,663,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",20/10/22,TRUE
+590863,664,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",21/10/22,TRUE
+635329,665,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",22/10/22,TRUE
+676636,666,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",23/10/22,TRUE
+271534,667,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",24/10/22,TRUE
+519475,668,"""New In""","""Covid19 Entry Requirements for Travellers to China""",25/10/22,TRUE
+670580,669,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",26/10/22,TRUE
+931749,670,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",27/10/22,TRUE
+337622,671,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",28/10/22,TRUE
+620977,672,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",29/10/22,TRUE
+839037,673,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",30/10/22,TRUE
+826200,674,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",31/10/22,TRUE
+720626,675,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",1/11/22,TRUE
+102028,676,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",2/11/22,TRUE
+916699,677,"""New In""","""Covid19 Entry Requirements for Travellers to China""",3/11/22,TRUE
+479302,678,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",4/11/22,TRUE
+554294,679,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",5/11/22,TRUE
+681755,680,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",6/11/22,TRUE
+842831,681,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",7/11/22,TRUE
+513611,682,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",8/11/22,TRUE
+707882,683,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",9/11/22,TRUE
+746321,684,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",10/11/22,TRUE
+375339,685,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",11/11/22,TRUE
+386399,686,"""New In""","""Covid19 Entry Requirements for Travellers to China""",12/11/22,TRUE
+366627,687,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",13/11/22,TRUE
+975078,688,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",14/11/22,TRUE
+237710,689,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",15/11/22,TRUE
+242771,690,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",16/11/22,TRUE
+724895,691,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",17/11/22,TRUE
+618023,692,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",18/11/22,TRUE
+137088,693,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",19/11/22,TRUE
+754586,694,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",20/11/22,TRUE
+547214,695,"""New In""","""Covid19 Entry Requirements for Travellers to China""",21/11/22,TRUE
+685117,696,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",22/11/22,TRUE
+343320,697,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",23/11/22,TRUE
+955197,698,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",24/11/22,TRUE
+292745,699,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",25/11/22,TRUE
+762531,700,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",26/11/22,TRUE
+769238,701,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",27/11/22,TRUE
+914681,702,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",28/11/22,TRUE
+570889,703,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",29/11/22,TRUE
+459821,704,"""New In""","""Covid19 Entry Requirements for Travellers to China""",30/11/22,TRUE
+147177,705,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",1/12/22,TRUE
+685577,706,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",2/12/22,TRUE
+654479,707,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",3/12/22,TRUE
+668715,708,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",4/12/22,TRUE
+275092,709,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",5/12/22,TRUE
+651814,710,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",6/12/22,TRUE
+566690,711,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",7/12/22,TRUE
+265341,712,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",8/12/22,TRUE
+721542,713,"""New In""","""Covid19 Entry Requirements for Travellers to China""",9/12/22,TRUE
+918716,714,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",10/12/22,TRUE
+576476,715,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",11/12/22,TRUE
+920686,716,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",12/12/22,TRUE
+548075,717,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",13/12/22,TRUE
+930480,718,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",14/12/22,TRUE
+616005,719,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",15/12/22,TRUE
+202756,720,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",16/12/22,TRUE
+255802,721,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",17/12/22,TRUE
+861956,722,"""New In""","""Covid19 Entry Requirements for Travellers to China""",18/12/22,TRUE
+543687,723,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",19/12/22,TRUE
+977768,724,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",20/12/22,TRUE
+986544,725,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",21/12/22,TRUE
+550288,726,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",22/12/22,TRUE
+872676,727,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",23/12/22,TRUE
+539850,728,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",24/12/22,TRUE
+476735,729,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",25/12/22,TRUE
+243464,730,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",26/12/22,TRUE
+667971,731,"""New In""","""Covid19 Entry Requirements for Travellers to China""",27/12/22,TRUE
+362382,732,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",28/12/22,TRUE
+488908,733,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",29/12/22,TRUE
+764084,734,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",30/12/22,TRUE
+775435,735,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",31/12/22,TRUE
+164653,736,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",1/1/23,TRUE
+571718,737,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",2/1/23,TRUE
+941846,738,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",3/1/23,TRUE
+180564,739,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",4/1/23,TRUE
+333235,740,"""New In""","""Covid19 Entry Requirements for Travellers to China""",5/1/23,TRUE
+674475,741,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",6/1/23,TRUE
+406681,742,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",7/1/23,TRUE
+980813,743,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",8/1/23,TRUE
+818895,744,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",9/1/23,TRUE
+418930,745,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",10/1/23,TRUE
+139353,746,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",11/1/23,TRUE
+178182,747,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",12/1/23,TRUE
+883542,748,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",13/1/23,TRUE
+133249,749,"""New In""","""Covid19 Entry Requirements for Travellers to China""",14/1/23,TRUE
+823008,750,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",15/1/23,TRUE
+586878,751,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",16/1/23,TRUE
+702547,752,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",17/1/23,TRUE
+451190,753,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",18/1/23,TRUE
+168054,754,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",19/1/23,TRUE
+993075,755,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",20/1/23,TRUE
+391565,756,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",21/1/23,TRUE
+448482,757,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",22/1/23,TRUE
+328272,758,"""New In""","""Covid19 Entry Requirements for Travellers to China""",23/1/23,TRUE
+302843,759,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",24/1/23,TRUE
+149345,760,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",25/1/23,TRUE
+529811,761,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",26/1/23,TRUE
+473630,762,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",27/1/23,TRUE
+245021,763,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",28/1/23,TRUE
+711335,764,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",29/1/23,TRUE
+879290,765,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",30/1/23,TRUE
+614100,766,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",31/1/23,TRUE
+960642,767,"""New In""","""Covid19 Entry Requirements for Travellers to China""",1/2/23,TRUE
+248258,768,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",2/2/23,TRUE
+630024,769,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",3/2/23,TRUE
+607906,770,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",4/2/23,TRUE
+832032,771,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",5/2/23,TRUE
+442806,772,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",6/2/23,TRUE
+388482,773,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",7/2/23,TRUE
+460273,774,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",8/2/23,TRUE
+800870,775,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",9/2/23,TRUE
+513447,776,"""New In""","""Covid19 Entry Requirements for Travellers to China""",10/2/23,TRUE
+817688,777,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",11/2/23,TRUE
+397850,778,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",12/2/23,TRUE
+954572,779,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",13/2/23,TRUE
+563008,780,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",14/2/23,TRUE
+830736,781,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",15/2/23,TRUE
+735952,782,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",16/2/23,TRUE
+214662,783,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",17/2/23,TRUE
+329668,784,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",18/2/23,TRUE
+154161,785,"""New In""","""Covid19 Entry Requirements for Travellers to China""",19/2/23,TRUE
+805467,786,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",20/2/23,TRUE
+254989,787,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",21/2/23,TRUE
+123040,788,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",22/2/23,TRUE
+787631,789,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",23/2/23,TRUE
+853953,790,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",24/2/23,TRUE
+669251,791,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",25/2/23,TRUE
+356326,792,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",26/2/23,TRUE
+812704,793,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",27/2/23,TRUE
+919944,794,"""New In""","""Covid19 Entry Requirements for Travellers to China""",28/2/23,TRUE
+636833,795,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",1/3/23,TRUE
+117702,796,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",2/3/23,TRUE
+723027,797,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",3/3/23,TRUE
+928623,798,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",4/3/23,TRUE
+289062,799,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",5/3/23,TRUE
+721882,800,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",6/3/23,TRUE
+931036,801,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",7/3/23,TRUE
+396700,802,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",8/3/23,TRUE
+470563,803,"""New In""","""Covid19 Entry Requirements for Travellers to China""",9/3/23,TRUE
+889773,804,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",10/3/23,TRUE
+124226,805,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",11/3/23,TRUE
+662724,806,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",12/3/23,TRUE
+703292,807,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",13/3/23,TRUE
+668626,808,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",14/3/23,TRUE
+874818,809,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",15/3/23,TRUE
+386124,810,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",16/3/23,TRUE
+354194,811,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",17/3/23,TRUE
+234849,812,"""New In""","""Covid19 Entry Requirements for Travellers to China""",18/3/23,TRUE
+495099,813,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",19/3/23,TRUE
+627417,814,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",20/3/23,TRUE
+216569,815,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",21/3/23,TRUE
+802087,816,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",22/3/23,TRUE
+546745,817,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",23/3/23,TRUE
+520796,818,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",24/3/23,TRUE
+582558,819,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",25/3/23,TRUE
+947075,820,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",26/3/23,TRUE
+270659,821,"""New In""","""Covid19 Entry Requirements for Travellers to China""",27/3/23,TRUE
+921341,822,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",28/3/23,TRUE
+673572,823,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",29/3/23,TRUE
+299470,824,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",30/3/23,TRUE
+646104,825,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",31/3/23,TRUE
+107202,826,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",1/4/23,TRUE
+685272,827,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",2/4/23,TRUE
+299826,828,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",3/4/23,TRUE
+734206,829,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",4/4/23,TRUE
+464773,830,"""New In""","""Covid19 Entry Requirements for Travellers to China""",5/4/23,TRUE
+368208,831,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",6/4/23,TRUE
+749274,832,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",7/4/23,TRUE
+365776,833,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",8/4/23,TRUE
+883792,834,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",9/4/23,TRUE
+332329,835,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",10/4/23,TRUE
+533225,836,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",11/4/23,TRUE
+878870,837,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",12/4/23,TRUE
+929149,838,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",13/4/23,TRUE
+775470,839,"""New In""","""Covid19 Entry Requirements for Travellers to China""",14/4/23,TRUE
+624750,840,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",15/4/23,TRUE
+646955,841,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",16/4/23,TRUE
+223752,842,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",17/4/23,TRUE
+127774,843,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",18/4/23,TRUE
+929233,844,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",19/4/23,TRUE
+464752,845,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",20/4/23,TRUE
+881534,846,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",21/4/23,TRUE
+106178,847,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",22/4/23,TRUE
+682996,848,"""New In""","""Covid19 Entry Requirements for Travellers to China""",23/4/23,TRUE
+353283,849,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",24/4/23,TRUE
+974813,850,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",25/4/23,TRUE
+179822,851,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",26/4/23,TRUE
+163196,852,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",27/4/23,TRUE
+859547,853,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",28/4/23,TRUE
+709313,854,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",29/4/23,TRUE
+937732,855,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",30/4/23,TRUE
+859537,856,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",1/5/23,TRUE
+687799,857,"""New In""","""Covid19 Entry Requirements for Travellers to China""",2/5/23,TRUE
+276973,858,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",3/5/23,TRUE
+416449,859,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",4/5/23,TRUE
+244341,860,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",5/5/23,TRUE
+276020,861,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",6/5/23,TRUE
+103295,862,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",7/5/23,TRUE
+386321,863,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",8/5/23,TRUE
+143825,864,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",9/5/23,TRUE
+848324,865,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",10/5/23,TRUE
+913550,866,"""New In""","""Covid19 Entry Requirements for Travellers to China""",11/5/23,TRUE
+954319,867,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",12/5/23,TRUE
+814387,868,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",13/5/23,TRUE
+731351,869,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",14/5/23,TRUE
+277211,870,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",15/5/23,TRUE
+684758,871,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",16/5/23,TRUE
+559861,872,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",17/5/23,TRUE
+326756,873,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",18/5/23,TRUE
+611026,874,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",19/5/23,TRUE
+730256,875,"""New In""","""Covid19 Entry Requirements for Travellers to China""",20/5/23,TRUE
+578088,876,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",21/5/23,TRUE
+339777,877,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",22/5/23,TRUE
+930672,878,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",23/5/23,TRUE
+404607,879,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",24/5/23,TRUE
+816822,880,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",25/5/23,TRUE
+946557,881,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",26/5/23,TRUE
+259045,882,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",27/5/23,TRUE
+501841,883,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",28/5/23,TRUE
+869944,884,"""New In""","""Covid19 Entry Requirements for Travellers to China""",29/5/23,TRUE
+967384,885,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",30/5/23,TRUE
+417766,886,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",31/5/23,TRUE
+186882,887,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",1/6/23,TRUE
+648906,888,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",2/6/23,TRUE
+375036,889,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",3/6/23,TRUE
+924078,890,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",4/6/23,TRUE
+830502,891,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",5/6/23,TRUE
+830818,892,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",6/6/23,TRUE
+285488,893,"""New In""","""Covid19 Entry Requirements for Travellers to China""",7/6/23,TRUE
+575073,894,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",8/6/23,TRUE
+877630,895,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",9/6/23,TRUE
+240911,896,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",10/6/23,TRUE
+114727,897,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",11/6/23,TRUE
+388545,898,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",12/6/23,TRUE
+469694,899,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",13/6/23,TRUE
+689422,900,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",14/6/23,TRUE
+689897,901,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",15/6/23,TRUE
+997365,902,"""New In""","""Covid19 Entry Requirements for Travellers to China""",16/6/23,TRUE
+132921,903,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",17/6/23,TRUE
+780620,904,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",18/6/23,TRUE
+731271,905,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",19/6/23,TRUE
+976336,906,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",20/6/23,TRUE
+193176,907,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",21/6/23,TRUE
+916564,908,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",22/6/23,TRUE
+482154,909,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",23/6/23,TRUE
+450428,910,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",24/6/23,TRUE
+215036,911,"""New In""","""Covid19 Entry Requirements for Travellers to China""",25/6/23,TRUE
+298183,912,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",26/6/23,TRUE
+450748,913,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",27/6/23,TRUE
+747467,914,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",28/6/23,TRUE
+769154,915,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",29/6/23,TRUE
+802781,916,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",30/6/23,TRUE
+181253,917,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",1/7/23,TRUE
+360719,918,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",2/7/23,TRUE
+388933,919,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",3/7/23,TRUE
+420570,920,"""New In""","""Covid19 Entry Requirements for Travellers to China""",4/7/23,TRUE
+420652,921,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",5/7/23,TRUE
+844189,922,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",6/7/23,TRUE
+608355,923,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",7/7/23,TRUE
+546910,924,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",8/7/23,TRUE
+882220,925,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",9/7/23,TRUE
+825690,926,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",10/7/23,TRUE
+455424,927,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",11/7/23,TRUE
+774474,928,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",12/7/23,TRUE
+647170,929,"""New In""","""Covid19 Entry Requirements for Travellers to China""",13/7/23,TRUE
+339640,930,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",14/7/23,TRUE
+852291,931,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",15/7/23,TRUE
+944997,932,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",16/7/23,TRUE
+536567,933,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",17/7/23,TRUE
+450320,934,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",18/7/23,TRUE
+649942,935,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",19/7/23,TRUE
+561727,936,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",20/7/23,TRUE
+459948,937,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",21/7/23,TRUE
+277520,938,"""New In""","""Covid19 Entry Requirements for Travellers to China""",22/7/23,TRUE
+436033,939,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",23/7/23,TRUE
+843680,940,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",24/7/23,TRUE
+111115,941,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",25/7/23,TRUE
+807184,942,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",26/7/23,TRUE
+557104,943,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",27/7/23,TRUE
+949854,944,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",28/7/23,TRUE
+447495,945,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",29/7/23,TRUE
+330975,946,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",30/7/23,TRUE
+408254,947,"""New In""","""Covid19 Entry Requirements for Travellers to China""",31/7/23,TRUE
+279157,948,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",1/8/23,TRUE
+225497,949,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",2/8/23,TRUE
+302860,950,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",3/8/23,TRUE
+535076,951,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",4/8/23,TRUE
+667765,952,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",5/8/23,TRUE
+933000,953,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",6/8/23,TRUE
+905550,954,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",7/8/23,TRUE
+845570,955,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",8/8/23,TRUE
+740734,956,"""New In""","""Covid19 Entry Requirements for Travellers to China""",9/8/23,TRUE
+509493,957,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",10/8/23,TRUE
+388587,958,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",11/8/23,TRUE
+507911,959,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",12/8/23,TRUE
+803666,960,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",13/8/23,TRUE
+779913,961,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",14/8/23,TRUE
+946929,962,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",15/8/23,TRUE
+251524,963,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",16/8/23,TRUE
+221306,964,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",17/8/23,TRUE
+457634,965,"""New In""","""Covid19 Entry Requirements for Travellers to China""",18/8/23,TRUE
+888910,966,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",19/8/23,TRUE
+519054,967,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",20/8/23,TRUE
+637941,968,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",21/8/23,TRUE
+108255,969,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",22/8/23,TRUE
+901165,970,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",23/8/23,TRUE
+743387,971,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",24/8/23,TRUE
+440681,972,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",25/8/23,TRUE
+296435,973,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",26/8/23,TRUE
+991253,974,"""New In""","""Covid19 Entry Requirements for Travellers to China""",27/8/23,TRUE
+204346,975,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",28/8/23,TRUE
+464761,976,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",29/8/23,TRUE
+669743,977,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",30/8/23,TRUE
+617044,978,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",31/8/23,TRUE
+552208,979,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",1/9/23,TRUE
+847180,980,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",2/9/23,TRUE
+325837,981,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",3/9/23,TRUE
+949320,982,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",4/9/23,TRUE
+188829,983,"""New In""","""Covid19 Entry Requirements for Travellers to China""",5/9/23,TRUE
+280254,984,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",6/9/23,TRUE
+158446,985,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",7/9/23,TRUE
+934617,986,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",8/9/23,TRUE
+911546,987,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",9/9/23,TRUE
+886976,988,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",10/9/23,TRUE
+149272,989,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",11/9/23,TRUE
+919565,990,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",12/9/23,TRUE
+732853,991,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",13/9/23,TRUE
+740143,992,"""New In""","""Covid19 Entry Requirements for Travellers to China""",14/9/23,TRUE
+790265,993,"""Breaking News""","""Hospitals reduce non urgent surgery to prepare for surge in Covid19 cases in S'pore""",15/9/23,TRUE
+948397,994,"""Channel News Octo""","""Temporary Covid 19 curbs will not derail Singapore recovery say economists""",16/9/23,TRUE
+989412,995,"""Channel News Octo""","""Olympics Coe says Tokyo 2020 organisers delivered on Covid19 protocols""",17/9/23,TRUE
+738426,996,"""Turbo Times""","""Malaysia's vaccination plan may be delayed as 'pharmaceutical firms prioritise rich nations', says minister""",18/9/23,TRUE
+396937,997,"""Turbo Times""","""Cruises eye smoother waters with Covid19 vaccines health bubbles'""",19/9/23,TRUE
+395373,998,"""Breaking News""","""1 community infection among 16 new Covid19 cases in SG , not linked to TTSH cluster""",20/9/23,TRUE
+822771,999,"""Channel News Octo""","""South Korea says AstraZeneca Pfizer Covid19 vaccines 87% effective after first shot""",21/9/23,TRUE
+421653,1000,"""New In""","""Covid19 Air Travel Bubble Flights between Singapore and Hong Kong""",22/9/23,TRUE
