@@ -1,5 +1,5 @@
 import {Component} from "react";
-import {alertlistfull} from "./api/alertstable_api";
+import {alertlist} from "./api/alertstable_api";
 import IndivAlertsPaginationTableComponent from "./IndivAlertsPaginationTableComponent";
 
 function DisplayAlertNo(props: { status: number, totalNoofAlerts: number }) {
@@ -19,7 +19,7 @@ export class AlertsTable extends Component {
     }
 
     async componentDidMount() {
-        await alertlistfull().then(res => {
+        await alertlist().then(res => {
             const totalNoofAlerts : number = this.gettotalNoofAlerts(res.data);
             this.setState({result : res.data , totalNoofAlerts : totalNoofAlerts, status : res.status });
         }).catch(err => {

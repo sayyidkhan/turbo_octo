@@ -61,4 +61,8 @@
     background-color: #4CAF50; 
     border: #4CAF50;
     color: white;
-  }
+}
+
+.validationMsg{
+    display: block;
+}

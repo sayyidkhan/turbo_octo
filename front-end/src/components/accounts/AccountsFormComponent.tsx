@@ -68,9 +68,9 @@ export class AccountsFormComponent extends Component {
                     <div>
                         <label>User Type: </label>
                         <select name="admintype" defaultValue={admintype} onChange={this.changeHandler}>
-                            <option value="government">Government</option>
-                            <option value="healthcare">Health Care</option>
-                            <option value="business">Business</option>
+                            <option value="G">Government</option>
+                            <option value="H">Health Care</option>
+                            <option value="B">Business</option>
                         </select>
                     </div>
                     <div>
