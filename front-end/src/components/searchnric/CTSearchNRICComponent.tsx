@@ -43,7 +43,7 @@ export default class SearchNRIC extends Component<SearchNricProps> {
             .catch(err => {
                 console.log(err);
                 this.updateStatement();
-                alert("Incorrect NRIC! please fill up again.")
+                /*alert("Incorrect NRIC! please fill up again.")*/
             });
          //const outcome = postIssueAlerts_API(this.state);
          //outcome.then(res => {

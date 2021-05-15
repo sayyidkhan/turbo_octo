@@ -43,7 +43,7 @@ export default class VTSearchNRIC extends Component<SearchNricProps> {
             .catch(err => {
                 console.log(err);
                 this.updateStatement();
-                alert("Incorrect NRIC! please fill up again.")
+                /*alert("Incorrect NRIC! please fill up again.")*/
             });
          //const outcome = postIssueAlerts_API(this.state);
          //outcome.then(res => {
@@ -73,8 +73,8 @@ export default class VTSearchNRIC extends Component<SearchNricProps> {
                         <label>Search NRIC: </label>
                         <input type="text" name="p_nric" value={p_nric} onChange={this.changeHandler}/>
                     </div>
-                    <button type="submit">Search</button>
                     <div>{this.state.result_statement}</div>
+                    <button type="submit">Search</button>
                 </form>
             </div>
         );

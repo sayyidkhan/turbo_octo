@@ -11,7 +11,7 @@ import TableRow from '@material-ui/core/TableRow';
 import './alertstable.css';
 
 interface AlertColumn {
-    id: 'alertTitle' | 'alertDetail' | 'alertDate' | 'active' | 'location_id';
+    id: 'alertTitle' | 'alertDetail' | 'alertDate' | 'active' | 'location_name';
     label: string;
     minWidth?: number;
     align?: 'left';
@@ -20,7 +20,7 @@ interface AlertColumn {
 
 const columns: AlertColumn[] = [
     { id: 'alertDate', label: 'Reported date', minWidth: 80 },
-    { id: 'location_id', label: 'Location', minWidth: 80 },
+    { id: 'location_name', label: 'Location', minWidth: 80 },
     { id: 'alertDetail', label: 'Details', minWidth: 200 },
     { id: 'alertTitle', label: 'Alert', minWidth: 60 },
     { id: 'active', label: 'Active', minWidth: 80 },
@@ -42,10 +42,10 @@ function formatDate(x: any) {
     return formattedDate.substring(0,10);
 };
 
-function createData(parameters: { alertTitle: string, alertDetail: string, alertDate: number, active: boolean, location_id: number, alertListId: number }) {
-    let {alertTitle, alertDetail, alertDate, active, location_id, alertListId} = parameters;
+function createData(parameters: { alertTitle: string, alertDetail: string, alertDate: number, active: boolean, location_name: string, alertListId: number }) {
+    let {alertTitle, alertDetail, alertDate, active, location_name, alertListId} = parameters;
 
-    return { alertTitle: alertTitle, alertDetail: alertDetail, alertDate: formatDate(alertDate), active: checkBoolean(active), location_id: location_id, alertListId: alertListId };
+    return { alertTitle: alertTitle, alertDetail: alertDetail, alertDate: formatDate(alertDate), active: checkBoolean(active), location_name: location_name, alertListId: alertListId };
 }
 
 const useStyles = makeStyles({
@@ -71,7 +71,7 @@ export default function IndivAlertsPaginationTableComponent(props : any) {
         setPage(0);
     };
 
-    function createRows() : { alertTitle: string, alertDetail: string, alertDate: number, active: string, location_id: number, alertListId: number }[] {
+    function createRows() : { alertTitle: string, alertDetail: string, alertDate: number, active: string, location_name: string, alertListId: number }[] {
         const myListing : any[] = props.myList;
         const result = myListing.map(data => createData(data));
         return (myListing.length !== 0) ? result : [];
