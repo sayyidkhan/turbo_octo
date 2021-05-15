@@ -48,10 +48,15 @@ function sliceArray(arr1: any[]) {
     }
 }
 
+function formatDate(x: any) {
+    var formattedDate = x.toString();
+    return formattedDate.substring(0,10);
+}
+
 function createData(parameters: { date: string, location_id: number, description: string, e_nric: string }) {
     let {date, location_id, description, e_nric} = parameters;
 
-    return { date: date, location_id: location_id, description: description, e_nric: e_nric };
+    return { date: formatDate(date), location_id: location_id, description: description, e_nric: e_nric };
 }
 
 const useStyles = makeStyles({

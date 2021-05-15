@@ -24,9 +24,14 @@ const columns: CTraceColumn[] = [
     { id: 'p_nric', label: 'NRIC', minWidth: 80 },
 ];
 
+function formatDate(x: any) {
+    var formattedDate = x.toString();
+    return formattedDate.substring(0,10);
+}
+
 function createData(parameters: { ct_id: number, p_nric: string, location_id: number, date: number}) {
     let {ct_id, p_nric, location_id, date} = parameters;
-    return { ct_id: ct_id, p_nric: p_nric, location_id: location_id, date: date };
+    return { ct_id: ct_id, p_nric: p_nric, location_id: location_id, date: formatDate(date) };
 }
 
 const useStyles = makeStyles({

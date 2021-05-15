@@ -49,10 +49,15 @@ function sliceArray(arr1: any[]) {
     }
 }
 
+function formatDate(x: any) {
+    var formattedDate = x.toString();
+    return formattedDate.substring(0,10);
+}
+
 function createData(parameters: { alertTitle: string, alertDetail: string, alertDate: number, active: boolean, location_id: number, alertListId: number }) {
     let {alertTitle, alertDetail, alertDate, active, location_id, alertListId} = parameters;
 
-    return { alertTitle: alertTitle, alertDetail: alertDetail, alertDate: alertDate, active: checkBoolean(active), location_id: location_id, alertListId: alertListId };
+    return { alertTitle: alertTitle, alertDetail: alertDetail, alertDate: formatDate(alertDate), active: checkBoolean(active), location_id: location_id, alertListId: alertListId };
 }
 
 const useStyles = makeStyles({

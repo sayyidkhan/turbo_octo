@@ -24,9 +24,14 @@ const columns: VaccineColumn[] = [
     { id: 'e_nric', label: 'Vaccinated by', minWidth: 80 },
 ];
 
+function formatDate(x: any) {
+    var formattedDate = x.toString();
+    return formattedDate.substring(0,10);
+}
+
 function createData(parameters: { p_nric: string, v_date: Date, e_nric: string }) {
     let {p_nric, v_date, e_nric} = parameters;
-    return { p_nric: p_nric, v_date: v_date, e_nric: e_nric};
+    return { p_nric: p_nric, v_date: formatDate(v_date), e_nric: e_nric};
 }
 
 const useStyles = makeStyles({
