@@ -5,10 +5,6 @@ import './IssueVaccineComponent.css';
 
 export class IssueVaccine extends Component {
 
-    constructor(props : any) {
-        super(props);
-    }
-
     state = {
         'p_nric': '',
         'v_date': '',

@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {Box} from "@material-ui/core";
 import SearchNRIC from "../searchnric/CTSearchNRICComponent";
-import {V2_CTTable} from "./V2_CTTableComponent";
+import {V2CTTableComponent} from "./V2_CTTableComponent";
 
 
 export default class CTMainComponent extends Component {
@@ -36,7 +36,7 @@ export default class CTMainComponent extends Component {
                     <div className="searchtable-typical-content-div">
                         <Box justifyContent="center" m={1} p={0} bgcolor="background.paper">
                             <Box p={1} m={1} bgcolor="white.100">
-                                <V2_CTTable list_result={this.getList()}/>
+                                <V2CTTableComponent list_result={this.getList()}/>
                             </Box>
                         </Box>
                     </div>

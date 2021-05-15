@@ -5,10 +5,6 @@ import './UpdateCovidStatusComponent.css';
 
 export class UpdateCovidStatus extends Component {
 
-    constructor(props : any) {
-        super(props);
-    }
-
     state = {
         'p_nric': '',
         'covid_status': '',

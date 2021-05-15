@@ -5,10 +5,6 @@ import * as React from "react";
 
 export class PostUserComponent extends Component {
 
-    constructor(props : any) {
-        super(props);
-    }
-
     state = {
         'email': '',
         'age': 0,

@@ -6,7 +6,7 @@ interface SearchNricProps {
     list_result : any[];
 }
 
-export class V2_CTTable extends Component<SearchNricProps> {
+export class V2CTTableComponent extends Component<SearchNricProps> {
 
     render() {
         return(

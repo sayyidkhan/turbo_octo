@@ -5,10 +5,6 @@ import './TriggerAlertsComponent.css';
 
 export class TriggerAlerts extends Component {
 
-    constructor(props : any) {
-        super(props);
-    }
-
     state = {
         'date': '',
         'location_id': '',

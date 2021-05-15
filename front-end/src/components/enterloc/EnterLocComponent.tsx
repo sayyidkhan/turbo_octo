@@ -37,10 +37,6 @@ function ValidateLocation(props : any) {
 
 export class EnterLocComponent extends Component {
 
-    constructor(props : any) {
-        super(props);
-    }
-
     state = {
         'p_nric':'',
         'location_id': '',
@@ -79,7 +75,7 @@ export class EnterLocComponent extends Component {
 
     onHandleChangeNumeric = (e : any) => {
         function isNumeric(number : number) : boolean {
-            if (+number === +number) { // if is a number
+            if (isNumeric(number)) { // if is a number
                 return true;
             }
 

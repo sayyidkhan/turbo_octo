@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {Box} from "@material-ui/core";
 import VTSearchNRIC from "../searchnric/VTSearchNRICComponent";
-import {V2_VTTable} from "./V2_VTTableComponent";
+import {V2VTTable} from "./V2_VTTableComponent";
 
 
 export default class VTMainComponent extends Component {
@@ -36,7 +36,7 @@ export default class VTMainComponent extends Component {
                     <div className="searchtable-typical-content-div">
                         <Box justifyContent="center" m={1} p={0} bgcolor="background.paper">
                             <Box p={1} m={1} bgcolor="white.100">
-                                <V2_VTTable list_result={this.getList()}/>
+                                <V2VTTable list_result={this.getList()}/>
                             </Box>
                         </Box>
                     </div>

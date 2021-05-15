@@ -4,10 +4,6 @@ import axios from 'axios';
 
 export class AccountsFormComponent extends Component {
 
-    constructor(props : any) {
-        super(props);
-    }
-
     state = {
         'e_nric': '',
         'firstname': '',

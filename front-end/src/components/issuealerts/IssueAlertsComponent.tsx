@@ -5,10 +5,6 @@ import './IssueAlertsComponent.css';
 
 export class IssueAlerts extends Component {
 
-    constructor(props : any) {
-        super(props);
-    }
-
     state = {
         'alertTitle': '',
         'alertDetail': '',
