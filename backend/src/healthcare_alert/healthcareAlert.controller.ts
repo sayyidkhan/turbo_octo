@@ -6,6 +6,8 @@ import {UpdateHealthcareAlertsDto} from "./dto/update-healthcareAlerts.dto";
 import {DateUtil} from "../commonUtil/DateUtil";
 import {E_User} from "../e_user/schemas/e_user.schema";
 import {E_UserService} from "../e_user/e_User.service";
+import {CompositeHealthcareAlertService} from "./CompositeHealthcareAlert.service";
+import {ViewHealthcareAlertsDto} from "./dto/view-healthcareAlerts.dto";
 
 
 @Controller('healthcare_alert')
@@ -13,6 +15,7 @@ export class HealthcareAlertController {
   constructor(
       private readonly healthcareAlertService: HealthcareAlertService,
       private readonly e_UserService : E_UserService,
+      private readonly compositeHealthcareAlertService : CompositeHealthcareAlertService,
   ) {}
 
   @Get(':healthcareAlertId')
@@ -21,9 +24,9 @@ export class HealthcareAlertController {
   }
 
   @Get()
-  async getAllHealthCareAlerts(): Promise<HealthcareAlert[]> {
+  async getAllHealthCareAlerts(): Promise<ViewHealthcareAlertsDto[]> {
       console.log("get all healthcare alerts...");
-      return this.healthcareAlertService.getAllHealthcareAlerts();
+      return this.compositeHealthcareAlertService.getAllHealthcareAlertsDTO();
   }
 
   @Post()
