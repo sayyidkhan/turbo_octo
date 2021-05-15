@@ -1,7 +1,55 @@
-import {Component, useState} from "react";
-import axios from 'axios';
 import * as React from "react";
+import {Component, useEffect, useState} from "react";
 import {postEnterLoc_API} from "./api/enterloc_api"
+import {getLocationById} from "../location/api/location_api";
+
+interface LocationJSON {
+    location_id : number,
+    location_name: string,
+    district : string,
+}
+
+interface ValidateLocationProps {
+    location_id : string;
+}
+
+class ValidateLocation extends React.Component<ValidateLocationProps> {
+    constructor(props : ValidateLocationProps) {
+        super(props);
+        this.setState({location_id : props.location_id});
+    }
+
+    state = {
+        location_id : 0,
+    };
+
+    updateLocation: () => Promise<string | string> = async () => {
+        console.log(this.state.location_id);
+        const location_id = Number(this.state.location_id);
+        const location: any = await getLocationById(location_id);
+        console.log(location);
+        if (location != null) {
+            return location;
+        }
+        return "";
+    }
+
+    async componentDidUpdate(prevProps: Readonly<ValidateLocationProps>, prevState: Readonly<{}>, snapshot?: any) {
+        const result = await this.updateLocation();
+        console.log(result);
+    }
+
+
+    render() {
+        return (
+            <div>
+                <h6>Currently Checking into:</h6>
+                <p>{}</p>
+            </div>
+        );
+    }
+}
+
 
 export class EnterLocComponent extends Component {
 
@@ -12,6 +60,7 @@ export class EnterLocComponent extends Component {
     state = {
         'p_nric':'',
         'location_id': '',
+        'date' : null,
         //only will be used to hold the outcome of the data
         'createdAlert' : ''
     }
@@ -31,9 +80,13 @@ export class EnterLocComponent extends Component {
 
     mapDTO = () => {
         //backend only accept this data shape
-        const dto = {'nric' : this.state.p_nric, 'location_id': this.state.location_id};
+        const dto = {
+            p_nric : this.state.p_nric,
+            location_id : this.state.location_id,
+            date : new Date(),
+        };
         //purge any existing data, if there is any
-        this.setState({'createdAlert' : ''})
+        this.setState({createdAlert : ''})
         return dto;
     }
 
@@ -41,8 +94,9 @@ export class EnterLocComponent extends Component {
         e.preventDefault();
         //map data to DTO object for sending //
         const dto  = this.mapDTO();
+        console.log(dto);
         //map data to DTO object for sending //
-        axios.post("http://localhost:5000/c_tracing",dto)
+        postEnterLoc_API(dto)
             .then(res=> {
                 console.log(res);
                 this.onUpdateLoc(res.data);
@@ -51,13 +105,7 @@ export class EnterLocComponent extends Component {
                 console.log(err);
                 alert("NRIC/ Location not found")
             });
-         //const outcome = postIssueAlerts_API(this.state);
-         //outcome.then(res => {
-          //   console.log(res);
-         //}).catch(err => {
-          //  console.log(err);
-         //});
-        this.setState({p_nric: '', location_id: ''});
+        this.setState({p_nric: '', location_id: '', date : null});
     }
 
     render() {
@@ -73,7 +121,7 @@ export class EnterLocComponent extends Component {
                         <label>Location: </label>
                         <input type="number" name="location_id" value={location_id} onChange={this.changeHandler}/>
                     </div>
-    
+                    <ValidateLocation location_id={this.state.location_id} />
                     <button type="submit">Check-In</button>
                     <div>{this.state.createdAlert}</div>
                 </form>

@@ -5,6 +5,10 @@ export const getAllLocations: () => Promise<any> = async () => {
     return result;
 }
 
+export const getLocationById: (location_id : number) => Promise<any> = async (location_id) => {
+    const result = await API.get(   `/locations/${location_id}`);
+}
+
 export const postNewUser_API: (stateObject : any) => Promise<any> = async (stateObject : any) => {
     const result = await API.post('/users' ,stateObject);
     return result;

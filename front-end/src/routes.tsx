@@ -2,7 +2,6 @@ import {Route, Switch} from "react-router";
 import * as React from "react";
 import Home from "./pages/Home";
 import {Login} from "./pages/Login";
-import {LocationListComponent} from "./components/location/LocationListComponent";
 import LocationList from "./pages/LocationList";
 import About from "./pages/About";
 import Dashboard from "./pages/Dashboard";
@@ -14,8 +13,7 @@ import UpdateCovidStatus from "./pages/UpdateCovidStatus";
 import Reports from "./pages/Reports";
 import Accounts from "./pages/Accounts";
 import NoAccessMsg from "./pages/NoAccessMsg";
-import { EnterLoc } from "./pages/EnterLoc";
-import { EnterLocComponent } from "./components/enterloc/EnterLocComponent";
+import {EnterLoc} from "./pages/EnterLoc";
 
 export default function Routes(props: any) {
 
@@ -27,13 +25,13 @@ export default function Routes(props: any) {
         const businessAccess = ["Dashboard", "PublicAlerts"];
         const healthcareAccess = ["Dashboard", "ContactTracing", "VaccinationRecords", "TriggerAlert", "UpdateCovidStatus"];
 
-        if(userType == "public" && publicAccess.includes(page)){
+        if(userType === "public" && publicAccess.includes(page)){
             return true;
-        } else if (userType == "government" && governmentAccess.includes(page)){
+        } else if (userType === "government" && governmentAccess.includes(page)){
             return true;
-        } else if (userType == "business" && businessAccess.includes(page)){
+        } else if (userType === "business" && businessAccess.includes(page)){
             return true;
-        } else if (userType == "healthcare" && healthcareAccess.includes(page)){
+        } else if (userType === "healthcare" && healthcareAccess.includes(page)){
             return true;
         }
 
