@@ -1,7 +1,6 @@
 import {Injectable} from "@nestjs/common";
 import {c_tracing} from "./schemas/ctracing.schema";
 import {CtracingRepository} from "./ctracing.repository";
-import {ViewCtracingDto} from "./dto/view-ctracing.dto";
 
 @Injectable()
 export class CtracingService {
@@ -15,13 +14,8 @@ export class CtracingService {
         return this.ctracingRepository.getMaxCtracingId();
     }
 
-    async getCtracingByNric(p_nric: string): Promise<ViewCtracingDto[]> {
-        const cTracingList : c_tracing[] = await this.ctracingRepository.find({p_nric : p_nric});
-        const result : ViewCtracingDto[] = cTracingList.map((c_tracing : c_tracing) => {
-            const date : string = c_tracing.date.toLocaleString();
-            return new ViewCtracingDto(c_tracing.p_nric,c_tracing.location_id,date);
-        });
-        return result;
+    async getCtracingByNric(p_nric: string): Promise<c_tracing[]> {
+        return this.ctracingRepository.find({p_nric : p_nric});
     }
 
     async getCtracing(): Promise<c_tracing[]> {

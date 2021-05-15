@@ -23,9 +23,9 @@ export default class SearchNRIC extends Component<SearchNricProps> {
         result_statement : '',
     }
 
-    onSearchResultID = async (updatedInfo : any) => {
-        await this.setState({result : updatedInfo});
-        await this.update_list(updatedInfo);
+    onSearchResultID = (updatedInfo : any) => {
+        this.setState({result : updatedInfo});
+        this.update_list(updatedInfo);
     }
 
     changeHandler = (e : any) => {
@@ -37,7 +37,7 @@ export default class SearchNRIC extends Component<SearchNricProps> {
         const p_nric = this.state.p_nric;
         searchnric_API(p_nric).then(res => {
                 console.log(res);
-                this.onSearchResultID(res.data);
+                 this.onSearchResultID(res.data);
                 this.updateStatement();
             })
             .catch(err => {
@@ -73,8 +73,8 @@ export default class SearchNRIC extends Component<SearchNricProps> {
                         <label>Search NRIC: </label>
                         <input type="text" name="p_nric" value={p_nric} onChange={this.changeHandler}/>
                     </div>
-                    <button type="submit">Search</button>
                     <div>{this.state.result_statement}</div>
+                    <button type="submit">Search</button>
                 </form>
             </div>
         );

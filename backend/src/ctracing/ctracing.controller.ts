@@ -8,6 +8,7 @@ import {p_user} from "../p_user/schemas/p_user.schema";
 import {Location} from "../location/schemas/location.schema";
 import {ViewCtracingDto} from "./dto/view-ctracing.dto";
 import {DateUtil} from "../commonUtil/DateUtil";
+import {CompositeCtracingService} from "./CompositeCtracing.service";
 
 
 @Controller('c_tracing')
@@ -16,6 +17,7 @@ export class CtracingController {
       private readonly CtracingService: CtracingService,
       private readonly p_UserService: P_UserService,
       private readonly locationService : LocationService,
+      private readonly compositeCtracingService : CompositeCtracingService,
   ) {}
 
   @Get(':ct_id')
@@ -26,7 +28,7 @@ export class CtracingController {
   @Get("searchbynric/:nric")
   async getCtracingByNric(@Param('nric') nric : string) : Promise<ViewCtracingDto[]> {
       console.log("get contract tracing by nric: " + nric);
-      return this.CtracingService.getCtracingByNric(nric);
+      return this.compositeCtracingService.getCtracingByNric(nric);
   }
 
   @Get()

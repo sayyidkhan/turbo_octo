@@ -98,13 +98,13 @@ describe("ctracing Service", () => {
         const c_tracing = new CtracingServiceMock().getCtracingList();
         const testCase = new ViewCtracingDto(
             c_tracing[0].p_nric,
-            c_tracing[0].location_id,
+            c_tracing[0].location_id.toString(),
             c_tracing[0].date.toLocaleString()
         );
 
         repository.find = jest.fn().mockReturnValue(c_tracing);
         const result = await service.getCtracingByNric(c_tracing[0].p_nric);
-        expect(result[0].location_id).toEqual(testCase.location_id);
+        expect(result[0].p_nric).toEqual(testCase.p_nric);
     });
 
 });
