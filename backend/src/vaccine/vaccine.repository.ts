@@ -1,8 +1,8 @@
-import { Injectable } from "@nestjs/common";
-import { InjectModel } from "@nestjs/mongoose";
-import { FilterQuery, Model } from "mongoose";
+import {Injectable} from "@nestjs/common";
+import {InjectModel} from "@nestjs/mongoose";
+import {FilterQuery, Model} from "mongoose";
 
-import { v_cert, VaccineDocument } from "./schemas/vaccine.schema";
+import {v_cert, VaccineDocument} from "./schemas/vaccine.schema";
 
 @Injectable()
 export class VaccineRepository {
@@ -13,7 +13,18 @@ export class VaccineRepository {
     }
 
     async find(vaccinesFilterQuery: FilterQuery<v_cert>): Promise<v_cert[]> {
-        return this.vaccineModel.find(vaccinesFilterQuery)
+        return this.vaccineModel.find(vaccinesFilterQuery).sort({ v_cert : -1 });
+    }
+
+    async getLatestVaccinationRecordOnly(p_nric : string): Promise<v_cert> {
+        return this.vaccineModel.findOne({ p_nric : p_nric }).sort({ v_cert : -1 }).limit(1);
+    }
+
+
+    async getMaxVaccineListId(): Promise<number> {
+        //Assume vaccine ID is assigned by system all the time,max ID will always be number of object in the table 
+        const vaccineList = await this.vaccineModel.find({}).sort({ v_cert : -1 });
+        return (vaccineList.length > 0) ? vaccineList.length : 0;
     }
 
     async create(vaccine: v_cert): Promise<v_cert> {
@@ -21,7 +32,4 @@ export class VaccineRepository {
         return newVaccine.save()
     }
 
-    async findOneAndUpdate(vaccineFilterQuery: FilterQuery<v_cert>, vaccine: Partial<v_cert>): Promise<v_cert> {
-        return this.vaccineModel.findOneAndUpdate(vaccineFilterQuery, vaccine, { new: true });
-    }
 }

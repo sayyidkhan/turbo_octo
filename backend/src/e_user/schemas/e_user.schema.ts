@@ -6,19 +6,19 @@ export type E_UserDocument = E_User & Document;
 @Schema()
 export class E_User {
     @Prop()
-    eNRIC: string;
+    e_nric: string;
 
     @Prop()
-    firstName: string;
+    firstname: string;
 
     @Prop()
-    lastName: string;
+    lastname: string;
 
     @Prop()
     password: string;
 
     @Prop()
-    adminType: string;
+    admintype: string;
 
 }
 

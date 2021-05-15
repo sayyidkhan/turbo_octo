@@ -1,6 +1,6 @@
 export class UpdateEnterpriseUserDto {
-    firstName : string;
-    lastName : string;
+    firstname : string;
+    lastname : string;
     password : string;
-    adminType: string;
+    admintype: string;
 }

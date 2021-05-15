@@ -10,7 +10,7 @@ export class E_UserService {
     constructor(private readonly e_UserRepository: E_UserRepository) {}
 
     async getEnterpriseUserById(eNRIC: string): Promise<E_User> {
-        return this.e_UserRepository.findOne({ eNRIC : eNRIC })
+        return this.e_UserRepository.findOne({ e_nric : eNRIC })
     }
 
     async getAllEnterpriseUser(): Promise<E_User[]> {
@@ -24,16 +24,16 @@ export class E_UserService {
         password: string,
         adminType: string,): Promise<E_User> {
         return this.e_UserRepository.create({
-            eNRIC : eNric,
-            firstName : firstName,
-            lastName : lastName,
+            e_nric : eNric,
+            firstname : firstName,
+            lastname : lastName,
             password : password,
-            adminType: adminType,
+            admintype: adminType,
         });
     }
 
     async updateEnterpriseUser(eNRIC: string, euserUpdates: UpdateEnterpriseUserDto): Promise<E_User> {
-        return this.e_UserRepository.findOneAndUpdate({ eNRIC : eNRIC }, euserUpdates);
+        return this.e_UserRepository.findOneAndUpdate({ e_nric : eNRIC }, euserUpdates);
     }
 
     async deleteEnterpriseUserById(eNRIC: string): Promise<E_User> {
@@ -41,10 +41,7 @@ export class E_UserService {
         //check user list in record, if not return null
         // only record exist then perform delete
         console.log(findUser);
-        if(findUser != null) {
-            return this.e_UserRepository.deleteEnterpriseUserById({ _id : findUser['_id'] });
-        }
-        return null;
+        return (findUser != null) ? this.e_UserRepository.deleteEnterpriseUserById({ _id : findUser['_id'] }) : null;
     }
 
 }

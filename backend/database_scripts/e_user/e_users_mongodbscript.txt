@@ -1,0 +1,6 @@
+//e_users records
+db = db.getSiblingDB('demo');
+db.e_users.insert({
+    "_id":  ObjectId() ,
+    REPLACE_OBJECT_HERE
+});

@@ -1,8 +1,8 @@
-import { Injectable } from "@nestjs/common";
-import { InjectModel } from "@nestjs/mongoose";
-import { FilterQuery, Model } from "mongoose";
+import {Injectable} from "@nestjs/common";
+import {InjectModel} from "@nestjs/mongoose";
+import {FilterQuery, Model} from "mongoose";
 
-import {AlertList , AlertListDocument } from "./schemas/alertList.schema";
+import {AlertList, AlertListDocument} from "./schemas/alertList.schema";
 
 
 @Injectable()
@@ -14,16 +14,13 @@ export class AlertListRepository {
     }
 
     async find(query: FilterQuery<AlertList>): Promise<AlertList[]> {
-        return this.alertListModel.find(query)
+        return this.alertListModel.find(query).sort({ alertListId : -1 });
     }
 
     async getMaxAlertListId(): Promise<number> {
         const alertList = await this.alertListModel.find({}).sort({ alertListId : -1 }).limit(1);
-        if(alertList.length > 0) {
-            const alert :AlertList = alertList[0];
-            return alert.alertListId;
-        }
-        return 0;
+        const result = (alertList.length > 0) ? alertList[0].alertListId : 0;;
+        return result;
     }
 
     async create(myObj: AlertList): Promise<AlertList> {

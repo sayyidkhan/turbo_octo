@@ -16,7 +16,6 @@ function App() {
       <Navbar />
     </Router>
   );
-  
 }
 
 export default App;

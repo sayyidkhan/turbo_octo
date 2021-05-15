@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom"
-import { MdClose } from "react-icons/md"
-import { FiMenu } from "react-icons/fi"
 import './App.css';
 import history from './history';
+import CloseIcon from '@material-ui/icons/Close';
+import MenuIcon from '@material-ui/icons/Menu';
 
 export default function Navbar(props : any){
 
@@ -26,43 +26,55 @@ export default function Navbar(props : any){
         id: 3,
         path: "/Dashboard",
         text: "Dashboard",
-        accessBy: ["admin", "business", "healthcare"],
+        accessBy: ["government", "business", "healthcare"],
       },
       {
         id: 4,
         path: "/ContactTracing",
         text: "Contact Tracing",
-        accessBy: ["admin", "healthcare"],
+        accessBy: ["government", "healthcare"],
       },
       {
         id: 5,
         path: "/VaccinationRecords",
-        text: "Vaccination Records",
-        accessBy: ["admin", "healthcare"],
+        text: "Vaccination",
+        accessBy: ["government", "healthcare"],
       },
       {
         id: 6,
         path: "/PublicAlerts",
         text: "Public Alerts",
-        accessBy: ["admin", "business"],
+        accessBy: ["government", "business"],
       },
       {
         id: 7,
-        path: "/Reports",
-        text: "Reports",
-        accessBy: ["admin"],
+        path: "/TriggerAlert",
+        text: "Trigger Alert",
+        accessBy: ["healthcare"],
       },
       {
         id: 8,
-        path: "/ManageAccounts",
-        text: "Manage Accounts",
-        accessBy: ["admin"],
+        path: "/UpdateCovidStatus",
+        text: "Update Covid Status",
+        accessBy: ["healthcare"],
       },
       {
         id: 9,
+        path: "/Reports",
+        text: "Reports",
+        accessBy: ["government"],
+      },
+      {
+        id: 10,
+        path: "/Accounts",
+        text: "Manage Accounts",
+        accessBy: ["government"],
+      },
+      {
+        id: 11,
         path: "/",
         text: "Logout",
-        accessBy: ["admin", "business", "healthcare"],
+        accessBy: ["government", "business", "healthcare"],
       }
   ];
 
@@ -92,10 +104,10 @@ export default function Navbar(props : any){
       <button onClick={handleToggle} className={userType === "public" ? "toShow" : "toHide"}>
         {
           navbarOpen ? 
-          <MdClose 
+          <CloseIcon
             style={{color: "#fff", width: "40px", height: "40px" }} 
           /> : 
-          <FiMenu 
+          <MenuIcon
             style={{color: "#7b7b7b", width: "40px", height: "40px" }} 
           />
         }

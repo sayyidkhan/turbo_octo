@@ -1,12 +1,13 @@
 import {Injectable} from "@nestjs/common";
-import {AlertListDto} from "./dto/alert-list.dto";
+import {PersistAlertListDto} from "./dto/alert-list.dto";
 
 import {AlertList} from "./schemas/alertList.schema";
 import {AlertListRepository} from "./alertList.repository";
 
 @Injectable()
 export class AlertListService {
-    constructor(private readonly alertListRepository: AlertListRepository) {}
+    constructor(
+        private readonly alertListRepository: AlertListRepository,) {}
 
     async getAlertById(alertListId: number): Promise<AlertList> {
         return this.alertListRepository.findOne({ alertListId : alertListId })
@@ -16,6 +17,10 @@ export class AlertListService {
         return this.alertListRepository.find({});
     }
 
+    async getAlertsWithQuery(query): Promise<AlertList[]> {
+        return this.alertListRepository.find(query);
+    }
+
     async getMaxAlertListId() : Promise<number> {
         return this.alertListRepository.getMaxAlertListId();
     }
@@ -23,7 +28,7 @@ export class AlertListService {
     async createAlert(
         alertTitle: string,
         alertDetail: string,
-        alertDate : number,
+        alertDate : Date,
         active : boolean,
         location_id : number,
         ): Promise<AlertList> {
@@ -40,8 +45,8 @@ export class AlertListService {
         return this.alertListRepository.create(persistence);
     }
 
-    async updateAlertById(alertListId: number, alertListDto: AlertListDto): Promise<AlertList> {
-        return this.alertListRepository.findOneAndUpdate({ alertListId : alertListId }, alertListDto);
+    async updateAlertById(alertListId: number, dto: PersistAlertListDto): Promise<AlertList> {
+        return this.alertListRepository.findOneAndUpdate({ alertListId : alertListId }, dto);
     }
 
     async deleteAlertListById(alertId: number): Promise<AlertList> {
@@ -50,7 +55,8 @@ export class AlertListService {
         // only record exist then perform delete
         console.log(findAlertId);
         if(findAlertId != null) {
-            return this.alertListRepository.deleteAlertListById({ _id : findAlertId['_id'] });
+            const result = this.alertListRepository.deleteAlertListById({ _id : findAlertId['_id'] });
+            return result;
         }
         return null;
     }

@@ -73,6 +73,50 @@
   margin-top: 7rem;
 }
 
+/* =========================== dashboard page specific===================================== */
+.dashboard-container-general {
+  margin-left: 300px;
+}
+
+.dashboard-container-general>h1 {
+  color: #000000;
+  margin: 0px;
+}
+
+.dashboard-tableContainer-div {
+  background-color: #ffffff;
+  min-width: 850px;
+  height: 100%;
+  /* end */
+  border-radius: 25px;
+}
+
+.dashboard-content-div {
+  background-color: #ffffff;
+  min-width: 850px;
+  height: 100%;
+  /* end */
+  border-radius: 25px;
+  margin-left: 20px;
+  padding-bottom: 20px;
+}
+
+.dashboard-tableContainer-div>h2 {
+  margin-left: 20px;
+  color: #ff0000;
+}
+
+.dashboardbusiness-img {
+  display: inline-block;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 48px;
+  height: 48px;
+  vertical-align: middle;
+}
+
 /* =========================== Home page specific===================================== */
 
 
@@ -105,7 +149,7 @@
 
 .home-tableContainer-div {
   background-color: #ffffff;
-  min-width: 850px;
+  min-width: 1200px;
   height: 100%;
   /* center */
   display: table;
@@ -137,5 +181,25 @@
   display: none;
 }
 
-/* =========================== Main page specific end ================================== */
+/* =========================== General div ================================== */
 
+.account-typical-content-div {
+  background-color: #ffffff;
+  min-width: 850px;
+  height: 100%;
+  /* end */
+  border-radius: 25px;
+  margin-left: 20px;
+}
+
+.under-page-title-div {
+  margin-bottom: 40px;
+}
+
+/* =========================== No Access Message ================================== */
+
+.message-container{
+  text-align: center;
+  padding-top: 300px;  
+  padding-left: 200px;
+}

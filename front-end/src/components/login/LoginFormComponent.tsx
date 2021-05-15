@@ -1,5 +1,4 @@
 import {Component} from "react";
-import axios from 'axios';
 import './Login.css';
 import history from '../../history';
 
@@ -8,61 +7,78 @@ import history from '../../history';
 export class LoginFormComponent extends Component {
 
     state = {
-        'username': '',
+        'e_nric': '',
         'password': '',
-        //only will be used to hold the outcome of the data
-        'userType': '',
-    }
-
-    onUpdateUser = (user : any) => {
-        //get usertype from database
-        //...
-
-        this.setState({'userType' : user.userType});
-        //console.log(updatedInfo);
+        'admintype': 'public',
     }
 
     changeHandler = (e : any) => {
         this.setState({[e.target.name] : e.target.value});
     }
 
-    mapDTO = () => {
-        //backend only accept this data shape
-        const dto = {'username': this.state.username, 'password': this.state.password};
-        //purge any existing data, if there is any
-        //this.setState({'userType' : ''});
-        return dto;
-    }
-
     submitHandler = (e: any) => {
         e.preventDefault();
-        const dto  = this.mapDTO();
 
-        //map data to DTO object for sending to backend //
-        axios.post("http://localhost:5000/users", dto)
-            .then(res => {
-                console.log(res);
-                this.onUpdateUser(res.data);
-            })
-            .catch(err => {
-                console.log(err);
-            });
-        // const outcome = postNewUser_API(this.state);
-        // outcome.then(res => {
-        //     console.log(res);
-        // }).catch(err => {
-        //    console.log(err);
-        // });
-        //this.setState({email: '', age: 0});
+        this.validateUser();
+
+        const adminTypes = ["government", "business", "healthcare"];
+        const userType = sessionStorage.getItem('userType') ?? "public";
+        //console.log('admintype in sessionStorage: ', sessionStorage.getItem('userType'));
+
+        if(adminTypes.includes(userType)){
+            history.push('/Dashboard');
+            window.location.reload(false);
+        }
     }
+
+    validateUser = () => {
+
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        var raw = JSON.stringify({
+            "e_nric": this.state.e_nric,
+            "password": this.state.password
+        });
+
+        var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+        };
+        
+        fetch("http://localhost:5000/e_user/login", requestOptions)
+        .then(response => response.json())
+        .then(e_user => { 
+
+            var userType = "public";
+            switch(e_user.admintype){
+                case 'G': userType = 'government'; break;
+                case 'H': userType = 'healthcare'; break;
+                case 'B': userType = 'business'; break;
+            }
+
+            this.setState({'admintype': userType});
+            sessionStorage.setItem('userType', userType);
+        })
+        .catch(error => {
+            console.log('error', error);
+        });
+    };
 
     submitHandler_temp = (e: any) => {
         e.preventDefault();
 
-        this.setState({'userType' : this.state.username});
-        sessionStorage.setItem('userType', this.state.username);
+        var temp_userType = this.state.e_nric;
+        const adminTypes = ["government", "business", "healthcare"];
+        if(!adminTypes.includes(temp_userType)){
+            temp_userType = "public";
+        }
+
+        this.setState({'userType' : temp_userType});
+        sessionStorage.setItem('userType', temp_userType);
         //checking use
-        //this.setState({'userType' : this.state.username}, () => {alert(this.state.userType);}); 
+        //this.setState({'userType' : this.state.e_nric}, () => {alert(this.state.userType);}); 
         //alert(sessionStorage.getItem('userType'));
 
         history.push('/Dashboard');
@@ -70,16 +86,17 @@ export class LoginFormComponent extends Component {
     }
 
     render() {
-        const {username , password} = this.state;
+        const {e_nric , password} = this.state;
         return (
             <div>
-                <form onSubmit={this.submitHandler_temp}>
+                <div className="validationMsg">This NRIC or password is invalid.</div>
+                <form onSubmit={this.submitHandler}>
                     <div>
-                        <label>Username</label>
-                        <input type="text" name="username" value={username} onChange={this.changeHandler}/>
+                        <label>NRIC:</label>
+                        <input type="text" name="e_nric" value={e_nric} onChange={this.changeHandler}/>
                     </div>
                     <div>
-                        <label>Password</label>
+                        <label>Password:</label>
                         <input type="password" name="password" value={password} onChange={this.changeHandler}/>
                     </div>
                     <div>

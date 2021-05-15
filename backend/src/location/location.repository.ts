@@ -15,13 +15,4 @@ export class LocationRepository {
         return this.locationModel.find(query)
     }
 
-    async create(myObj: Location): Promise<Location> {
-        const newObj = new this.locationModel(myObj);
-        return newObj.save()
-    }
-
-    async findOneAndUpdate(query: FilterQuery<Location>, user: Partial<Location>): Promise<Location> {
-        return this.locationModel.findOneAndUpdate(query, user, { new: true });
-    }
-
 }

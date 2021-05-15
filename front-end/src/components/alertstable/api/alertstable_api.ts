@@ -1,7 +1,17 @@
 import API from '../../../services/api';
 
-export const getHello_API: () => Promise<any> = async () => {
-    const result = await API.get('/start' );
+export const alertlist: () => Promise<any> = async () => {
+    const result = await API.get('/alertlist/filterlist/true' );
+    return result;
+}
+
+export const alertlistfull: () => Promise<any> = async () => {
+    const result = await API.get('/alertlist' );
+    return result;
+}
+
+export const postNewUser_API: (stateObject : any) => Promise<any> = async (stateObject : any) => {
+    const result = await API.post('/users' ,stateObject);
     return result;
 }
 

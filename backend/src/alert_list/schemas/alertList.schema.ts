@@ -15,7 +15,7 @@ export class AlertList {
     alertDetail: string;
 
     @Prop()
-    alertDate: number;
+    alertDate: Date;
 
     @Prop()
     active: boolean;

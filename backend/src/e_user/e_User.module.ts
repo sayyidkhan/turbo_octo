@@ -8,6 +8,7 @@ import { E_UserService } from "./e_User.service";
 @Module({
     imports: [MongooseModule.forFeature([{ name: E_User.name, schema: E_UserSchema }])],
     controllers: [E_UserController],
-    providers: [E_UserService , E_UserRepository]
+    providers: [E_UserService , E_UserRepository],
+    exports: [E_UserService , E_UserRepository],
 })
 export class E_UserModule {}

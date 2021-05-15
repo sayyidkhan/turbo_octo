@@ -24,7 +24,7 @@ export class UsersController {
   async createUser(@Body() createUserDto: CreateUserDto): Promise<User> {
       console.log("user DTO received successfully...")
       return this.usersService.createUser(createUserDto.email, createUserDto.age)
-  }
+  } 
 
   @Patch(':userId')
   async updateUser(@Param('userId') userId: string, @Body() updateUserDto: UpdateUserDto): Promise<User> {

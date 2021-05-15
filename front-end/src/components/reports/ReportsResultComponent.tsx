@@ -1,4 +1,5 @@
-import {Component} from "react";
+import React, { Component } from 'react';
+/*import { makeStyles } from '@material-ui/core/styles';*/
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -6,7 +7,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import './AlertsTable.css';
+import './Reports.css';
 
 function createData(name: string, calories: number, fat: number, carbs: number, protein: number) {
   return { name, calories, fat, carbs, protein };
@@ -20,12 +21,13 @@ const rows = [
   createData('Gingerbread', 356, 16.0, 49, 3.9),
 ];
 
-export class AlertsTable extends Component {
+export class ReportsResultComponent extends Component {
 
-    render () {
-        return (
+    render() {
+        return(
+        <div>
             <TableContainer component={Paper}>
-            <Table className="tableWidth" aria-label="simple table">
+            <Table aria-label="simple table">
                 <TableHead>
                 <TableRow>
                     <TableCell>Dessert (100g serving)</TableCell>
@@ -50,6 +52,7 @@ export class AlertsTable extends Component {
                 </TableBody>
             </Table>
             </TableContainer>
+        </div>
         );
     }
 }
