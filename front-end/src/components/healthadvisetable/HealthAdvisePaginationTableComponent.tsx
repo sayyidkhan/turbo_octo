@@ -11,7 +11,7 @@ import TableRow from '@material-ui/core/TableRow';
 import './healthadvisetable.css';
 
 interface HealthAviseColumn {
-    id: 'date' | 'location_id' | 'description' | 'e_nric';
+    id: 'date' | 'location_name' | 'description' | 'e_nric';
     label: string;
     minWidth?: number;
     align?: 'left';
@@ -20,7 +20,7 @@ interface HealthAviseColumn {
 
 const columns: HealthAviseColumn[] = [
     { id: 'date', label: 'Reported date', minWidth: 80 },
-    { id: 'location_id', label: 'Location', minWidth: 80 },
+    { id: 'location_name', label: 'Location', minWidth: 80 },
     { id: 'description', label: 'Details', minWidth: 200 },
     { id: 'e_nric', label: 'Triggered by', minWidth: 60 },
 ];
@@ -42,10 +42,10 @@ function formatDate(x: any) {
     return formattedDate.substring(0,10);
 }
 
-function createData(parameters: { date: string, location_id: number, description: string, e_nric: string }) {
-    let {date, location_id, description, e_nric} = parameters;
+function createData(parameters: { date: string, location_name: string, description: string, e_nric: string }) {
+    let {date, location_name, description, e_nric} = parameters;
 
-    return { date: formatDate(date), location_id: location_id, description: description, e_nric: e_nric };
+    return { date: formatDate(date), location_name: location_name, description: description, e_nric: e_nric };
 }
 
 const useStyles = makeStyles({
@@ -71,7 +71,7 @@ export default function HealthAdvisePaginationTableComponent(props : any) {
         setPage(0);
     };
 
-    function createRows() : { date: string, location_id: number, description: string, e_nric: string }[] {
+    function createRows() : { date: string, location_name: string, description: string, e_nric: string }[] {
         const myListing : any[] = props.myList;
         const result = myListing.map(data => createData(data));
         const slicedResults = sliceArray(result);

@@ -85,15 +85,15 @@ export class IssueAlerts extends Component {
                         <input type="number" name="location_id" value={location_id} onChange={this.changeHandler}/>
                     </div>
                     <div>
-                        <label>Description: </label>
+                        <label>Details: </label>
                         <input type="text" name="alertDetail" value={alertDetail} onChange={this.changeHandler}/>
                     </div>
                     <div>
-                        <label>Level: </label>
+                        <label>Alert level: </label>
                         <input type="text" name="alertTitle" value={alertTitle} onChange={this.changeHandler}/>
                     </div>
                     <div>
-                        <label>Status: </label>
+                        <label>Active: </label>
                         <input type="text" name="active" value={active} onChange={this.changeHandler}/>
                     </div>
                     <button type="submit">Issue alert</button>
