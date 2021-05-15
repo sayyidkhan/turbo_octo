@@ -11,7 +11,7 @@ import TableRow from '@material-ui/core/TableRow';
 
 /* Checked-in table */ 
 interface CTraceColumn {
-    id: 'ct_id' | 'p_nric' | 'location_id' | 'date';
+    id: 'ct_id' | 'p_nric' | 'location_name' | 'date';
     label: string;
     minWidth?: number;
     align?: 'left';
@@ -20,7 +20,7 @@ interface CTraceColumn {
 
 const columns: CTraceColumn[] = [
     { id: 'date', label: 'Checked-in date', minWidth: 80 },
-    { id: 'location_id', label: 'Location', minWidth: 80 },
+    { id: 'location_name', label: 'Location', minWidth: 80 },
     { id: 'p_nric', label: 'NRIC', minWidth: 80 },
 ];
 
@@ -29,9 +29,9 @@ function formatDate(x: any) {
     return formattedDate.substring(0,10);
 }
 
-function createData(parameters: { ct_id: number, p_nric: string, location_id: number, date: number}) {
-    let {ct_id, p_nric, location_id, date} = parameters;
-    return { ct_id: ct_id, p_nric: p_nric, location_id: location_id, date: formatDate(date) };
+function createData(parameters: { ct_id: number, p_nric: string, location_name: string, date: number}) {
+    let {ct_id, p_nric, location_name, date} = parameters;
+    return { ct_id: ct_id, p_nric: p_nric, location_name: location_name, date: formatDate(date) };
 }
 
 const useStyles = makeStyles({
@@ -69,12 +69,12 @@ export default function CTPagination(props : any) {
         setPage(0);
     };
 
-    function createRows() : { ct_id: number, p_nric: string, location_id: number, date: number }[] {
-        const myListing1 : any[] = props.myList;
-        const result = myListing1.map(data => createData(data));
+    function createRows() : { ct_id: number, p_nric: string, location_name: string, date: number }[] {
+        const myListing : any[] = props.myList;
+        const result = myListing.map(data => createData(data));
         const slicedResults = sliceArray(result);
-        return (myListing1.length !== 0) ? slicedResults : [];
-    }
+        return (myListing.length !== 0) ? slicedResults : [];
+   }
 
     return (
         <Paper className={classes.root}>
