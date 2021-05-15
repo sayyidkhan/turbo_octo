@@ -1,6 +1,6 @@
 import {Component} from "react";
 import './Reports.css';
-import history from '../../history';
+/*import history from '../../history';*/
 
 
 export class ReportsFormComponent extends Component {

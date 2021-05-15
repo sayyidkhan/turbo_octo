@@ -2,13 +2,6 @@ import {Component} from "react";
 import {healthadvise_API} from "./api/healthadvisetable_api";
 import HealthAdvisePaginationTableComponent from "./HealthAdvisePaginationTableComponent";
 
-function DisplayAlertNo(props: { status: number, totalNoofAlerts: number }) {
-    return <div>
-        <p style={{color: (props.status === 200) ? "green" : "black"}}>Total number of
-            alerts: {props.totalNoofAlerts}</p>
-    </div>;
-}
-
 export class HealthAdviseTable extends Component {
 
     state = {

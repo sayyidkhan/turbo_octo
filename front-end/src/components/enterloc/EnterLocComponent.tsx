@@ -1,7 +1,7 @@
 import * as React from "react";
-import {Component, useEffect, useState} from "react";
+import {Component} from "react";
 import {postEnterLoc_API} from "./api/enterloc_api"
-import {getAllLocations, getLocationById} from "../location/api/location_api";
+import {getAllLocations} from "../location/api/location_api";
 
 interface LocationJSON {
     location_id : number,
@@ -9,9 +9,9 @@ interface LocationJSON {
     district : string,
 }
 
-interface ValidateLocationProps {
+/*interface ValidateLocationProps {
     location_id : string;
-}
+}*/
 
 function ValidateLocation(props : any) {
 

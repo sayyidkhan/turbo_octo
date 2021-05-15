@@ -1,7 +1,6 @@
-import {Component, useState} from "react";
+import {Component} from "react";
 import axios from 'axios';
 import * as React from "react";
-import {postTriggerAlerts_API} from "./api/triggeralerts_api";
 import './TriggerAlertsComponent.css';
 
 export class TriggerAlerts extends Component {

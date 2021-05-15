@@ -1,14 +1,6 @@
 import {Component} from "react";
 import {ctracinglist} from "./api/cttable_api";
-import axios from "axios";
 import CTPagination from "./CTPaginationComponent";
-
-function DisplayAlertNo(props: { status: number, totalNoofAlerts: number }) {
-    return <div>
-        <p style={{color: (props.status === 200) ? "green" : "black"}}>Total number of
-            alerts: {props.totalNoofAlerts}</p>
-    </div>;
-}
 
 export class CTTable extends Component {
 

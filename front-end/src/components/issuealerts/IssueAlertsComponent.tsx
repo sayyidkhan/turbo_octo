@@ -1,7 +1,6 @@
-import {Component, useState} from "react";
+import {Component} from "react";
 import axios from 'axios';
 import * as React from "react";
-import {postIssueAlerts_API} from "./api/issuealerts_api";
 import './IssueAlertsComponent.css';
 
 export class IssueAlerts extends Component {

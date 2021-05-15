@@ -27,7 +27,7 @@ const columns: AlertColumn[] = [
 ];
 
 function checkBoolean(x: boolean) {
-    if (x==true)
+    if (x===true)
     {
         return "Yes";
     }

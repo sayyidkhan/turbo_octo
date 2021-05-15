@@ -1,7 +1,6 @@
-import {Component, useState} from "react";
+import {Component} from "react";
 import axios from 'axios';
 import * as React from "react";
-import {updateCovidStatus_API} from "./api/updatecovidstatus_api";
 import './UpdateCovidStatusComponent.css';
 
 export class UpdateCovidStatus extends Component {

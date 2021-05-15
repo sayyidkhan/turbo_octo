@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import '../login/Login.css';
-import axios from "axios";
 import {getAllLocations} from "./api/location_api";
-import {LocationTable} from "./BasicTableComponent";
 import PaginationTableComponent from "./PaginationTableComponent";
 
 

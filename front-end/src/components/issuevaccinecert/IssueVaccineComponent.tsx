@@ -1,7 +1,6 @@
-import {Component, useState} from "react";
+import {Component} from "react";
 import axios from 'axios';
 import * as React from "react";
-import {postVaccine_API} from "./api/issuevaccine_api";
 import './IssueVaccineComponent.css';
 
 export class IssueVaccine extends Component {

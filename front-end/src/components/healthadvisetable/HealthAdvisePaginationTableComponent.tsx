@@ -25,17 +25,6 @@ const columns: HealthAviseColumn[] = [
     { id: 'e_nric', label: 'Triggered by', minWidth: 60 },
 ];
 
-function checkBoolean(x: boolean) {
-    if (x==true)
-    {
-        return "Yes";
-    }
-    else
-    {
-        return "Yes";
-    }
-}
-
 /* slice and get top 20 only */
 function sliceArray(arr1: any[]) {
     if(arr1.length > 20)
