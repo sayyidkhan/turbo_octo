@@ -7,6 +7,7 @@ import {E_UserService} from "../e_user/e_User.service";
 import {p_user} from "../p_user/schemas/p_user.schema";
 import {E_User} from "../e_user/schemas/e_user.schema";
 import {DateUtil} from "../commonUtil/DateUtil";
+import {LatestVaccineDto} from "./dto/latest-vaccine.dto";
 
 
 @Controller('vaccines')
@@ -23,6 +24,15 @@ export class VaccineController {
     console.log(v_cert_id);
     console.log("get by ID...");
     return this.VaccineService.getVaccineById(v_cert_id);
+  }
+
+  @Get('/latest_vaccine_record/:p_nric')
+  async getVaccineRecordByp_nric(@Param('p_nric') p_nric: string): Promise<LatestVaccineDto> {
+      const vaccineRecord : v_cert = await this.VaccineService.getLatestVaccinationRecordOnly(p_nric);
+      const pUser : p_user = await this.p_UserService.getP_UserById(vaccineRecord.p_nric);
+      const eUser : E_User = await this.e_UserService.getEnterpriseUserById(vaccineRecord.e_nric);
+      const dto : LatestVaccineDto = new LatestVaccineDto(vaccineRecord,pUser,eUser);
+      return dto;
   }
 
   @Get('/p_user/:p_nric')

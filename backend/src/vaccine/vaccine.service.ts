@@ -14,6 +14,11 @@ export class VaccineService {
     async getVaccineByDate(v_date : Date): Promise<v_cert> {
         return this.vaccineRepository.findOne({ v_date : new Date })
     }
+
+    async getLatestVaccinationRecordOnly(p_nric: string): Promise<v_cert> {
+        const vCert : v_cert = await this.vaccineRepository.getLatestVaccinationRecordOnly(p_nric);
+        return vCert;
+    }
   
     async getVaccineByp_nric(p_nric: string): Promise<v_cert[]> {
         return this.vaccineRepository.find({ p_nric : p_nric })

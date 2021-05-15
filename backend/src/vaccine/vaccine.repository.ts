@@ -16,6 +16,10 @@ export class VaccineRepository {
         return this.vaccineModel.find(vaccinesFilterQuery).sort({ v_cert : -1 });
     }
 
+    async getLatestVaccinationRecordOnly(p_nric : string): Promise<v_cert> {
+        return this.vaccineModel.findOne({ p_nric : p_nric }).sort({ v_cert : -1 }).limit(1);
+    }
+
 
     async getMaxVaccineListId(): Promise<number> {
         //Assume vaccine ID is assigned by system all the time,max ID will always be number of object in the table 
