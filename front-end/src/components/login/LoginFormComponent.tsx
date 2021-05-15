@@ -2,36 +2,26 @@ import {Component} from "react";
 import './Login.css';
 import history from '../../history';
 
-//import api
-
 export class LoginFormComponent extends Component {
 
     state = {
         'e_nric': '',
         'password': '',
         'admintype': 'public',
+        'status': 0
     }
 
-    changeHandler = (e : any) => {
+    changeHandler = async (e : any) => {
         this.setState({[e.target.name] : e.target.value});
     }
 
-    submitHandler = (e: any) => {
+    submitHandler = async (e: any) => {
         e.preventDefault();
 
-        this.validateUser();
-
-        const adminTypes = ["government", "business", "healthcare"];
-        const userType = sessionStorage.getItem('userType') ?? "public";
-        //console.log('admintype in sessionStorage: ', sessionStorage.getItem('userType'));
-
-        if(adminTypes.includes(userType)){
-            history.push('/Dashboard');
-            window.location.reload(false);
-        }
+        await this.validateUser();
     }
 
-    validateUser = () => {
+    validateUser = async () => {
 
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
@@ -60,6 +50,19 @@ export class LoginFormComponent extends Component {
 
             this.setState({'admintype': userType});
             sessionStorage.setItem('userType', userType);
+
+            const adminTypes = ["government", "business", "healthcare"];
+            //const userType = sessionStorage.getItem('userType') ?? "public";
+            //console.log('admintype in sessionStorage: ', sessionStorage.getItem('userType'));
+
+            if(adminTypes.includes(userType)){
+                history.push('/Dashboard');
+                window.location.reload(false);
+            }else{
+                this.setState({'status': -1});
+                console.log("line 64", this.state.status);
+            }
+
         })
         .catch(error => {
             console.log('error', error);
@@ -86,10 +89,10 @@ export class LoginFormComponent extends Component {
     }
 
     render() {
-        const {e_nric , password} = this.state;
+        const {e_nric , password, status} = this.state;
         return (
             <div>
-                <div className="validationMsg">This NRIC or password is invalid.</div>
+                <div className={status === -1 ? "toShowErrorMsg" : "toHideErrorMsg"}>The NRIC or password is invalid.</div>
                 <form onSubmit={this.submitHandler}>
                     <div>
                         <label>NRIC:</label>
