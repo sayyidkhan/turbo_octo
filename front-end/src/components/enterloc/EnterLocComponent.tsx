@@ -75,7 +75,7 @@ export class EnterLocComponent extends Component {
 
     onHandleChangeNumeric = (e : any) => {
         function isNumeric(number : number) : boolean {
-            if (isNumeric(number)) { // if is a number
+            if (!isNaN(number)) { // if is a number
                 return true;
             }
 
