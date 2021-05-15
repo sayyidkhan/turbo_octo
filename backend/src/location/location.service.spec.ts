@@ -37,8 +37,8 @@ class LocationServiceMock {
 }
 
 describe('LocationService', () => {
-    let locationRepository : LocationRepository;
-    let locationService : LocationService;
+    let repository : LocationRepository;
+    let service : LocationService;
 
     beforeEach(async () => {
        const module: TestingModule = await Test.createTestingModule({
@@ -58,32 +58,38 @@ describe('LocationService', () => {
            ]
        }).compile();
 
-       locationService = module.get<LocationService>(LocationService);
-       locationRepository = module.get<LocationRepository>(LocationRepository);
-    })
+       service = module.get<LocationService>(LocationService);
+       repository = module.get<LocationRepository>(LocationRepository);
+    });
+
+    afterEach(async () => {
+        service = null;
+        repository = null;
+    });
+
 
     it("LocationService - should be defined", () => {
-        expect(locationService).toBeDefined();
+        expect(service).toBeDefined();
     });
 
     it('test - getAllLocation()', async () => {
 
-        locationRepository.find = jest.fn().mockReturnValue(new LocationServiceMock().getAllLocation());
-        const result = await locationService.getAllLocation();
+        repository.find = jest.fn().mockReturnValue(new LocationServiceMock().getAllLocation());
+        const result = await service.getAllLocation();
         expect(result).toEqual(new LocationServiceMock().getAllLocation());
     });
 
     it('test - getLocationById()', async () => {
         const location_id = new LocationServiceMock().getLocationId();
 
-        locationRepository.findOne = jest.fn().mockReturnValue(new LocationServiceMock().getLocationById(location_id));
-        const result = await locationService.getLocationById(location_id);
+        repository.findOne = jest.fn().mockReturnValue(new LocationServiceMock().getLocationById(location_id));
+        const result = await service.getLocationById(location_id);
         expect(result).toEqual(new LocationServiceMock().getLocationById(location_id));
     });
 
     it('test - getAllLocationDict()', async () => {
-        locationRepository.find = jest.fn().mockReturnValue(new LocationServiceMock().getAllLocation());
-        const result = await locationService.getAllLocationDict();
+        repository.find = jest.fn().mockReturnValue(new LocationServiceMock().getAllLocation());
+        const result = await service.getAllLocationDict();
         expect(result).toEqual(new LocationServiceMock().getAllLocationDict());
     });
 

@@ -15,8 +15,8 @@ export class CtracingService {
         return this.ctracingRepository.getMaxCtracingId();
     }
 
-    async getCtracingByNric(nric: string): Promise<ViewCtracingDto[]> {
-        const cTracingList : c_tracing[] = await this.ctracingRepository.find({p_nric : nric});
+    async getCtracingByNric(p_nric: string): Promise<ViewCtracingDto[]> {
+        const cTracingList : c_tracing[] = await this.ctracingRepository.find({p_nric : p_nric});
         const result : ViewCtracingDto[] = cTracingList.map((c_tracing : c_tracing) => {
             const date : string = c_tracing.date.toLocaleString();
             return new ViewCtracingDto(c_tracing.p_nric,c_tracing.location_id,date);

@@ -56,7 +56,13 @@ describe('P_User Service', () => {
 
        service = module.get<P_UserService>(P_UserService);
        repository = module.get<P_UserRepository>(P_UserRepository);
-    })
+    });
+
+    afterEach(async () => {
+        service = null;
+        repository = null;
+    });
+
 
     it("P_UserService - should be defined", () => {
         expect(service).toBeDefined();
