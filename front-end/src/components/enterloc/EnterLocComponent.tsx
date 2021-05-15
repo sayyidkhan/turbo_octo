@@ -1,7 +1,7 @@
 import * as React from "react";
 import {Component, useEffect, useState} from "react";
 import {postEnterLoc_API} from "./api/enterloc_api"
-import {getLocationById} from "../location/api/location_api";
+import {getAllLocations, getLocationById} from "../location/api/location_api";
 
 interface LocationJSON {
     location_id : number,
@@ -13,41 +13,25 @@ interface ValidateLocationProps {
     location_id : string;
 }
 
-class ValidateLocation extends React.Component<ValidateLocationProps> {
-    constructor(props : ValidateLocationProps) {
-        super(props);
-        this.setState({location_id : props.location_id});
-    }
+function ValidateLocation(props : any) {
 
-    state = {
-        location_id : 0,
-    };
+    const locationDict : any = props.locationDict;
+    const locationId : string  = props.location_id;
 
-    updateLocation: () => Promise<string | string> = async () => {
-        console.log(this.state.location_id);
-        const location_id = Number(this.state.location_id);
-        const location: any = await getLocationById(location_id);
-        console.log(location);
-        if (location != null) {
-            return location;
+    const displayLocationName = () => {
+        if(locationId.length === 6) {
+            const result = (locationDict[locationId] === undefined) ? "" : locationDict[locationId];
+            return result;
         }
         return "";
     }
 
-    async componentDidUpdate(prevProps: Readonly<ValidateLocationProps>, prevState: Readonly<{}>, snapshot?: any) {
-        const result = await this.updateLocation();
-        console.log(result);
-    }
-
-
-    render() {
-        return (
-            <div>
-                <h6>Currently Checking into:</h6>
-                <p>{}</p>
-            </div>
-        );
-    }
+    return (
+        <div>
+            <h4>Currently Checking into:</h4>
+            <p>{displayLocationName()}</p>
+        </div>
+    );
 }
 
 
@@ -62,20 +46,54 @@ export class EnterLocComponent extends Component {
         'location_id': '',
         'date' : null,
         //only will be used to hold the outcome of the data
-        'createdAlert' : ''
+        'createdAlert' : '',
+        //hold locationDict
+        locationDict : {},
     }
 
     onUpdateLoc = (updatedInfo : any) => {
+        const locationDict : any = this.state.locationDict;
+        const locationId : string = updatedInfo.location_id.toString();
+
+        const displayLocationName = () => {
+            if(locationId.length === 6) {
+                const id = Number(locationId);
+                const result = (locationDict[id] === undefined) ? "" : locationDict[id];
+                return result;
+            }
+            return "";
+        }
+
         const result = (
-            <p style={{'fontSize' : 14}}> You have successfully check in to {updatedInfo.location_id}.<br/>
+            <p style={{'fontSize' : 14}}>
+                You have successfully check in to <br/>
+                <b style={{color  : 'green'}}>{displayLocationName()}</b>
             </p>
         );
         this.setState({'createdAlert' : result});
-        console.log(updatedInfo);
     }
 
     changeHandler = (e : any) => {
         this.setState({[e.target.name] : e.target.value});
+    }
+
+    onHandleChangeNumeric = (e : any) => {
+        function isNumeric(number : number) : boolean {
+            if (+number === +number) { // if is a number
+                return true;
+            }
+
+            return false;
+        }
+
+        const value = e.target.value;
+        if(isNumeric(value)) {
+            this.setState({[e.target.name] : e.target.value});
+        }
+        else {
+            //do nothing
+        }
+
     }
 
     mapDTO = () => {
@@ -94,19 +112,41 @@ export class EnterLocComponent extends Component {
         e.preventDefault();
         //map data to DTO object for sending //
         const dto  = this.mapDTO();
-        console.log(dto);
         //map data to DTO object for sending //
         postEnterLoc_API(dto)
             .then(res=> {
-                console.log(res);
                 this.onUpdateLoc(res.data);
             })
             .catch(err => {
-                console.log(err);
                 alert("NRIC/ Location not found")
             });
         this.setState({p_nric: '', location_id: '', date : null});
     }
+
+
+    async componentWillMount() {
+        function morphListToDict(myList : LocationJSON[]) {
+            const dict: any = {};
+            myList.forEach((location : LocationJSON) => {
+                const locationId : number = location.location_id;
+                const locationName : string = location.location_name;
+                dict[locationId] = locationName;
+            });
+            return dict;
+        }
+
+        await getAllLocations().then(res => {
+            const list = res.data;
+            this.setState({locationDict : morphListToDict(list) });
+        }).catch(err => {
+            console.log(err);
+        });
+    }
+
+    componentWillUnmount(): void {
+        this.setState({locationDict : {locations : null} });
+    }
+
 
     render() {
         const {p_nric, location_id} = this.state;
@@ -115,13 +155,13 @@ export class EnterLocComponent extends Component {
                 <form onSubmit={this.submitHandler}>
                     <div>
                         <label>NRIC: </label>
-                        <input type="text" name='p_nric' value={p_nric} onChange={this.changeHandler}/>
+                        <input type="text" name='p_nric' value={p_nric} onChange={this.changeHandler} maxLength={9} />
                     </div>
                     <div>
                         <label>Location: </label>
-                        <input type="number" name="location_id" value={location_id} onChange={this.changeHandler}/>
+                        <input type="text" name="location_id" value={location_id} onChange={this.onHandleChangeNumeric} maxLength={6} />
                     </div>
-                    <ValidateLocation location_id={this.state.location_id} />
+                    <ValidateLocation location_id={this.state.location_id} locationDict={this.state.locationDict} />
                     <button type="submit">Check-In</button>
                     <div>{this.state.createdAlert}</div>
                 </form>
