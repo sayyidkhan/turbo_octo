@@ -1,5 +1,5 @@
 import {Body, Controller, Delete, Get, HttpException, HttpStatus, Param, Patch, Post} from '@nestjs/common';
-import {AlertListDto, PersistAlertListDto} from "./dto/alert-list.dto";
+import {AlertListDto, PersistAlertListDto, ViewAlertListDto} from "./dto/alert-list.dto";
 
 import { AlertList } from './schemas/alertList.schema';
 import { AlertListService } from './alertList.service';
@@ -30,9 +30,9 @@ export class AlertListController {
   }
 
   @Get()
-  async getAllAlertList(): Promise<AlertList[]> {
+  async getAllAlertList(): Promise<ViewAlertListDto[]> {
       console.log("get all alerts...");
-      return this.alertListService.getAllAlerts();
+      return this.compositeAlertListService.getAllAlertListDTO();
   }
 
   @Post()
