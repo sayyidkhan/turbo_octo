@@ -1,4 +1,4 @@
-import React, {Component, useState} from "react";
+import React, {Component} from "react";
 import {Box} from "@material-ui/core";
 import VTSearchNRIC from "../searchnric/VTSearchNRICComponent";
 import {V2_VTTable} from "./V2_VTTableComponent";
