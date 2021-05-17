@@ -18,6 +18,10 @@ export class CtracingService {
         return this.ctracingRepository.find({p_nric : p_nric});
     }
 
+    async getCtracingByLocationID(location_id: number): Promise<c_tracing[]> {
+        return this.ctracingRepository.find({location_id : location_id});
+    }
+
     async getCtracing(): Promise<c_tracing[]> {
         return this.ctracingRepository.find({});
     }

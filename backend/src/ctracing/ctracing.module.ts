@@ -6,7 +6,6 @@ import {CtracingRepository} from "./ctracing.repository";
 import {CtracingService} from "./ctracing.service";
 import {P_UserModule} from "../p_user/p_user.module";
 import {LocationModule} from "../location/location.module";
-import {CompositeCtracingService} from "./CompositeCtracing.service";
 
 @Module({
     imports: [MongooseModule.forFeature([
@@ -15,6 +14,6 @@ import {CompositeCtracingService} from "./CompositeCtracing.service";
         LocationModule,
     ],
     controllers: [CtracingController],
-    providers: [CtracingService,CompositeCtracingService, CtracingRepository]
+    providers: [CtracingService, CtracingRepository]
 })
 export class CtracingModule {}

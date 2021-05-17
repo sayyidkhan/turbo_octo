@@ -8,7 +8,6 @@ import {p_user} from "../p_user/schemas/p_user.schema";
 import {Location} from "../location/schemas/location.schema";
 import {ViewCtracingDto} from "./dto/view-ctracing.dto";
 import {DateUtil} from "../commonUtil/DateUtil";
-import {CompositeCtracingService} from "./CompositeCtracing.service";
 
 
 @Controller('c_tracing')
@@ -17,7 +16,6 @@ export class CtracingController {
       private readonly CtracingService: CtracingService,
       private readonly p_UserService: P_UserService,
       private readonly locationService : LocationService,
-      private readonly compositeCtracingService : CompositeCtracingService,
   ) {}
 
   @Get(':ct_id')
@@ -25,10 +23,18 @@ export class CtracingController {
     return this.CtracingService.getCtracingById(ct_id);
   }
 
-  @Get("searchbynric/:nric")
-  async getCtracingByNric(@Param('nric') nric : string) : Promise<ViewCtracingDto[]> {
-      console.log("get contract tracing by nric: " + nric);
-      return this.compositeCtracingService.getCtracingByNric(nric);
+  @Get("searchbynric/:p_nric")
+  async getCtracingByNric(@Param('nric') p_nric : string) : Promise<ViewCtracingDto[]> {
+      console.log("get contract tracing by nric: " + p_nric);
+      const cTracingList : c_tracing[] = await this.CtracingService.getCtracingByNric(p_nric);
+      const locationListDict: {} = await this.locationService.getAllLocationDict();
+      const dto : ViewCtracingDto[] = cTracingList.map((c_tracing : c_tracing) => {
+          const date : string = c_tracing.date.toLocaleString();
+          const location : Location = locationListDict[c_tracing.location_id];
+          const locationName = location.location_name;
+          return new ViewCtracingDto(c_tracing.p_nric,locationName,date);
+      });
+      return dto;
   }
 
   @Get()
@@ -37,16 +43,55 @@ export class CtracingController {
       const c_tracingList : c_tracing[] = await this.CtracingService.getCtracing();
       const locationListDict: {} = await this.locationService.getAllLocationDict();
 
+      const convertDateToStr = (date : Date) =>  (date === undefined) ? "" : date.toISOString();
+      const result : ViewCtracingDto[] = c_tracingList.map((c_tracing : c_tracing) => {
+        const dto = new ViewCtracingDto(
+            c_tracing.p_nric,
+            locationListDict[c_tracing.location_id],
+            convertDateToStr(c_tracing.date));
+        return dto;
+      });
+      return result;
+  }
 
-      c_tracingList.forEach((x) => console.log(x.date));
-      // const result : ViewCtracingDto[] = c_tracingList.map((c_tracing : c_tracing) => {
-      //   const dto = new ViewCtracingDto(
-      //       c_tracing.p_nric,
-      //       locationListDict[c_tracing.location_id],
-      //       c_tracing.date.toISOString());
-      //   return dto;
-      // });
-      return null;
+  @Get('ctracing_by_district/:district')
+  async getCtracingsByDistrict(@Param('district') district : string) {
+      const c_tracingList : c_tracing[] = await this.CtracingService.getCtracing();
+      const locationListDict: {} = await this.locationService.getLocationByDistrict(district);
+      const convertDateToStr = (date : Date) =>  (date === undefined) ? "" : date.toISOString();
+      const result = c_tracingList
+          .filter((c_tracing : c_tracing) => {
+              const location : Location = locationListDict[c_tracing.location_id];
+              return location !== undefined;
+          })
+          .map((c_tracing : c_tracing) => {
+              const location : Location = locationListDict[c_tracing.location_id];
+              const dto = new ViewCtracingDto(
+                  c_tracing.p_nric,
+                  location.location_name,
+                  convertDateToStr(c_tracing.date));
+              return dto;
+          });
+      return result;
+  }
+
+  @Get('ctracing_by_locationid/:location_id')
+  async  getCtracingsByLocationId(@Param('location_id') location_id : number) {
+      console.log("get all contact tracing by location_id..");
+      const c_tracingList : c_tracing[] = await this.CtracingService.getCtracingByLocationID(location_id);
+      const locationListDict: {} = await this.locationService.getAllLocationDict();
+
+      const convertDateToStr = (date : Date) =>  (date === undefined) ? "" : date.toISOString();
+      const result : ViewCtracingDto[] = c_tracingList
+          .map((c_tracing : c_tracing) => {
+          const location : Location = locationListDict[c_tracing.location_id];
+          const dto = new ViewCtracingDto(
+              c_tracing.p_nric,
+              location.location_name,
+              convertDateToStr(c_tracing.date));
+          return dto;
+      });
+      return result;
   }
 
   @Post()
