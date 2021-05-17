@@ -32,9 +32,18 @@ export class CtracingController {
   }
 
   @Get()
-  async getCtracings(): Promise<c_tracing[]> {
+  async getCtracings(): Promise<ViewCtracingDto[]> {
       console.log("get all contact tracing..");
-      return this.CtracingService.getCtracing();
+      const c_tracingList : c_tracing[] = await this.CtracingService.getCtracing();
+      const locationListDict: {} = await this.locationService.getAllLocationDict();
+      const result : ViewCtracingDto[] = c_tracingList.map((c_tracing : c_tracing) => {
+        const dto = new ViewCtracingDto(
+            c_tracing.p_nric,
+            locationListDict[c_tracing.location_id],
+            c_tracing.date.toLocaleString());
+        return dto;
+      });
+      return result;
   }
 
   @Post()

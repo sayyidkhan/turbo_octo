@@ -49,15 +49,25 @@ export class E_UserController {
     }
 
     @Post()
-    async createNewEnterpriseUser(@Body() createEnterpriseUserDto: CreateEnterpriseUserDto): Promise<E_User> {
-        console.log("e_user DTO received successfully...");
-        return this.e_UserService.createNewEnterpriseUser(
-            createEnterpriseUserDto.e_nric,
-            createEnterpriseUserDto.firstname,
-            createEnterpriseUserDto.lastname,
-            createEnterpriseUserDto.password,
-            createEnterpriseUserDto.admintype,
-        );
+    async createNewEnterpriseUser(@Body() dto: CreateEnterpriseUserDto): Promise<E_User> {
+        const e_user :E_User = await this.e_UserService.getEnterpriseUserById(dto.e_nric);
+        if(e_user !== null){
+            const errorMsg : string = "unable to add existing user.";
+            console.log("create new user failed." + errorMsg);
+            throw new HttpException(
+                errorMsg,
+                HttpStatus.BAD_REQUEST);
+        }
+        else {
+            console.log("e_user DTO received successfully...");
+            return this.e_UserService.createNewEnterpriseUser(
+                dto.e_nric,
+                dto.firstname,
+                dto.lastname,
+                dto.password,
+                dto.admintype,
+            );
+        }
     }
 
     @Patch(':e_nric')
