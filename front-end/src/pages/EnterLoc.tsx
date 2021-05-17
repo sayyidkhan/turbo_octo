@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import '../components/login/Login.css';
 import {EnterLocComponent} from '../components/enterloc/EnterLocComponent';
 
-export class EnterLoc extends Component {
+export default class EnterLoc extends Component {
 
     render(){
         return(

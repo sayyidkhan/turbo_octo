@@ -3,7 +3,7 @@ import '../components/vacccert/vaccCert.css';
 import {VaccCertComponent} from '../components/vacccert/VaccCertComponent';
 import {VaccCertInputComponent} from '../components/vacccert/VaccCertInputComponent'
 
-export class VaccCert extends Component {
+export default class VaccCert extends Component {
 
     render(){
         return(

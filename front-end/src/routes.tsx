@@ -1,5 +1,4 @@
 import {Route, Switch} from "react-router";
-import * as React from "react";
 import Home from "./pages/Home";
 import {Login} from "./pages/Login";
 import LocationList from "./pages/LocationList";
@@ -10,10 +9,10 @@ import PublicAlerts from "./pages/PublicAlerts";
 import TriggerAlert from "./pages/TriggerAlert";
 import UpdateCovidStatus from "./pages/UpdateCovidStatus";
 import Reports from "./pages/Reports";
-import {Accounts} from "./pages/Accounts";
+import Accounts from "./pages/Accounts";
 import NoAccessMsg from "./pages/NoAccessMsg";
-import {EnterLoc} from "./pages/EnterLoc";
-import { VaccCert } from "./pages/VaccCert";
+import EnterLoc from "./pages/EnterLoc";
+import VaccCert from "./pages/VaccCert";
 
 export default function Routes(props: any) {
 
