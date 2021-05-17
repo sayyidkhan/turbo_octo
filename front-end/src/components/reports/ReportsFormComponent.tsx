@@ -26,7 +26,6 @@ export class ReportsFormComponent extends Component {
                     <div>
                         <label>Report Periodicity: </label>
                         <select>
-                            <option value="daily">Daily</option>
                             <option selected value="monthly">Monthly</option>
                             <option value="yearly">Yearly</option>
                         </select>
