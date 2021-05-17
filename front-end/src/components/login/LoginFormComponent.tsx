@@ -60,7 +60,6 @@ export class LoginFormComponent extends Component {
                 window.location.reload(false);
             }else{
                 this.setState({'status': -1});
-                console.log("line 64", this.state.status);
             }
 
         })

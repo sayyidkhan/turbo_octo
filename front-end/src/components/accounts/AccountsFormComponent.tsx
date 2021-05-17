@@ -4,7 +4,6 @@ import axios from 'axios';
 
 interface IProps {
     selected_nric : string;
-    status : number
 }
 
 interface IState {
@@ -21,6 +20,10 @@ export class AccountsFormComponent extends Component<IProps, IState> {
         'actionMessage': '',
         'isAccountSelected': false,
         'action': 'C'
+    }
+
+    componentDidUpdate(){
+        setTimeout(() => this.setState({actionMessage:''}), 3000);
     }
 
     mapDTO = () => {

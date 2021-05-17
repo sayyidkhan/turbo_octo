@@ -18,7 +18,6 @@ interface IState {
 export class AccountsTableComponent extends Component<IProps, IState> {
 
     state = {
-        loadingStatus: true,
         status: 0,
         totalRow: 0,
         result: []

@@ -9,7 +9,6 @@ import CurrentLoginUserComponent from '../components/CurrentLoginUserComponent';
 export default class Accounts extends Component {
 
     state = {
-        status: 0,
         selected_nric: ''
     }
 
@@ -28,7 +27,7 @@ export default class Accounts extends Component {
                 </div>
 
                 <div className="accounts-form-wrapper">
-                    <AccountsFormComponent selected_nric={this.state.selected_nric} status={this.state.status} />
+                    <AccountsFormComponent selected_nric={this.state.selected_nric} />
                 </div>
 
                 <div className="accounts-table-container">
