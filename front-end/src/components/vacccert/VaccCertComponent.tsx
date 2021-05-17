@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import './vaccCert.css';
-import axios from "axios";
 import octo from '../../img/octo.png'
 
 export class VaccCertComponent extends Component {

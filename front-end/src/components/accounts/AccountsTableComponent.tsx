@@ -17,10 +17,6 @@ interface IState {
 
 export class AccountsTableComponent extends Component<IProps, IState> {
 
-    constructor(props: IProps) {
-        super(props);
-    }
-
     state = {
         loadingStatus: true,
         status: 0,

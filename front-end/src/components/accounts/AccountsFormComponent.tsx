@@ -12,10 +12,6 @@ interface IState {
 
 export class AccountsFormComponent extends Component<IProps, IState> {
 
-    constructor(props: IProps) {
-        super(props);
-    }
-
     state = {
         'e_nric': '',
         'firstname': '',
