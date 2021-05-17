@@ -14,6 +14,7 @@ import Reports from "./pages/Reports";
 import Accounts from "./pages/Accounts";
 import NoAccessMsg from "./pages/NoAccessMsg";
 import {EnterLoc} from "./pages/EnterLoc";
+import { VaccCert } from "./pages/VaccCert";
 
 export default function Routes(props: any) {
 
@@ -45,7 +46,7 @@ export default function Routes(props: any) {
             <Route path="/about" component={About} />
             <Route path="/EnterLocation"  component={EnterLoc}/>
             <Route path="/locationList" component={LocationList}/>
-            <Route path="/CheckVaccCert" />
+            <Route path="/CheckVaccCert" component={VaccCert}/>
             <Route path="/Dashboard" render= {() => {return isUserAuthenticated("Dashboard") ? <Dashboard/> : <NoAccessMsg />}} />
             <Route path="/ContactTracing" render= {() => {return isUserAuthenticated("ContactTracing") ? <ContactTracing/> : <NoAccessMsg/>}} />
             <Route path="/VaccinationRecords" render= {() => {return isUserAuthenticated("VaccinationRecords") ? <VaccinationRecords/> : <NoAccessMsg/>}} />

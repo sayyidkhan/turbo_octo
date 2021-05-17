@@ -1,0 +1,47 @@
+.vaccCert-container {
+    padding: 4rem;
+    position: relative
+}
+
+.VaccCert-wrapper {
+    background-color: rgb(237, 250, 182);
+    min-width: 850px;
+    height: 50%;
+    display: table;
+    margin: 20px auto 20px auto;
+    border-radius: 25px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.vaccCert-header {
+    display: table;
+    margin: 00px auto 0px auto;
+    color: #7f7f7f;
+}
+
+td, th {
+    text-align: center;
+    padding: 8px;
+    margin-left:20px;
+    margin-right:auto;
+}
+
+table {
+    width: 100%;
+}
+
+.center {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:40%;
+}
+
+.left {
+    float:left;
+}
+
+.right {
+    float: right;
+}
