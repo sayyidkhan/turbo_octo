@@ -1,6 +1,6 @@
 import {Route, Switch} from "react-router";
 import Home from "./pages/Home";
-import {Login} from "./pages/Login";
+import Login from "./pages/Login";
 import LocationList from "./pages/LocationList";
 import Dashboard from "./pages/Dashboard";
 import ContactTracing from "./pages/ContactTracing";
