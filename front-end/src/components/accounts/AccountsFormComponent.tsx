@@ -4,6 +4,7 @@ import axios from 'axios';
 
 interface IProps {
     selected_nric : string;
+    refresh_component : Function;
 }
 
 interface IState {
@@ -92,6 +93,7 @@ export class AccountsFormComponent extends Component<IProps, IState> {
 
         this.handleFormReset();
 
+
     }
 
     handleFormReset  = () => { 
@@ -104,6 +106,8 @@ export class AccountsFormComponent extends Component<IProps, IState> {
             'isAccountSelected': false,
             'action': 'C'
         });
+
+        this.props.refresh_component();
     }
 
     getUserBySelectedNric = async (nric : string) => {
