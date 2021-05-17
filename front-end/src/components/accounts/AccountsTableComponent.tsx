@@ -8,13 +8,28 @@ function DisplayTotal(props: { status: number, totalRow: number }) {
     </div>;
 }
 
-export class AccountsTableComponent extends Component {
+interface IProps {
+    getNric(e_nric:any) : any;
+}
+
+interface IState {
+}
+
+export class AccountsTableComponent extends Component<IProps, IState> {
+
+    constructor(props: IProps) {
+        super(props);
+    }
 
     state = {
-        loadingStatus : true,
-        status : 0,
+        loadingStatus: true,
+        status: 0,
         totalRow: 0,
-        result : []
+        result: []
+    }
+
+    sendData = (selected_nric : string) => {
+        this.props.getNric(selected_nric);
     }
 
     async componentDidMount() {
@@ -35,9 +50,8 @@ export class AccountsTableComponent extends Component {
         return (
             <div>
             <DisplayTotal status={this.state.status} totalRow={this.state.totalRow}/>
-            <AccountsTablePaginationComponent dataRows={this.state.result}/>
+            <AccountsTablePaginationComponent dataRows={this.state.result} selected_nric={this.sendData}/>
             </div>
-            
         );
     }
 }
