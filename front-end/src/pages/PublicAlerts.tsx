@@ -2,8 +2,9 @@ import '../App.css';
 import {IssueAlerts} from "../components/issuealerts/IssueAlertsComponent";
 import {AlertsTable} from '../components/alertstable/IndivAlertsTableComponent';
 import CurrentLoginUserComponent from '../components/CurrentLoginUserComponent';
+import {Component} from "react";
 
-export default function Dashboard() {
+export function RenderSubDashboardComponent() {
     
     const userType = sessionStorage.getItem("userType");
 
@@ -51,6 +52,15 @@ export default function Dashboard() {
                 
                 </div>
             </div>
+        );
+    }
+}
+
+export default class Dashboard extends Component {
+
+    render() {
+        return (
+            <RenderSubDashboardComponent />
         );
     }
 }

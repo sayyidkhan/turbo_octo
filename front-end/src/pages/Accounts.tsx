@@ -6,7 +6,7 @@ import {AccountsTableComponent} from "../components/accounts/AccountsTableCompon
 import CurrentLoginUserComponent from '../components/CurrentLoginUserComponent';
 
 
-export class Accounts extends Component{
+export class Accounts extends Component {
 
     state = {
         status: 0,

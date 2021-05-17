@@ -3,7 +3,6 @@ import * as React from "react";
 import Home from "./pages/Home";
 import {Login} from "./pages/Login";
 import LocationList from "./pages/LocationList";
-import About from "./pages/About";
 import Dashboard from "./pages/Dashboard";
 import ContactTracing from "./pages/ContactTracing";
 import VaccinationRecords from "./pages/VaccinationRecords";
@@ -43,7 +42,6 @@ export default function Routes(props: any) {
         <Switch>
             <Route path="/" exact render= {() => {return isUserAuthenticated("Home") ? <Home/> : <NoAccessMsg/>}}/>
             <Route path="/Login" render= {() => {return isUserAuthenticated("Login") ? <Login/> : <NoAccessMsg/>}}/>
-            <Route path="/about" component={About} />
             <Route path="/EnterLocation"  component={EnterLoc}/>
             <Route path="/locationList" component={LocationList}/>
             <Route path="/CheckVaccCert" component={VaccCert}/>

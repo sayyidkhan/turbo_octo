@@ -36,14 +36,17 @@ export class CtracingController {
       console.log("get all contact tracing..");
       const c_tracingList : c_tracing[] = await this.CtracingService.getCtracing();
       const locationListDict: {} = await this.locationService.getAllLocationDict();
-      const result : ViewCtracingDto[] = c_tracingList.map((c_tracing : c_tracing) => {
-        const dto = new ViewCtracingDto(
-            c_tracing.p_nric,
-            locationListDict[c_tracing.location_id],
-            c_tracing.date.toLocaleString());
-        return dto;
-      });
-      return result;
+
+
+      c_tracingList.forEach((x) => console.log(x.date));
+      // const result : ViewCtracingDto[] = c_tracingList.map((c_tracing : c_tracing) => {
+      //   const dto = new ViewCtracingDto(
+      //       c_tracing.p_nric,
+      //       locationListDict[c_tracing.location_id],
+      //       c_tracing.date.toISOString());
+      //   return dto;
+      // });
+      return null;
   }
 
   @Post()
