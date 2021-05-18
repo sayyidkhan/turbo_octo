@@ -11,7 +11,7 @@ export interface DateCompute {
     date_to : Date;
 }
 
-export interface PerMonth_DistrictListing {
+export interface PerMonth_CTracingListing {
     myList : any[],
     total_amount : number,
     north : number,
@@ -27,7 +27,7 @@ export abstract class ReportUtil {
         const dateTo : number =  dto.date_to.getMonth() + 1;
 
         const myDict = {};
-        const district_listing : PerMonth_DistrictListing = {
+        const district_listing : PerMonth_CTracingListing = {
             myList : [],
             total_amount : 0,
             north : 0,

@@ -1,7 +1,7 @@
 import {Injectable} from "@nestjs/common";
 import {CtracingService} from "./ctracing.service";
 import {ReportComputeCtracingDto} from "./dto/report-ctracing.dto";
-import {PerMonth_DistrictListing, ReportUtil} from "../commonUtil/ReportUtil";
+import {PerMonth_CTracingListing, ReportUtil} from "../commonUtil/ReportUtil";
 import {c_tracing} from "./schemas/ctracing.schema";
 import {LocationService} from "../location/location.service";
 
@@ -23,7 +23,7 @@ export class Ctracing_reportService {
             //update month if month is not updated
             currMonth = c_tracing.date.getMonth() + 1;
             //insert into calendar dictionary
-            const monthList : PerMonth_DistrictListing = calendar_dict[currMonth];
+            const monthList : PerMonth_CTracingListing = calendar_dict[currMonth];
             //push existing records
             monthList.myList.push(c_tracing);
             //add all the counters for the month
