@@ -10,22 +10,17 @@ export class VaccineService {
         return this.vaccineRepository.findOne({ v_cert_id : v_cert_id })
     }
 
-    //get by date 
-    async getVaccineByDate(v_date : Date): Promise<v_cert> {
-        return this.vaccineRepository.findOne({ v_date : new Date })
-    }
-
     async getLatestVaccinationRecordOnly(p_nric: string): Promise<v_cert> {
         const vCert : v_cert = await this.vaccineRepository.getLatestVaccinationRecordOnly(p_nric);
         return vCert;
     }
   
     async getVaccineByp_nric(p_nric: string): Promise<v_cert[]> {
-        return this.vaccineRepository.find({ p_nric : p_nric })
+        return this.vaccineRepository.find({ p_nric : p_nric });
     }
 
     async getVaccineBye_nric(e_nric: string): Promise<v_cert[]> {
-        return this.vaccineRepository.find({ e_nric : e_nric })
+        return this.vaccineRepository.find({ e_nric : e_nric });
     }
 
     async getAllVaccinationList(): Promise<v_cert[]> {
@@ -34,6 +29,14 @@ export class VaccineService {
 
     async getMaxAlertListId() : Promise<number> {
         return this.vaccineRepository.getMaxVaccineListId();
+    }
+
+    async getVaccineByDates(date_from : Date, date_to : Date) : Promise<v_cert[]> {
+        return this.vaccineRepository.find({ v_date : {
+                $gte : date_from,
+                $lte : date_to,
+            }
+        });
     }
 
     async createVaccine(p_nric: string, v_date :Date , e_nric : string): Promise<v_cert> {
