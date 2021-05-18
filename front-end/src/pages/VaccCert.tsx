@@ -5,6 +5,14 @@ import {VaccCertInputComponent} from '../components/vacccert/VaccCertInputCompon
 
 export default class VaccCert extends Component {
 
+    state = {
+        'userData': ''
+    }
+
+    getUserData(userData : any) : any{
+        this.setState({'userData': userData});
+    }
+
     render(){
         return(
             <div className="vaccCert-container">
@@ -12,10 +20,10 @@ export default class VaccCert extends Component {
                     <h1>Check Vaccination Certificate</h1>
                 </div>
                 <div className="login-wrapper">
-                    <VaccCertInputComponent/>
+                    <VaccCertInputComponent getUserData={(e) => this.getUserData(e)}/>
                 </div>
                 <div className="vaccCert-wrapper">
-                    <VaccCertComponent />
+                    <VaccCertComponent userData={this.state.userData} />
                 </div>
         </div>
         )
