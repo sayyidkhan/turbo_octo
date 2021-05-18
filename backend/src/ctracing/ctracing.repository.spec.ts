@@ -53,6 +53,11 @@ describe("c_tracing Repository", () => {
         expect(repository.findOne({})).toBeDefined();
     });
 
+    it('test - getMaxCtracingId()', async () => {
+        await service.getMaxCtracingId();
+        expect(repository.findAndSortByLatestId({})).toBeDefined();
+    });
+
     it('test - create()', async () => {
         const testObj = new c_tracing();
         await service.createCtracing("p_nric",123456,new Date());

@@ -43,6 +43,7 @@ describe("ctracing Service", () => {
                     useValue: {
                         find: jest.fn(),
                         findOne: jest.fn(),
+                        findAndSortByLatestId : jest.fn(),
                     }
                 }
             ],
@@ -65,8 +66,16 @@ describe("ctracing Service", () => {
     it("test - getCtracingByLatestId()", async () => {
         const testCase = new CtracingServiceMock().getCtracingList();
 
-        repository.find = jest.fn().mockReturnValue(testCase);
+        repository.findAndSortByLatestId = jest.fn().mockReturnValue(testCase);
         const result = await service.getCtracingByLatestId();
+        expect(result).toEqual(testCase);
+    });
+
+    it("test - getCtracingByLocationID()", async () => {
+        const testCase = new CtracingServiceMock().getCtracingList();
+
+        repository.findAndSortByLatestId = jest.fn().mockReturnValue(testCase);
+        const result = await service.getCtracingByLocationID(123456);
         expect(result).toEqual(testCase);
     });
 
@@ -102,9 +111,17 @@ describe("ctracing Service", () => {
             c_tracing[0].date.toLocaleString()
         );
 
-        repository.find = jest.fn().mockReturnValue(c_tracing);
+        repository.findAndSortByLatestId = jest.fn().mockReturnValue(c_tracing);
         const result = await service.getCtracingByNric(c_tracing[0].p_nric);
         expect(result[0].p_nric).toEqual(testCase.p_nric);
+    });
+
+    it("test - getCtracingByDates()", async () => {
+        const testCase = new CtracingServiceMock().getCtracingList();
+
+        repository.find = jest.fn().mockReturnValue(testCase);
+        const result = await service.getCtracingByDates(new Date(), new Date());
+        expect(result).toEqual(testCase);
     });
 
 });
