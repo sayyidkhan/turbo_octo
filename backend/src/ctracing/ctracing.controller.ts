@@ -45,9 +45,10 @@ export class CtracingController {
 
       const convertDateToStr = (date : Date) =>  (date === undefined) ? "" : date.toISOString();
       const result : ViewCtracingDto[] = c_tracingList.map((c_tracing : c_tracing) => {
+        const location : Location =  locationListDict[c_tracing.location_id];
         const dto = new ViewCtracingDto(
             c_tracing.p_nric,
-            locationListDict[c_tracing.location_id],
+            location.location_name,
             convertDateToStr(c_tracing.date));
         return dto;
       });
