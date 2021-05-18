@@ -19,6 +19,25 @@ export class Ctracing_reportService {
         all_districts : {}) {
         let currMonth = 0;
 
+        function districtCounter(locationDict, monthList: PerMonth_CTracingListing) {
+            console.log(locationDict);
+            //count district
+            if (locationDict !== undefined) {
+                const district = locationDict.district;
+                monthList[district] += 1;
+            }
+            else {
+                const district = "undefined_district";
+                if (monthList[district] == undefined) {
+                    monthList[district] = 1;
+                } else {
+                    monthList[district] += 1;
+                }
+            }
+            //count total
+            monthList.total_amount += 1;
+        }
+
         c_tracings.forEach((c_tracing : c_tracing) => {
             //update month if month is not updated
             currMonth = c_tracing.date.getMonth() + 1;
@@ -27,9 +46,8 @@ export class Ctracing_reportService {
             //push existing records
             monthList.myList.push(c_tracing);
             //add all the counters for the month
-            const district = all_districts[c_tracing.location_id].district;
-            monthList[district] += 1;
-            monthList.total_amount += 1;
+            const locationDict = all_districts[c_tracing.location_id];
+            districtCounter(locationDict, monthList);
         });
         return calendar_dict;
     }
