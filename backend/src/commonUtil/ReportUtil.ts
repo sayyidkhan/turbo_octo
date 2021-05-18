@@ -27,21 +27,30 @@ export abstract class ReportUtil {
         const dateTo : number =  dto.date_to.getMonth() + 1;
 
         const myDict = {};
-        const district_listing : PerMonth_CTracingListing = {
-            myList : [],
-            total_amount : 0,
-            north : 0,
-            south : 0,
-            east : 0,
-            west : 0
-        };
+
         if(dateFrom === dateTo) {
+            const district_listing : PerMonth_CTracingListing = {
+                myList : [],
+                total_amount : 0,
+                north : 0,
+                south : 0,
+                east : 0,
+                west : 0,
+            };
             myDict[dateFrom] = district_listing;
             return myDict;
         }
         else{
             let counter = dateFrom;
             while (counter != dateTo + 1) {
+                const district_listing : PerMonth_CTracingListing = {
+                    myList : [],
+                    total_amount : 0,
+                    north : 0,
+                    south : 0,
+                    east : 0,
+                    west : 0,
+                };
                 myDict[counter] = district_listing;
                 counter++;
             }
