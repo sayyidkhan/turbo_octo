@@ -8,6 +8,7 @@ import {p_user} from "../p_user/schemas/p_user.schema";
 import {Location} from "../location/schemas/location.schema";
 import {ViewCtracingDto} from "./dto/view-ctracing.dto";
 import {DateUtil} from "../commonUtil/DateUtil";
+import {ReportComputeCtracingDto, ReportQueryCtracingDto} from "./dto/report-ctracing.dto";
 
 
 @Controller('c_tracing')
@@ -131,6 +132,21 @@ export class CtracingController {
               dto.p_nric,
               dto.location_id,
               v_date);
+      }
+  }
+
+  @Post('/report/monthly/')
+  async generateMonthlyReport(@Body() dto: ReportQueryCtracingDto) {
+      const dtoResult : string | ReportComputeCtracingDto = DateUtil.validateDates(dto);
+      if(typeof(dtoResult) === "string"){
+          //date related errors shown here
+          console.log(dtoResult);
+          throw new HttpException(
+              dtoResult,
+              HttpStatus.BAD_REQUEST);
+      }
+      else {
+          console.log(dtoResult);
       }
   }
 
