@@ -34,13 +34,13 @@ export class VaccCertInputComponent extends Component<IProps, IState> {
     submitHandler = (e: any) => {
         e.preventDefault();
 
-        console.log(this.state.p_nric);
         axios.get("http://localhost:5000/vaccines/latest_vaccine_record/"+this.state.p_nric)
             .then(res=> {
                 console.log(res);
                 this.setUserData(res.data);
             })
             .catch(err => {
+                this.props.getUserData({v_cert: {v_cert_id: 'error'}});
                 console.log(err);
             });
 

@@ -5,7 +5,7 @@
 
 .VaccCert-wrapper {
     background-color: rgb(237, 250, 182);
-    min-width: 850px;
+    width: 60%;
     height: 50%;
     display: table;
     margin: 20px auto 20px auto;
@@ -14,13 +14,18 @@
     padding-bottom: 30px;
 }
 
+.msg-wrapper{
+    text-align: center;
+    
+}
+
 .vaccCert-header {
     display: table;
     margin: 00px auto 0px auto;
     color: #7f7f7f;
 }
 
-td, th {
+td {
     text-align: center;
     padding: 8px;
     margin-left:20px;
@@ -29,6 +34,7 @@ td, th {
 
 table {
     width: 100%;
+    table-layout:fixed;
 }
 
 .center {
@@ -44,4 +50,8 @@ table {
 
 .right {
     float: right;
+}
+
+.cert-title{
+    text-align: center;
 }
