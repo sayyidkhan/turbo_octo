@@ -38,7 +38,6 @@ export class LocationService {
             myDict[locationId] = locationInterface;
         })
         return myDict;
-        return locationList;
     }
 
 
