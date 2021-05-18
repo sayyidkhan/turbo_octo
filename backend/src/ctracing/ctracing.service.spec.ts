@@ -62,11 +62,11 @@ describe("ctracing Service", () => {
         expect(service).toBeDefined();
     });
 
-    it("test - getCtracing()", async () => {
+    it("test - getCtracingByLatestId()", async () => {
         const testCase = new CtracingServiceMock().getCtracingList();
 
         repository.find = jest.fn().mockReturnValue(testCase);
-        const result = await service.getCtracing();
+        const result = await service.getCtracingByLatestId();
         expect(result).toEqual(testCase);
     });
 

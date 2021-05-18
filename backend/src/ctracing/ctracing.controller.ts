@@ -9,6 +9,7 @@ import {Location} from "../location/schemas/location.schema";
 import {ViewCtracingDto} from "./dto/view-ctracing.dto";
 import {DateUtil} from "../commonUtil/DateUtil";
 import {ReportComputeCtracingDto, ReportQueryCtracingDto} from "./dto/report-ctracing.dto";
+import {Ctracing_reportService} from "./ctracing_report.service";
 
 
 @Controller('c_tracing')
@@ -17,6 +18,7 @@ export class CtracingController {
       private readonly CtracingService: CtracingService,
       private readonly p_UserService: P_UserService,
       private readonly locationService : LocationService,
+      private readonly ctracing_reportService : Ctracing_reportService,
   ) {}
 
   @Get(':ct_id')
@@ -41,7 +43,7 @@ export class CtracingController {
   @Get()
   async getCtracings(): Promise<ViewCtracingDto[]> {
       console.log("get all contact tracing..");
-      const c_tracingList : c_tracing[] = await this.CtracingService.getCtracing();
+      const c_tracingList : c_tracing[] = await this.CtracingService.getCtracingByLatestId();
       const locationListDict: {} = await this.locationService.getAllLocationDict();
 
       const convertDateToStr = (date : Date) =>  (date === undefined) ? "" : date.toISOString();
@@ -58,7 +60,7 @@ export class CtracingController {
 
   @Get('ctracing_by_district/:district')
   async getCtracingsByDistrict(@Param('district') district : string) {
-      const c_tracingList : c_tracing[] = await this.CtracingService.getCtracing();
+      const c_tracingList : c_tracing[] = await this.CtracingService.getCtracingByLatestId();
       const locationListDict: {} = await this.locationService.getLocationByDistrict(district);
       const convertDateToStr = (date : Date) =>  (date === undefined) ? "" : date.toISOString();
       const result = c_tracingList
@@ -146,7 +148,9 @@ export class CtracingController {
               HttpStatus.BAD_REQUEST);
       }
       else {
+          const result = await this.ctracing_reportService.generateMonthlyReport(dtoResult);
           console.log(dtoResult);
+          return result;
       }
   }
 

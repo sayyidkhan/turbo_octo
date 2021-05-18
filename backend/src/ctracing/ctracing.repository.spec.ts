@@ -39,7 +39,7 @@ describe("c_tracing Repository", () => {
     });
 
     it('test - find()', async () => {
-        await service.getCtracing();
+        await service.getCtracingByLatestId();
         expect(repository.find({})).toBeDefined();
     });
 

@@ -1,17 +1,7 @@
 import {ReportComputeCtracingDto} from "../ctracing/dto/report-ctracing.dto";
-
-export interface DateQuery {
-    date_from : string;
-    date_to : string;
-}
-
-export interface DateCompute {
-    date_from : Date;
-    date_to : Date;
-}
+import {DateCompute, DateQuery} from "./ReportUtil";
 
 export abstract class DateUtil {
-
 
     static error: string = 'Invalid Date';
     static  MS_PER_DAY = 1000 * 60 * 60 * 24;

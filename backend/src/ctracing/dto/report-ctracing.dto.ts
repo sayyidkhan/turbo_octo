@@ -1,5 +1,6 @@
 //for frontend use only
-import {DateCompute, DateQuery, DateUtil} from "../../commonUtil/DateUtil";
+import {DateUtil} from "../../commonUtil/DateUtil";
+import {DateCompute, DateQuery} from "../../commonUtil/ReportUtil";
 
 
 export class ReportQueryCtracingDto implements DateQuery {
