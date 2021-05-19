@@ -13,17 +13,23 @@ export class VaccineRepository {
     }
 
     async find(vaccinesFilterQuery: FilterQuery<v_cert>): Promise<v_cert[]> {
-        return this.vaccineModel.find(vaccinesFilterQuery).sort({ v_cert : -1 });
+        return this.vaccineModel.find(vaccinesFilterQuery).sort({v_cert_id : -1});
     }
 
-    async getLatestVaccinationRecordOnly(p_nric : string): Promise<v_cert> {
-        return this.vaccineModel.findOne({ p_nric : p_nric }).sort({ v_cert : -1 }).limit(1);
+    async getLatestVaccinationRecordOnly(vaccinesFilterQuery): Promise<v_cert> {
+        const vaccines : v_cert[] = await this.vaccineModel.find(vaccinesFilterQuery).sort({v_cert_id : -1}).limit(1);
+        if (vaccines.length !== 0) {
+           return vaccines[0];
+        }
+        else {
+            return null;
+        }
     }
 
 
     async getMaxVaccineListId(): Promise<number> {
         //Assume vaccine ID is assigned by system all the time,max ID will always be number of object in the table 
-        const vaccineList = await this.vaccineModel.find({}).sort({ v_cert : -1 });
+        const vaccineList = await this.vaccineModel.find({}).sort({v_cert_id : -1});
         return (vaccineList.length > 0) ? vaccineList.length : 0;
     }
 

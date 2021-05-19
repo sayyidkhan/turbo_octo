@@ -11,7 +11,7 @@ export class VaccineService {
     }
 
     async getLatestVaccinationRecordOnly(p_nric: string): Promise<v_cert> {
-        const vCert : v_cert = await this.vaccineRepository.getLatestVaccinationRecordOnly(p_nric);
+        const vCert : v_cert = await this.vaccineRepository.getLatestVaccinationRecordOnly({ p_nric : p_nric });
         return vCert;
     }
   
