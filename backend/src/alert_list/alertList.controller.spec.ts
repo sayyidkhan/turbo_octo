@@ -55,7 +55,7 @@ class AlertListControllerMock {
     }
 }
 
-describe('E_User Controller',() => {
+describe('AlertList Controller',() => {
     let app : INestApplication;
     let httpService : HttpService;
 
