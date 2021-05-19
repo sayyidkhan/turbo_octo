@@ -8,6 +8,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
+import {DateUtil} from "../../util/DateUtil";
 
 /* Checked-in table */ 
 interface VaccineColumn {
@@ -24,14 +25,9 @@ const columns: VaccineColumn[] = [
     { id: 'e_nric', label: 'Vaccinated by', minWidth: 80 },
 ];
 
-function formatDate(x: any) {
-    var formattedDate = x.toString();
-    return formattedDate.substring(0,10);
-}
-
-function createData(parameters: { p_nric: string, v_date: Date, e_nric: string }) {
+function createData(parameters: { p_nric: string, v_date: string, e_nric: string }) {
     let {p_nric, v_date, e_nric} = parameters;
-    return { p_nric: p_nric, v_date: formatDate(v_date), e_nric: e_nric};
+    return { p_nric: p_nric, v_date: DateUtil.formatDate(v_date), e_nric: e_nric};
 }
 
 const useStyles = makeStyles({
