@@ -10,7 +10,7 @@ import {ViewCtracingDto} from "./dto/view-ctracing.dto";
 import {DateUtil} from "../commonUtil/DateUtil";
 import {ReportComputeCtracingDto, ReportQueryCtracingDto} from "./dto/report-ctracing.dto";
 import {Ctracing_reportService} from "./ctracing_report.service";
-
+import {SweeperUtil} from "../commonUtil/SweeperUtil";
 
 @Controller('c_tracing')
 export class CtracingController {
@@ -26,8 +26,8 @@ export class CtracingController {
     return this.CtracingService.getCtracingById(ct_id);
   }
 
-  @Get("searchbynric/:p_nric")
-  async getCtracingByNric(@Param('nric') p_nric : string) : Promise<ViewCtracingDto[]> {
+  @Get("/searchbynric/:p_nric")
+  async getCtracingByNric(@Param('p_nric') p_nric : string) : Promise<ViewCtracingDto[]> {
       console.log("get contract tracing by nric: " + p_nric);
       const cTracingList : c_tracing[] = await this.CtracingService.getCtracingByNric(p_nric);
       const locationListDict: {} = await this.locationService.getAllLocationDict();
@@ -47,15 +47,21 @@ export class CtracingController {
       const locationListDict: {} = await this.locationService.getAllLocationDict();
 
       const convertDateToStr = (date : Date) =>  (date === undefined) ? "" : date.toISOString();
+      //process record
       const result : ViewCtracingDto[] = c_tracingList.map((c_tracing : c_tracing) => {
         const location : Location =  locationListDict[c_tracing.location_id];
-        const dto = new ViewCtracingDto(
-            c_tracing.p_nric,
-            location.location_name,
-            convertDateToStr(c_tracing.date));
+
+          const dto = new ViewCtracingDto(
+              c_tracing.p_nric,
+              SweeperUtil.assignLocationName(location),
+              convertDateToStr(c_tracing.date));
         return dto;
       });
-      return result;
+      //filter bad data
+      const filterResult = result.filter((dto) => {
+          return dto.location_name !== "undefined";
+      })
+      return filterResult;
   }
 
   @Get('ctracing_by_district/:district')
