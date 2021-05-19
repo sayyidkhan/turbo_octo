@@ -86,6 +86,13 @@ describe("alertList Service", () => {
         expect(result).toEqual(testCase[0].alertListId);
     });
 
+    it("test - setAlertListId()", async () => {
+       const result_positive = service.setAlertListId(1);
+       expect(result_positive).toBe(2);
+       const result_negative = service.setAlertListId(0);
+       expect(result_negative).toBe(1)
+    });
+
     it('test - createAlert()', async () => {
         const testCase = new AlertListServiceMock().getOneAlertList();
 

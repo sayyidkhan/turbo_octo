@@ -17,9 +17,13 @@ export class AlertListRepository {
         return this.alertListModel.find(query).sort({ alertListId : -1 });
     }
 
+    setAlertListId(alertList) {
+        return (alertList.length > 0) ? alertList[0].alertListId : 0;
+    }
+
     async getMaxAlertListId(): Promise<number> {
         const alertList = await this.alertListModel.find({}).sort({ alertListId : -1 }).limit(1);
-        const result = (alertList.length > 0) ? alertList[0].alertListId : 0;;
+        const result = this.setAlertListId(alertList);
         return result;
     }
 
