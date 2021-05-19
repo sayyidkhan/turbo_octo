@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-/*import { makeStyles } from '@material-ui/core/styles';*/
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -9,50 +8,118 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import './Reports.css';
 
-function createData(name: string, calories: number, fat: number, carbs: number, protein: number) {
-  return { name, calories, fat, carbs, protein };
+
+interface ReportColumn {
+    id: 'month' | 'north' | 'south' | 'east' | 'west' | 'total_amount';
+    label: string;
+    minWidth?: number;
+    align?: 'center';
+    format?: (value: number) => string;
 }
 
-const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
+const columns: ReportColumn[] = [
+    { id: 'month', label: 'Month', minWidth: 150 },
+    { id: 'north', label: 'North', minWidth: 150 },
+    { id: 'south', label: 'South', minWidth: 150 },
+    { id: 'east', label: 'East', minWidth: 150 },
+    { id: 'west', label: 'West', minWidth: 150 },
+    { id: 'total_amount', label: 'Total', minWidth: 150 }
 ];
 
-export class ReportsResultComponent extends Component {
+interface IProps {
+    reportRes : any;
+}
+
+interface IState {
+}
+
+export class ReportsResultComponent extends Component<IProps, IState> {
+
+    state = {
+        type: 'empty',
+        keys: '',
+        data: ''
+    }
+
+    createRows() : { month: string, north: number, south: number, east: number, west: number, total_amount: number}[] {
+
+        const jsonData = this.state.data;
+        var dataRows : any = [];
+        Object.keys(jsonData).forEach(function(key:any) {
+            var value : any = jsonData[key];
+            var keyJson = {'month': key};
+            var completeData = Object.assign({}, keyJson, value);
+            dataRows.push(completeData);
+        });
+
+        console.log('print data row: ', dataRows);
+
+        const result = dataRows.map((data: { month: string; north: number; south: number; east: number; west: number; total_amount: number; }) => this.createData(data));
+        console.log('print result: ', result);
+        return (dataRows.length !== 0) ? result : [];
+    }
+
+    createData(parameters: { month: string, north: number, south: number, east: number, west: number, total_amount: number}) {
+        let {month, north, south, east, west, total_amount} = parameters;
+        return { month, north, south, east, west, total_amount };
+    }
+
+    async componentDidUpdate() {
+        if(this.state.type !== this.props.reportRes.type) {
+            this.setState({
+                type: this.props.reportRes.type,
+                keys: this.props.reportRes.keys,
+                data: this.props.reportRes.data
+            });
+            //console.log("go to table, ", this.props.reportRes);
+        }
+    }
 
     render() {
-        return(
-        <div>
-            <TableContainer component={Paper}>
-            <Table aria-label="simple table">
-                <TableHead>
-                <TableRow>
-                    <TableCell>Dessert (100g serving)</TableCell>
-                    <TableCell align="right">Calories</TableCell>
-                    <TableCell align="right">Fat&nbsp;(g)</TableCell>
-                    <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-                    <TableCell align="right">Protein&nbsp;(g)</TableCell>
-                </TableRow>
-                </TableHead>
-                <TableBody>
-                {rows.map((row) => (
-                    <TableRow key={row.name}>
-                    <TableCell component="th" scope="row">
-                        {row.name}
-                    </TableCell>
-                    <TableCell align="right">{row.calories}</TableCell>
-                    <TableCell align="right">{row.fat}</TableCell>
-                    <TableCell align="right">{row.carbs}</TableCell>
-                    <TableCell align="right">{row.protein}</TableCell>
-                    </TableRow>
-                ))}
-                </TableBody>
-            </Table>
-            </TableContainer>
-        </div>
-        );
+
+        const {type, data} = this.state;
+        console.log('type: ', type, '\ndata: ', data);
+
+        if(type !== "empty"){
+            return(
+                <div>
+                    <TableContainer component={Paper}>
+                    <Table aria-label="simple table">
+                        <TableHead>
+                        <TableRow>
+                            {columns.map((column) => (
+                                <TableCell key={column.id} align={column.align} style={{ minWidth: column.minWidth }}>
+                                    {column.label}
+                                </TableCell>
+                            ))}
+                        </TableRow>
+                        </TableHead>
+                        <TableBody>
+                            {this.createRows().map((row) => {
+                                return (
+                                    <TableRow hover role="checkbox" tabIndex={-1} key={row.month}>
+                                        {columns.map((column) => {
+                                            const value = row[column.id];
+                                            console.log('inside table: ', row[column.id])
+                                            return (
+                                                <TableCell key={column.id} align={column.align}>
+                                                    {column.format && typeof value === 'number' ? column.format(value) : value}
+                                                </TableCell>
+                                            );
+                                        })}
+                                    </TableRow>
+                                );
+                            })}
+                        </TableBody>
+                    </Table>
+                    </TableContainer>
+                </div>
+            );
+        }else{
+            return(
+                <div></div>
+            );
+        }
+        
     }
 }
