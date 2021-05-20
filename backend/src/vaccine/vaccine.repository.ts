@@ -12,11 +12,10 @@ export class VaccineRepository {
         return this.vaccineModel.findOne(vaccineFilterQuery);
     }
 
-    async find(vaccinesFilterQuery: FilterQuery<v_cert>): Promise<v_cert[]> {
-        const vaccines : v_cert[] = await this.vaccineModel.find(vaccinesFilterQuery).sort({v_cert_id : -1});
+    verifyList(vaccines : v_cert[]) {
         if(vaccines.length !== 0) {
             const records: v_cert[] = vaccines.filter((record : v_cert) => {
-              return record.v_cert_id !== undefined;
+                return record.v_cert_id !== undefined;
             });
             return records;
         }
@@ -25,14 +24,25 @@ export class VaccineRepository {
         }
     }
 
-    async getLatestVaccinationRecordOnly(vaccinesFilterQuery): Promise<v_cert> {
-        const vaccines : v_cert[] = await this.vaccineModel.find(vaccinesFilterQuery).sort({v_cert_id : -1}).limit(1);
+    async find(vaccinesFilterQuery: FilterQuery<v_cert>): Promise<v_cert[]> {
+        const vaccines : v_cert[] = await this.vaccineModel.find(vaccinesFilterQuery).sort({v_cert_id : -1});
+        const result = this.verifyList(vaccines);
+        return result;
+    }
+
+    verifyList_LatestRecord(vaccines : v_cert[]) {
         if (vaccines.length !== 0) {
-           return vaccines[0];
+            return vaccines[0];
         }
         else {
             return null;
         }
+    }
+
+    async getLatestVaccinationRecordOnly(vaccinesFilterQuery): Promise<v_cert> {
+        const vaccines : v_cert[] = await this.vaccineModel.find(vaccinesFilterQuery).sort({v_cert_id : -1}).limit(1);
+        const result = this.verifyList_LatestRecord(vaccines);
+        return result;
     }
 
 
