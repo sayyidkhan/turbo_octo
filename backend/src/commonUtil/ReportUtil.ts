@@ -20,6 +20,11 @@ export interface PerMonth_CTracingListing {
     west : number
 }
 
+export interface PerMonth_VaccinesListing {
+    myList : any[],
+    total_amount : number,
+}
+
 export interface PerWeek_CTracingListing {
     myList : any[],
     week : number,
@@ -32,7 +37,7 @@ export interface PerWeek_CTracingListing {
 
 export abstract class ReportUtil {
 
-    public static createCalendarDict_ForMonthly = (dto : DateCompute) => {
+    public static createDictCtracingForMonthly = (dto : DateCompute) => {
         const dateFrom : number =  dto.date_from.getMonth() + 1;
         const dateTo : number =  dto.date_to.getMonth() + 1;
 
@@ -68,7 +73,35 @@ export abstract class ReportUtil {
         }
     }
 
-    public static createCalendarDict_ForWeekly = () => {
+    public static createDictVaccinesForMonthly = (dto : DateCompute) => {
+        const dateFrom : number =  dto.date_from.getMonth() + 1;
+        const dateTo : number =  dto.date_to.getMonth() + 1;
+
+        const myDict = {};
+
+        if(dateFrom === dateTo) {
+            const district_listing : PerMonth_VaccinesListing = {
+                myList : [],
+                total_amount : 0,
+            };
+            myDict[dateFrom] = district_listing;
+            return myDict;
+        }
+        else{
+            let counter = dateFrom;
+            while (counter != dateTo + 1) {
+                const district_listing : PerMonth_VaccinesListing = {
+                    myList : [],
+                    total_amount : 0,
+                };
+                myDict[counter] = district_listing;
+                counter++;
+            }
+            return myDict;
+        }
+    }
+
+    public static createDictCtracingForWeekly = () => {
         const myDict = {};
 
         let counter = 1;

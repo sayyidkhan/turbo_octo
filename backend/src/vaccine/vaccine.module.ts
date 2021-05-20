@@ -6,6 +6,7 @@ import { VaccineRepository } from "./vaccine.repository";
 import { VaccineService } from "./vaccine.service";
 import {P_UserModule} from "../p_user/p_user.module";
 import {E_UserModule} from "../e_user/e_User.module";
+import {Vaccine_reportService} from "./vaccine_report.service";
 
 @Module({
     imports: [MongooseModule.forFeature([
@@ -14,6 +15,10 @@ import {E_UserModule} from "../e_user/e_User.module";
         E_UserModule,
     ],
     controllers: [VaccineController],
-    providers: [VaccineService, VaccineRepository]
+    providers: [
+        VaccineService,
+        Vaccine_reportService,
+        VaccineRepository
+    ]
 })
 export class VaccineModule {}

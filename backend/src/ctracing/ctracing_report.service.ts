@@ -57,7 +57,7 @@ export class Ctracing_reportService {
         if(c_tracings.length !== 0) {
             const all_districts = await this.locationService.getAllLocationDict();
             //create dict
-            const calendarDict = ReportUtil.createCalendarDict_ForMonthly(dto);
+            const calendarDict = ReportUtil.createDictCtracingForMonthly(dto);
             //sort records by month
             const sortedDict = this.sortRecordsByMonth(c_tracings, calendarDict, all_districts);
             return sortedDict;
@@ -72,7 +72,7 @@ export class Ctracing_reportService {
         if(c_tracings.length !== 0){
             const all_districts = await this.locationService.getAllLocationDict();
             //create dict
-            const calendarDict = ReportUtil.createCalendarDict_ForWeekly();
+            const calendarDict = ReportUtil.createDictCtracingForWeekly();
 
             return calendarDict;
         }

@@ -13,7 +13,16 @@ export class VaccineRepository {
     }
 
     async find(vaccinesFilterQuery: FilterQuery<v_cert>): Promise<v_cert[]> {
-        return this.vaccineModel.find(vaccinesFilterQuery).sort({v_cert_id : -1});
+        const vaccines : v_cert[] = await this.vaccineModel.find(vaccinesFilterQuery).sort({v_cert_id : -1});
+        if(vaccines.length !== 0) {
+            const records: v_cert[] = vaccines.filter((record : v_cert) => {
+              return record.v_cert_id !== undefined;
+            });
+            return records;
+        }
+        else {
+            return [];
+        }
     }
 
     async getLatestVaccinationRecordOnly(vaccinesFilterQuery): Promise<v_cert> {

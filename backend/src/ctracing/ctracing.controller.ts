@@ -148,14 +148,12 @@ export class CtracingController {
       const dtoResult : string | ReportComputeCtracingDto = DateUtil.validateDates(dto,"monthly");
       if(typeof(dtoResult) === "string"){
           //date related errors shown here
-          console.log(dtoResult);
           throw new HttpException(
               dtoResult,
               HttpStatus.BAD_REQUEST);
       }
       else {
           const result = await this.ctracing_reportService.generateMonthlyReport(dtoResult);
-          console.log(dtoResult);
           return result;
       }
   }

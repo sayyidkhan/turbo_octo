@@ -8,6 +8,8 @@ import {p_user} from "../p_user/schemas/p_user.schema";
 import {E_User} from "../e_user/schemas/e_user.schema";
 import {DateUtil} from "../commonUtil/DateUtil";
 import {LatestVaccineDto} from "./dto/latest-vaccine.dto";
+import {ReportComputeCtracingDto, ReportQueryCtracingDto} from "../ctracing/dto/report-ctracing.dto";
+import {Vaccine_reportService} from "./vaccine_report.service";
 
 
 @Controller('vaccines')
@@ -16,6 +18,7 @@ export class VaccineController {
       private readonly VaccineService: VaccineService,
       private readonly p_UserService :  P_UserService,
       private readonly e_UserService : E_UserService,
+      private readonly vaccine_reportService : Vaccine_reportService,
   ) {}
 
 
@@ -89,5 +92,21 @@ export class VaccineController {
           );
       }
   }
+
+    @Post('/report/monthly/')
+    async generateMonthlyReport(@Body() dto: ReportQueryCtracingDto) {
+        const dtoResult : string | ReportComputeCtracingDto = DateUtil.validateDates(dto,"monthly");
+        if(typeof(dtoResult) === "string"){
+            //date related errors shown here
+            throw new HttpException(
+                dtoResult,
+                HttpStatus.BAD_REQUEST);
+        }
+        else {
+            const result = await this.vaccine_reportService.generateMonthlyReport(dtoResult);
+            console.log(dtoResult);
+            return result;
+        }
+    }
 
 }
