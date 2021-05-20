@@ -1,7 +1,7 @@
 import { TextField } from "@material-ui/core";
 import {Component} from "react";
 import './Reports.css';
-import {postMonthlyReport_API, postWeeklyReport_API} from "../issuevaccinecert/api/issuevaccine_api";
+import {postMonthlyCTReport_API, postWeeklyCTReport_API} from "./api/reports_api";
 
 interface IProps {
     getReportRes(reportRes:any) : any;
@@ -16,20 +16,19 @@ enum FrequencyType {
 }
 
 enum ReportType {
-    CT_MONTH = "monthlyCT",
-    CT_WEEK = "weeklyCT",
-    //add vaccination report type below here
+    CT = "CT",
+    Vacc = "Vacc",
 }
 
 function MonthlySearchComponent(props: { date_from: any, onChange: (e: any) => Promise<void>, date_to: any }) {
     return <>
         <div>
             <label>From Date: </label>
-            <TextField name="date_from" type="date" defaultValue={props.date_from} onChange={props.onChange}/>
+            <TextField name="date_from" type="date" value={props.date_from} onChange={props.onChange}/>
         </div>
         <div>
             <label>To Date: </label>
-            <TextField name="date_to" type="date" defaultValue={props.date_to} onChange={props.onChange}/>
+            <TextField name="date_to" type="date" value={props.date_to} onChange={props.onChange}/>
         </div>
     </>;
 }
@@ -69,76 +68,108 @@ function WeekComponent(props: { value: number, onChange: (e: any) => Promise<voi
 export class ReportsFormComponent extends Component<IProps, IState> {
 
     state = {
-        frequencyType : FrequencyType.month,
-        reportType: ReportType.CT_MONTH,
+        actionMessage: '',
+        frequencyType: FrequencyType.month,
+        reportType: ReportType.CT,
         //variables for monthly record
         date_from: new Date(),
         date_to: new Date(),
         //variables for weekly record
-        year : 2021,
-        month : 1,
+        year: 2021,
+        month: 1,
     }
 
     sendData(type:string, keys:any, data:any){
         this.props.getReportRes({type: type, keys: keys, data: data});
     }
 
-    submitHandler = (e: any) => {
+    checkValidation(){
+
+        var dateFormat = require('dateformat');
+        const date_from_str = dateFormat(this.state.date_from, "mm/dd/yyyy");
+        const date_to_str = dateFormat(this.state.date_to, "mm/dd/yyyy");
+
+        const dateFrom : number = new Date(date_from_str).getTime();
+        const dateTo : number = new Date(date_to_str).getTime();
+        const diffDays = Math.floor((dateTo - dateFrom) / (1000 * 60 * 60 * 24));
+
+        if(dateFrom > dateTo) {
+            this.setState({actionMessage: "From Date cannot greater than To Date."});
+            return false;
+        }
+        else if(dateFrom === dateTo) {
+            this.setState({actionMessage: "From Date and To Date cannot be the same day."});
+            return false;
+        }
+        else if(diffDays > 365) {
+            this.setState({actionMessage: "The report duration cannot exceed 1 year range."});
+            return false;
+        }
+        else {
+            this.setState({actionMessage: ''});
+            return true;
+        }
+    }
+
+    submitHandler = async (e: any) => {
         e.preventDefault();
 
-        const myHeaders = new Headers();
-        myHeaders.append("Content-Type", "application/json");
+        if(!this.checkValidation()){
+            return;
+        }
 
         //logic for the month
         if(this.state.frequencyType === FrequencyType.month) {
+
             const dto = {
                 "date_from": this.state.date_from,
                 "date_to": this.state.date_to
             };
 
-            postMonthlyReport_API(dto)
-                .then(res => {
-                    const result =  res.data;
+            if(this.state.reportType === ReportType.CT){
+                await postMonthlyCTReport_API(dto)
+                    .then((res: { data: any; }) => {
+                        const result =  res.data;
 
-                    var keys: string[] = [];
-                    Object.keys(result).forEach(function(key) {
-                        keys.push(key);
-                    });
+                        var keys: string[] = [];
+                        Object.keys(result).forEach(function(key) {
+                            keys.push(key);
+                        });
 
-                    var dateFormat = require('dateformat');
-                    const date_from_str = dateFormat(this.state.date_from, "yyyy-mm-dd");
-                    const date_to_str = dateFormat(this.state.date_to, "yyyy-mm-dd");
-                    this.sendData('monthCT'+date_from_str+date_to_str, keys, result);
-                })
-                .catch(error => console.log('error', error));
+                        var dateFormat = require('dateformat');
+                        const date_from_str = dateFormat(this.state.date_from, "yyyy-mm-dd");
+                        const date_to_str = dateFormat(this.state.date_to, "yyyy-mm-dd");
+                        this.sendData('MCT'+date_from_str+date_to_str, keys, result);
+                    })
+                    .catch((error: any) => console.log('error', error));
+            }
         }
         //logic for the weekly report
         else if(this.state.frequencyType === FrequencyType.week) {
+
             const dto = {
                 month: Number(this.state.month),
                 year : Number(this.state.year),
             };
 
+            if(this.state.reportType === ReportType.CT){
+                await postWeeklyCTReport_API(dto)
+                    .then((res: { data: any }) => {
+                        const result = res.data;
+                        console.log(result);
 
-            postWeeklyReport_API(dto)
-                .then(res => {
-                    const result = res.data;
-                    /*********** extract the data here **********/
-                    console.log(result);
-                    /*********** extract the data here **********/
+                        const keys: string[] = [];
+                        Object.keys(result).forEach(function(key) {
+                            keys.push(key);
+                        });
 
-                    const keys: string[] = [];
-                    Object.keys(result).forEach(function(key) {
-                        keys.push(key);
-                });
-
-                    /*********** need to add the logic for filter on a weekly basis **********/
-                    //this.sendData('monthCT'+date_from_str+date_to_str, keys, result);
-                    /*********** need to add the logic for filter on a weekly basis **********/
-                })
-                .catch(error => console.log('error', error));
+                        const yearStr = this.state.year.toString();
+                        const monthStr = this.state.month.toString();
+                        this.sendData('WCT'+yearStr+monthStr, keys, result);
+                    })
+                    .catch((error: any) => console.log('error', error));
+            }
         }
-
     }
 
     changeHandler = async (e : any) => {
@@ -171,7 +202,6 @@ export class ReportsFormComponent extends Component<IProps, IState> {
             default:
                 return <div></div>;
         }
-
     }
 
     render() {
@@ -184,8 +214,8 @@ export class ReportsFormComponent extends Component<IProps, IState> {
                     <div>
                         <label>Type of Report: </label>
                         <select name="reportType" value={reportType} onChange={this.changeHandler}>
-                            <option value={ReportType.CT_MONTH}>Contact Tracing Report</option>
-                            <option value={ReportType.CT_WEEK}>Contact Tracing Report</option>
+                            <option value={ReportType.CT}>Contact Tracing Report</option>
+                            <option value={ReportType.Vacc}>Vaccination Report</option>
                         </select>
                     </div>
                     <div>
@@ -201,6 +231,7 @@ export class ReportsFormComponent extends Component<IProps, IState> {
                         <button type="submit">Generate</button>
                     </div>
                 </form>
+                <div><p style={{'color': 'red'}}>{this.state.actionMessage}</p></div>
             </div>
         );
     }

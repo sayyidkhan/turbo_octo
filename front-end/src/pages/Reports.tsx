@@ -13,7 +13,6 @@ export default class Reports extends Component {
 
     getReportRes(reportRes : any){
         this.setState({ 'reportRes' : reportRes });
-        console.log('outside:', reportRes);
     }
 
     render() {
