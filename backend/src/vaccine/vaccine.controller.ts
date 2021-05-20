@@ -95,7 +95,7 @@ export class VaccineController {
 
     @Post('/report/monthly/')
     async generateMonthlyReport(@Body() dto: ReportMonthlyQueryCtracingDto) {
-        const dtoResult : string | ReportMonthlyComputeCtracingDto = DateUtil.validateMonthlyQuery(dto,"monthly");
+        const dtoResult : string | ReportMonthlyComputeCtracingDto = DateUtil.validateMonthlyQuery(dto);
         if(typeof(dtoResult) === "string"){
             //date related errors shown here
             throw new HttpException(

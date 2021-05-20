@@ -148,7 +148,7 @@ export class CtracingController {
 
   @Post('/report/monthly/')
   async generateMonthlyReport(@Body() dto: ReportMonthlyQueryCtracingDto): Promise<{}> {
-      const dtoResult : string | ReportMonthlyComputeCtracingDto = DateUtil.validateMonthlyQuery(dto,"monthly");
+      const dtoResult : string | ReportMonthlyComputeCtracingDto = DateUtil.validateMonthlyQuery(dto);
       if(typeof(dtoResult) === "string"){
           console.log(dtoResult);
           //date related errors shown here

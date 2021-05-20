@@ -29,11 +29,11 @@ export abstract class DateUtil {
         return myDate;
     }
 
-    public static validateMonthlyQuery = (dto : DateQuery, report_type : string) => {
+    public static validateMonthlyQuery = (dto : DateQuery) => {
         const dateFrom = DateUtil.convertStrToDate(dto.date_from);
         const dateTo = DateUtil.convertStrToDate(dto.date_to);
 
-        const days_diff = (report_type === "monthly") ? 365 : 31;
+        const days_diff = 365;
 
         if(dateFrom === null){
             return "Invalid date from";
@@ -55,7 +55,6 @@ export abstract class DateUtil {
             else {
                 return rptDto;
             }
-            return ;
         }
     }
 
@@ -85,8 +84,8 @@ export abstract class DateUtil {
     }
 
     public static checkInvalidDateRange(dto : DateCompute) {
-        const dateFrom : number = dto.date_from.getUTCDate();
-        const dateTo : number = dto.date_to.getUTCDate();
+        const dateFrom : number = dto.date_from.getTime();
+        const dateTo : number = dto.date_to.getTime();
 
         if(dateFrom > dateTo) {
             return "date from greater than date to";
