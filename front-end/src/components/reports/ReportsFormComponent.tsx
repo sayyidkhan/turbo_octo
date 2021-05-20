@@ -15,6 +15,12 @@ enum FrequencyType {
     week = "week"
 }
 
+enum ReportType {
+    CT_MONTH = "monthlyCT",
+    CT_WEEK = "weeklyCT",
+    //add vaccination report type below here
+}
+
 function MonthlySearchComponent(props: { date_from: any, onChange: (e: any) => Promise<void>, date_to: any }) {
     return <>
         <div>
@@ -64,7 +70,7 @@ export class ReportsFormComponent extends Component<IProps, IState> {
 
     state = {
         frequencyType : FrequencyType.month,
-        reportType: 'monthlyCT',
+        reportType: ReportType.CT_MONTH,
         //variables for monthly record
         date_from: new Date(),
         date_to: new Date(),
@@ -80,7 +86,7 @@ export class ReportsFormComponent extends Component<IProps, IState> {
     submitHandler = (e: any) => {
         e.preventDefault();
 
-        var myHeaders = new Headers();
+        const myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
 
         //logic for the month
@@ -140,12 +146,17 @@ export class ReportsFormComponent extends Component<IProps, IState> {
     }
 
     queryComponent() {
+        const {date_from, date_to} = this.state;
+        var dateFormat = require('dateformat');
+        const date_from_str = dateFormat(date_from, "yyyy-mm-dd");
+        const date_to_str = dateFormat(date_to, "yyyy-mm-dd");
+
         switch (this.state.frequencyType) {
             case FrequencyType.month:
                 return (
                     <MonthlySearchComponent
-                        date_from={this.state.date_from}
-                        date_to={this.state.date_to}
+                        date_from={date_from_str}
+                        date_to={date_to_str}
                         onChange={this.changeHandler}
                     />
                 );
@@ -164,11 +175,7 @@ export class ReportsFormComponent extends Component<IProps, IState> {
     }
 
     render() {
-
-        const {frequencyType, reportType, date_from, date_to} = this.state;
-        var dateFormat = require('dateformat');
-        const date_from_str = dateFormat(date_from, "yyyy-mm-dd"); 
-        const date_to_str = dateFormat(date_to, "yyyy-mm-dd");
+        const {frequencyType, reportType} = this.state;
 
         return (
             <div className="reports-form">
@@ -177,8 +184,8 @@ export class ReportsFormComponent extends Component<IProps, IState> {
                     <div>
                         <label>Type of Report: </label>
                         <select name="reportType" value={reportType} onChange={this.changeHandler}>
-                            <option value="monthlyCT">Contact Tracing Report</option>
-                            <option value="weeklyCT">Contact Tracing Report</option>
+                            <option value={ReportType.CT_MONTH}>Contact Tracing Report</option>
+                            <option value={ReportType.CT_WEEK}>Contact Tracing Report</option>
                         </select>
                     </div>
                     <div>
