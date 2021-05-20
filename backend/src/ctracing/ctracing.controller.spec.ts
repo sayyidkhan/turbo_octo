@@ -218,9 +218,9 @@ describe('E_User Controller',() => {
     it("c_tracing Controller - POST generateMonthlyReport() (positive)", async () => {
         const dto = new ReportMonthlyQueryCtracingDto();
         const date1 = new Date("1/1/2021");
-        dto.date_to = date1.toLocaleString();
+        dto.date_from = date1.toLocaleString();
         const date2 = new Date("3/3/2021");
-        dto.date_from = date2.toLocaleString();
+        dto.date_to = date2.toLocaleString();
 
         const res = await request(app.getHttpServer())
             .post("/c_tracing/report/monthly/")
