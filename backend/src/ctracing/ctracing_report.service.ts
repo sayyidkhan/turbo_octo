@@ -20,7 +20,6 @@ export class Ctracing_reportService {
         let currMonth = 0;
 
         function districtCounter(locationDict, monthList: PerMonth_CTracingListing) {
-            console.log(locationDict);
             //count district
             if (locationDict !== undefined) {
                 const district = locationDict.district;
@@ -74,7 +73,6 @@ export class Ctracing_reportService {
         let currWeek = 0;
 
         function districtCounter(locationDict, monthList: PerWeek_CTracingListing) {
-            console.log(locationDict);
             //count district
             if (locationDict !== undefined) {
                 const district = locationDict.district;
