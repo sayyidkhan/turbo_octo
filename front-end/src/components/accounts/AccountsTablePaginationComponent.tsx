@@ -43,8 +43,9 @@ export default function AccountsTablePaginationComponent(props : any) {
   };
 
   function createRows() : { e_nric: string, firstname: string, lastname: string, admintype: string }[] {
-    const rows : any[] = props.dataRows;
-    const result = rows.map(data => createData(data));
+    const searchUser = props.searchUser.length === 0 ? "" : props.searchUser;
+    var rows : any[] = searchUser === "" ? props.dataRows : searchUser;
+    var result = rows.map(data => createData(data));
     return (rows.length !== 0) ? result : [];
   }
 

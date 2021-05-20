@@ -1,6 +1,8 @@
 import {Component} from "react";
 import {getAccounts_API} from "./api/accounts_api";
 import AccountsTablePaginationComponent from "./AccountsTablePaginationComponent";
+import SearchAccountComponent from "../searchnric/SearchAccountComponent";
+import './Accounts.css';
 
 function DisplayTotal(props: { status: number, totalRow: number }) {
     return <div>
@@ -23,6 +25,7 @@ export class AccountsTableComponent extends Component<IProps, IState> {
         totalRow: 0,
         result: [],
         prev_listener_counter : 0,
+        e_user : [],
     }
 
     sendData = (selected_nric : string) => {
@@ -41,6 +44,7 @@ export class AccountsTableComponent extends Component<IProps, IState> {
 
     async componentDidUpdate() {
         if(this.state.prev_listener_counter < this.props.listener_counter) {
+            await this.callAPI();
             await this.componentDidMount();
             console.log("re-rendered successfully");
         }
@@ -48,7 +52,7 @@ export class AccountsTableComponent extends Component<IProps, IState> {
 
     async componentDidMount() {
         await this.callAPI();
-        this.setState({ prev_listener_counter : this.props.listener_counter });
+        this.setState({ prev_listener_counter : this.props.listener_counter, e_user: []});
         console.log(this.props.listener_counter);
     }
 
@@ -56,11 +60,16 @@ export class AccountsTableComponent extends Component<IProps, IState> {
         return rows.length;
     } 
 
+    setUser = (result: []) => {
+        this.setState({e_user : [result]});
+    }
+
     render() {
         return (
             <div>
-            <DisplayTotal status={this.state.status} totalRow={this.state.totalRow}/>
-            <AccountsTablePaginationComponent dataRows={this.state.result} selected_nric={this.sendData}/>
+                <DisplayTotal status={this.state.status} totalRow={this.state.totalRow}/>
+                <SearchAccountComponent callback_function={this.setUser}/>
+                <AccountsTablePaginationComponent dataRows={this.state.result} selected_nric={this.sendData} searchUser={this.state.e_user}/>
             </div>
         );
     }
