@@ -29,9 +29,11 @@ export abstract class DateUtil {
         return myDate;
     }
 
-    public static validateDates = (dto : DateQuery) => {
+    public static validateDates = (dto : DateQuery,report_type : string) => {
         const dateFrom = DateUtil.convertStrToDate(dto.date_from);
         const dateTo = DateUtil.convertStrToDate(dto.date_to);
+
+        const days_diff = (report_type === "monthly") ? 365 : 31;
 
         if(dateFrom === null){
             return "Invalid date from";
@@ -47,7 +49,7 @@ export abstract class DateUtil {
             if(typeof(checkInvalidDateRange) === "string") {
                 return checkInvalidDateRange;
             }
-            else if(diffDays > 365) {
+            else if(diffDays > days_diff) {
                 return "exceeded 1 year search range.";
             }
             else {

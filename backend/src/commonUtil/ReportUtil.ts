@@ -20,6 +20,16 @@ export interface PerMonth_CTracingListing {
     west : number
 }
 
+export interface PerWeek_CTracingListing {
+    myList : any[],
+    week : number,
+    total_amount : number,
+    north : number,
+    south : number,
+    east : number,
+    west : number
+}
+
 export abstract class ReportUtil {
 
     public static createCalendarDict_ForMonthly = (dto : DateCompute) => {
@@ -58,4 +68,27 @@ export abstract class ReportUtil {
         }
     }
 
+    public static createCalendarDict_ForWeekly = () => {
+        const myDict = {};
+
+        let counter = 1;
+        let max_week = 4;
+
+        while (counter != max_week + 1) {
+            const district_listing: PerWeek_CTracingListing = {
+                myList: [],
+                week: counter,
+                total_amount: 0,
+                north: 0,
+                south: 0,
+                east: 0,
+                west: 0,
+            };
+
+            myDict[counter] = district_listing;
+            counter++;
+        }
+
+        return myDict;
+    }
 }

@@ -145,7 +145,7 @@ export class CtracingController {
 
   @Post('/report/monthly/')
   async generateMonthlyReport(@Body() dto: ReportQueryCtracingDto) {
-      const dtoResult : string | ReportComputeCtracingDto = DateUtil.validateDates(dto);
+      const dtoResult : string | ReportComputeCtracingDto = DateUtil.validateDates(dto,"monthly");
       if(typeof(dtoResult) === "string"){
           //date related errors shown here
           console.log(dtoResult);
@@ -159,5 +159,24 @@ export class CtracingController {
           return result;
       }
   }
+
+  @Post('/report/weekly/')
+  async generateWeeklyReport(@Body() dto: ReportQueryCtracingDto) {
+      const dtoResult : string | ReportComputeCtracingDto = DateUtil.validateDates(dto,"weekly");
+      if(typeof(dtoResult) === "string"){
+          //date related errors shown here
+          console.log(dtoResult);
+          throw new HttpException(
+              dtoResult,
+              HttpStatus.BAD_REQUEST);
+      }
+      else {
+          const result = await this.ctracing_reportService.generateWeeklyReport(dtoResult);
+          console.log(result);
+          //return result;
+      }
+    }
+
+
 
 }

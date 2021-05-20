@@ -67,4 +67,18 @@ export class Ctracing_reportService {
         }
     }
 
+    async generateWeeklyReport(dto : ReportComputeCtracingDto) {
+        const c_tracings : c_tracing[] = await this.ctracingService.getCtracingByMonthOnly(dto.date_from);
+        if(c_tracings.length !== 0){
+            const all_districts = await this.locationService.getAllLocationDict();
+            //create dict
+            const calendarDict = ReportUtil.createCalendarDict_ForWeekly();
+
+            return calendarDict;
+        }
+        else {
+            return {};
+        }
+    }
+
 }
