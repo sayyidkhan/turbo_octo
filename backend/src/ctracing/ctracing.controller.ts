@@ -112,7 +112,6 @@ export class CtracingController {
   async createCtracing(@Body() dto: CreateCtracingDto): Promise<c_tracing> {
       const locationId : number = dto.location_id;
       const p_nric : string = dto.p_nric;
-      console.log(dto.date);
       const v_date : Date = DateUtil.convertStrToDate(dto.date);
       //check if public / location_id is valid first
       const p_user: p_user = await this.p_UserService.getP_UserById(p_nric);
@@ -148,9 +147,10 @@ export class CtracingController {
   }
 
   @Post('/report/monthly/')
-  async generateMonthlyReport(@Body() dto: ReportMonthlyQueryCtracingDto) {
+  async generateMonthlyReport(@Body() dto: ReportMonthlyQueryCtracingDto): Promise<{}> {
       const dtoResult : string | ReportMonthlyComputeCtracingDto = DateUtil.validateMonthlyQuery(dto,"monthly");
       if(typeof(dtoResult) === "string"){
+          console.log(dtoResult);
           //date related errors shown here
           throw new HttpException(
               dtoResult,
@@ -163,7 +163,7 @@ export class CtracingController {
   }
 
   @Post('/report/weekly/')
-  async generateWeeklyReport(@Body() dto: ReportWeeklyQueryCtracingDto) {
+  async generateWeeklyReport(@Body() dto: ReportWeeklyQueryCtracingDto): Promise<{}> {
       const dtoResult: string | ReportWeeklyQueryCtracingDto = DateUtil.valdiateWeeklyQuery(dto);
       if(typeof(dtoResult) === "string"){
           //date related errors shown here
