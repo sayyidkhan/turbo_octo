@@ -2,7 +2,7 @@ import {Injectable} from "@nestjs/common";
 import {PerMonth_CTracingListing, ReportUtil} from "../commonUtil/ReportUtil";
 import {VaccineService} from "./vaccine.service";
 import {v_cert} from "./schemas/vaccine.schema";
-import {ReportComputeCtracingDto} from "../ctracing/dto/report-ctracing.dto";
+import {ReportMonthlyComputeCtracingDto} from "../ctracing/dto/report-ctracing.dto";
 
 @Injectable()
 export class Vaccine_reportService {
@@ -27,7 +27,7 @@ export class Vaccine_reportService {
         return calendar_dict;
     }
 
-    async generateMonthlyReport(dto : ReportComputeCtracingDto) {
+    async generateMonthlyReport(dto : ReportMonthlyComputeCtracingDto) {
         const c_tracings : v_cert[] = await this.vaccineService.getVaccineByDates(dto.date_from,dto.date_to);
         if(c_tracings.length !== 0) {
             //create dict

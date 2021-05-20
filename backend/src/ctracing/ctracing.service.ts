@@ -34,18 +34,13 @@ export class CtracingService {
         });
     }
 
-    async getCtracingByMonthOnly(date : Date) : Promise<c_tracing[]> {
-        const year = date.getFullYear();
-        const month = date.getMonth() + 1;
-        return this.ctracingRepository.find({ date : {
-                $expr : {
-                    $and: [
-                        {$eq: [{ $year: "$timestamp" }, year]},
-                        {$eq: [{ $month: "$timestamp" }, month]}
-                    ]
-                }
-            }
-        });
+    async getCtracingByMonthOnly(month : number, year : number) : Promise<c_tracing[]> {
+        return this.ctracingRepository.find({ $expr: {
+                $and: [
+                    {$eq: [{ $year: "$date" }, year]},
+                    {$eq: [{ $month: "$date" }, month]},
+                ]
+            }});
     }
 
     async createCtracing(

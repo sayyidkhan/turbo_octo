@@ -1,6 +1,3 @@
-
-
-
 export interface DateQuery {
     date_from : string;
     date_to : string;
@@ -9,6 +6,11 @@ export interface DateQuery {
 export interface DateCompute {
     date_from : Date;
     date_to : Date;
+}
+
+export interface WeeklyQuery {
+    month : number;
+    year : number;
 }
 
 export interface PerMonth_CTracingListing {

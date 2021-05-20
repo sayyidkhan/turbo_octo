@@ -1,4 +1,4 @@
-import {ReportComputeCtracingDto} from "../ctracing/dto/report-ctracing.dto";
+import {ReportMonthlyComputeCtracingDto, ReportWeeklyQueryCtracingDto} from "../ctracing/dto/report-ctracing.dto";
 import {DateCompute, DateQuery} from "./ReportUtil";
 
 export abstract class DateUtil {
@@ -29,7 +29,7 @@ export abstract class DateUtil {
         return myDate;
     }
 
-    public static validateDates = (dto : DateQuery,report_type : string) => {
+    public static validateMonthlyQuery = (dto : DateQuery, report_type : string) => {
         const dateFrom = DateUtil.convertStrToDate(dto.date_from);
         const dateTo = DateUtil.convertStrToDate(dto.date_to);
 
@@ -42,7 +42,7 @@ export abstract class DateUtil {
             return "Invalid date to";
         }
         else {
-            const rptDto = new ReportComputeCtracingDto(dto.date_from,dto.date_to);
+            const rptDto = new ReportMonthlyComputeCtracingDto(dto.date_from,dto.date_to);
             const checkInvalidDateRange = DateUtil.checkInvalidDateRange(rptDto);
             const diffDays = DateUtil.dateDiffInDays(rptDto);
 
@@ -58,6 +58,21 @@ export abstract class DateUtil {
             return ;
         }
     }
+
+    public static valdiateWeeklyQuery = (dto : ReportWeeklyQueryCtracingDto) => {
+        const year = dto.year;
+        const month = dto.month;
+        if(year === undefined || month === undefined || year === null || month === null) {
+            return "no year / date set";
+        }
+        else if(year === 0 || month === 0) {
+            return "year or month is 0";
+        }
+        else {
+            return dto;
+        }
+
+    };
 
     public static dateDiffInDays(dto : DateCompute) {
         const a : Date = dto.date_from;

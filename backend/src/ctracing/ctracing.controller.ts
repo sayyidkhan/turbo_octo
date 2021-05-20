@@ -8,7 +8,11 @@ import {p_user} from "../p_user/schemas/p_user.schema";
 import {Location} from "../location/schemas/location.schema";
 import {ViewCtracingDto} from "./dto/view-ctracing.dto";
 import {DateUtil} from "../commonUtil/DateUtil";
-import {ReportComputeCtracingDto, ReportQueryCtracingDto} from "./dto/report-ctracing.dto";
+import {
+    ReportMonthlyComputeCtracingDto,
+    ReportMonthlyQueryCtracingDto,
+    ReportWeeklyQueryCtracingDto
+} from "./dto/report-ctracing.dto";
 import {Ctracing_reportService} from "./ctracing_report.service";
 import {SweeperUtil} from "../commonUtil/SweeperUtil";
 
@@ -144,8 +148,8 @@ export class CtracingController {
   }
 
   @Post('/report/monthly/')
-  async generateMonthlyReport(@Body() dto: ReportQueryCtracingDto) {
-      const dtoResult : string | ReportComputeCtracingDto = DateUtil.validateDates(dto,"monthly");
+  async generateMonthlyReport(@Body() dto: ReportMonthlyQueryCtracingDto) {
+      const dtoResult : string | ReportMonthlyComputeCtracingDto = DateUtil.validateMonthlyQuery(dto,"monthly");
       if(typeof(dtoResult) === "string"){
           //date related errors shown here
           throw new HttpException(
@@ -159,8 +163,8 @@ export class CtracingController {
   }
 
   @Post('/report/weekly/')
-  async generateWeeklyReport(@Body() dto: ReportQueryCtracingDto) {
-      const dtoResult : string | ReportComputeCtracingDto = DateUtil.validateDates(dto,"weekly");
+  async generateWeeklyReport(@Body() dto: ReportWeeklyQueryCtracingDto) {
+      const dtoResult: string | ReportWeeklyQueryCtracingDto = DateUtil.valdiateWeeklyQuery(dto);
       if(typeof(dtoResult) === "string"){
           //date related errors shown here
           console.log(dtoResult);
@@ -171,7 +175,7 @@ export class CtracingController {
       else {
           const result = await this.ctracing_reportService.generateWeeklyReport(dtoResult);
           console.log(result);
-          //return result;
+          return result;
       }
     }
 
