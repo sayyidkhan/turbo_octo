@@ -11,6 +11,16 @@ export class CTTable extends Component {
         result : []
     }
 
+    async componentDidMount() {
+        await ctracinglist().then(res => {
+            const totalNoofAlerts : number = this.gettotalNoofAlerts(res.data);
+            this.setState({result : res.data , totalNoofAlerts : totalNoofAlerts, status : res.status });
+        }).catch(err => {
+            console.log(err);
+            this.setState({totalNoofAlerts : "backend not connected..." , status : err.status })
+        });
+    }
+
     gettotalNoofAlerts(myAlertList : any[]) : number {
         return myAlertList.length;
     }
