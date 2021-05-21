@@ -1,6 +1,7 @@
 import {Injectable} from "@nestjs/common";
 import {v_cert} from "./schemas/vaccine.schema";
 import {VaccineRepository} from "./vaccine.repository";
+import {c_tracing} from "../ctracing/schemas/ctracing.schema";
 
 @Injectable()
 export class VaccineService {
@@ -37,6 +38,15 @@ export class VaccineService {
                 $lte : date_to,
             }
         });
+    }
+
+    async getVaccineByMonthOnly(month : number, year : number) : Promise<v_cert[]> {
+        return this.vaccineRepository.find({ $expr: {
+                $and: [
+                    {$eq: [{ $year: "$v_date" }, year]},
+                    {$eq: [{ $month: "$v_date" }, month]},
+                ]
+            }});
     }
 
     async createVaccine(p_nric: string, v_date :Date , e_nric : string): Promise<v_cert> {

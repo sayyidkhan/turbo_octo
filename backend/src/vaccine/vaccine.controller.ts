@@ -8,7 +8,11 @@ import {p_user} from "../p_user/schemas/p_user.schema";
 import {E_User} from "../e_user/schemas/e_user.schema";
 import {DateUtil} from "../commonUtil/DateUtil";
 import {LatestVaccineDto} from "./dto/latest-vaccine.dto";
-import {ReportMonthlyComputeCtracingDto, ReportMonthlyQueryCtracingDto} from "../ctracing/dto/report-ctracing.dto";
+import {
+    ReportMonthlyComputeCtracingDto,
+    ReportMonthlyQueryCtracingDto,
+    ReportWeeklyQueryCtracingDto
+} from "../ctracing/dto/report-ctracing.dto";
 import {Vaccine_reportService} from "./vaccine_report.service";
 
 
@@ -105,6 +109,23 @@ export class VaccineController {
         else {
             const result = await this.vaccine_reportService.generateMonthlyReport(dtoResult);
             console.log(dtoResult);
+            return result;
+        }
+    }
+
+    @Post('/report/weekly/')
+    async generateWeeklyReport(@Body() dto: ReportWeeklyQueryCtracingDto): Promise<{}> {
+        const dtoResult: string | ReportWeeklyQueryCtracingDto = DateUtil.valdiateWeeklyQuery(dto);
+        if(typeof(dtoResult) === "string"){
+            //date related errors shown here
+            console.log(dtoResult);
+            throw new HttpException(
+                dtoResult,
+                HttpStatus.BAD_REQUEST);
+        }
+        else {
+            const result = await this.vaccine_reportService.generateWeeklyReport(dtoResult);
+            console.log(result);
             return result;
         }
     }

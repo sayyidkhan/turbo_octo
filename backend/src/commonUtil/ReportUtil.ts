@@ -22,11 +22,6 @@ export interface PerMonth_CTracingListing {
     west : number
 }
 
-export interface PerMonth_VaccinesListing {
-    myList : any[],
-    total_amount : number,
-}
-
 export interface PerWeek_CTracingListing {
     myList : any[],
     week : number,
@@ -35,6 +30,17 @@ export interface PerWeek_CTracingListing {
     south : number,
     east : number,
     west : number
+}
+
+export interface PerMonth_VaccinesListing {
+    myList : any[],
+    total_amount : number,
+}
+
+export interface PerWeek_VaccinesListing {
+    myList : any[],
+    week : number,
+    total_amount : number,
 }
 
 export abstract class ReportUtil {
@@ -126,4 +132,25 @@ export abstract class ReportUtil {
 
         return myDict;
     }
+
+    public static createDictVaccineForWeekly = () => {
+        const myDict = {};
+
+        let counter = 1;
+        let max_week = 4;
+
+        while (counter != max_week + 1) {
+            const district_listing: PerWeek_VaccinesListing = {
+                myList: [],
+                week: counter,
+                total_amount: 0,
+            };
+
+            myDict[counter] = district_listing;
+            counter++;
+        }
+
+        return myDict;
+    }
+
 }

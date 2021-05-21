@@ -177,8 +177,7 @@ export class CtracingController {
           console.log(result);
           return result;
       }
-    }
-
+  }
 
 
 }

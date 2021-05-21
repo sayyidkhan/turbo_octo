@@ -101,4 +101,28 @@ export abstract class DateUtil {
         }
     }
 
+    public static weekSelection(date : Date): number {
+        const day: number = date.getDate();
+        if(day >= 1 && day <= 7) {
+            //week 1
+            return 1;
+        }
+        else if(day >= 8 && day <= 14){
+            //week 2
+            return 2;
+        }
+        else if(day >= 15 && day <= 21){
+            //week 3
+            return 3;
+        }
+        else if(day >= 22 && day <= 31){
+            return 4;
+        }
+        else{
+            //error
+            return null;
+        }
+    }
+
+
 }
