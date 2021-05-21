@@ -2,20 +2,23 @@ import {HttpModule, HttpService, INestApplication} from "@nestjs/common";
 import {Test, TestingModule} from "@nestjs/testing";
 import {AppModule} from "../app.module";
 import * as request from 'supertest';
-import {CtracingController} from "./ctracing.controller";
-import {CtracingModule} from "./ctracing.module";
-import {CtracingService} from "./ctracing.service";
 import {P_UserService} from "../p_user/p_user.service";
-import {LocationService} from "../location/location.service";
-import {Ctracing_reportService} from "./ctracing_report.service";
+import {Vaccine_reportService} from "./vaccine_report.service";
+import {E_UserService} from "../e_user/e_User.service";
+import {P_UserModule} from "../p_user/p_user.module";
+import {E_UserModule} from "../e_user/e_User.module";
+import {v_cert} from "./schemas/vaccine.schema";
 import {Location} from "../location/schemas/location.schema";
-import {c_tracing} from "./schemas/ctracing.schema";
-import {CreateCtracingDto} from "./dto/create-ctracing.dto";
+import {VaccineModule} from "./vaccine.module";
+import {VaccineController} from "./vaccine.controller";
+import {VaccineService} from "./vaccine.service";
+import {CreateVaccineDto} from "./dto/create-vaccine.dto";
 import {p_user} from "../p_user/schemas/p_user.schema";
-import {ReportMonthlyQueryCtracingDto, ReportWeeklyQueryCtracingDto} from "./dto/report-ctracing.dto";
+import {E_User} from "../e_user/schemas/e_user.schema";
+import {ReportMonthlyQueryCtracingDto, ReportWeeklyQueryCtracingDto} from "../ctracing/dto/report-ctracing.dto";
 
 
-class CtracingControllerMock {
+class VaccineControllerMock {
     getAllLocationDict() : {} {
         const location = new Location();
         location.location_id = 123456;
@@ -31,44 +34,48 @@ class CtracingControllerMock {
         myDict[location.location_id] = locationDict;
         return myDict;
     }
-    getOneCtracing() {
-        const ctracing = new c_tracing();
-        ctracing.location_id = 123456;
-        ctracing.date = new Date();
-        ctracing.p_nric = "p_nric";
-        ctracing.ct_id = 1;
-        return ctracing;
+    getOneVaccine(): v_cert {
+        const vCert = new v_cert();
+        vCert.v_cert_id = 1;
+        vCert.p_nric = "p_nric";
+        vCert.e_nric = "e_nric";
+        vCert.v_date = new Date();
+        return vCert;
     }
-    getAllCtracing() {
-        return [this.getOneCtracing()];
+    getVaccineList(): v_cert[] {
+        return [this.getOneVaccine()];
     }
 }
 
-describe('Ctracing Controller',() => {
+describe('Vaccine Controller',() => {
     let app : INestApplication;
     let httpService : HttpService;
 
     const mockGetP_UserById = jest.fn();
-    const mockGetLocationById = jest.fn();
+    const mockGetEnterpriseUserById = jest.fn();
 
     beforeAll(async () => {
-        const controllerMock = new CtracingControllerMock();
+        const controllerMock = new VaccineControllerMock();
 
         const testAppModule : TestingModule = await Test.createTestingModule({
             imports : [
-                CtracingModule,
+                VaccineModule,
+                P_UserModule,
+                E_UserModule,
                 AppModule,
                 HttpModule,
             ],
-            controllers: [CtracingController],
+            controllers: [VaccineController],
             providers : [
-                {provide : CtracingService,
+                {provide : VaccineService,
                     useValue : {
-                        getCtracingByLatestId: jest.fn(() => new CtracingControllerMock().getAllCtracing()),
-                        getCtracingByNric: jest.fn(() => new CtracingControllerMock().getAllCtracing()),
-                        getCtracingById : jest.fn(() => new CtracingControllerMock().getOneCtracing()),
-                        getCtracingByLocationID : jest.fn(() => new CtracingControllerMock().getAllCtracing()),
-                        createCtracing : jest.fn(() => new CtracingControllerMock().getOneCtracing()),
+                        getLatestVaccinationRecordOnly : jest.fn(() => new VaccineControllerMock().getOneVaccine()),
+                        getCtracingByLatestId: jest.fn(() => new VaccineControllerMock().getOneVaccine()),
+                        getVaccineById: jest.fn(() => new VaccineControllerMock().getOneVaccine()),
+                        getVaccineByp_nric: jest.fn(() => new VaccineControllerMock().getVaccineList()),
+                        getVaccineBye_nric: jest.fn(() => new VaccineControllerMock().getVaccineList()),
+                        getAllVaccinationList: jest.fn(() => new VaccineControllerMock().getVaccineList()),
+                        createVaccine : jest.fn(() => new VaccineControllerMock().getOneVaccine()),
                     }
                 },
                 {provide : P_UserService,
@@ -76,14 +83,12 @@ describe('Ctracing Controller',() => {
                         getP_UserById: mockGetP_UserById,
                     }
                 },
-                {provide : LocationService,
+                {provide : E_UserService,
                     useValue : {
-                        getLocationById: mockGetLocationById,
-                        getLocationByDistrict: jest.fn(new CtracingControllerMock().getAllLocationDict),
-                        getAllLocationDict : jest.fn(new CtracingControllerMock().getAllLocationDict),
+                        getEnterpriseUserById: mockGetEnterpriseUserById,
                     }
                 },
-                {provide : Ctracing_reportService,
+                {provide : Vaccine_reportService,
                     useValue : {
                         generateMonthlyReport: jest.fn(),
                         generateWeeklyReport : jest.fn(),
@@ -102,75 +107,77 @@ describe('Ctracing Controller',() => {
         httpService = null;
     });
 
-    it("c_tracing Controller - GET getCtracing()", async () => {
-        const testCase = new CtracingControllerMock().getOneCtracing();
+    it("vaccines Controller - GET getVaccineById()", async () => {
+        const testCase = new VaccineControllerMock().getOneVaccine();
 
         const res = await request(app.getHttpServer())
-            .get(`/c_tracing/${testCase.ct_id}`)
+            .get(`/vaccines/${testCase.v_cert_id}`)
             .expect(200);
         let result = res.status;
         expect(result).toBe(200);
     });
 
-    it("c_tracing Controller - GET getCtracingByNric()", async () => {
-        const testCase = new CtracingControllerMock().getOneCtracing();
+    it("vaccines Controller - GET getVaccineRecordByp_nric()", async () => {
+        const testCase = new VaccineControllerMock().getOneVaccine();
 
         const res = await request(app.getHttpServer())
-            .get(`/c_tracing/searchbynric/${testCase.p_nric}`)
+            .get(`/vaccines/latest_vaccine_record/${testCase.p_nric}`)
             .expect(200);
         let result = res.status;
         expect(result).toBe(200);
     });
 
-    it("c_tracing Controller - GET getCtracings()", async () => {
+    it("vaccines Controller - GET getVaccineByp_nric()", async () => {
+        const testCase = new VaccineControllerMock().getOneVaccine();
+
         const res = await request(app.getHttpServer())
-            .get("/c_tracing/")
+            .get(`/vaccines/p_user/${testCase.p_nric}`)
             .expect(200);
         let result = res.status;
         expect(result).toBe(200);
     });
 
-    it("c_tracing Controller - GET getCtracingsByDistrict()", async () => {
-        const district = "west";
+    it("vaccines Controller - GET getVaccineBye_nric()", async () => {
+        const testCase = new VaccineControllerMock().getOneVaccine();
+
         const res = await request(app.getHttpServer())
-            .get(`/c_tracing/ctracing_by_district/${district}`)
+            .get(`/vaccines/e_user/${testCase.e_nric}`)
             .expect(200);
         let result = res.status;
         expect(result).toBe(200);
     });
 
-    it("c_tracing Controller - GET getCtracingsByLocationId()", async () => {
-        const location_id = "location_id";
+    it("vaccines Controller - GET getAllVaccinationList()", async () => {
         const res = await request(app.getHttpServer())
-            .get(`/c_tracing/ctracing_by_locationid/${location_id}`)
+            .get("/vaccines/")
             .expect(200);
         let result = res.status;
         expect(result).toBe(200);
     });
 
-    it("c_tracing Controller - POST createCtracing() (positive)", async () => {
-        const dto = new CreateCtracingDto();
-        dto.location_id = 123456;
+    it("vaccines Controller - GET createVaccine() (positive)", async () => {
+        const dto = new CreateVaccineDto();
         dto.p_nric = "p_nric";
-        dto.date = new Date().toLocaleString();
+        dto.e_nric = "e_nric";
+        dto.v_date = new Date().toISOString();
 
         const res = await request(app.getHttpServer())
-            .post("/c_tracing/")
+            .post("/vaccines/")
             .send(dto)
             .expect(201);
         let result = res.status;
         expect(result).toBe(201);
     });
 
-    it("c_tracing Controller - POST createCtracing() (negative scenario - 1)", async () => {
-        const dto = new CreateCtracingDto();
-        dto.location_id = 123456;
-        dto.p_nric = "p_nric";
-        dto.date = new Date().toLocaleString();
+    it("vaccines Controller - GET createVaccine() (negative scenario - 1)", async () => {
+        const dto = new CreateVaccineDto();
+        dto.p_nric = null;
+        dto.e_nric = "e_nric";
+        dto.v_date = new Date().toISOString();
 
         mockGetP_UserById.mockReturnValue(null);
         const res = await request(app.getHttpServer())
-            .post("/c_tracing/")
+            .post("/vaccines/")
             .send(dto)
             .expect(400);
         let result = res.status;
@@ -179,34 +186,35 @@ describe('Ctracing Controller',() => {
         expect(text).toContain("public nric invalid. user is trying to enter public nric which doesnt exist in record.");
     });
 
-    it("c_tracing Controller - POST createCtracing() (negative scenario - 2)", async () => {
-        const dto = new CreateCtracingDto();
-        dto.location_id = 123456;
-        dto.p_nric = "p_nric";
-        dto.date = new Date().toLocaleString();
+    it("vaccines Controller - GET createVaccine() (negative scenario - 2)", async () => {
+        const dto = new CreateVaccineDto();
+        dto.p_nric = null;
+        dto.e_nric = "e_nric";
+        dto.v_date = new Date().toISOString();
 
         mockGetP_UserById.mockReturnValue(new p_user());
-        mockGetLocationById.mockReturnValue(null);
+        mockGetEnterpriseUserById.mockReturnValue(null);
         const res = await request(app.getHttpServer())
-            .post("/c_tracing/")
+            .post("/vaccines/")
             .send(dto)
             .expect(400);
         let result = res.status;
         let text = res.text;
         expect(result).toBe(400);
-        expect(text).toContain("location id is invalid. user is trying to enter a location which doesnt exist in record.");
+        expect(text).toContain("enterpise nric invalid. user is trying to enter enterprise nric which doesnt exist in record.");
     });
 
-    it("c_tracing Controller - POST createCtracing() (negative scenario - 3)", async () => {
-        const dto = new CreateCtracingDto();
-        dto.location_id = 123456;
-        dto.p_nric = "p_nric";
-        dto.date = "";
+
+    it("vaccines Controller - GET createVaccine() (negative scenario - 3)", async () => {
+        const dto = new CreateVaccineDto();
+        dto.p_nric = null;
+        dto.e_nric = "e_nric";
+        dto.v_date = "";
 
         mockGetP_UserById.mockReturnValue(new p_user());
-        mockGetLocationById.mockReturnValue(new Location());
+        mockGetEnterpriseUserById.mockReturnValue(new E_User());
         const res = await request(app.getHttpServer())
-            .post("/c_tracing/")
+            .post("/vaccines/")
             .send(dto)
             .expect(400);
         let result = res.status;
@@ -215,7 +223,7 @@ describe('Ctracing Controller',() => {
         expect(text).toContain("date is invalid. please review the date string before sending.");
     });
 
-    it("c_tracing Controller - POST generateMonthlyReport() (positive)", async () => {
+    it("vaccines Controller - POST generateMonthlyReport() (positive)", async () => {
         const dto = new ReportMonthlyQueryCtracingDto();
         const date1 = new Date("1/1/2021");
         dto.date_from = date1.toLocaleString();
@@ -223,50 +231,49 @@ describe('Ctracing Controller',() => {
         dto.date_to = date2.toLocaleString();
 
         const res = await request(app.getHttpServer())
-            .post("/c_tracing/report/monthly/")
+            .post("/vaccines/report/monthly/")
             .send(dto)
             .expect(201);
         let result = res.status;
         expect(result).toBe(201);
     });
 
-    it("c_tracing Controller - POST generateMonthlyReport() (negative)", async () => {
+    it("vaccines Controller - POST generateMonthlyReport() (negative)", async () => {
         const dto = new ReportMonthlyQueryCtracingDto();
         const date1 = new Date("1/1/2021");
         dto.date_to = date1.toLocaleString();
         dto.date_from = "";
 
         const res = await request(app.getHttpServer())
-            .post("/c_tracing/report/monthly/")
+            .post("/vaccines/report/monthly/")
             .send(dto)
             .expect(400);
         let result = res.status;
         expect(result).toBe(400);
     });
 
-    it("c_tracing Controller - POST generateWeeklyReport() (positive)", async () => {
+    it("vaccines Controller - POST generateWeeklyReport() (positive)", async () => {
         const dto = new ReportWeeklyQueryCtracingDto();
         dto.year = 2021;
         dto.month = 5;
 
         const res = await request(app.getHttpServer())
-            .post("/c_tracing/report/weekly/")
+            .post("/vaccines/report/weekly/")
             .send(dto)
             .expect(201);
         let result = res.status;
         expect(result).toBe(201);
     });
 
-    it("c_tracing Controller - POST generateWeeklyReport() (negative)", async () => {
+    it("vaccines Controller - POST generateWeeklyReport() (negative)", async () => {
         const dto = new ReportWeeklyQueryCtracingDto();
 
         const res = await request(app.getHttpServer())
-            .post("/c_tracing/report/weekly/")
+            .post("/vaccines/report/weekly/")
             .send(dto)
             .expect(400);
         let result = res.status;
         expect(result).toBe(400);
     });
-
 
 });

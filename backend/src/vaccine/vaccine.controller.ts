@@ -80,7 +80,7 @@ export class VaccineController {
               errorMsg,
               HttpStatus.BAD_REQUEST);
       }
-      else if(date === null){
+      else if(date === null) {
           const errorMsg = "date is invalid. please review the date string before sending.";
           console.log(errorMsg);
           throw new HttpException(
@@ -98,7 +98,7 @@ export class VaccineController {
   }
 
     @Post('/report/monthly/')
-    async generateMonthlyReport(@Body() dto: ReportMonthlyQueryCtracingDto) {
+    async generateMonthlyReport(@Body() dto: ReportMonthlyQueryCtracingDto): Promise<{}> {
         const dtoResult : string | ReportMonthlyComputeCtracingDto = DateUtil.validateMonthlyQuery(dto);
         if(typeof(dtoResult) === "string"){
             //date related errors shown here
