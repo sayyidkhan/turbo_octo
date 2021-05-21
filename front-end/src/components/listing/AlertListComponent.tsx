@@ -12,6 +12,7 @@ import {activeAlertListOnly} from "./api/activealertstable_api";
 import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
 import IconButton from "@material-ui/core/IconButton";
 import './AlertListComponent.css';
+import {DateUtil} from "../../util/DateUtil";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -38,12 +39,6 @@ const useStyles = makeStyles((theme: Theme) =>
     }),
 );
 
-function formatDate(x: any) {
-    var formattedDate = x.toString();
-    return formattedDate.substring(0,10);
-}
-
-
 function AlertListing(props: any) {
     const classes = useStyles();
     const myList = props.myList;
@@ -54,7 +49,7 @@ function AlertListing(props: any) {
             const title = listItem.alertTitle;
             const description = listItem.alertDetail;
             const date = listItem.alertDate;
-            const dateFormatted = formatDate(date);
+            const dateFormatted = DateUtil.formatDate(date);
             const location_name = listItem.location_name;
             return (
                 <Paper key={id}>

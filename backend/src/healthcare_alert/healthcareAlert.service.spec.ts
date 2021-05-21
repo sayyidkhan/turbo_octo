@@ -1,13 +1,27 @@
 import {Test, TestingModule} from "@nestjs/testing";
 import {AppModule} from "../app.module";
-import {MongooseModule} from "@nestjs/mongoose";
 import {HealthCareAlertRepository} from "./healthcareAlert.repository";
 import {HealthcareAlertService} from "./healthcareAlert.service";
 import {HealthcareAlertModule} from "./healthcareAlert.module";
-import {HealthcareAlert, HealthcareAlertSchema} from "./schemas/healthcareAlert.schema";
-import {PersistUpdateHealthcareAlertsDto, UpdateHealthcareAlertsDto} from "./dto/update-healthcareAlerts.dto";
+import {HealthcareAlert} from "./schemas/healthcareAlert.schema";
+import {UpdateHealthcareAlertsDto} from "./dto/update-healthcareAlerts.dto";
 
-describe("healthcare Repository", () => {
+class HealthcareServiceMock {
+    getOneHealthcareRecord() {
+        const healthcare = new HealthcareAlert();
+        healthcare.e_nric = "e_nric";
+        healthcare.description = "description";
+        healthcare.location_id = 123456;
+        healthcare.healthcareAlertId = 1;
+        healthcare.date = new Date();
+        return healthcare;
+    }
+    getAllHealthcareRecord() {
+        return [this.getOneHealthcareRecord()];
+    }
+}
+
+describe("healthcare Service", () => {
     let repository : HealthCareAlertRepository;
     let service : HealthcareAlertService;
 
@@ -16,7 +30,6 @@ describe("healthcare Repository", () => {
             imports : [
                 HealthcareAlertModule,
                 AppModule,
-                MongooseModule.forFeature([ { name: HealthcareAlert.name, schema: HealthcareAlertSchema }]),
             ],
             providers : [
                 {
@@ -40,18 +53,34 @@ describe("healthcare Repository", () => {
     });
 
     it('test - find()', async () => {
-        await service.getAllHealthcareAlerts();
-        expect(repository.find({})).toBeDefined();
+        const testCase = new HealthcareServiceMock().getAllHealthcareRecord();
+
+        repository.find = jest.fn().mockReturnValue(testCase);
+        const result = await service.getAllHealthcareAlerts();
+        expect(result).toEqual(testCase);
     });
 
     it('test - findOne()', async () => {
-        await service.getHealthcareAlertByID(123456);
-        expect(repository.findOne({})).toBeDefined();
+        const testCase = new HealthcareServiceMock().getOneHealthcareRecord();
+
+        repository.findOne = jest.fn().mockReturnValue(testCase);
+        const result = await service.getHealthcareAlertByID(123456);
+        expect(result).toEqual(testCase);
     });
 
     it('test - getMaxCtracingId()', async () => {
-        await service.getMaxAlertListId();
-        expect(repository.findOne({})).toBeDefined();
+        const testCase = new HealthcareServiceMock().getOneHealthcareRecord().healthcareAlertId;
+
+        repository.getMaxAlertListId = jest.fn().mockReturnValue(testCase);
+        const result = await service.getMaxAlertListId();
+        expect(result).toEqual(testCase);
+    });
+
+    it('test - setHealthCareId()', async () => {
+        const result_positive = service.setHealthCareId(1);
+        expect(result_positive).toBe(2);
+        const result_negative = service.setHealthCareId(0);
+        expect(result_negative).toBe(1)
     });
 
     it('test - create()', async () => {
@@ -62,13 +91,14 @@ describe("healthcare Repository", () => {
         testObj.description = "description";
         testObj.e_nric = "e_nric";
 
-        await service.createNewHealthcareAlerts(
+        repository.create = jest.fn().mockReturnValue(testObj);
+        const result = await service.createNewHealthcareAlerts(
             testObj.date,
             testObj.location_id,
             testObj.description,
             testObj.e_nric,
         );
-        expect(repository.create(testObj)).toBeDefined();
+        expect(result.healthcareAlertId).toEqual(testObj.healthcareAlertId);
     });
 
     it("test findOneAndUpdate()", async () => {
@@ -80,21 +110,10 @@ describe("healthcare Repository", () => {
         testObj.e_nric = "e_nric";
         const dto = new UpdateHealthcareAlertsDto();
         dto.date = testObj.date.toISOString();
-        const persistence = new PersistUpdateHealthcareAlertsDto(dto);
 
-        await service.updateHealthcareAlertByID(testObj.healthcareAlertId,dto);
-        expect(repository.findOneAndUpdate({ healthcareAlertId : testObj.healthcareAlertId },persistence)).toBeDefined();
-    });
-
-    it('test - checkEmptyArray()',async () => {
-        const healthcareAlert = new HealthcareAlert();
-        healthcareAlert.healthcareAlertId = 123456;
-        //check empty array
-        repository.checkEmptyArray([]);
-        expect(repository.checkEmptyArray([])).toEqual(0);
-        //check array with value
-        const result = repository.checkEmptyArray([healthcareAlert]);
-        expect(result).toEqual(healthcareAlert.healthcareAlertId);
+        repository.findOneAndUpdate = jest.fn().mockReturnValue(testObj);
+        const result = await service.updateHealthcareAlertByID(testObj.healthcareAlertId,dto);
+        expect(result.healthcareAlertId).toEqual(testObj.healthcareAlertId);
     });
 
 });

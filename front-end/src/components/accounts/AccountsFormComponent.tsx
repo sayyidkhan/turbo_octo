@@ -24,7 +24,7 @@ export class AccountsFormComponent extends Component<IProps, IState> {
     }
 
     componentDidUpdate(){
-        setTimeout(() => this.setState({actionMessage:''}), 3000);
+        setTimeout(() => this.setState({actionMessage:''}), 5000);
     }
 
     mapDTO = () => {
@@ -42,9 +42,29 @@ export class AccountsFormComponent extends Component<IProps, IState> {
         this.setState({[e.target.name] : e.target.value});
     }
 
+    checkValidation(){
+
+        const {e_nric, firstname, lastname, password, admintype} = this.state;
+
+        if(e_nric.trim() === '' || firstname.trim() === '' || lastname.trim() === '' || password.trim() === '' || admintype.trim() === ''){
+            return false;
+        }
+        return true;
+    }
+
     submitHandler = (e: any) => {
         e.preventDefault();
         const dto  = this.mapDTO();
+
+        if(!this.checkValidation()){
+            const result = (
+                <p style={{'color': 'red'}}>
+                    Please fill in all the fields.
+                </p>
+            );
+            this.setState({'actionMessage': result});
+            return;
+        }
 
         if(this.state.action === "C"){ //create account
             axios.post("http://localhost:5000/e_user", dto)

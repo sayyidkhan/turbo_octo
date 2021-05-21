@@ -1,4 +1,3 @@
-import * as React from "react";
 import {Component} from "react";
 import {searchnric_API} from "./api/searchnric_api";
 import './SearchNRICComponent.css';
@@ -18,7 +17,6 @@ export default class SearchNRIC extends Component<SearchNricProps> {
 
     state = {
         p_nric: '',
-        //only will be used to hold the outcome of the data
         result : [],
         result_statement : '',
     }
@@ -43,15 +41,7 @@ export default class SearchNRIC extends Component<SearchNricProps> {
             .catch(err => {
                 console.log(err);
                 this.updateStatement();
-                /*alert("Incorrect NRIC! please fill up again.")*/
             });
-         //const outcome = postIssueAlerts_API(this.state);
-         //outcome.then(res => {
-          //   console.log(res);
-         //}).catch(err => {
-          //  console.log(err);
-         //});
-
     }
 
     updateStatement = () => {

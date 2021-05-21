@@ -8,6 +8,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
+import {DateUtil} from "../../util/DateUtil";
 
 /* Checked-in table */ 
 interface CTraceColumn {
@@ -24,14 +25,11 @@ const columns: CTraceColumn[] = [
     { id: 'p_nric', label: 'NRIC', minWidth: 80 },
 ];
 
-function formatDate(x: any) {
-    var formattedDate = x.toString();
-    return formattedDate.substring(0,10);
-}
 
-function createData(parameters: { ct_id: number, p_nric: string, location_name: string, date: number}) {
+
+function createData(parameters: { ct_id: number, p_nric: string, location_name: string, date: string}) {
     let {ct_id, p_nric, location_name, date} = parameters;
-    return { ct_id: ct_id, p_nric: p_nric, location_name: location_name, date: formatDate(date) };
+    return { ct_id: ct_id, p_nric: p_nric, location_name: location_name, date: DateUtil.formatDate(date) };
 }
 
 const useStyles = makeStyles({

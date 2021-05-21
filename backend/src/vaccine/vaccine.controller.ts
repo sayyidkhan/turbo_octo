@@ -8,6 +8,12 @@ import {p_user} from "../p_user/schemas/p_user.schema";
 import {E_User} from "../e_user/schemas/e_user.schema";
 import {DateUtil} from "../commonUtil/DateUtil";
 import {LatestVaccineDto} from "./dto/latest-vaccine.dto";
+import {
+    ReportMonthlyComputeCtracingDto,
+    ReportMonthlyQueryCtracingDto,
+    ReportWeeklyQueryCtracingDto
+} from "../ctracing/dto/report-ctracing.dto";
+import {Vaccine_reportService} from "./vaccine_report.service";
 
 
 @Controller('vaccines')
@@ -16,6 +22,7 @@ export class VaccineController {
       private readonly VaccineService: VaccineService,
       private readonly p_UserService :  P_UserService,
       private readonly e_UserService : E_UserService,
+      private readonly vaccine_reportService : Vaccine_reportService,
   ) {}
 
 
@@ -73,7 +80,7 @@ export class VaccineController {
               errorMsg,
               HttpStatus.BAD_REQUEST);
       }
-      else if(date === null){
+      else if(date === null) {
           const errorMsg = "date is invalid. please review the date string before sending.";
           console.log(errorMsg);
           throw new HttpException(
@@ -89,5 +96,38 @@ export class VaccineController {
           );
       }
   }
+
+    @Post('/report/monthly/')
+    async generateMonthlyReport(@Body() dto: ReportMonthlyQueryCtracingDto): Promise<{}> {
+        const dtoResult : string | ReportMonthlyComputeCtracingDto = DateUtil.validateMonthlyQuery(dto);
+        if(typeof(dtoResult) === "string"){
+            //date related errors shown here
+            throw new HttpException(
+                dtoResult,
+                HttpStatus.BAD_REQUEST);
+        }
+        else {
+            const result = await this.vaccine_reportService.generateMonthlyReport(dtoResult);
+            console.log(dtoResult);
+            return result;
+        }
+    }
+
+    @Post('/report/weekly/')
+    async generateWeeklyReport(@Body() dto: ReportWeeklyQueryCtracingDto): Promise<{}> {
+        const dtoResult: string | ReportWeeklyQueryCtracingDto = DateUtil.valdiateWeeklyQuery(dto);
+        if(typeof(dtoResult) === "string"){
+            //date related errors shown here
+            console.log(dtoResult);
+            throw new HttpException(
+                dtoResult,
+                HttpStatus.BAD_REQUEST);
+        }
+        else {
+            const result = await this.vaccine_reportService.generateWeeklyReport(dtoResult);
+            console.log(result);
+            return result;
+        }
+    }
 
 }

@@ -9,6 +9,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
 import './alertstable.css';
+import {DateUtil} from "../../util/DateUtil";
 
 interface AlertColumn {
     id: 'alertTitle' | 'alertDetail' | 'alertDate' | 'active' | 'location_name';
@@ -49,15 +50,10 @@ function sliceArray(arr1: any[]) {
     }
 }
 
-function formatDate(x: any) {
-    var formattedDate = x.toString();
-    return formattedDate.substring(0,10);
-}
-
-function createData(parameters: { alertTitle: string, alertDetail: string, alertDate: number, active: boolean, location_name: string, alertListId: number }) {
+function createData(parameters: { alertTitle: string, alertDetail: string, alertDate: string, active: boolean, location_name: string, alertListId: number }) {
     let {alertTitle, alertDetail, alertDate, active, location_name, alertListId} = parameters;
 
-    return { alertTitle: alertTitle, alertDetail: alertDetail, alertDate: formatDate(alertDate), active: checkBoolean(active), location_name: location_name, alertListId: alertListId };
+    return { alertTitle: alertTitle, alertDetail: alertDetail, alertDate: DateUtil.formatDate(alertDate), active: checkBoolean(active), location_name: location_name, alertListId: alertListId };
 }
 
 const useStyles = makeStyles({

@@ -106,6 +106,15 @@ describe("vaccine service", () => {
         expect(result).toEqual(testCase);
     });
 
+    it('test - getVaccineByMonthOnly()', async () => {
+        const testCase = new VaccineServiceMock().getVaccinesList();
+        const date = new Date();
+
+        repository.find = jest.fn().mockReturnValue(testCase);
+        const result = await service.getVaccineByMonthOnly(date.getMonth(),date.getFullYear());
+        expect(result).toEqual(testCase);
+    });
+
     it('test - createVaccine()', async () => {
         const testCase = new VaccineServiceMock().getOneVaccine();
 

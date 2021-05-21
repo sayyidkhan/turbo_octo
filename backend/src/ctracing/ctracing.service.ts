@@ -34,6 +34,15 @@ export class CtracingService {
         });
     }
 
+    async getCtracingByMonthOnly(month : number, year : number) : Promise<c_tracing[]> {
+        return this.ctracingRepository.find({ $expr: {
+                $and: [
+                    {$eq: [{ $year: "$date" }, year]},
+                    {$eq: [{ $month: "$date" }, month]},
+                ]
+            }});
+    }
+
     async createCtracing(
         p_nric: string,
         location_id:number,

@@ -28,7 +28,6 @@ export class CTTable extends Component {
     render() {
         return(
             <div>
-                {/*<HomeAlertsTable myList={this.state.result}/>*/}
                 <CTPagination myList={this.state.result}/>
             </div>
         );
