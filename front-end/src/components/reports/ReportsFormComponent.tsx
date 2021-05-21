@@ -85,27 +85,36 @@ export class ReportsFormComponent extends Component<IProps, IState> {
 
     checkValidation(){
 
-        var dateFormat = require('dateformat');
-        const date_from_str = dateFormat(this.state.date_from, "mm/dd/yyyy");
-        const date_to_str = dateFormat(this.state.date_to, "mm/dd/yyyy");
+        if(this.state.frequencyType === FrequencyType.month){
+            var dateFormat = require('dateformat');
+            const date_from_str = dateFormat(this.state.date_from, "mm/dd/yyyy");
+            const date_to_str = dateFormat(this.state.date_to, "mm/dd/yyyy");
 
-        const dateFrom : number = new Date(date_from_str).getTime();
-        const dateTo : number = new Date(date_to_str).getTime();
-        const diffDays = Math.floor((dateTo - dateFrom) / (1000 * 60 * 60 * 24));
+            const dateFrom : number = new Date(date_from_str).getTime();
+            const dateTo : number = new Date(date_to_str).getTime();
+            const diffDays = Math.floor((dateTo - dateFrom) / (1000 * 60 * 60 * 24));
 
-        if(dateFrom > dateTo) {
-            this.setState({actionMessage: "From Date cannot greater than To Date."});
-            return false;
-        }
-        else if(dateFrom === dateTo) {
-            this.setState({actionMessage: "From Date and To Date cannot be the same day."});
-            return false;
-        }
-        else if(diffDays > 365) {
-            this.setState({actionMessage: "The report duration cannot exceed 1 year range."});
-            return false;
-        }
-        else {
+            if(dateFrom > dateTo) {
+                this.setState({actionMessage: "From Date cannot greater than To Date."});
+                return false;
+            }
+            else if(dateFrom === dateTo) {
+                this.setState({actionMessage: "From Date and To Date cannot be the same day."});
+                return false;
+            }
+            else if(diffDays < 31) {
+                this.setState({actionMessage: "The report duration cannot less than 1 month."});
+                return false;
+            }
+            else if(diffDays > 365) {
+                this.setState({actionMessage: "The report duration cannot exceed 1 year range."});
+                return false;
+            }
+            else {
+                this.setState({actionMessage: ''});
+                return true;
+            }
+        }else {
             this.setState({actionMessage: ''});
             return true;
         }
