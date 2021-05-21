@@ -1,7 +1,7 @@
 import { TextField } from "@material-ui/core";
 import {Component} from "react";
 import './Reports.css';
-import {postMonthlyCTReport_API, postWeeklyCTReport_API} from "./api/reports_api";
+import {postMonthlyCTReport_API, postWeeklyCTReport_API, postMonthlyVaccReport_API, postWeeklyVaccReport_API} from "./api/reports_api";
 
 interface IProps {
     getReportRes(reportRes:any) : any;
@@ -73,7 +73,7 @@ export class ReportsFormComponent extends Component<IProps, IState> {
         reportType: ReportType.CT,
         //variables for monthly record
         date_from: new Date(),
-        date_to: new Date(),
+        date_to: new Date(new Date().setMonth(new Date().getMonth()+1)),
         //variables for weekly record
         year: 2021,
         month: 1,
@@ -145,10 +145,34 @@ export class ReportsFormComponent extends Component<IProps, IState> {
                             keys.push(key);
                         });
 
+                        if(keys.length === 0){
+                            this.setState({actionMessage: 'No result found.'});
+                        }
+
                         var dateFormat = require('dateformat');
                         const date_from_str = dateFormat(this.state.date_from, "yyyy-mm-dd");
                         const date_to_str = dateFormat(this.state.date_to, "yyyy-mm-dd");
                         this.sendData('MCT'+date_from_str+date_to_str, keys, result);
+                    })
+                    .catch((error: any) => console.log('error', error));
+
+            }else if(this.state.reportType === ReportType.Vacc){
+                await postMonthlyVaccReport_API(dto)
+                    .then((res: { data: any; }) => {
+                        const result =  res.data;
+                        var keys: string[] = [];
+                        Object.keys(result).forEach(function(key) {
+                            keys.push(key);
+                        });
+
+                        if(keys.length === 0){
+                            this.setState({actionMessage: 'No result found.'});
+                        }
+
+                        var dateFormat = require('dateformat');
+                        const date_from_str = dateFormat(this.state.date_from, "yyyy-mm-dd");
+                        const date_to_str = dateFormat(this.state.date_to, "yyyy-mm-dd");
+                        this.sendData('MVA'+date_from_str+date_to_str, keys, result);
                     })
                     .catch((error: any) => console.log('error', error));
             }
@@ -172,9 +196,34 @@ export class ReportsFormComponent extends Component<IProps, IState> {
                             keys.push(key);
                         });
 
+                        if(keys.length === 0){
+                            this.setState({actionMessage: 'No result found.'});
+                        }
+
                         const yearStr = this.state.year.toString();
                         const monthStr = this.state.month.toString();
                         this.sendData('WCT'+yearStr+monthStr, keys, result);
+                    })
+                    .catch((error: any) => console.log('error', error));
+
+            }else if(this.state.reportType === ReportType.Vacc){
+                 await postWeeklyVaccReport_API(dto)
+                    .then((res: { data: any }) => {
+                        const result = res.data;
+                        console.log(result);
+
+                        const keys: string[] = [];
+                        Object.keys(result).forEach(function(key) {
+                            keys.push(key);
+                        });
+
+                        if(keys.length === 0){
+                            this.setState({actionMessage: 'No result found.'});
+                        }
+
+                        const yearStr = this.state.year.toString();
+                        const monthStr = this.state.month.toString();
+                        this.sendData('WVA'+yearStr+monthStr, keys, result);
                     })
                     .catch((error: any) => console.log('error', error));
             }

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -58,6 +58,23 @@ export default class MonthlyCTReportComponent extends Component<IProps, IState> 
 
     createData(parameters: { month: string, north: number, south: number, east: number, west: number, total_amount: number}) {
         let {month, north, south, east, west, total_amount} = parameters;
+        
+        switch(month){
+            case "1": month = "Jan"; break;
+            case "2": month = "Feb"; break;
+            case "3": month = "Mar"; break;
+            case "4": month = "Apr"; break;
+            case "5": month = "May"; break;
+            case "6": month = "Jun"; break;
+            case "7": month = "Jul"; break;
+            case "8": month = "Aug"; break;
+            case "9": month = "Sep"; break;
+            case "10": month = "Oct"; break;
+            case "11": month = "Nov"; break;
+            case "12": month = "Dec"; break;
+            default: month = "Jan"; 
+        }
+
         return { month, north, south, east, west, total_amount };
     }
 
@@ -76,10 +93,7 @@ export default class MonthlyCTReportComponent extends Component<IProps, IState> 
     }
 
     render() {
-
-        const {type, data} = this.state;
-
-        if(type !== "empty"){
+        if(this.state.type !== "empty" && this.state.keys.length !== 0){
             return(
                 <div>
                     <TableContainer component={Paper}>

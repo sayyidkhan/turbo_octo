@@ -2,6 +2,8 @@ import { Component } from 'react';
 import './Reports.css';
 import MonthlyCTReportComponent from './MonthlyCTReportComponent';
 import WeeklyCTReportComponent from './WeeklyCTReportComponent';
+import MonthlyVaccReportComponent from './MonthlyVaccReportComponent';
+import WeeklyVaccReportComponent from './WeeklyVaccReportComponent';
 
 interface IProps {
     reportRes : any;
@@ -47,12 +49,12 @@ export class ReportsResultComponent extends Component<IProps, IState> {
                 }
                 case "MVA":{
                     return(
-                        <MonthlyCTReportComponent reportRes={this.props.reportRes}/>
+                        <MonthlyVaccReportComponent reportRes={this.props.reportRes}/>
                     );
                 }
                 case "WVA":{
                     return(
-                        <MonthlyCTReportComponent reportRes={this.props.reportRes}/>
+                        <WeeklyVaccReportComponent reportRes={this.props.reportRes}/>
                     );
                 }
             }

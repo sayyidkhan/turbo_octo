@@ -76,10 +76,7 @@ export default class WeeklyCTReportComponent extends Component<IProps, IState> {
     }
 
     render() {
-
-        const {type, data} = this.state;
-
-        if(type !== "empty"){
+        if(this.state.type !== "empty" && this.state.keys.length !== 0){
             return(
                 <div>
                     <TableContainer component={Paper}>
