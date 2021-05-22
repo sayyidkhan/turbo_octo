@@ -2,7 +2,7 @@
 import csv
 import json
 import os
-
+import datetime
 #filepath setup
 script_dir = os.path.dirname(__file__)
 
@@ -62,6 +62,7 @@ def read_csvfile(csv_filepath, mongodbtxt_filepath):
         #convert ct_id from string to int
         for row in myDict:
             row['ct_id'] = int(row['ct_id'])
+            row['date'] = 'new Date("' + str(row['date']) + '")'
         #readList(myDict)
         ########################################
         #2. transform dict into lines of string (to be inserted into template)

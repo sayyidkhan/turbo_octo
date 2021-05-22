@@ -5,5 +5,5 @@ db.c_tracing.insert({
     "ct_id": 1,
     "p_nric": "S7599799Z",
     "location_id": 1,
-    "date": ""
+    "date": "2021-05-21T12:00:00-00:00"
 });
