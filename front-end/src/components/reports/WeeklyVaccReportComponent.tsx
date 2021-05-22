@@ -92,11 +92,50 @@ export default class WeeklyVaccReportComponent extends React.Component<IProps, I
         return { week, total_amount };
     }
 
+    monthToString(month : string){
+        switch(month){
+            case "1": return "Jan"; 
+            case "2": return "Feb"; 
+            case "3": return "Mar"; 
+            case "4": return "Apr"; 
+            case "5": return "May"; 
+            case "6": return "Jun"; 
+            case "7": return "Jul"; 
+            case "8": return "Aug"; 
+            case "9": return "Sep"; 
+            case "10": return "Oct"; 
+            case "11": return "Nov"; 
+            case "12": return "Dec"; 
+            default: return "Jan"; 
+        }
+    }
+
     public render(): React.ReactNode {
 
-        if(this.state.type !== "empty" && this.state.keys.length !== 0){
+        const type = this.state.type;
+
+        if(type !== "empty" && this.state.keys.length !== 0){
             return (
                 <div>
+                    <div>
+                        <h2>Weekly Vaccination Report for {this.monthToString(type.slice(-1))} {type.substring(3,7)}</h2>
+                        <Paper>
+                            <Chart data={chartData} >
+                            <ValueScale name="total_amount" />
+
+                            <ArgumentAxis />
+                            <ValueAxis scaleName="total_amount" showGrid={false} showLine={true} showTicks={true} />
+
+                            <BarSeries
+                                name="Units Sold"
+                                valueField="total_amount"
+                                argumentField="week"
+                                scaleName="total_amount"
+                            />
+                            </Chart>
+                        </Paper>
+                    </div>
+
                     <div className="small-table">
                         <TableContainer component={Paper}>
                         <Table aria-label="simple table">
@@ -127,27 +166,6 @@ export default class WeeklyVaccReportComponent extends React.Component<IProps, I
                             </TableBody>
                         </Table>
                         </TableContainer>
-                    </div>
-
-                    <div>
-                        <Paper>
-                            <Chart
-                            data={chartData}
-                            >
-                            <ValueScale name="total_amount" />
-
-                            <ArgumentAxis />
-                            <ValueAxis scaleName="total_amount" showGrid={false} showLine={true} showTicks={true} />
-
-                            <BarSeries
-                                name="Units Sold"
-                                valueField="total_amount"
-                                argumentField="week"
-                                scaleName="total_amount"
-                            />
-
-                            </Chart>
-                        </Paper>
                     </div>
                 </div>
             );

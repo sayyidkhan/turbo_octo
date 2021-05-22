@@ -75,10 +75,32 @@ export default class WeeklyCTReportComponent extends Component<IProps, IState> {
         });
     }
 
+    monthToString(month : string){
+        switch(month){
+            case "1": return "Jan"; 
+            case "2": return "Feb"; 
+            case "3": return "Mar"; 
+            case "4": return "Apr"; 
+            case "5": return "May"; 
+            case "6": return "Jun"; 
+            case "7": return "Jul"; 
+            case "8": return "Aug"; 
+            case "9": return "Sep"; 
+            case "10": return "Oct"; 
+            case "11": return "Nov"; 
+            case "12": return "Dec"; 
+            default: return "Jan"; 
+        }
+    }
+
     render() {
-        if(this.state.type !== "empty" && this.state.keys.length !== 0){
+
+        const type = this.state.type;
+
+        if(type !== "empty" && this.state.keys.length !== 0){
             return(
                 <div>
+                    <h2>Weekly Contact Tracing Report for {this.monthToString(type.slice(-1))} {type.substring(3,7)}</h2>
                     <TableContainer component={Paper}>
                     <Table aria-label="simple table">
                         <TableHead>

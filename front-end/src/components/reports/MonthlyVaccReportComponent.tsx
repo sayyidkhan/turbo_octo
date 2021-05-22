@@ -102,9 +102,31 @@ export default class MonthlyVaccReportComponent extends React.Component<IProps, 
 
     public render(): React.ReactNode {
 
-        if(this.state.type !== "empty" && this.state.keys.length !== 0){
+        const type = this.state.type;
+
+        if(type !== "empty" && this.state.keys.length !== 0){
             return (
                 <div>
+
+                    <div>
+                        <h2>Monthly Vaccination Report from {type.substring(3,13)} to {type.substring(13,23)}</h2>
+                        <Paper>
+                            <Chart data={chartData} >
+                            <ValueScale name="total_amount" />
+
+                            <ArgumentAxis />
+                            <ValueAxis scaleName="total_amount" showGrid={false} showLine={true} showTicks={true} />
+
+                            <BarSeries
+                                name="Total"
+                                valueField="total_amount"
+                                argumentField="month"
+                                scaleName="total_amount"
+                            />
+                            </Chart>
+                        </Paper>
+                    </div>
+               
                     <div className="small-table">
                         <TableContainer component={Paper}>
                         <Table aria-label="simple table">
@@ -137,26 +159,6 @@ export default class MonthlyVaccReportComponent extends React.Component<IProps, 
                         </TableContainer>
                     </div>
 
-                    <div>
-                        <Paper>
-                            <Chart
-                            data={chartData}
-                            >
-                            <ValueScale name="total_amount" />
-
-                            <ArgumentAxis />
-                            <ValueAxis scaleName="total_amount" showGrid={false} showLine={true} showTicks={true} />
-
-                            <BarSeries
-                                name="Units Sold"
-                                valueField="total_amount"
-                                argumentField="month"
-                                scaleName="total_amount"
-                            />
-
-                            </Chart>
-                        </Paper>
-                    </div>
                 </div>
             );
         } else {

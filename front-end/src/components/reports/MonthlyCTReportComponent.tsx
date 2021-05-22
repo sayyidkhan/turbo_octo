@@ -93,9 +93,13 @@ export default class MonthlyCTReportComponent extends Component<IProps, IState> 
     }
 
     render() {
-        if(this.state.type !== "empty" && this.state.keys.length !== 0){
+
+        const type = this.state.type;
+        
+        if(type !== "empty" && this.state.keys.length !== 0){
             return(
                 <div>
+                    <h2>Monthly Contact Tracing Report from {type.substring(3,13)} to {type.substring(13,23)}</h2>
                     <TableContainer component={Paper}>
                     <Table aria-label="simple table">
                         <TableHead>
