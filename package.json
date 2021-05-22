@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "@devexpress/dx-react-chart-material-ui": "^2.7.5",
-    "dateformat": "^4.5.1"
-  }
-}
