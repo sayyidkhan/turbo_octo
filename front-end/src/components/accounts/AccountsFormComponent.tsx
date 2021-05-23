@@ -23,10 +23,6 @@ export class AccountsFormComponent extends Component<IProps, IState> {
         'action': 'C'
     }
 
-    componentDidUpdate(){
-        setTimeout(() => this.setState({actionMessage:''}), 5000);
-    }
-
     mapDTO = () => {
         const dto = {
             'e_nric': this.state.e_nric, 
@@ -45,8 +41,24 @@ export class AccountsFormComponent extends Component<IProps, IState> {
     checkValidation(){
 
         const {e_nric, firstname, lastname, password, admintype} = this.state;
+        const nric_format = /^[A-Z][0-9]{7}[A-Z]$/;
 
         if(e_nric.trim() === '' || firstname.trim() === '' || lastname.trim() === '' || password.trim() === '' || admintype.trim() === ''){
+            const result = (
+                <p style={{'color': 'red'}}>
+                    Please fill in all the fields.
+                </p>
+            );
+            this.setState({'actionMessage': result});
+            return false;
+
+        }else if(!nric_format.test(e_nric.trim())){
+            const result = (
+                <p style={{'color': 'red'}}>
+                    The NRIC is invalid. 
+                </p>
+            );
+            this.setState({'actionMessage': result});
             return false;
         }
         return true;
@@ -57,12 +69,6 @@ export class AccountsFormComponent extends Component<IProps, IState> {
         const dto  = this.mapDTO();
 
         if(!this.checkValidation()){
-            const result = (
-                <p style={{'color': 'red'}}>
-                    Please fill in all the fields.
-                </p>
-            );
-            this.setState({'actionMessage': result});
             return;
         }
 
@@ -78,6 +84,12 @@ export class AccountsFormComponent extends Component<IProps, IState> {
                 })
                 .catch(err => {
                     console.log(err);
+                    const result = (
+                        <p style={{'color': 'red'}}>
+                            The NRIC is duplicated. 
+                        </p>
+                    );
+                    this.setState({'actionMessage': result});
                 });
 
         }else if(this.state.action === "U"){ //update account
@@ -112,8 +124,6 @@ export class AccountsFormComponent extends Component<IProps, IState> {
         }
 
         this.handleFormReset();
-
-
     }
 
     handleFormReset  = () => { 
