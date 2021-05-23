@@ -7,7 +7,7 @@ export default class Dashboard extends Component {
     render() {
         return (
             <div className="dashboard-container-general">
-                <h1>Contact tracing</h1>
+                <h1>Contact Tracing</h1>
                 <div className="under-page-title-div">
                     <CurrentLoginUserComponent/>
                 </div>

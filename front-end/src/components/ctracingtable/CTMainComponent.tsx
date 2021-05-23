@@ -32,7 +32,7 @@ export default class CTMainComponent extends Component {
                 </div>
 
                 <div className="dashboard-tableContainer-div">
-                    <h2>Contact tracing records</h2>
+                    <h2>Contact Tracing Records</h2>
                     <div className="searchtable-typical-content-div">
                         <Box justifyContent="center" m={1} p={0} bgcolor="background.paper">
                             <Box p={1} m={1} bgcolor="white.100">
