@@ -1,24 +1,22 @@
 import {Component} from "react";
 import axios from 'axios';
-import * as React from "react";
 import './UpdateCovidStatusComponent.css';
 
 export class UpdateCovidStatus extends Component {
 
     state = {
         'p_nric': '',
-        'covid_status': '',
-        //only will be used to hold the outcome of the data
-        'updateCovidStatus' : ''
+        'covid_status': 'true',
+        'actionMessage' : ''
     }
 
     onUpdateCovidStatusID = (updatedInfo : any) => {
         const result = (
-            <p style={{'fontSize' : 14}}>Citizen Covid-19 status updated successfully.<br/>
+            <p style={{'color' : 'green'}}>
+                Covid-19 status for citizen with NRIC {updatedInfo.p_nric} updated successfully.<br/>
             </p>
         );
-        this.setState({'updateCovidStatus' : result});
-        console.log(updatedInfo);
+        this.setState({'actionMessage' : result});
     }
 
     changeHandler = (e : any) => {
@@ -26,19 +24,16 @@ export class UpdateCovidStatus extends Component {
     }
 
     mapDTO = () => {
-        //backend only accept this data shape
         const dto = {'covid_status': this.state.covid_status};
-        //purge any existing data, if there is any
-        this.setState({'updateCovidStatus' : ''});
+        this.setState({'actionMessage' : ''});
         return dto;
     }
 
     submitHandler = (e: any) => {
         e.preventDefault();
-        //map data to DTO object for sending //
         const dto  = this.mapDTO();
-        //map data to DTO object for sending //
-        const p_nric = this.state.p_nric
+        const p_nric = this.state.p_nric;
+
         axios.patch(`http://localhost:5000/p_user/${p_nric}`, dto)
             .then(res=> {
                 console.log(res);
@@ -46,33 +41,38 @@ export class UpdateCovidStatus extends Component {
             })
             .catch(err => {
                 console.log(err);
-                alert("Incomplete form or incorrect input! Please check and submit again!")
+                const result = (
+                    <p style={{'color' : 'red'}}>
+                        Invalid Citizen NRIC.<br/>
+                    </p>
+                );
+                this.setState({'actionMessage' : result});
             });
-         //const outcome = postIssueAlerts_API(this.state);
-         //outcome.then(res => {
-          //   console.log(res);
-         //}).catch(err => {
-          //  console.log(err);
-         //});
+
         this.setState({p_nric: '', covid_status: ''});
     }
 
     render() {
-        const {p_nric , covid_status} = this.state;
+        const {p_nric, covid_status} = this.state;
+
         return (
-            <div>
+            <div className="update-covid-div">
                 <form onSubmit={this.submitHandler}>
                     <div>
                         <label>Citizen NRIC: </label>
                         <input type="text" name="p_nric" value={p_nric} onChange={this.changeHandler}/>
                     </div>
                     <div>
-                        <label>Covid status: </label>
-                        <input type="boolean" name="covid_status" value={covid_status} onChange={this.changeHandler}/>
+                        <label>Covid-19 Status: </label>
+                        <select name="covid_status" value={covid_status} onChange={this.changeHandler}>
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
                     </div>
-                    <button type="submit">Update Covid-19 status</button>
-                    <div>{this.state.updateCovidStatus}</div>
+                    <label></label>
+                    <button type="submit">Update Status</button>
                 </form>
+                <div style={{'paddingLeft':'20px'}}>{this.state.actionMessage}</div>
             </div>
         );
     }
