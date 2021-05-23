@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import {Component} from 'react';
 import '../App.css';
 import CurrentLoginUserComponent from '../components/CurrentLoginUserComponent';
 import VTMainComponent from "../components/vaccinetable/VTMainComponent";

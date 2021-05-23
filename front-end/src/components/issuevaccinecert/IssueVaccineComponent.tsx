@@ -1,33 +1,24 @@
 import {Component} from "react";
 import axios from 'axios';
-import * as React from "react";
+import { TextField } from "@material-ui/core";
 import './IssueVaccineComponent.css';
 
 export class IssueVaccine extends Component {
 
     state = {
         'p_nric': '',
-        'v_date': '',
+        'v_date': new Date(),
         'e_nric': '',
-        //only will be used to hold the outcome of the data
-        'createdVaccine' : ''
+        'actionMessage' : ''
     }
-
-    /*
-    const result = (
-        <p style={{'fontSize' : 14}}>Issue ID {updatedInfo.alertListId} added successfully.<br/>
-        Please refresh page to see updated table.
-        </p>
-    );*/
 
     onUpdateVaccineID = (updatedInfo : any) => {
         const result = (
-            <p style={{'fontSize' : 14}}>Issue ID {updatedInfo.vaccineListID} added successfully.<br/>
-            Please refresh page to see updated table.
+            <p style={{'color' : 'green'}}>
+                Issue ID {updatedInfo.vaccineListID} added successfully.<br/>
             </p>
         );
-        this.setState({'createdVaccine' : result});
-        console.log(updatedInfo);
+        this.setState({'actionMessage' : result});
     }
 
     changeHandler = (e : any) => {
@@ -35,18 +26,15 @@ export class IssueVaccine extends Component {
     }
 
     mapDTO = () => {
-        //backend only accept this data shape
         const dto = {'p_nric': this.state.p_nric, 'v_date': this.state.v_date, 'e_nric': this.state.e_nric};
-        //purge any existing data, if there is any
-        this.setState({'createdVaccine' : ''});
+        this.setState({'actionMessage' : ''});
         return dto;
     }
 
     submitHandler = (e: any) => {
         e.preventDefault();
-        //map data to DTO object for sending //
         const dto  = this.mapDTO();
-        //map data to DTO object for sending //
+
         axios.post("http://localhost:5000/vaccines",dto)
             .then(res=> {
                 console.log(res);
@@ -54,40 +42,48 @@ export class IssueVaccine extends Component {
             })
             .catch(err => {
                 console.log(err);
-                alert("Incomplete form! Please complete the form and submit again!")
+                const result = (
+                    <p style={{'color' : 'red'}}>
+                        Invalid Citizen NRIC or Issuer NRIC.<br/>
+                    </p>
+                );
+                this.setState({'actionMessage' : result});
             });
-         //const outcome = postIssueAlerts_API(this.state);
-         //outcome.then(res => {
-          //   console.log(res);
-         //}).catch(err => {
-          //  console.log(err);
-         //});
-        this.setState({p_nric: '', v_date: '', e_nric: ''});
+
+        this.setState({p_nric: '', v_date: new Date(), e_nric: ''});
     }
 
     render() {
         const {p_nric, v_date, e_nric} = this.state;
+        var dateFormat = require('dateformat');
+        const v_date_str = dateFormat(v_date, "yyyy-mm-dd");
+
         return (
             <div className="dashboard-tableContainer-div">
                 <div className="vaccineissue-typical-content-div">
                     <h2>Issue vaccination certificate</h2>
                     <form onSubmit={this.submitHandler}>
+
+                        <div style={{'marginBottom':'10px'}}>
+                            <label>Vaccination date: </label>
+                            <TextField name="alertDate" type="date" value={v_date_str} onChange={this.changeHandler}/>
+                        </div>
+
                         <div>
                             <label>Citizen NRIC: </label>
                             <input type="text" name="p_nric" value={p_nric} onChange={this.changeHandler}/>
                         </div>
-                        <div>
-                            <label>Vaccination date: </label>
-                            <input type="text" name="v_date" value={v_date} onChange={this.changeHandler}/>
-                        </div>
+                        
                         <div>
                             <label>Issued by: </label>
                             <input type="text" name="e_nric" value={e_nric} onChange={this.changeHandler}/>
                         </div>
-                        <button type="submit">Issue vaccination certificate</button>
-                        <div>{this.state.createdVaccine}</div>
+
+                        <label></label>
+                        <button type="submit">Submit</button>
                     </form>
                 </div>
+                <div style={{'paddingLeft':'20px'}}>{this.state.actionMessage}</div>
             </div>
         );
     }
