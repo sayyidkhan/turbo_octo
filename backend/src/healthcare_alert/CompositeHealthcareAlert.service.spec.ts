@@ -8,6 +8,10 @@ import {LocationModule} from "../location/location.module";
 import {Location} from "../location/schemas/location.schema";
 import {CompositeHealthcareAlertService} from "./CompositeHealthcareAlert.service";
 import {ViewHealthcareAlertsDto} from "./dto/view-healthcareAlerts.dto";
+import {E_UserModule} from "../e_user/e_User.module";
+import {E_UserService} from "../e_user/e_User.service";
+import {E_User} from "../e_user/schemas/e_user.schema";
+import {CreateHealthcareAlertsDto} from "./dto/create-healthcareAlerts.dto";
 
 class CompositeHealthcareServiceMock {
     getOneHealthcareRecord() {
@@ -43,11 +47,17 @@ describe("composite healthcare Service", () => {
     let healthcareAlertService : HealthcareAlertService;
     let locationService : LocationService;
     let compositeHealthcareAlertService : CompositeHealthcareAlertService;
+    let e_UserService : E_UserService;
+
+    const mockGetEnterpriseUserById = jest.fn();
+    const mockGetAllLocationDict = jest.fn();
+    const mockGetLocationById = jest.fn();
 
     beforeEach(async () => {
         const module: TestingModule = await Test.createTestingModule({
             imports : [
                 HealthcareAlertModule,
+                E_UserModule,
                 LocationModule,
                 AppModule,
             ],
@@ -61,13 +71,21 @@ describe("composite healthcare Service", () => {
                 {
                     provide : LocationService,
                     useValue : {
-                        getAllLocationDict : jest.fn(),
+                        getAllLocationDict : mockGetAllLocationDict,
+                        getLocationById : mockGetLocationById,
+                    }
+                },
+                {
+                    provide : E_UserService,
+                    useValue : {
+                        getEnterpriseUserById : mockGetEnterpriseUserById,
                     }
                 },
                 CompositeHealthcareAlertService,
             ]
         }).compile();
 
+        e_UserService = module.get<E_UserService>(E_UserService);
         locationService = module.get<LocationService>(LocationService);
         healthcareAlertService = module.get<HealthcareAlertService>(HealthcareAlertService);
         compositeHealthcareAlertService = module.get<CompositeHealthcareAlertService>(CompositeHealthcareAlertService);
@@ -109,6 +127,70 @@ describe("composite healthcare Service", () => {
         locationService.getAllLocationDict = jest.fn().mockReturnValue(locationMock);
         const result: ViewHealthcareAlertsDto[] = await compositeHealthcareAlertService.getAllHealthcareAlertsDTO();
         expect(result[0].e_nric).toEqual(testCase[0].e_nric);
+    });
+
+    it('test - createNewHealthcareAlerts() (positive)', async () => {
+        const locationMock = new CompositeHealthcareServiceMock().getAllLocationDict();
+        delete locationMock[123456];
+
+        const dto = new CreateHealthcareAlertsDto();
+        dto.date = new Date().toISOString();
+        dto.location_id = 123456;
+        dto.description = "description";
+        dto.e_nric = "e_nric";
+
+        mockGetEnterpriseUserById.mockReturnValue(new E_User());
+        locationService.getLocationById = jest.fn().mockReturnValue(new Location());
+        const result: string | CreateHealthcareAlertsDto = await compositeHealthcareAlertService.createNewHealthcareAlerts(dto);
+        expect(result !== null).toBeTruthy();
+    });
+
+    it('test - createNewHealthcareAlerts() (negative scenario - 1)', async () => {
+        const locationMock = new CompositeHealthcareServiceMock().getAllLocationDict();
+        delete locationMock[123456];
+
+        const dto = new CreateHealthcareAlertsDto();
+        dto.date = "";
+        dto.location_id = 123456;
+        dto.description = "description";
+        dto.e_nric = "e_nric";
+
+        mockGetEnterpriseUserById.mockReturnValue(new E_User());
+        locationService.getLocationById = jest.fn().mockReturnValue(new Location());
+        const result: string | CreateHealthcareAlertsDto = await compositeHealthcareAlertService.createNewHealthcareAlerts(dto);
+        expect(result).toEqual("date is invalid. please review the date string before sending.");
+    });
+
+    it('test - createNewHealthcareAlerts() (negative scenario - 2)', async () => {
+        const locationMock = new CompositeHealthcareServiceMock().getAllLocationDict();
+        delete locationMock[123456];
+
+        const dto = new CreateHealthcareAlertsDto();
+        dto.date = new Date().toISOString();
+        dto.location_id = 123456;
+        dto.description = "description";
+        dto.e_nric = "e_nric";
+
+        e_UserService.getEnterpriseUserById = jest.fn().mockReturnValue(null);
+        locationService.getLocationById = jest.fn().mockReturnValue(new Location());
+        const result: string | CreateHealthcareAlertsDto = await compositeHealthcareAlertService.createNewHealthcareAlerts(dto);
+        expect(result).toEqual("enterpise nric invalid. user is trying to enter enterprise nric which doesnt exist in record.");
+    });
+
+    it('test - createNewHealthcareAlerts() (negative scenario - 3)', async () => {
+        const locationMock = new CompositeHealthcareServiceMock().getAllLocationDict();
+        delete locationMock[123456];
+
+        const dto = new CreateHealthcareAlertsDto();
+        dto.date = new Date().toISOString();
+        dto.location_id = 123456;
+        dto.description = "description";
+        dto.e_nric = "e_nric";
+
+        e_UserService.getEnterpriseUserById = jest.fn().mockReturnValue(new E_User());
+        locationService.getLocationById = jest.fn().mockReturnValue(null);
+        const result: string | CreateHealthcareAlertsDto = await compositeHealthcareAlertService.createNewHealthcareAlerts(dto);
+        expect(result).toEqual("location is invalid. please review the location id before sending.");
     });
 
 });

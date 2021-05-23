@@ -8,6 +8,7 @@ import {E_User} from "../e_user/schemas/e_user.schema";
 import {E_UserService} from "../e_user/e_User.service";
 import {CompositeHealthcareAlertService} from "./CompositeHealthcareAlert.service";
 import {ViewHealthcareAlertsDto} from "./dto/view-healthcareAlerts.dto";
+import {type} from "os";
 
 
 @Controller('healthcare_alert')
@@ -31,24 +32,15 @@ export class HealthcareAlertController {
 
   @Post()
   async createNewHealthcareAlerts(@Body() dto: CreateHealthcareAlertsDto): Promise<HealthcareAlert> {
-      const date : Date = DateUtil.convertStrToDate(dto.date);
-      const e_user: E_User = await this.e_UserService.getEnterpriseUserById(dto.e_nric);
-      if(e_user === null) {
-          const errorMsg = "enterpise nric invalid. user is trying to enter enterprise nric which doesnt exist in record.";
-          console.log(errorMsg);
+      const result = await this.compositeHealthcareAlertService.createNewHealthcareAlerts(dto);
+      if(typeof(result) === "string"){
           throw new HttpException(
-              errorMsg,
-              HttpStatus.BAD_REQUEST);
-      }
-      else if(date === null){
-          const errorMsg = "date is invalid. please review the date string before sending.";
-          console.log(errorMsg);
-          throw new HttpException(
-              errorMsg,
+              result,
               HttpStatus.BAD_REQUEST);
       }
       else {
           console.log("healthcare DTO received successfully...")
+          const date : Date = DateUtil.convertStrToDate(dto.date);
           return this.healthcareAlertService.createNewHealthcareAlerts(
               date,
               dto.location_id,

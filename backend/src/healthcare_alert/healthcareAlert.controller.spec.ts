@@ -54,6 +54,7 @@ describe('HealthcareAlert Controller',() => {
 
     const mockUpdateHealthcareAlertByID = jest.fn();
     const mockGetEnterpriseUserById = jest.fn();
+    const mockCreateNewHealthcareAlerts = jest.fn();
 
     beforeAll(async () => {
         const controllerMock = new HealthcareAlertControllerMock();
@@ -82,6 +83,7 @@ describe('HealthcareAlert Controller',() => {
                 {provide : CompositeHealthcareAlertService,
                     useValue : {
                         getAllHealthcareAlertsDTO : jest.fn(() => controllerMock.getViewHealthCareAlertsDTO()),
+                        createNewHealthcareAlerts : mockCreateNewHealthcareAlerts,
                     }
                 },
             ]
@@ -124,7 +126,7 @@ describe('HealthcareAlert Controller',() => {
         dto.description = "description";
         dto.location_id = 123456;
 
-        mockGetEnterpriseUserById.mockReturnValue(new HealthcareAlertControllerMock().mockOneE_User());
+        mockCreateNewHealthcareAlerts.mockReturnValue(new CreateHealthcareAlertsDto());
         const res = await request(app.getHttpServer())
             .post("/healthcare_alert")
             .send(dto)
@@ -140,7 +142,7 @@ describe('HealthcareAlert Controller',() => {
         dto.description = "description";
         dto.location_id = 123456;
 
-        mockGetEnterpriseUserById.mockReturnValue(null);
+        mockCreateNewHealthcareAlerts.mockReturnValue("error");
         const res = await request(app.getHttpServer())
             .post("/healthcare_alert")
             .send(dto)
@@ -148,25 +150,7 @@ describe('HealthcareAlert Controller',() => {
         let result = res.status;
         let text = res.text;
         expect(result).toBe(400);
-        expect(text).toContain("enterpise nric invalid. user is trying to enter enterprise nric which doesnt exist in record.");
-    });
-
-    it("HealthCare Alert Controller - POST createNewHealthcareAlerts() (negative scenario - 2)", async () => {
-        const dto = new CreateHealthcareAlertsDto();
-        dto.e_nric = "e_nric";
-        dto.date = "";
-        dto.description = "description";
-        dto.location_id = 123456;
-
-        mockGetEnterpriseUserById.mockReturnValue(new HealthcareAlertControllerMock().mockOneE_User());
-        const res = await request(app.getHttpServer())
-            .post("/healthcare_alert")
-            .send(dto)
-            .expect(400);
-        let result = res.status;
-        let text = res.text;
-        expect(result).toBe(400);
-        expect(text).toContain("date is invalid. please review the date string before sending.");
+        expect(text).toContain("error");
     });
 
     it("HealthCare Alert Controller - PATCH updateHealthcareAlerts() (positive)", async () => {
