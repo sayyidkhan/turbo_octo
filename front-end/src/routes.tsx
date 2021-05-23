@@ -19,7 +19,6 @@ export default function Routes(props: any) {
     function isUserAuthenticated(page : any){
 
         const userType = sessionStorage.getItem('userType');
-        console.log(userType, userType==="G");
         const publicAccess = ["Home", "Login"];
         const governmentAccess = ["Dashboard", "ContactTracing", "VaccinationRecords", "PublicAlerts", "Reports", "Accounts"];
         const businessAccess = ["Dashboard", "PublicAlerts"];

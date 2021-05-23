@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import {Component} from "react";
 import {LocationListComponent} from "../components/location/LocationListComponent";
 import {Box} from "@material-ui/core";
 
@@ -16,11 +16,6 @@ export default class LocationList extends Component {
                         <LocationListComponent/>
                     </Box>
                 </Box>
-                {/*<Container>*/}
-                {/*<Paper variant="outlined" >*/}
-                {/**/}
-                {/*</Paper>*/}
-                {/*</Container>*/}
             </div>
         )
     }

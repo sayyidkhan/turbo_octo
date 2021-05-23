@@ -15,6 +15,7 @@ export class HealthAdviseTable extends Component {
         await healthadvise_API().then(res => {
             const totalNoofAlerts : number = this.gettotalNoofAlerts(res.data);
             this.setState({result : res.data , totalNoofAlerts : totalNoofAlerts, status : res.status });
+            console.log(res.data)
         }).catch(err => {
             console.log(err);
             this.setState({totalNoofAlerts : "backend not connected..." , status : err.status })
@@ -28,8 +29,6 @@ export class HealthAdviseTable extends Component {
     render() {
         return(
             <div>
-                {/*<DisplayAlertNo status={this.state.status} totalNoofAlerts={this.state.totalNoofAlerts}/>*/}
-                {/*<HomeAlertsTable myList={this.state.result}/>*/}
                 <HealthAdvisePaginationTableComponent myList={this.state.result}/>
             </div>
         );

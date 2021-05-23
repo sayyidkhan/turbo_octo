@@ -20,7 +20,6 @@ export default class Accounts extends Component {
     }
 
     refreshAllComponents = () => {
-        //calling setState will re-render components
         this.setState({ listener_counter : this.state.listener_counter + 1});
         console.log("re-render: " + this.state.listener_counter);
     }
