@@ -112,4 +112,16 @@ export class AlertListController {
       throw new HttpException("unable to find alert to delete",HttpStatus.BAD_REQUEST);
   }
 
+    @Get('alertlist_by_district/:district')
+    async getalertListByDistrict(@Param('district') district : string): Promise<ViewAlertListDto[]> {
+      const result: Promise<ViewAlertListDto[]> = this.compositeAlertListService.getAlertListByDistrict(district);
+      return result;
+    }
+
+    @Get('alertlist_by_locationid/:location_id')
+    async getalertListByLocationId(@Param('location_id') location_id : number): Promise<ViewAlertListDto[]> {
+        const result: Promise<ViewAlertListDto[]> = this.compositeAlertListService.getAlertListByLocationId(location_id);
+        return result;
+    }
+
 }

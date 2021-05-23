@@ -108,4 +108,24 @@ describe("composite alertList Service", () => {
         expect(result[0].alertListId).toEqual(testCase[0].alertListId);
     });
 
+    it('test - getAlertListByLocationId()', async () => {
+        const testCase = new CompositeAlertListServiceMock().getAlertLists();
+        const locationMock = new CompositeAlertListServiceMock().getLocationList();
+
+        alertService.getAlertsWithQuery = jest.fn().mockReturnValue(testCase);
+        locationService.getAllLocationDict = jest.fn().mockReturnValue(locationMock);
+        const result: P_userAlertListDto[] = await compositeAlertListService.getAlertListByLocationId(123456);
+        expect(result[0].alertListId).toEqual(testCase[0].alertListId);
+    });
+
+    it('test - getAlertListByDistrict()', async () => {
+        const testCase = new CompositeAlertListServiceMock().getAlertLists();
+        const locationMock = new CompositeAlertListServiceMock().getLocationList();
+
+        alertService.getAllAlerts = jest.fn().mockReturnValue(testCase);
+        locationService.getLocationByDistrict = jest.fn().mockReturnValue(locationMock);
+        const result: P_userAlertListDto[] = await compositeAlertListService.getAlertListByDistrict("west");
+        expect(result[0].alertListId).toEqual(testCase[0].alertListId);
+    });
+
 });

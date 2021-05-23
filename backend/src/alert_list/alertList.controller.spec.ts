@@ -87,6 +87,8 @@ describe('AlertList Controller',() => {
                     useValue : {
                         getOnlyActiveAlerts : jest.fn(() => controllerMock.getP_userAlertListDTO()),
                         getAllAlertListDTO : jest.fn(() => controllerMock.getViewAlertListDTO()),
+                        getAlertListByDistrict: jest.fn(() => controllerMock.getViewAlertListDTO()),
+                        getAlertListByLocationId : jest.fn(() => controllerMock.getViewAlertListDTO()),
                     }
                 },
                 {provide : LocationService,
@@ -107,7 +109,7 @@ describe('AlertList Controller',() => {
     });
 
 
-    it("E_User Controller - GET getAlertListById()", async () => {
+    it("AlertList Controller - GET getAlertListById()", async () => {
         const testCase = new AlertListControllerMock().getOneAlertList();
 
         mockGetAlertById.mockReturnValue(new AlertListControllerMock().getOneAlertList());
@@ -118,7 +120,7 @@ describe('AlertList Controller',() => {
         expect(result).toBe(200);
     });
 
-    it("E_User Controller - GET getAllActiveAlertList()", async () => {
+    it("AlertList Controller - GET getAllActiveAlertList()", async () => {
         const res = await request(app.getHttpServer())
             .get("/alertlist/filterlist/true")
             .expect(200);
@@ -126,7 +128,7 @@ describe('AlertList Controller',() => {
         expect(result).toBe(200);
     });
 
-    it("E_User Controller - GET getAllAlertList()", async () => {
+    it("AlertList Controller - GET getAllAlertList()", async () => {
         const res = await request(app.getHttpServer())
             .get("/alertlist/")
             .expect(200);
@@ -134,7 +136,7 @@ describe('AlertList Controller',() => {
         expect(result).toBe(200);
     });
 
-    it("E_User Controller - POST createAlert() (positive scenario)", async () => {
+    it("AlertList Controller - POST createAlert() (positive scenario)", async () => {
         const dto = new AlertListDto();
         dto.location_id = 123456;
         dto.alertTitle = "title";
@@ -151,7 +153,7 @@ describe('AlertList Controller',() => {
         expect(result).toBe(201);
     });
 
-    it("E_User Controller - POST createAlert() (negative scenario - 1)", async () => {
+    it("AlertList Controller - POST createAlert() (negative scenario - 1)", async () => {
         const dto = new AlertListDto();
         dto.location_id = 123456;
         dto.alertTitle = "title";
@@ -170,7 +172,7 @@ describe('AlertList Controller',() => {
         expect(text).toContain("location id is invalid. user is trying to enter a location which doesnt exist in record.");
     });
 
-    it("E_User Controller - POST createAlert() (negative scenario - 2)", async () => {
+    it("AlertList Controller - POST createAlert() (negative scenario - 2)", async () => {
         const dto = new AlertListDto();
         dto.location_id = 123456;
         dto.alertTitle = "title";
@@ -188,7 +190,7 @@ describe('AlertList Controller',() => {
         expect(text).toContain("date is invalid. please review the date string before sending.");
     });
 
-    it("E_User Controller - PATCH createAlert() (positive scenario)", async () => {
+    it("AlertList Controller - PATCH createAlert() (positive scenario)", async () => {
         const id = 1;
 
         const dto = new AlertListDto();
@@ -208,7 +210,7 @@ describe('AlertList Controller',() => {
         expect(result).toBe(200);
     });
 
-    it("E_User Controller - PATCH createAlert() (negative scenario - 1)", async () => {
+    it("AlertList Controller - PATCH createAlert() (negative scenario - 1)", async () => {
         const id = 1;
 
         const dto = new AlertListDto();
@@ -229,7 +231,7 @@ describe('AlertList Controller',() => {
         expect(text).toContain("alert id is invalid. user is trying to update a alertId which doesnt exist in record.");
     });
 
-    it("E_User Controller - PATCH createAlert() (negative scenario - 2)", async () => {
+    it("AlertList Controller - PATCH createAlert() (negative scenario - 2)", async () => {
         const id = 1;
 
         const dto = new AlertListDto();
@@ -251,7 +253,7 @@ describe('AlertList Controller',() => {
         expect(text).toContain("location id is invalid. user is trying to update a location which doesnt exist in record.");
     });
 
-    it("E_User Controller - PATCH createAlert() (negative scenario - 3)", async () => {
+    it("AlertList Controller - PATCH createAlert() (negative scenario - 3)", async () => {
         const id = 1;
 
         const dto = new AlertListDto();
@@ -272,7 +274,7 @@ describe('AlertList Controller',() => {
         expect(text).toContain("date is invalid. please review the date string before sending.");
     });
 
-    it("E_User Controller - DELETE deleteAlertListByAlertId() (positive)", async () => {
+    it("AlertList Controller - DELETE deleteAlertListByAlertId() (positive)", async () => {
         const id = 1;
 
         mockdeleteAlertListById.mockReturnValue(new AlertListControllerMock().getOneAlertList());
@@ -283,7 +285,7 @@ describe('AlertList Controller',() => {
         expect(result).toBe(200);
     });
 
-    it("E_User Controller - DELETE deleteAlertListByAlertId() (negative)", async () => {
+    it("AlertList Controller - DELETE deleteAlertListByAlertId() (negative)", async () => {
         const id = 1;
 
         mockdeleteAlertListById.mockReturnValue(null);
@@ -294,6 +296,26 @@ describe('AlertList Controller',() => {
         let text = res.text;
         expect(result).toBe(400);
         expect(text).toContain("unable to find alert to delete");
+    });
+
+    it("AlertList Controller - GET getalertListByDistrict()", async () => {
+        const district = "west";
+        
+        const res = await request(app.getHttpServer())
+            .get(`/alertlist/alertlist_by_district/${district}`)
+            .expect(200);
+        let result = res.status;
+        expect(result).toBe(200);
+    });
+
+    it("AlertList Controller - GET getalertListByLocationId()", async () => {
+        const location_id = 123456;
+
+        const res = await request(app.getHttpServer())
+            .get(`/alertlist/alertlist_by_locationid/${location_id}`)
+            .expect(200);
+        let result = res.status;
+        expect(result).toBe(200);
     });
 
 });
