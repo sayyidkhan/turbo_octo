@@ -67,8 +67,8 @@ export class AccountsTableComponent extends Component<IProps, IState> {
     render() {
         return (
             <div>
-                <DisplayTotal status={this.state.status} totalRow={this.state.totalRow}/>
                 <SearchAccountComponent callback_function={this.setUser}/>
+                <DisplayTotal status={this.state.status} totalRow={this.state.totalRow}/>
                 <AccountsTablePaginationComponent dataRows={this.state.result} selected_nric={this.sendData} searchUser={this.state.e_user}/>
             </div>
         );

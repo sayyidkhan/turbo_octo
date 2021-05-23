@@ -58,7 +58,6 @@ export default function AccountsTablePaginationComponent(props : any) {
     props.selected_nric(e_nric);
     sessionStorage.setItem('clickedAccount', 'yes');
   };
-
   // ----------------- end of handling select button -----------------
 
   return (
