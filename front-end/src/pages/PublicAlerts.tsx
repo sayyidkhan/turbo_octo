@@ -2,6 +2,7 @@ import '../App.css';
 import {IssueAlerts} from "../components/issuealerts/IssueAlertsComponent";
 import {AlertsTable} from '../components/alertstable/IndivAlertsTableComponent';
 import CurrentLoginUserComponent from '../components/CurrentLoginUserComponent';
+import {AlertsTableForBusinessComponent} from '../components/alertstable/AlertsTableForBusinessComponent';
 import {Component} from "react";
 
 export function RenderSubDashboardComponent() {
@@ -11,7 +12,7 @@ export function RenderSubDashboardComponent() {
     if(userType === "government"){
         return (
             <div className="dashboard-container-general">
-                <h1>Public alerts</h1>
+                <h1>Public Alerts</h1>
                 <div className="under-page-title-div">
                     <CurrentLoginUserComponent/>
                 </div>
@@ -25,7 +26,7 @@ export function RenderSubDashboardComponent() {
                     </div>
 
                     <div className="dashboard-tableContainer-div">
-                        <h2>Public alerts</h2>
+                        <h2>Public Alerts</h2>
                         <div className="account-typical-content-div">
                         <AlertsTable />
                         </div>
@@ -37,16 +38,15 @@ export function RenderSubDashboardComponent() {
     } else {
         return (
             <div className="dashboard-container-general">
-                <h1>Public alerts</h1>
+                <h1>Public Alerts</h1>
                 <div className="under-page-title-div">
                     <CurrentLoginUserComponent/>
                 </div>
                 <div className="dashboard-container">
 
                     <div className="dashboard-tableContainer-div">
-                        <h2>Public alerts</h2>
                         <div className="account-typical-content-div">
-                        <AlertsTable />
+                        <AlertsTableForBusinessComponent />
                         </div>
                     </div>
                 

@@ -86,10 +86,6 @@ export default function AlertsPaginationTableComponent(props : any) {
         return (myListing.length !== 0) ? slicedResults : [];
     }
 
-    /*
-    {classes.root}
-    {classes.container}
-    */
     return (
         <Paper className={classes.root}>
             <TableContainer className={classes.container}>
