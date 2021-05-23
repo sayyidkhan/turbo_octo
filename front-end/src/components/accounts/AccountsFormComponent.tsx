@@ -172,7 +172,6 @@ export class AccountsFormComponent extends Component<IProps, IState> {
         return (
             <div className="accounts-form">
                 <form onSubmit={this.submitHandler} onReset={this.handleFormReset}>
-                    <h3>Manage Accounts</h3>
                     <div>
                         <label>User Type: </label>
                         <select name="admintype" value={admintype} onChange={this.changeHandler}>

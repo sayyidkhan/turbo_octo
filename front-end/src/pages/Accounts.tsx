@@ -29,12 +29,13 @@ export default class Accounts extends Component {
     render(){
         return (
             <div className="dashboard-container-general">
-                <h1>Manages Accounts</h1>
+                <h1>Manage Accounts</h1>
                 <div className="under-page-title-div">
                     <CurrentLoginUserComponent/>
                 </div>
 
                 <div className="accounts-form-wrapper">
+                    <h2 style={{'color':'red', 'paddingLeft':'20px'}}>Manage Account</h2>
                     <AccountsFormComponent selected_nric={this.state.selected_nric} refresh_component={this.refreshAllComponents} />
                 </div>
 

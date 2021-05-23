@@ -46,14 +46,12 @@ export class AccountsTableComponent extends Component<IProps, IState> {
         if(this.state.prev_listener_counter < this.props.listener_counter) {
             await this.callAPI();
             await this.componentDidMount();
-            console.log("re-rendered successfully");
         }
     }
 
     async componentDidMount() {
         await this.callAPI();
         this.setState({ prev_listener_counter : this.props.listener_counter, e_user: []});
-        console.log(this.props.listener_counter);
     }
 
     getTotalRow(rows : any[]) : number {
