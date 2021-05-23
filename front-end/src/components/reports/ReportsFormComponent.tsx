@@ -73,10 +73,15 @@ export class ReportsFormComponent extends Component<IProps, IState> {
         reportType: ReportType.CT,
         //variables for monthly record
         date_from: new Date(),
-        date_to: new Date(new Date().setMonth(new Date().getMonth()+1)),
+        date_to: this.getDatePlusMonth(new Date(), 1),
         //variables for weekly record
         year: 2021,
         month: 1,
+    }
+
+    getDatePlusMonth(date : Date, month : number){
+        date.setMonth( date.getMonth() + month );
+        return date;
     }
 
     sendData(type:string, keys:any, data:any){

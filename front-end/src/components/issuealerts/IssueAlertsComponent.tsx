@@ -21,6 +21,11 @@ export class IssueAlerts extends Component<IProps, IState> {
         'actionMessage': ''
     }
 
+    getDatePlus8hours(date : Date){
+        date.setHours( date.getHours() + 8 );
+        return date;
+    }
+
     onUpdateAlertListID = (updatedInfo : any) => {
         const result = (
             <p style={{'color':'green'}}>
@@ -36,7 +41,13 @@ export class IssueAlerts extends Component<IProps, IState> {
     }
 
     mapDTO = () => {
-        const dto = {'alertTitle': this.state.alertTitle, 'alertDetail': this.state.alertDetail, 'alertDate': this.state.alertDate, 'active': this.state.active, 'location_id': this.state.location_id};
+        const dto = {
+            'alertTitle': this.state.alertTitle, 
+            'alertDetail': this.state.alertDetail, 
+            'alertDate': this.getDatePlus8hours(this.state.alertDate), 
+            'active': this.state.active, 
+            'location_id': this.state.location_id
+        };
         this.setState({'actionMessage': ''});
         return dto;
     }

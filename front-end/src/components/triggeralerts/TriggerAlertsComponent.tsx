@@ -13,6 +13,11 @@ export class TriggerAlerts extends Component {
         'actionMessage' : ''
     }
 
+    getDatePlus8hours(date : Date){
+        date.setHours( date.getHours() + 8 );
+        return date;
+    }
+
     onUpdateactionMessageListID = (updatedInfo : any) => {
         const result = (
             <p style={{'color' : 'green'}}>
@@ -27,7 +32,12 @@ export class TriggerAlerts extends Component {
     }
 
     mapDTO = () => {
-        const dto = {'date': this.state.date, 'location_id': this.state.location_id, 'description': this.state.description, 'e_nric': this.state.e_nric};
+        const dto = {
+            'date': this.getDatePlus8hours(this.state.date), 
+            'location_id': this.state.location_id, 
+            'description': this.state.description, 
+            'e_nric': this.state.e_nric
+        };
         this.setState({'actionMessage' : ''});
         return dto;
     }

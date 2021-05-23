@@ -12,6 +12,11 @@ export class IssueVaccine extends Component {
         'actionMessage' : ''
     }
 
+    getDatePlus8hours(date : Date){
+        date.setHours( date.getHours() + 8 );
+        return date;
+    }
+
     onUpdateVaccineID = (updatedInfo : any) => {
         const result = (
             <p style={{'color' : 'green'}}>
@@ -26,7 +31,11 @@ export class IssueVaccine extends Component {
     }
 
     mapDTO = () => {
-        const dto = {'p_nric': this.state.p_nric, 'v_date': this.state.v_date, 'e_nric': this.state.e_nric};
+        const dto = {
+            'p_nric': this.state.p_nric, 
+            'v_date': this.getDatePlus8hours(this.state.v_date), 
+            'e_nric': this.state.e_nric
+        };
         this.setState({'actionMessage' : ''});
         return dto;
     }

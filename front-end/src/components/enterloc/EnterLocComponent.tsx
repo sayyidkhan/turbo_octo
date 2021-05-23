@@ -1,4 +1,3 @@
-import * as React from "react";
 import {Component} from "react";
 import {postEnterLoc_API} from "./api/enterloc_api"
 import {getAllLocations} from "../location/api/location_api";
@@ -29,7 +28,6 @@ function ValidateLocation(props : any) {
         </div>
     );
 }
-
 
 export class EnterLocComponent extends Component {
 
@@ -89,10 +87,15 @@ export class EnterLocComponent extends Component {
         const dto = {
             p_nric : this.state.p_nric,
             location_id : this.state.location_id,
-            date : new Date(),
+            date : this.getDatePlus8hours(new Date()),
         };
         this.setState({createdAlert : ''})
         return dto;
+    }
+
+    getDatePlus8hours(date : Date){
+        date.setHours( date.getHours() + 8 );
+        return date;
     }
 
     checkValidation(){
