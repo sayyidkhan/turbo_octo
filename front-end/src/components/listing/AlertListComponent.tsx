@@ -45,12 +45,12 @@ function AlertListing(props: any) {
 
     const listTile = (myList : any[]) => {
         const createListTile = (listItem : any) => {
-            const id = listItem.alertListId;
-            const title = listItem.alertTitle;
-            const description = listItem.alertDetail;
+            const id = listItem.alertListId ?? "";
+            const title = listItem.alertTitle ?? "";
+            const description = listItem.alertDetail ?? "";
             const date = listItem.alertDate;
             const dateFormatted = DateUtil.formatDate(date);
-            const location_name = listItem.location_name;
+            const location_name = listItem.location_name  ?? "";
             return (
                 <Paper key={id}>
                     <ListItem>
