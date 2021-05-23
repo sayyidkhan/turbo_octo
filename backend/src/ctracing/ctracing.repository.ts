@@ -30,7 +30,6 @@ export class CtracingRepository {
 
     async getMaxCtracingId(): Promise<number> {
         const alertList = await this.ctracingModel.find({}).sort({ ct_id : -1 }).limit(1);
-        console.log(alertList);
         const result = this.checkEmptyArray(alertList);
         return result;
     }

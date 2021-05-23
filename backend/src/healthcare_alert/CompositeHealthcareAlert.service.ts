@@ -15,7 +15,6 @@ export class CompositeHealthcareAlertService {
     filterLocation: (location_id: number, locationList : {}) => string = (location_id: number, locationList : {}) => {
         console.log(location_id);
         if (locationList[location_id] === null || locationList[location_id] === undefined) {
-            console.log(locationList[location_id]);
             return "undefined";
         } else {
             const locationInterface = locationList[location_id.toString()];
