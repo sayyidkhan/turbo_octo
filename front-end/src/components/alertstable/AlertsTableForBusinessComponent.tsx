@@ -41,7 +41,6 @@ export class AlertsTableForBusinessComponent extends Component {
     render() {
         return(
             <div className="business-alert-div">
-                <h2>Search Alerts</h2>
                 <SearchAlertComponent callback_function={this.setResult}/>
                 {this.showTable()}
             </div>

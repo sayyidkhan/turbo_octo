@@ -53,9 +53,9 @@ export default class PublicAlerts extends Component {
                         <CurrentLoginUserComponent/>
                     </div>
                     <div className="dashboard-container">
-    
                         <div className="dashboard-tableContainer-div">
                             <div className="account-typical-content-div">
+                            <h2 style={{'color':'red'}}>Search Alerts</h2>
                             <AlertsTableForBusinessComponent />
                             </div>
                         </div>

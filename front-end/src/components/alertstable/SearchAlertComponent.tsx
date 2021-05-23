@@ -104,12 +104,12 @@ export default class SearchAlertComponent extends Component<SearchNricProps> {
             <div className="search-alert-div">
                 <form onSubmit={this.submitHandler}>
                     <div>
-                        <span>Search by&nbsp;&nbsp;</span>
+                        <span style={{'fontWeight':'bold'}}>Search by&nbsp;&nbsp;</span>
                         <select name="searchBy" value={searchBy} onChange={this.changeHandler}>
                             <option value="district">District</option>
                             <option value="locationId">Location ID</option>
                         </select>
-                        <span>&nbsp;&nbsp;:&nbsp;&nbsp;</span>
+                        <span style={{'fontWeight':'bold'}}>&nbsp;&nbsp;:&nbsp;&nbsp;</span>
 
                         {this.queryComponent()}
 
