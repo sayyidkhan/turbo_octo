@@ -1,5 +1,6 @@
 import {DateUtil} from "./DateUtil";
-import {DateQuery} from "./ReportUtil";
+import {DateCompute, DateQuery} from "./ReportUtil";
+import {ReportWeeklyQueryCtracingDto} from "../ctracing/dto/report-ctracing.dto";
 
 describe("DateUtil", () => {
 
@@ -67,7 +68,105 @@ describe("DateUtil", () => {
 
         const result = DateUtil.validateMonthlyQuery(dto);
         expect(result !== null).toBeTruthy();
-    })
+    });
 
+    it("test valdiateWeeklyQuery() (negative - 1)", () => {
+        const dto : ReportWeeklyQueryCtracingDto = {
+            month : undefined,
+            year : undefined,
+        };
+
+        const result = DateUtil.valdiateWeeklyQuery(dto);
+        expect(result).toEqual("no year / date set");
+    });
+
+    it("test valdiateWeeklyQuery() (negative - 2)", () => {
+        const dto : ReportWeeklyQueryCtracingDto = {
+            month : null,
+            year : null,
+        };
+
+        const result = DateUtil.valdiateWeeklyQuery(dto);
+        expect(result).toEqual("no year / date set");
+    });
+
+    it("test valdiateWeeklyQuery() (negative - 3)", () => {
+        const dto : ReportWeeklyQueryCtracingDto = {
+            month : 0,
+            year : 0,
+        };
+
+        const result = DateUtil.valdiateWeeklyQuery(dto);
+        expect(result).toEqual("year or month is 0");
+    });
+
+    it("test valdiateWeeklyQuery() (positive)", () => {
+        const dto : ReportWeeklyQueryCtracingDto = {
+            month : 1,
+            year : 2021,
+        };
+
+        const result = DateUtil.valdiateWeeklyQuery(dto);
+        expect(result).toEqual(dto);
+    });
+
+    it("test dateDiffInDays()", () => {
+        const dto : DateCompute = {
+            date_from : new Date(2021,10,10),
+            date_to : new Date(2021,10,20),
+        };
+
+        const result = DateUtil.dateDiffInDays(dto);
+        expect(result).toEqual(10);
+    });
+
+    it("test checkInvalidDateRange() (positive)", () => {
+        const dto : DateCompute = {
+            date_from : new Date(2021,10,10),
+            date_to : new Date(2021,10,20),
+        };
+
+        const result = DateUtil.checkInvalidDateRange(dto);
+        expect(result !== null).toBeTruthy();
+    });
+
+    it("test checkInvalidDateRange() (negative - 1)", () => {
+        const dto : DateCompute = {
+            date_from : new Date(2021,10,20),
+            date_to : new Date(2021,10,10),
+        };
+
+        const result = DateUtil.checkInvalidDateRange(dto);
+        expect(result).toEqual("date from greater than date to");
+    });
+
+    it("test checkInvalidDateRange() (negative - 2)", () => {
+        const dto : DateCompute = {
+            date_from : new Date(2021,10,9),
+            date_to : new Date(2021,10,9),
+        };
+
+        const result = DateUtil.checkInvalidDateRange(dto);
+        expect(result).toEqual("date from and date to cannot be same day");
+    });
+
+    it("test weekSelection()", () => {
+        const array = [
+            new Date("2021-01-01"),
+            new Date("2021-01-08"),
+            new Date("2021-01-15"),
+            new Date("2021-01-23")
+        ];
+
+
+        const result_1 = DateUtil.weekSelection(array[0]);
+        expect(result_1).toBe(1);
+        const result_2 = DateUtil.weekSelection(array[1]);
+        expect(result_2).toBe(2);
+        const result_3 = DateUtil.weekSelection(array[2]);
+        expect(result_3).toBe(3);
+        const result_4 = DateUtil.weekSelection(array[3]);
+        expect(result_4).toBe(4);
+    });
 
 });

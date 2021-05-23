@@ -90,9 +90,6 @@ export abstract class DateUtil {
         if(dateFrom > dateTo) {
             return "date from greater than date to";
         }
-        else if(dateTo < dateFrom) {
-            return "date to lesser than date from";
-        }
         else if(dateFrom === dateTo) {
             return "date from and date to cannot be same day";
         }
