@@ -245,7 +245,7 @@ describe('Ctracing Controller',() => {
     });
 
     it("c_tracing Controller - POST generateWeeklyReport() (positive)", async () => {
-        const dto = new ReportWeeklyQueryCtracingDto();
+        const dto = new ReportWeeklyQueryCtracingDto(0,0);
         dto.year = 2021;
         dto.month = 5;
 
@@ -258,7 +258,7 @@ describe('Ctracing Controller',() => {
     });
 
     it("c_tracing Controller - POST generateWeeklyReport() (negative)", async () => {
-        const dto = new ReportWeeklyQueryCtracingDto();
+        const dto = new ReportWeeklyQueryCtracingDto(0,0);
 
         const res = await request(app.getHttpServer())
             .post("/c_tracing/report/weekly/")
