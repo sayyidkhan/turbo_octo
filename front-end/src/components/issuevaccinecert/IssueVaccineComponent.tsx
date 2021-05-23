@@ -15,7 +15,7 @@ export class IssueVaccine extends Component {
     onUpdateVaccineID = (updatedInfo : any) => {
         const result = (
             <p style={{'color' : 'green'}}>
-                Issue ID {updatedInfo.vaccineListID} added successfully.<br/>
+                New vaccination certificate added successfully.<br/>
             </p>
         );
         this.setState({'actionMessage' : result});
