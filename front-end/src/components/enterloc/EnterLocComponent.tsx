@@ -9,10 +9,6 @@ interface LocationJSON {
     district : string,
 }
 
-/*interface ValidateLocationProps {
-    location_id : string;
-}*/
-
 function ValidateLocation(props : any) {
 
     const locationDict : any = props.locationDict;
@@ -41,9 +37,7 @@ export class EnterLocComponent extends Component {
         'p_nric':'',
         'location_id': '',
         'date' : null,
-        //only will be used to hold the outcome of the data
         'createdAlert' : '',
-        //hold locationDict
         locationDict : {},
     }
 
@@ -89,36 +83,57 @@ export class EnterLocComponent extends Component {
         else {
             //do nothing
         }
-
     }
 
     mapDTO = () => {
-        //backend only accept this data shape
         const dto = {
             p_nric : this.state.p_nric,
             location_id : this.state.location_id,
             date : new Date(),
         };
-        //purge any existing data, if there is any
         this.setState({createdAlert : ''})
         return dto;
     }
 
+    checkValidation(){
+
+        const {p_nric, location_id} = this.state;
+
+        if(p_nric.trim() === '' || location_id.trim() === ''){
+            const result = (
+                <p style={{'color': 'red'}}>
+                    Please fill in all the fields.
+                </p>
+            );
+            this.setState({'createdAlert': result});
+            return false;
+        }
+        return true;
+    }
+
     submitHandler = (e: any) => {
         e.preventDefault();
-        //map data to DTO object for sending //
         const dto  = this.mapDTO();
-        //map data to DTO object for sending //
+
+        if(!this.checkValidation()){
+            return;
+        }
+
         postEnterLoc_API(dto)
             .then(res=> {
                 this.onUpdateLoc(res.data);
             })
             .catch(err => {
-                alert("NRIC/ Location not found")
+                console.log(err);
+                const result = (
+                    <p style={{'color' : 'red'}}>
+                       Invalid NRIC or Location.
+                    </p>
+                );
+                this.setState({'createdAlert' : result});
             });
         this.setState({p_nric: '', location_id: '', date : null});
     }
-
 
     async componentWillMount() {
         function morphListToDict(myList : LocationJSON[]) {
@@ -142,7 +157,6 @@ export class EnterLocComponent extends Component {
     componentWillUnmount(): void {
         this.setState({locationDict : {locations : null} });
     }
-
 
     render() {
         const {p_nric, location_id} = this.state;
