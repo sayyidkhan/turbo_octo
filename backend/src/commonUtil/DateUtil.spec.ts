@@ -167,6 +167,8 @@ describe("DateUtil", () => {
         expect(result_3).toBe(3);
         const result_4 = DateUtil.weekSelection(array[3]);
         expect(result_4).toBe(4);
+        const result_5 = DateUtil.weekSelection(new Date(""));
+        expect(result_5).toBe(null);
     });
 
 });
