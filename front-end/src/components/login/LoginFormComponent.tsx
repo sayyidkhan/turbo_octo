@@ -59,6 +59,7 @@ export class LoginFormComponent extends Component {
         })
         .catch(error => {
             console.log('error', error);
+            this.setState({'status': -1});
         });
     };
 

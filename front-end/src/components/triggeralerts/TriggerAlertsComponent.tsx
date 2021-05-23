@@ -76,11 +76,11 @@ export class TriggerAlerts extends Component {
                         <textarea name="description" value={description} onChange={this.changeHandler}></textarea>
                     </div>
                     <div>
-                        <label>Triggered by: </label>
+                        <label>Triggered By: </label>
                         <input type="text" name="e_nric" value={e_nric} onChange={this.changeHandler}/>
                     </div>
                     <label></label>
-                    <button type="submit">Trigger alert</button>
+                    <button type="submit">Trigger Alert</button>
                 </form>
                 <div style={{'paddingLeft':'20px'}}>{this.state.actionMessage}</div>
             </div>
