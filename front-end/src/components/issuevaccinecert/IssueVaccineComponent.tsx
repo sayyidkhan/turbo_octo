@@ -61,11 +61,11 @@ export class IssueVaccine extends Component {
         return (
             <div className="dashboard-tableContainer-div">
                 <div className="vaccineissue-typical-content-div">
-                    <h2>Issue vaccination certificate</h2>
+                    <h2>Issue Vaccination Certificate</h2>
                     <form onSubmit={this.submitHandler}>
 
                         <div style={{'marginBottom':'10px'}}>
-                            <label>Vaccination date: </label>
+                            <label>Vaccination Date: </label>
                             <TextField name="alertDate" type="date" value={v_date_str} onChange={this.changeHandler}/>
                         </div>
 
@@ -75,7 +75,7 @@ export class IssueVaccine extends Component {
                         </div>
                         
                         <div>
-                            <label>Issued by: </label>
+                            <label>Issued By: </label>
                             <input type="text" name="e_nric" value={e_nric} onChange={this.changeHandler}/>
                         </div>
 
