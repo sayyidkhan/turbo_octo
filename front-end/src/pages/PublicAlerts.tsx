@@ -5,62 +5,64 @@ import CurrentLoginUserComponent from '../components/CurrentLoginUserComponent';
 import {AlertsTableForBusinessComponent} from '../components/alertstable/AlertsTableForBusinessComponent';
 import {Component} from "react";
 
-export function RenderSubDashboardComponent() {
-    
-    const userType = sessionStorage.getItem("userType");
+export default class PublicAlerts extends Component {
 
-    if(userType === "government"){
-        return (
-            <div className="dashboard-container-general">
-                <h1>Public Alerts</h1>
-                <div className="under-page-title-div">
-                    <CurrentLoginUserComponent/>
-                </div>
-                <div className="dashboard-container">
-        
-                    <div className="dashboard-tableContainer-div">
-                        <h2>Issue new alert</h2>
-                        <div className="account-typical-content-div">
-                            <IssueAlerts />
-                        </div>
-                    </div>
-
-                    <div className="dashboard-tableContainer-div">
-                        <h2>Public Alerts</h2>
-                        <div className="account-typical-content-div">
-                        <AlertsTable />
-                        </div>
-                    </div>
-                
-                </div>
-            </div>
-        );
-    } else {
-        return (
-            <div className="dashboard-container-general">
-                <h1>Public Alerts</h1>
-                <div className="under-page-title-div">
-                    <CurrentLoginUserComponent/>
-                </div>
-                <div className="dashboard-container">
-
-                    <div className="dashboard-tableContainer-div">
-                        <div className="account-typical-content-div">
-                        <AlertsTableForBusinessComponent />
-                        </div>
-                    </div>
-                
-                </div>
-            </div>
-        );
+    state = {
+        renderStatus: 0,
     }
-}
 
-export default class Dashboard extends Component {
+    setRenderStatus(status : any){
+        this.setState({renderStatus: status});
+    }
 
     render() {
-        return (
-            <RenderSubDashboardComponent />
-        );
+
+        const userType = sessionStorage.getItem("userType");
+
+        if(userType === "government"){
+            return (
+                <div className="dashboard-container-general">
+                    <h1>Public Alerts</h1>
+                    <div className="under-page-title-div">
+                        <CurrentLoginUserComponent/>
+                    </div>
+                    <div className="dashboard-container">
+            
+                        <div className="dashboard-tableContainer-div">
+                            <h2>Issue New Alert</h2>
+                            <div>
+                                <IssueAlerts setRenderStatus={(e) => this.setRenderStatus(e)}/>
+                            </div>
+                        </div>
+    
+                        <div className="dashboard-tableContainer-div">
+                            <h2>Public Alerts</h2>
+                            <div className="account-typical-content-div">
+                            <AlertsTable renderStatus={this.state.renderStatus}/>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            );
+        } else {
+            return (
+                <div className="dashboard-container-general">
+                    <h1>Public Alerts</h1>
+                    <div className="under-page-title-div">
+                        <CurrentLoginUserComponent/>
+                    </div>
+                    <div className="dashboard-container">
+    
+                        <div className="dashboard-tableContainer-div">
+                            <div className="account-typical-content-div">
+                            <AlertsTableForBusinessComponent />
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            );
+        }
     }
 }

@@ -1,35 +1,35 @@
 import {Component} from "react";
 import axios from 'axios';
-import * as React from "react";
+import { TextField } from "@material-ui/core";
 import './IssueAlertsComponent.css';
 
-export class IssueAlerts extends Component {
+interface IProps {
+    setRenderStatus(status:any) : any;
+}
+
+interface IState {
+}
+
+export class IssueAlerts extends Component<IProps, IState> {
 
     state = {
-        'alertTitle': '',
+        'alertTitle': 'Low',
         'alertDetail': '',
-        'alertDate': '',
-        'active': '',
+        'alertDate': new Date(),
+        'active': 'true',
         'location_id': 0,
         //only will be used to hold the outcome of the data
-        'createdAlert' : ''
+        'actionMessage': ''
     }
-
-    /*
-    const result = (
-        <p style={{'fontSize' : 14}}>Issue ID {updatedInfo.alertListId} added successfully.<br/>
-        Please refresh page to see updated table.
-        </p>
-    );*/
 
     onUpdateAlertListID = (updatedInfo : any) => {
         const result = (
-            <p style={{'fontSize' : 14}}>Issue ID {updatedInfo.alertListId} added successfully.<br/>
-            Please refresh page to see updated table.
+            <p style={{'color':'green'}}>
+                New alert with location Id {updatedInfo.location_id} added successfully.
             </p>
         );
-        this.setState({'createdAlert' : result});
-        console.log(updatedInfo);
+        this.setState({'actionMessage': result});
+        this.props.setRenderStatus(1);
     }
 
     changeHandler = (e : any) => {
@@ -37,64 +37,93 @@ export class IssueAlerts extends Component {
     }
 
     mapDTO = () => {
-        //backend only accept this data shape
         const dto = {'alertTitle': this.state.alertTitle, 'alertDetail': this.state.alertDetail, 'alertDate': this.state.alertDate, 'active': this.state.active, 'location_id': this.state.location_id};
-        //purge any existing data, if there is any
-        this.setState({'createdAlert' : ''});
+        this.setState({'actionMessage': ''});
         return dto;
+    }
+
+    checkValidation(){
+
+        if(this.state.alertDetail.trim() === ''){
+            const result = (
+                <p style={{'color':'red'}}>
+                    Please fill in the alert details.
+                </p>
+            );
+            this.setState({'actionMessage': result});
+            return false;
+        }else {
+            this.setState({actionMessage: ''});
+            return true;
+        }
     }
 
     submitHandler = (e: any) => {
         e.preventDefault();
-        //map data to DTO object for sending //
+
+        if(!this.checkValidation()){
+            return;
+        }
+
         const dto  = this.mapDTO();
-        //map data to DTO object for sending //
-        axios.post("http://localhost:5000/alertlist",dto)
+
+        axios.post("http://localhost:5000/alertlist", dto)
             .then(res=> {
                 console.log(res);
                 this.onUpdateAlertListID(res.data);
             })
             .catch(err => {
                 console.log(err);
-                alert("Incomplete form! Please complete the form and submit again!")
+                const result = (
+                    <p style={{'color':'red'}}>
+                        Invalid Location ID.
+                    </p>
+                );
+                this.setState({'actionMessage': result});
             });
-         //const outcome = postIssueAlerts_API(this.state);
-         //outcome.then(res => {
-          //   console.log(res);
-         //}).catch(err => {
-          //  console.log(err);
-         //});
-        this.setState({alertTitle: '', alertDetail: '', alertDate: '', active: '', location_id: ''});
+
+        this.setState({alertTitle: 'Low', alertDetail: '', alertDate: new Date(), active: 'true', location_id: 0});
     }
 
     render() {
+
         const {alertTitle , alertDetail, alertDate, active, location_id} = this.state;
+        var dateFormat = require('dateformat');
+        const alertDate_str = dateFormat(alertDate, "yyyy-mm-dd");
+
         return (
-            <div>
+            <div className="issue-alert-div">
                 <form onSubmit={this.submitHandler}>
-                    <div>
+                    <div style={{'paddingBottom':'10px'}}>
                         <label>Date: </label>
-                        <input type="text" name="alertDate" value={alertDate} onChange={this.changeHandler}/>
+                        <TextField name="alertDate" type="date" value={alertDate_str} onChange={this.changeHandler}/>
                     </div>
                     <div>
                         <label>Location: </label>
                         <input type="number" name="location_id" value={location_id} onChange={this.changeHandler}/>
                     </div>
                     <div>
-                        <label>Details: </label>
-                        <input type="text" name="alertDetail" value={alertDetail} onChange={this.changeHandler}/>
+                        <label style={{'height':'60px', 'marginTop':'-30px'}}>Details: </label>
+                        <textarea name="alertDetail" value={alertDetail} onChange={this.changeHandler}></textarea>
                     </div>
                     <div>
                         <label>Alert level: </label>
-                        <input type="text" name="alertTitle" value={alertTitle} onChange={this.changeHandler}/>
+                        <select name="alertTitle" value={alertTitle} onChange={this.changeHandler}>
+                            <option value="Low">Low</option>
+                            <option value="Medium">Medium</option>
+                            <option value="High">High</option>
+                        </select>
                     </div>
                     <div>
                         <label>Active: </label>
-                        <input type="text" name="active" value={active} onChange={this.changeHandler}/>
+                        <select name="active" value={active} onChange={this.changeHandler}>
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
                     </div>
-                    <button type="submit">Issue alert</button>
-                    <div>{this.state.createdAlert}</div>
+                    <label></label> <button type="submit">Issue alert</button>
                 </form>
+                <div style={{'paddingLeft':'20px'}}>{this.state.actionMessage}</div>
             </div>
         );
     }

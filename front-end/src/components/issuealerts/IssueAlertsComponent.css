@@ -1,4 +1,8 @@
-.account-typical-content-div label{
+.issue-alert-div{
+    padding-bottom: 10px;
+}
+
+.issue-alert-div label{
     padding-right: 0px;
     font-size: 14;
     letter-spacing: 0.5px;
@@ -6,22 +10,31 @@
     width: 120px;
 }
 
-.account-typical-content-div input{
+.issue-alert-div input[type="number"], .issue-alert-div select{
     height: 40px;
-    width: 250px;
+    width: 200px;
     font-size: 14px;
     margin-bottom: 10px;
 }
 
-.account-typical-content-div input:focus {
+textarea{
+    height: 80px;
+    width: 400px;
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.issue-alert-div input:focus {
     border: 1px solid #555;
     background-color: floralwhite;
-  }
+}
 
-.account-typical-content-div button{
+.issue-alert-div button{
     border-radius: 4px;
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     height: 40px;
     width: 150px;
     font-size: 16px;
@@ -31,8 +44,13 @@
     border: none;
 }
 
-.account-typical-content-div button:hover {
+.issue-alert-div button:hover {
     background-color: #4CAF50; 
     border: #4CAF50;
     color: white;
-  }
+}
+
+label{
+    padding-left: 20px;
+    vertical-align: middle;
+}
