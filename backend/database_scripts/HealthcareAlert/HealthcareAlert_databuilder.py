@@ -60,7 +60,10 @@ def read_csvfile(csv_filepath, mongodbtxt_filepath):
         '''do the converting of the data over here '''
         #convert location_id from string to int
         for row in myDict:
+            row['heathcareAlertId'] = int(row['heathcareAlertId'])
             row['description'] = str(row['description'])
+            row['location_id'] = int(row['location_id'])
+            row['date'] = 'new Date(\"' + str(row['date']) + '\")'
         #readList(myDict)
         ########################################
         #2. transform dict into lines of string (to be inserted into template)

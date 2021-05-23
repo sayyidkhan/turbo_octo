@@ -13,7 +13,6 @@ export class CompositeHealthcareAlertService {
 
     //hashmap filter
     filterLocation: (location_id: number, locationList : {}) => string = (location_id: number, locationList : {}) => {
-        console.log(location_id);
         if (locationList[location_id] === null || locationList[location_id] === undefined) {
             return "undefined";
         } else {

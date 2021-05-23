@@ -1,6 +1,6 @@
 //records
 db = db.getSiblingDB('demo');
-db.HealthcareAlert.insert({
+db.healthcarealerts.insert({
     "_id":  ObjectId() ,
     REPLACE_OBJECT_HERE
 });
