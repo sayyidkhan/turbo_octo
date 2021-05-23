@@ -18,7 +18,6 @@ export class IssueAlerts extends Component<IProps, IState> {
         'alertDate': new Date(),
         'active': 'true',
         'location_id': 0,
-        //only will be used to hold the outcome of the data
         'actionMessage': ''
     }
 
