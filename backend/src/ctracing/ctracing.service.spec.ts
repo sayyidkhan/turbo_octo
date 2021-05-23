@@ -116,6 +116,14 @@ describe("ctracing Service", () => {
         expect(result[0].p_nric).toEqual(testCase.p_nric);
     });
 
+    it("test - getCtracingByMonthOnly()", async () => {
+        const testCase = new CtracingServiceMock().getCtracingList();
+
+        repository.find = jest.fn().mockReturnValue(testCase);
+        const result = await service.getCtracingByMonthOnly(5, 2021);
+        expect(result).toEqual(testCase);
+    });
+
     it("test - getCtracingByDates()", async () => {
         const testCase = new CtracingServiceMock().getCtracingList();
 
