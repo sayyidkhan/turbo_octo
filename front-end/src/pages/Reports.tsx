@@ -23,6 +23,7 @@ export default class Reports extends Component {
                     <CurrentLoginUserComponent/>
                 </div>
                 <div className="reports-form-wrapper">
+                    <h2 style={{'color':'red', 'paddingLeft':'20px'}}>Generate Report</h2>
                     <ReportsFormComponent getReportRes={(e) => this.getReportRes(e)} />
                 </div>
 

@@ -268,7 +268,7 @@ export class ReportsFormComponent extends Component<IProps, IState> {
         return (
             <div className="reports-form">
                 <form onSubmit={this.submitHandler}>
-                    <h3>Select the report to generate:</h3>
+                    <h4>Select the report to generate:</h4>
                     <div>
                         <label>Type of Report: </label>
                         <select name="reportType" value={reportType} onChange={this.changeHandler}>
