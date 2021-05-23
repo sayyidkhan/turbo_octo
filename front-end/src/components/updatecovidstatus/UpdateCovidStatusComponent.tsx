@@ -34,6 +34,7 @@ export class UpdateCovidStatus extends Component {
         const dto  = this.mapDTO();
         const p_nric = this.state.p_nric;
 
+        console.log(p_nric);
         axios.patch(`http://localhost:5000/p_user/${p_nric}`, dto)
             .then(res=> {
                 console.log(res);
@@ -49,7 +50,7 @@ export class UpdateCovidStatus extends Component {
                 this.setState({'actionMessage' : result});
             });
 
-        this.setState({p_nric: '', covid_status: ''});
+        this.setState({p_nric: '', covid_status: 'true'});
     }
 
     render() {
