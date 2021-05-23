@@ -3,7 +3,6 @@ import {PerMonth_CTracingListing, PerWeek_CTracingListing, ReportUtil} from "../
 import {VaccineService} from "./vaccine.service";
 import {v_cert} from "./schemas/vaccine.schema";
 import {ReportMonthlyComputeCtracingDto, ReportWeeklyQueryCtracingDto} from "../ctracing/dto/report-ctracing.dto";
-import {c_tracing} from "../ctracing/schemas/ctracing.schema";
 import {DateUtil} from "../commonUtil/DateUtil";
 
 @Injectable()

@@ -23,4 +23,10 @@ export class ReportMonthlyComputeCtracingDto implements DateCompute {
 export class ReportWeeklyQueryCtracingDto implements WeeklyQuery {
     month: number;
     year: number;
+
+
+    constructor(month: number, year: number) {
+        this.month = month;
+        this.year = year;
+    }
 }
