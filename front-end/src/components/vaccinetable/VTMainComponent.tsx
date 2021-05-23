@@ -12,7 +12,6 @@ export default class VTMainComponent extends Component {
 
     setList = (vaccines: []) => {
         this.setState({myList : vaccines});
-        console.log("parent component");
         console.log(this.state.myList);;
     }
 
