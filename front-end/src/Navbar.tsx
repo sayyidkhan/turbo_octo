@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom"
 import './App.css';
 import history from './history';
@@ -14,71 +14,71 @@ export default function Navbar(props : any){
         id: 1,
         path: "/",
         text: "Home",
-        accessBy: ["public"],
+        accessBy: ["P"],
       }, 
       {
         id: 2,
         path: "/Login",
         text: "Login",
-        accessBy: ["public"],
+        accessBy: ["P"],
       },
       {
         id: 3,
         path: "/Dashboard",
         text: "Dashboard",
-        accessBy: ["government", "business", "healthcare"],
+        accessBy: ["G", "B", "H"],
       },
       {
         id: 4,
         path: "/ContactTracing",
         text: "Contact Tracing",
-        accessBy: ["government", "healthcare"],
+        accessBy: ["G", "H"],
       },
       {
         id: 5,
         path: "/VaccinationRecords",
         text: "Vaccination",
-        accessBy: ["government", "healthcare"],
+        accessBy: ["G", "H"],
       },
       {
         id: 6,
         path: "/PublicAlerts",
         text: "Public Alerts",
-        accessBy: ["government", "business"],
+        accessBy: ["G", "B"],
       },
       {
         id: 7,
         path: "/TriggerAlert",
         text: "Trigger Alert",
-        accessBy: ["healthcare"],
+        accessBy: ["H"],
       },
       {
         id: 8,
         path: "/UpdateCovidStatus",
         text: "Update Covid Status",
-        accessBy: ["healthcare"],
+        accessBy: ["H"],
       },
       {
         id: 9,
         path: "/Reports",
         text: "Reports",
-        accessBy: ["government"],
+        accessBy: ["G"],
       },
       {
         id: 10,
         path: "/Accounts",
         text: "Manage Accounts",
-        accessBy: ["government"],
+        accessBy: ["G"],
       },
       {
         id: 11,
         path: "/",
         text: "Logout",
-        accessBy: ["government", "business", "healthcare"],
+        accessBy: ["G", "B", "H"],
       }
   ];
 
-  const [navbarOpen, setNavbarOpen] = useState(userType === "public"  || userType === "" ? false : true);
+  const [navbarOpen, setNavbarOpen] = useState(userType === "P"  || userType === "" ? false : true);
 
   const handleToggle = () => {
       setNavbarOpen(prev => !prev)
@@ -93,7 +93,7 @@ export default function Navbar(props : any){
   }
 
   const logoutAction = () => {
-    sessionStorage.setItem('userType', "public");
+    sessionStorage.setItem('userType', "P");
     closeMenu();
     history.push('/');
   }
@@ -101,7 +101,7 @@ export default function Navbar(props : any){
 
   return (
       <nav className="navBar">
-      <button onClick={handleToggle} className={userType === "public" ? "toShow" : "toHide"}>
+      <button onClick={handleToggle} className={userType === "P" ? "toShow" : "toHide"}>
         {
           navbarOpen ? 
           <CloseIcon
@@ -119,7 +119,7 @@ export default function Navbar(props : any){
               <NavLink 
                 to={link.path} 
                 activeClassName="active-link"
-                onClick={userType === "public" ? () => closeMenu() : link.text === "Logout" ? () => logoutAction() : () => doNothing()}
+                onClick={userType === "P" ? () => closeMenu() : link.text === "Logout" ? () => logoutAction() : () => doNothing()}
                 exact>
                 {link.text}
               </NavLink>

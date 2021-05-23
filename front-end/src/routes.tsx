@@ -19,18 +19,19 @@ export default function Routes(props: any) {
     function isUserAuthenticated(page : any){
 
         const userType = sessionStorage.getItem('userType');
+        console.log(userType, userType==="G");
         const publicAccess = ["Home", "Login"];
         const governmentAccess = ["Dashboard", "ContactTracing", "VaccinationRecords", "PublicAlerts", "Reports", "Accounts"];
         const businessAccess = ["Dashboard", "PublicAlerts"];
         const healthcareAccess = ["Dashboard", "ContactTracing", "VaccinationRecords", "TriggerAlert", "UpdateCovidStatus"];
 
-        if(userType === "public" && publicAccess.includes(page)){
+        if(userType === "P" && publicAccess.includes(page)){
             return true;
-        } else if (userType === "government" && governmentAccess.includes(page)){
+        } else if (userType === "G" && governmentAccess.includes(page)){
             return true;
-        } else if (userType === "business" && businessAccess.includes(page)){
+        } else if (userType === "B" && businessAccess.includes(page)){
             return true;
-        } else if (userType === "healthcare" && healthcareAccess.includes(page)){
+        } else if (userType === "H" && healthcareAccess.includes(page)){
             return true;
         }
 

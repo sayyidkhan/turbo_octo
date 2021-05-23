@@ -19,7 +19,7 @@ export default class PublicAlerts extends Component {
 
         const userType = sessionStorage.getItem("userType");
 
-        if(userType === "government"){
+        if(userType === "G"){
             return (
                 <div className="dashboard-container-general">
                     <h1>Public Alerts</h1>

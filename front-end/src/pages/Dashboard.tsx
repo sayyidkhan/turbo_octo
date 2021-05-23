@@ -13,7 +13,7 @@ export default class Dashboard extends Component {
 
         const userType = sessionStorage.getItem("userType");
 
-        if (userType === "government") {
+        if (userType === "G") {
             return (
                 <div className="dashboard-container-general">
                     <h1>Dashboard</h1>
@@ -29,7 +29,7 @@ export default class Dashboard extends Component {
                 </div>
             );
 
-        } else if (userType === "healthcare") {
+        } else if (userType === "H") {
             return (
                 <div className="dashboard-container-general">
                     <h1>Dashboard</h1>
@@ -44,7 +44,7 @@ export default class Dashboard extends Component {
                 </div>
             );
 
-        } else if (userType === "business") {
+        } else if (userType === "B") {
             return (
                 <div className="dashboard-container-general">
                     <h1>Dashboard</h1>

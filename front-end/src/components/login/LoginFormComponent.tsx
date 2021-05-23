@@ -7,7 +7,7 @@ export class LoginFormComponent extends Component {
     state = {
         'e_nric': '',
         'password': '',
-        'admintype': 'public',
+        'admintype': 'P',
         'status': 0
     }
 
@@ -41,19 +41,13 @@ export class LoginFormComponent extends Component {
         .then(response => response.json())
         .then(e_user => { 
 
-            var userType = "public";
-            switch(e_user.admintype){
-                case 'G': userType = 'government'; break;
-                case 'H': userType = 'healthcare'; break;
-                case 'B': userType = 'business'; break;
-            }
+            var userType = e_user.admintype.toString();
 
             this.setState({'admintype': userType});
             sessionStorage.setItem('userType', userType);
+            console.log(sessionStorage.getItem('userType'));
 
-            const adminTypes = ["government", "business", "healthcare"];
-            //const userType = sessionStorage.getItem('userType') ?? "public";
-            //console.log('admintype in sessionStorage: ', sessionStorage.getItem('userType'));
+            const adminTypes = ["G", "B", "H"];
 
             if(adminTypes.includes(userType)){
                 history.push('/Dashboard');
@@ -72,16 +66,13 @@ export class LoginFormComponent extends Component {
         e.preventDefault();
 
         var temp_userType = this.state.e_nric;
-        const adminTypes = ["government", "business", "healthcare"];
+        const adminTypes = ["G", "B", "H"];
         if(!adminTypes.includes(temp_userType)){
-            temp_userType = "public";
+            temp_userType = "P";
         }
 
         this.setState({'userType' : temp_userType});
         sessionStorage.setItem('userType', temp_userType);
-        //checking use
-        //this.setState({'userType' : this.state.e_nric}, () => {alert(this.state.userType);}); 
-        //alert(sessionStorage.getItem('userType'));
 
         history.push('/Dashboard');
         window.location.reload(false);
