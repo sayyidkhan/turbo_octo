@@ -47,6 +47,7 @@ export default class MonthlyVaccReportComponent extends React.Component<IProps, 
     }
 
     async componentDidUpdate() {
+        chartData = [];
         if(this.state.type !== this.props.reportRes.type) {
             await this.componentDidMount();
         }

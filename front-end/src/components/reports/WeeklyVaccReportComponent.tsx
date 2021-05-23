@@ -94,15 +94,15 @@ export default class WeeklyVaccReportComponent extends React.Component<IProps, I
 
     monthToString(month : string){
         switch(month){
-            case "1": return "Jan"; 
-            case "2": return "Feb"; 
-            case "3": return "Mar"; 
-            case "4": return "Apr"; 
-            case "5": return "May"; 
-            case "6": return "Jun"; 
-            case "7": return "Jul"; 
-            case "8": return "Aug"; 
-            case "9": return "Sep"; 
+            case "01": return "Jan"; 
+            case "02": return "Feb"; 
+            case "03": return "Mar"; 
+            case "04": return "Apr"; 
+            case "05": return "May"; 
+            case "06": return "Jun"; 
+            case "07": return "Jul"; 
+            case "08": return "Aug"; 
+            case "09": return "Sep"; 
             case "10": return "Oct"; 
             case "11": return "Nov"; 
             case "12": return "Dec"; 
@@ -118,7 +118,7 @@ export default class WeeklyVaccReportComponent extends React.Component<IProps, I
             return (
                 <div>
                     <div>
-                        <h2>Weekly Vaccination Report for {this.monthToString(type.slice(-1))} {type.substring(3,7)}</h2>
+                        <h2>Weekly Vaccination Report for {this.monthToString(type.slice(-2))} {type.substring(3,7)}</h2>
                         <Paper>
                             <Chart data={chartData} >
                             <ValueScale name="total_amount" />

@@ -201,7 +201,12 @@ export class ReportsFormComponent extends Component<IProps, IState> {
                         }
 
                         const yearStr = this.state.year.toString();
-                        const monthStr = this.state.month.toString();
+                        const month = this.state.month;
+                        let monthStr = month.toString();
+                        if(month < 10){
+                            monthStr = "0" + monthStr;
+                        }
+                        
                         this.sendData('WCT'+yearStr+monthStr, keys, result);
                     })
                     .catch((error: any) => console.log('error', error));
@@ -222,7 +227,12 @@ export class ReportsFormComponent extends Component<IProps, IState> {
                         }
 
                         const yearStr = this.state.year.toString();
-                        const monthStr = this.state.month.toString();
+                        const month = this.state.month;
+                        let monthStr = month.toString();
+                        if(month < 10){
+                            monthStr = "0" + monthStr;
+                        }
+
                         this.sendData('WVA'+yearStr+monthStr, keys, result);
                     })
                     .catch((error: any) => console.log('error', error));
