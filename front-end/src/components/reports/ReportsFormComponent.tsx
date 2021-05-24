@@ -95,9 +95,12 @@ export class ReportsFormComponent extends Component<IProps, IState> {
             const date_from_str = dateFormat(this.state.date_from, "mm/dd/yyyy");
             const date_to_str = dateFormat(this.state.date_to, "mm/dd/yyyy");
 
+            const currentYear = new Date().getFullYear().toString();
             const dateFrom : number = new Date(date_from_str).getTime();
             const dateTo : number = new Date(date_to_str).getTime();
             const diffDays = Math.floor((dateTo - dateFrom) / (1000 * 60 * 60 * 24));
+
+            console.log(this.state.date_from, " ", this.state.date_to);
 
             if(dateFrom > dateTo) {
                 this.setState({actionMessage: "From Date cannot greater than To Date."});
@@ -114,6 +117,11 @@ export class ReportsFormComponent extends Component<IProps, IState> {
             else if(diffDays > 365) {
                 this.setState({actionMessage: "The report duration cannot exceed 1 year range."});
                 return false;
+
+            }else if(date_from_str.slice(-4) !== date_to_str.slice(-4)){
+                this.setState({actionMessage: "The report can only be generated within a year."});
+                return false;
+
             }
             else {
                 this.setState({actionMessage: ''});
