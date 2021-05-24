@@ -6,7 +6,7 @@ import { TextField } from "@material-ui/core";
 export class TriggerAlerts extends Component {
 
     state = {
-        'date': new Date(),
+        'date': this.getDatePlus8hours(new Date()),
         'location_id': '',
         'description': '',
         'e_nric': '',
@@ -33,7 +33,7 @@ export class TriggerAlerts extends Component {
 
     mapDTO = () => {
         const dto = {
-            'date': this.getDatePlus8hours(this.state.date), 
+            'date': this.state.date, 
             'location_id': this.state.location_id, 
             'description': this.state.description, 
             'e_nric': this.state.e_nric
@@ -61,7 +61,7 @@ export class TriggerAlerts extends Component {
                 this.setState({'actionMessage' : result});
             });
 
-        this.setState({date: new Date(), location_id: '', description: '', e_nric: ''});
+        this.setState({date: this.getDatePlus8hours(new Date()), location_id: '', description: '', e_nric: ''});
     }
 
     render() {

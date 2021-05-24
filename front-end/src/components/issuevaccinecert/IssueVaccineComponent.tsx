@@ -7,7 +7,7 @@ export class IssueVaccine extends Component {
 
     state = {
         'p_nric': '',
-        'v_date': new Date(),
+        'v_date': this.getDatePlus8hours(new Date()),
         'e_nric': '',
         'actionMessage' : ''
     }
@@ -33,7 +33,7 @@ export class IssueVaccine extends Component {
     mapDTO = () => {
         const dto = {
             'p_nric': this.state.p_nric, 
-            'v_date': this.getDatePlus8hours(this.state.v_date), 
+            'v_date': this.state.v_date, 
             'e_nric': this.state.e_nric
         };
         this.setState({'actionMessage' : ''});
@@ -59,7 +59,7 @@ export class IssueVaccine extends Component {
                 this.setState({'actionMessage' : result});
             });
 
-        this.setState({p_nric: '', v_date: new Date(), e_nric: ''});
+        this.setState({p_nric: '', v_date: this.getDatePlus8hours(new Date()), e_nric: ''});
     }
 
     render() {
@@ -75,7 +75,7 @@ export class IssueVaccine extends Component {
 
                         <div style={{'marginBottom':'10px'}}>
                             <label>Vaccination Date: </label>
-                            <TextField name="alertDate" type="date" value={v_date_str} onChange={this.changeHandler}/>
+                            <TextField name="v_date" type="date" value={v_date_str} onChange={this.changeHandler}/>
                         </div>
 
                         <div>

@@ -15,7 +15,7 @@ export class IssueAlerts extends Component<IProps, IState> {
     state = {
         'alertTitle': 'Low',
         'alertDetail': '',
-        'alertDate': new Date(),
+        'alertDate': this.getDatePlus8hours(new Date()),
         'active': 'true',
         'location_id': 0,
         'actionMessage': ''
@@ -44,7 +44,7 @@ export class IssueAlerts extends Component<IProps, IState> {
         const dto = {
             'alertTitle': this.state.alertTitle, 
             'alertDetail': this.state.alertDetail, 
-            'alertDate': this.getDatePlus8hours(this.state.alertDate), 
+            'alertDate': this.state.alertDate, 
             'active': this.state.active, 
             'location_id': this.state.location_id
         };
@@ -92,7 +92,7 @@ export class IssueAlerts extends Component<IProps, IState> {
                 this.setState({'actionMessage': result});
             });
 
-        this.setState({alertTitle: 'Low', alertDetail: '', alertDate: new Date(), active: 'true', location_id: 0});
+        this.setState({alertTitle: 'Low', alertDetail: '', alertDate: this.getDatePlus8hours(new Date()), active: 'true', location_id: 0});
     }
 
     render() {
