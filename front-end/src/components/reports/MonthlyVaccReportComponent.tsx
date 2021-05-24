@@ -59,7 +59,6 @@ export default class MonthlyVaccReportComponent extends React.Component<IProps, 
             keys: this.props.reportRes.keys,
             data: this.props.reportRes.data
         });
-        chartData = [];
     }
 
     createRows() : { month: string, total_amount: number}[] {
