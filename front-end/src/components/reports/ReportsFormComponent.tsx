@@ -119,7 +119,7 @@ export class ReportsFormComponent extends Component<IProps, IState> {
                 return false;
 
             }else if(date_from_str.slice(-4) !== date_to_str.slice(-4)){
-                this.setState({actionMessage: "The report can only be generated within a year."});
+                this.setState({actionMessage: "The report Date From and Date To must be in the same year."});
                 return false;
 
             }
