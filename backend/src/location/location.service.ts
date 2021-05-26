@@ -7,7 +7,7 @@ export class LocationService {
     constructor(private readonly locationRepository: LocationRepository) {}
 
     async getLocationById(locationId: number): Promise<Location> {
-        return this.locationRepository.findOne({ location_id : locationId })
+        return this.locationRepository.findOne({ location_id : locationId });
     }
 
     async getAllLocation(): Promise<Location[]> {
@@ -26,5 +26,19 @@ export class LocationService {
         })
         return myDict;
     }
+
+    async getLocationByDistrict(district : string) : Promise<{}> {
+        const locationList : Location[] = await this.locationRepository.find({ district : district });
+        const myDict = {};
+        locationList.forEach((location: Location) => {
+            const locationId = location.location_id;
+            const locationName = location.location_name;
+            const district = location.district;
+            const locationInterface = {locationId: locationId, location_name: locationName, district: district};
+            myDict[locationId] = locationInterface;
+        })
+        return myDict;
+    }
+
 
 }

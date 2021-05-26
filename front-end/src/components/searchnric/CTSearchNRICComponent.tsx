@@ -1,4 +1,3 @@
-import * as React from "react";
 import {Component} from "react";
 import {searchnric_API} from "./api/searchnric_api";
 import './SearchNRICComponent.css';
@@ -18,7 +17,6 @@ export default class SearchNRIC extends Component<SearchNricProps> {
 
     state = {
         p_nric: '',
-        //only will be used to hold the outcome of the data
         result : [],
         result_statement : '',
     }
@@ -35,47 +33,67 @@ export default class SearchNRIC extends Component<SearchNricProps> {
     submitHandler = (e: any) => {
         e.preventDefault();
         const p_nric = this.state.p_nric;
+
+        if(!this.checkValidation()){
+            return;
+        }
+
         searchnric_API(p_nric).then(res => {
                 console.log(res);
-                 this.onSearchResultID(res.data);
+                this.onSearchResultID(res.data);
                 this.updateStatement();
             })
             .catch(err => {
                 console.log(err);
                 this.updateStatement();
-                /*alert("Incorrect NRIC! please fill up again.")*/
             });
-         //const outcome = postIssueAlerts_API(this.state);
-         //outcome.then(res => {
-          //   console.log(res);
-         //}).catch(err => {
-          //  console.log(err);
-         //});
+    }
 
+    checkValidation(){
+        if(this.state.p_nric === ''){
+            const result = (
+                <p style={{'color' : 'red'}}>
+                    Please fill in the NRIC.
+                </p>
+            );
+            this.setState({'result_statement' : result});
+            return false;
+        }
+        return true;
     }
 
     updateStatement = () => {
-      if(this.state.result.length === 0) {
-          this.setState({'result_statement' :  "No Result Found"});
-      }
-      else {
+        if(this.state.result.length === 0) {
+          const result = (
+              <p style={{'color' : 'red'}}>
+                  No result found.
+              </p>
+          );
+          this.setState({'result_statement' : result});
+        }
+        else {
           this.update_list(this.state.result);
-          this.setState({'result_statement' :  `Successfully obtained ${this.state.result.length} records.`});
-      }
-    };
+          const result = (
+              <p style={{'color' : 'green'}}>
+                  Successfully obtained {this.state.result.length} records.
+              </p>
+          );
+          this.setState({'result_statement' : result});
+        }
+      };
 
     render() {
-        const {p_nric} = this.state;
+        const {p_nric, result_statement} = this.state;
         return (
             <div>
                 <form onSubmit={this.submitHandler}>
                     <div>
                         <label>Search NRIC: </label>
                         <input type="text" name="p_nric" value={p_nric} onChange={this.changeHandler}/>
+                        <button style={{'marginLeft':'20px'}} type="submit">Search</button>
                     </div>
-                    <div>{this.state.result_statement}</div>
-                    <button type="submit">Search</button>
                 </form>
+                <div>{result_statement}</div>
             </div>
         );
     }

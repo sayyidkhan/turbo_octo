@@ -10,7 +10,6 @@
 
 .reports-form{
     margin-left: 20px;
-    padding-top: 10px;
     font-size: 18px;
 }
 
@@ -51,4 +50,9 @@
 
 .reports-result-wrapper table {
     min-width: 650;
+}
+
+.small-table{
+    margin-top: 30px;
+    width: 50%;
 }

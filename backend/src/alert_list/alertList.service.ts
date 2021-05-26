@@ -25,6 +25,10 @@ export class AlertListService {
         return this.alertListRepository.getMaxAlertListId();
     }
 
+    setAlertListId(highestAlertListId: number) {
+        return (highestAlertListId > 0) ? highestAlertListId + 1 : 1;
+    }
+
     async createAlert(
         alertTitle: string,
         alertDetail: string,
@@ -35,7 +39,7 @@ export class AlertListService {
         const highestAlertListId : number = await this.getMaxAlertListId();
         const persistence = {
             //increment the id if there is an existing alertId, otherwise initalise at 1
-            alertListId: (highestAlertListId > 0) ? highestAlertListId + 1 : 1,
+            alertListId: this.setAlertListId(highestAlertListId),
             alertTitle : alertTitle,
             alertDetail : alertDetail,
             alertDate : alertDate,

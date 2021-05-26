@@ -35,4 +35,8 @@
     background-color: #4CAF50; 
     border: #4CAF50;
     color: white;
-  }
+}
+
+.inlineBtn{
+    margin-left: 20px;
+}

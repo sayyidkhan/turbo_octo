@@ -63,6 +63,14 @@
     color: white;
 }
 
-.validationMsg{
+.toShowErrorMsg{
     display: block;
+    color: red;
+    position: relative;
+}
+
+.toHideErrorMsg{
+    display: block;
+    visibility:hidden;
+    position: relative;
 }

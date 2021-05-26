@@ -1,0 +1,6 @@
+//records
+db = db.getSiblingDB('demo');
+db.v_certs.insert({
+    "_id":  ObjectId() ,
+    REPLACE_OBJECT_HERE
+});

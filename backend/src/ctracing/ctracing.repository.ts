@@ -13,6 +13,10 @@ export class CtracingRepository {
     }
 
     async find(ctracingsFilterQuery: FilterQuery<c_tracing>): Promise<c_tracing[]> {
+        return this.ctracingModel.find(ctracingsFilterQuery);
+    }
+
+    async findAndSortByLatestId(ctracingsFilterQuery: FilterQuery<c_tracing>): Promise<c_tracing[]> {
         return this.ctracingModel.find(ctracingsFilterQuery).sort({ ct_id : -1 });
     }
 
@@ -26,7 +30,6 @@ export class CtracingRepository {
 
     async getMaxCtracingId(): Promise<number> {
         const alertList = await this.ctracingModel.find({}).sort({ ct_id : -1 }).limit(1);
-        console.log(alertList);
         const result = this.checkEmptyArray(alertList);
         return result;
     }

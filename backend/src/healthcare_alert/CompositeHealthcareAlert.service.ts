@@ -1,21 +1,24 @@
 import {Injectable} from "@nestjs/common";
-
 import {HealthcareAlertService} from "./healthcareAlert.service";
 import {LocationService} from "../location/location.service";
 import {HealthcareAlert} from "./schemas/healthcareAlert.schema";
 import {ViewHealthcareAlertsDto} from "./dto/view-healthcareAlerts.dto";
+import {DateUtil} from "../commonUtil/DateUtil";
+import {E_User} from "../e_user/schemas/e_user.schema";
+import {CreateHealthcareAlertsDto} from "./dto/create-healthcareAlerts.dto";
+import {E_UserService} from "../e_user/e_User.service";
+import {Location} from '../location/schemas/location.schema';
 
 @Injectable()
 export class CompositeHealthcareAlertService {
     constructor(private readonly healthcareAlertService : HealthcareAlertService,
                 private readonly locationService : LocationService,
+                private readonly e_UserService : E_UserService,
     ) {}
 
     //hashmap filter
     filterLocation: (location_id: number, locationList : {}) => string = (location_id: number, locationList : {}) => {
-        console.log(location_id);
         if (locationList[location_id] === null || locationList[location_id] === undefined) {
-            console.log(locationList[location_id]);
             return "undefined";
         } else {
             const locationInterface = locationList[location_id.toString()];
@@ -39,4 +42,27 @@ export class CompositeHealthcareAlertService {
         });
         return healthcareAlert;
     }
+
+    async createNewHealthcareAlerts(dto: CreateHealthcareAlertsDto) {
+        const date : Date = DateUtil.convertStrToDate(dto.date);
+        const e_user: E_User = await this.e_UserService.getEnterpriseUserById(dto.e_nric);
+        const location: Location = await this.locationService.getLocationById(dto.location_id);
+        if(date === null) {
+            const errorMsg = "date is invalid. please review the date string before sending.";
+            return errorMsg;
+        }
+        else if(e_user === null){
+            const errorMsg = "enterpise nric invalid. user is trying to enter enterprise nric which doesnt exist in record.";
+            return errorMsg;
+        }
+        else if(location === null){
+            const errorMsg = "location is invalid. please review the location id before sending.";
+            return errorMsg;
+        }
+        else {
+            return dto;
+        }
+
+    }
+
 }

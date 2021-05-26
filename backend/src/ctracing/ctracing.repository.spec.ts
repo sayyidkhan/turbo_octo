@@ -39,7 +39,7 @@ describe("c_tracing Repository", () => {
     });
 
     it('test - find()', async () => {
-        await service.getCtracing();
+        await service.getCtracingByLatestId();
         expect(repository.find({})).toBeDefined();
     });
 
@@ -51,6 +51,11 @@ describe("c_tracing Repository", () => {
     it('test - getMaxCtracingId()', async () => {
         await service.getMaxCtracingId();
         expect(repository.findOne({})).toBeDefined();
+    });
+
+    it('test - getMaxCtracingId()', async () => {
+        await service.getMaxCtracingId();
+        expect(repository.findAndSortByLatestId({})).toBeDefined();
     });
 
     it('test - create()', async () => {

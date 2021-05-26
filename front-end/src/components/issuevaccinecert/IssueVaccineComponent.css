@@ -1,13 +1,17 @@
+.dashboard-tableContainer-div{
+    padding-bottom: 10px;
+}
+
 .vaccineissue-typical-content-div label{
     padding-right: 0px;
     font-size: 14;
     letter-spacing: 0.5px;
     display: inline-block;
-    width: 120px;
+    width: 170px;
     margin-left: 20px;
 }
 
-.vaccineissue-typical-content-div input{
+.vaccineissue-typical-content-div input[type=text]{
     height: 40px;
     width: 250px;
     font-size: 14px;

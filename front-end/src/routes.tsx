@@ -1,9 +1,7 @@
 import {Route, Switch} from "react-router";
-import * as React from "react";
 import Home from "./pages/Home";
-import {Login} from "./pages/Login";
+import Login from "./pages/Login";
 import LocationList from "./pages/LocationList";
-import About from "./pages/About";
 import Dashboard from "./pages/Dashboard";
 import ContactTracing from "./pages/ContactTracing";
 import VaccinationRecords from "./pages/VaccinationRecords";
@@ -13,7 +11,8 @@ import UpdateCovidStatus from "./pages/UpdateCovidStatus";
 import Reports from "./pages/Reports";
 import Accounts from "./pages/Accounts";
 import NoAccessMsg from "./pages/NoAccessMsg";
-import {EnterLoc} from "./pages/EnterLoc";
+import EnterLoc from "./pages/EnterLoc";
+import VaccCert from "./pages/VaccCert";
 
 export default function Routes(props: any) {
 
@@ -25,13 +24,13 @@ export default function Routes(props: any) {
         const businessAccess = ["Dashboard", "PublicAlerts"];
         const healthcareAccess = ["Dashboard", "ContactTracing", "VaccinationRecords", "TriggerAlert", "UpdateCovidStatus"];
 
-        if(userType === "public" && publicAccess.includes(page)){
+        if(userType === "P" && publicAccess.includes(page)){
             return true;
-        } else if (userType === "government" && governmentAccess.includes(page)){
+        } else if (userType === "G" && governmentAccess.includes(page)){
             return true;
-        } else if (userType === "business" && businessAccess.includes(page)){
+        } else if (userType === "B" && businessAccess.includes(page)){
             return true;
-        } else if (userType === "healthcare" && healthcareAccess.includes(page)){
+        } else if (userType === "H" && healthcareAccess.includes(page)){
             return true;
         }
 
@@ -42,10 +41,9 @@ export default function Routes(props: any) {
         <Switch>
             <Route path="/" exact render= {() => {return isUserAuthenticated("Home") ? <Home/> : <NoAccessMsg/>}}/>
             <Route path="/Login" render= {() => {return isUserAuthenticated("Login") ? <Login/> : <NoAccessMsg/>}}/>
-            <Route path="/about" component={About} />
             <Route path="/EnterLocation"  component={EnterLoc}/>
             <Route path="/locationList" component={LocationList}/>
-            <Route path="/CheckVaccCert" />
+            <Route path="/CheckVaccCert" component={VaccCert}/>
             <Route path="/Dashboard" render= {() => {return isUserAuthenticated("Dashboard") ? <Dashboard/> : <NoAccessMsg />}} />
             <Route path="/ContactTracing" render= {() => {return isUserAuthenticated("ContactTracing") ? <ContactTracing/> : <NoAccessMsg/>}} />
             <Route path="/VaccinationRecords" render= {() => {return isUserAuthenticated("VaccinationRecords") ? <VaccinationRecords/> : <NoAccessMsg/>}} />

@@ -12,7 +12,7 @@ export class E_UserRepository {
     }
 
     async find(query: FilterQuery<E_User>): Promise<E_User[]> {
-        return this.eUserModel.find(query);
+        return this.eUserModel.find(query).sort({});
     }
 
     async create(myObj: E_User): Promise<E_User> {

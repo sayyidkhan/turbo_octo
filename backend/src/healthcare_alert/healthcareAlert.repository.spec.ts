@@ -7,7 +7,7 @@ import {HealthcareAlertModule} from "./healthcareAlert.module";
 import {HealthcareAlert, HealthcareAlertSchema} from "./schemas/healthcareAlert.schema";
 import {PersistUpdateHealthcareAlertsDto, UpdateHealthcareAlertsDto} from "./dto/update-healthcareAlerts.dto";
 
-describe("alertList Repository", () => {
+describe("healthcare Repository", () => {
     let repository : HealthCareAlertRepository;
     let service : HealthcareAlertService;
 

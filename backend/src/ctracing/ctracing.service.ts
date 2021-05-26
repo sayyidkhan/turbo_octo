@@ -15,11 +15,32 @@ export class CtracingService {
     }
 
     async getCtracingByNric(p_nric: string): Promise<c_tracing[]> {
-        return this.ctracingRepository.find({p_nric : p_nric});
+        return this.ctracingRepository.findAndSortByLatestId({p_nric : p_nric});
     }
 
-    async getCtracing(): Promise<c_tracing[]> {
-        return this.ctracingRepository.find({});
+    async getCtracingByLocationID(location_id: number): Promise<c_tracing[]> {
+        return this.ctracingRepository.findAndSortByLatestId({location_id : location_id});
+    }
+
+    async getCtracingByLatestId(): Promise<c_tracing[]> {
+        return this.ctracingRepository.findAndSortByLatestId({});
+    }
+
+    async getCtracingByDates(date_from : Date, date_to : Date) : Promise<c_tracing[]> {
+        return this.ctracingRepository.find({ date : {
+                $gte : date_from,
+                $lte : date_to,
+            }
+        });
+    }
+
+    async getCtracingByMonthOnly(month : number, year : number) : Promise<c_tracing[]> {
+        return this.ctracingRepository.find({ $expr: {
+                $and: [
+                    {$eq: [{ $year: "$date" }, year]},
+                    {$eq: [{ $month: "$date" }, month]},
+                ]
+            }});
     }
 
     async createCtracing(

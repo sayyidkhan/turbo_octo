@@ -1,8 +1,7 @@
-import React, {Component} from "react";
+import {Component} from "react";
 import {Box} from "@material-ui/core";
 import SearchNRIC from "../searchnric/CTSearchNRICComponent";
 import {V2CTTableComponent} from "./V2_CTTableComponent";
-
 
 export default class CTMainComponent extends Component {
 
@@ -22,17 +21,16 @@ export default class CTMainComponent extends Component {
 
     render() {
         return (
-            <div className="dashboard-container">
-
-                <div className="dashboard-tableContainer-div">
-                    <h2>Search NRIC</h2>
+            <div className="dashboard-tableContainer-div">
+                <div>
+                    <h2 style={{'color':'red', 'paddingLeft':'20px'}}>Search NRIC</h2>
                     <div className="account-typical-content-div">
                         <SearchNRIC callback_function={this.setList}/>
                     </div>
                 </div>
 
-                <div className="dashboard-tableContainer-div">
-                    <h2>Contact tracing records</h2>
+                <div>
+                    <h3 style={{'paddingLeft':'20px'}}>Contact Tracing Records</h3>
                     <div className="searchtable-typical-content-div">
                         <Box justifyContent="center" m={1} p={0} bgcolor="background.paper">
                             <Box p={1} m={1} bgcolor="white.100">

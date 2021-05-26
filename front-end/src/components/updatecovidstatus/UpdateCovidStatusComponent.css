@@ -1,24 +1,31 @@
-.account-typical-content-div label{
+.update-covid-div label{
     padding-right: 0px;
     font-size: 14;
     letter-spacing: 0.5px;
     display: inline-block;
-    width: 120px;
+    width: 150px;
 }
 
-.account-typical-content-div input{
+.update-covid-div input{
     height: 40px;
     width: 250px;
     font-size: 14px;
     margin-bottom: 10px;
 }
 
-.account-typical-content-div input:focus {
+.update-covid-div select{
+    height: 40px;
+    width: 260px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.update-covid-div input:focus {
     border: 1px solid #555;
     background-color: floralwhite;
   }
 
-.account-typical-content-div button{
+.update-covid-div button{
     border-radius: 4px;
     margin-top: 20px;
     margin-bottom: 30px;
@@ -31,7 +38,7 @@
     border: none;
 }
 
-.account-typical-content-div button:hover {
+.update-covid-div button:hover {
     background-color: #4CAF50; 
     border: #4CAF50;
     color: white;

@@ -5,61 +5,64 @@ import {RecentCheckedinTable} from '../components/dashboard/RecentCheckedinTable
 import {RecentVaccinatedTable} from '../components/dashboard/RecentVaccinatedTable';
 import {RecentAlertsTable} from '../components/dashboard/RecentAlertsTable';
 import {Covid19TipsComponent} from '../components/dashboard/Covid19TipsComponent';
+import {Component} from "react";
 
 
-export default function Dashboard() {
+export default class Dashboard extends Component {
+    render() {
 
-    const userType = sessionStorage.getItem("userType");
+        const userType = sessionStorage.getItem("userType");
 
-    if(userType === "government"){
-        return (
-            <div className="dashboard-container-general">
-                <h1>Dashboard</h1>
-                <div className="under-page-title-div">
-                    <CurrentLoginUserComponent />
+        if (userType === "G") {
+            return (
+                <div className="dashboard-container-general">
+                    <h1>Dashboard</h1>
+                    <div className="under-page-title-div">
+                        <CurrentLoginUserComponent/>
+                    </div>
+                    <div className="dashboard-container">
+                        <AdvisoryFromHealthcareTable/>
+                        <RecentCheckedinTable/>
+                        <RecentVaccinatedTable/>
+                        <RecentAlertsTable/>
+                    </div>
                 </div>
-                <div className="dashboard-container">
-                    <AdvisoryFromHealthcareTable />
-                    <RecentCheckedinTable />
-                    <RecentVaccinatedTable />
-                    <RecentAlertsTable />
-                </div>
-            </div>
-        );
+            );
 
-    }else if(userType === "healthcare"){
-        return (
-            <div className="dashboard-container-general">
-                <h1>Dashboard</h1>
-                <div className="under-page-title-div">
-                    <CurrentLoginUserComponent />
+        } else if (userType === "H") {
+            return (
+                <div className="dashboard-container-general">
+                    <h1>Dashboard</h1>
+                    <div className="under-page-title-div">
+                        <CurrentLoginUserComponent/>
+                    </div>
+                    <div className="dashboard-container">
+                        <RecentCheckedinTable/>
+                        <RecentVaccinatedTable/>
+                        <RecentAlertsTable/>
+                    </div>
                 </div>
-                <div className="dashboard-container">
-                    <RecentCheckedinTable />
-                    <RecentVaccinatedTable />
-                    <RecentAlertsTable />
-                </div>
-            </div>
-        );
+            );
 
-    } else if(userType === "business"){
-        return (
-            <div className="dashboard-container-general">
-                <h1>Dashboard</h1>
-                <div className="under-page-title-div">
-                    <CurrentLoginUserComponent />
+        } else if (userType === "B") {
+            return (
+                <div className="dashboard-container-general">
+                    <h1>Dashboard</h1>
+                    <div className="under-page-title-div">
+                        <CurrentLoginUserComponent/>
+                    </div>
+                    <div className="dashboard-container">
+                        <Covid19TipsComponent/>
+                        <RecentAlertsTable/>
+                    </div>
                 </div>
-                <div className="dashboard-container">
-                    <Covid19TipsComponent />
-                    <RecentAlertsTable />
-                </div>
-            </div>
-        );
+            );
 
-    }else{
-        return(
-            <div></div>
-        );
+        } else {
+            return (
+                <div></div>
+            );
+        }
+
     }
-
 }

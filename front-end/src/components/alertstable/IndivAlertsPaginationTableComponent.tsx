@@ -9,6 +9,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
 import './alertstable.css';
+import {DateUtil} from "../../util/DateUtil";
 
 interface AlertColumn {
     id: 'alertTitle' | 'alertDetail' | 'alertDate' | 'active' | 'location_name';
@@ -37,15 +38,10 @@ function checkBoolean(x: boolean) {
     }
 }
 
-function formatDate(x: any) {
-    var formattedDate = x.toString();
-    return formattedDate.substring(0,10);
-};
-
-function createData(parameters: { alertTitle: string, alertDetail: string, alertDate: number, active: boolean, location_name: string, alertListId: number }) {
+function createData(parameters: { alertTitle: string, alertDetail: string, alertDate: string, active: boolean, location_name: string, alertListId: number }) {
     let {alertTitle, alertDetail, alertDate, active, location_name, alertListId} = parameters;
 
-    return { alertTitle: alertTitle, alertDetail: alertDetail, alertDate: formatDate(alertDate), active: checkBoolean(active), location_name: location_name, alertListId: alertListId };
+    return { alertTitle: alertTitle, alertDetail: alertDetail, alertDate: DateUtil.formatDate(alertDate), active: checkBoolean(active), location_name: location_name, alertListId: alertListId };
 }
 
 const useStyles = makeStyles({
@@ -77,54 +73,54 @@ export default function IndivAlertsPaginationTableComponent(props : any) {
         return (myListing.length !== 0) ? result : [];
     }
 
-    /*
-    {classes.root}
-    {classes.container}
-    */
     return (
-        <Paper className={classes.root}>
-            <TableContainer className={classes.container}>
-                <Table stickyHeader aria-label="sticky table">
-                    <TableHead>
-                        <TableRow>
-                            {columns.map((column) => (
-                                <TableCell
-                                    key={column.id}
-                                    align={column.align}
-                                    style={{ minWidth: column.minWidth }}
-                                >
-                                    {column.label}
-                                </TableCell>
-                            ))}
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        {createRows().slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row ) => {
-                            return (
-                                <TableRow hover role="checkbox" tabIndex={-1} key={row.alertListId}>
-                                    {columns.map((column) => {
-                                        const value = row[column.id];
-                                        return (
-                                            <TableCell key={column.id} align={column.align}>
-                                                {column.format && typeof value === 'number' ? column.format(value) : value}
-                                            </TableCell>
-                                        );
-                                    })}
-                                </TableRow>
-                            );
-                        })}
-                    </TableBody>
-                </Table>
-            </TableContainer>
-            <TablePagination
-                rowsPerPageOptions={[10, 25, 100]}
-                component="div"
-                count={createRows().length}
-                rowsPerPage={rowsPerPage}
-                page={page}
-                onChangePage={handleChangePage}
-                onChangeRowsPerPage={handleChangeRowsPerPage}
-            />
-        </Paper>
+        <div>
+            <div style={{'display': 'none'}}>{props.renderStatus}</div>
+            <Paper className={classes.root}>
+                <TableContainer className={classes.container}>
+                    <Table stickyHeader aria-label="sticky table">
+                        <TableHead>
+                            <TableRow>
+                                {columns.map((column) => (
+                                    <TableCell
+                                        key={column.id}
+                                        align={column.align}
+                                        style={{ minWidth: column.minWidth }}
+                                    >
+                                        {column.label}
+                                    </TableCell>
+                                ))}
+                            </TableRow>
+                        </TableHead>
+                        <TableBody>
+                            {createRows().slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row ) => {
+                                return (
+                                    <TableRow hover role="checkbox" tabIndex={-1} key={row.alertListId}>
+                                        {columns.map((column) => {
+                                            const value = row[column.id];
+                                            return (
+                                                <TableCell key={column.id} align={column.align}>
+                                                    {column.format && typeof value === 'number' ? column.format(value) : value}
+                                                </TableCell>
+                                            );
+                                        })}
+                                    </TableRow>
+                                );
+                            })}
+                        </TableBody>
+                    </Table>
+                </TableContainer>
+                <TablePagination
+                    rowsPerPageOptions={[10, 25, 100]}
+                    component="div"
+                    count={createRows().length}
+                    rowsPerPage={rowsPerPage}
+                    page={page}
+                    onChangePage={handleChangePage}
+                    onChangeRowsPerPage={handleChangeRowsPerPage}
+                />
+            </Paper>
+        </div>
     );
+
 }

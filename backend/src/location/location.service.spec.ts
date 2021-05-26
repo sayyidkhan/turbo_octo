@@ -93,4 +93,10 @@ describe('LocationService', () => {
         expect(result).toEqual(new LocationServiceMock().getAllLocationDict());
     });
 
+    it('test - getLocationByDistrict()', async () => {
+        repository.find = jest.fn().mockReturnValue(new LocationServiceMock().getAllLocation());
+        const result = await service.getLocationByDistrict("west");
+        expect(result).toBeDefined();
+    });
+
 });

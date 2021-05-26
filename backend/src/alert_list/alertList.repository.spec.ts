@@ -5,6 +5,7 @@ import {AlertListRepository} from "./alertList.repository";
 import {AlertListService} from "./alertList.service";
 import {AlertListModule} from "./alertlist.module";
 import {AlertList, AlertListSchema} from "./schemas/alertList.schema";
+import exp = require("constants");
 
 
 describe("alertList Repository", () => {
@@ -49,6 +50,17 @@ describe("alertList Repository", () => {
     it('test - findOne()', async () => {
         await service.getAlertById(123456);
         expect(repository.findOne({})).toBeDefined();
+    });
+
+    it("test - setAlertListId()", () => {
+        const testObj = new AlertList();
+        testObj.alertListId = 1;
+
+        const postive_outcome = repository.setAlertListId([testObj]);
+        expect(postive_outcome).toBe(1);
+
+        const negative_outcome = repository.setAlertListId([]);
+        expect(negative_outcome).toBe(0);
     });
 
     it('test - getMaxCtracingId()', async () => {

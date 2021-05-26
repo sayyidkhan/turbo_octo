@@ -36,7 +36,6 @@ export class AlertsTable extends Component {
         return(
             <div>
                 <DisplayAlertNo status={this.state.status} totalNoofAlerts={this.state.totalNoofAlerts}/>
-                {/*<HomeAlertsTable myList={this.state.result}/>*/}
                 <AlertsPaginationTableComponent myList={this.state.result}/>
             </div>
         );

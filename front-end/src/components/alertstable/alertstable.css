@@ -9,3 +9,13 @@
     overflow: auto;
     max-width: 100%;
 }
+
+.business-alert-div{
+    padding-bottom: 20px;
+}
+
+.search-alert-div select, input{
+    height: 40px;
+    width: 150px;
+    font-size: 14px;
+}

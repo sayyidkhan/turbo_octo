@@ -9,6 +9,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
 import './healthadvisetable.css';
+import {DateUtil} from "../../util/DateUtil";
 
 interface HealthAviseColumn {
     id: 'date' | 'location_name' | 'description' | 'e_nric';
@@ -37,15 +38,11 @@ function sliceArray(arr1: any[]) {
     }
 }
 
-function formatDate(x: any) {
-    var formattedDate = x.toString();
-    return formattedDate.substring(0,10);
-}
 
 function createData(parameters: { date: string, location_name: string, description: string, e_nric: string }) {
     let {date, location_name, description, e_nric} = parameters;
 
-    return { date: formatDate(date), location_name: location_name, description: description, e_nric: e_nric };
+    return { date: DateUtil.formatDate(date), location_name: location_name, description: description, e_nric: e_nric };
 }
 
 const useStyles = makeStyles({
