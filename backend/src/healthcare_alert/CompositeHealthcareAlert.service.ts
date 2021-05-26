@@ -34,7 +34,7 @@ export class CompositeHealthcareAlertService {
             const healthcare_id = healthcareAlerts.location_id;
             const healthcare_name = this.filterLocation(healthcare_id,locationList);
             const dto = new ViewHealthcareAlertsDto();
-            dto.date = healthcareAlerts.date.toLocaleString();
+            dto.date = healthcareAlerts.date.toISOString();
             dto.location_name = healthcare_name;
             dto.description = healthcareAlerts.description;
             dto.e_nric = healthcareAlerts.e_nric;

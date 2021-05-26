@@ -36,7 +36,7 @@ export class CtracingController {
       const cTracingList : c_tracing[] = await this.CtracingService.getCtracingByNric(p_nric);
       const locationListDict: {} = await this.locationService.getAllLocationDict();
       const dto : ViewCtracingDto[] = cTracingList.map((c_tracing : c_tracing) => {
-          const date : string = c_tracing.date.toLocaleString();
+          const date : string = c_tracing.date.toISOString();
           const location : Location = locationListDict[c_tracing.location_id];
           const locationName = location.location_name;
           return new ViewCtracingDto(c_tracing.p_nric,locationName,date);

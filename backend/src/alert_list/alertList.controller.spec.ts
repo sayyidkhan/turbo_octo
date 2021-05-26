@@ -30,7 +30,7 @@ class AlertListControllerMock {
             alertList.alertListId,
             alertList.alertTitle,
             alertList.alertDetail,
-            alertList.alertDate.toLocaleString(),
+            alertList.alertDate.toISOString(),
             "location_name"
         );
         return [activeAlertList];

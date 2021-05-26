@@ -27,7 +27,7 @@ class HealthcareAlertControllerMock {
     getViewHealthCareAlertsDTO(): ViewHealthcareAlertsDto[] {
         const alertList = this.getOneHealthAlertList();
         const dto = new ViewHealthcareAlertsDto();
-        dto.date = alertList.date.toLocaleString();
+        dto.date = alertList.date.toISOString();
         dto.location_name = "location_name";
         dto.description = "description";
         dto.e_nric = "e_nric";
@@ -122,7 +122,7 @@ describe('HealthcareAlert Controller',() => {
     it("HealthCare Alert Controller - POST createNewHealthcareAlerts() (positive)", async () => {
         const dto = new CreateHealthcareAlertsDto();
         dto.e_nric = "e_nric";
-        dto.date = new Date().toLocaleString();
+        dto.date = new Date().toISOString();
         dto.description = "description";
         dto.location_id = 123456;
 
@@ -138,7 +138,7 @@ describe('HealthcareAlert Controller',() => {
     it("HealthCare Alert Controller - POST createNewHealthcareAlerts() (negative scenario - 1)", async () => {
         const dto = new CreateHealthcareAlertsDto();
         dto.e_nric = "e_nric";
-        dto.date = new Date().toLocaleString();
+        dto.date = new Date().toISOString();
         dto.description = "description";
         dto.location_id = 123456;
 
@@ -156,7 +156,7 @@ describe('HealthcareAlert Controller',() => {
     it("HealthCare Alert Controller - PATCH updateHealthcareAlerts() (positive)", async () => {
         const dto = new UpdateHealthcareAlertsDto();
         dto.e_nric = "e_nric";
-        dto.date = new Date().toLocaleString();
+        dto.date = new Date().toISOString();
         dto.description = "description";
         dto.location_id = 123456;
 

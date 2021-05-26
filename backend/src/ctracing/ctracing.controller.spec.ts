@@ -152,7 +152,7 @@ describe('Ctracing Controller',() => {
         const dto = new CreateCtracingDto();
         dto.location_id = 123456;
         dto.p_nric = "p_nric";
-        dto.date = new Date().toLocaleString();
+        dto.date = new Date().toISOString();
 
         const res = await request(app.getHttpServer())
             .post("/c_tracing/")
@@ -166,7 +166,7 @@ describe('Ctracing Controller',() => {
         const dto = new CreateCtracingDto();
         dto.location_id = 123456;
         dto.p_nric = "p_nric";
-        dto.date = new Date().toLocaleString();
+        dto.date = new Date().toISOString();
 
         mockGetP_UserById.mockReturnValue(null);
         const res = await request(app.getHttpServer())
@@ -183,7 +183,7 @@ describe('Ctracing Controller',() => {
         const dto = new CreateCtracingDto();
         dto.location_id = 123456;
         dto.p_nric = "p_nric";
-        dto.date = new Date().toLocaleString();
+        dto.date = new Date().toISOString();
 
         mockGetP_UserById.mockReturnValue(new p_user());
         mockGetLocationById.mockReturnValue(null);
@@ -218,9 +218,9 @@ describe('Ctracing Controller',() => {
     it("c_tracing Controller - POST generateMonthlyReport() (positive)", async () => {
         const dto = new ReportMonthlyQueryCtracingDto();
         const date1 = new Date("1/1/2021");
-        dto.date_from = date1.toLocaleString();
+        dto.date_from = date1.toISOString();
         const date2 = new Date("3/3/2021");
-        dto.date_to = date2.toLocaleString();
+        dto.date_to = date2.toISOString();
 
         const res = await request(app.getHttpServer())
             .post("/c_tracing/report/monthly/")
@@ -233,7 +233,7 @@ describe('Ctracing Controller',() => {
     it("c_tracing Controller - POST generateMonthlyReport() (negative)", async () => {
         const dto = new ReportMonthlyQueryCtracingDto();
         const date1 = new Date("1/1/2021");
-        dto.date_to = date1.toLocaleString();
+        dto.date_to = date1.toISOString();
         dto.date_from = "";
 
         const res = await request(app.getHttpServer())

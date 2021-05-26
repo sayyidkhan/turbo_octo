@@ -32,7 +32,7 @@ describe("DateUtil", () => {
 
     it("test validateMonthlyQuery() (negative scenario - 2)", () => {
         const dto : DateQuery = {
-            date_from : new Date().toLocaleString(),
+            date_from : new Date().toISOString(),
             date_to : "",
         };
 
@@ -42,8 +42,8 @@ describe("DateUtil", () => {
 
     it("test validateMonthlyQuery() (negative scenario - 3)", () => {
         const dto : DateQuery = {
-            date_from : new Date("1/1/2021").toLocaleString(),
-            date_to : new Date("1/1/2021").toLocaleString(),
+            date_from : new Date("1/1/2021").toISOString(),
+            date_to : new Date("1/1/2021").toISOString(),
         };
 
         const result = DateUtil.validateMonthlyQuery(dto);
