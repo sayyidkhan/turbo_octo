@@ -29,7 +29,7 @@ export class ViewAlertListDto {
         this.alertListId = alertList.alertListId;
         this.alertTitle = alertList.alertTitle;
         this.alertDetail = alertList.alertDetail;
-        this.alertDate = alertList.alertDate.toLocaleString();
+        this.alertDate = alertList.alertDate.toISOString();
         this.active = alertList.active;
         this.location_name = location_name;
     }

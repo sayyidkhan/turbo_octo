@@ -226,9 +226,9 @@ describe('Vaccine Controller',() => {
     it("vaccines Controller - POST generateMonthlyReport() (positive)", async () => {
         const dto = new ReportMonthlyQueryCtracingDto();
         const date1 = new Date("1/1/2021");
-        dto.date_from = date1.toLocaleString();
+        dto.date_from = date1.toISOString();
         const date2 = new Date("3/3/2021");
-        dto.date_to = date2.toLocaleString();
+        dto.date_to = date2.toISOString();
 
         const res = await request(app.getHttpServer())
             .post("/vaccines/report/monthly/")
@@ -241,7 +241,7 @@ describe('Vaccine Controller',() => {
     it("vaccines Controller - POST generateMonthlyReport() (negative)", async () => {
         const dto = new ReportMonthlyQueryCtracingDto();
         const date1 = new Date("1/1/2021");
-        dto.date_to = date1.toLocaleString();
+        dto.date_to = date1.toISOString();
         dto.date_from = "";
 
         const res = await request(app.getHttpServer())
@@ -253,9 +253,7 @@ describe('Vaccine Controller',() => {
     });
 
     it("vaccines Controller - POST generateWeeklyReport() (positive)", async () => {
-        const dto = new ReportWeeklyQueryCtracingDto();
-        dto.year = 2021;
-        dto.month = 5;
+        const dto = new ReportWeeklyQueryCtracingDto(5,2021);
 
         const res = await request(app.getHttpServer())
             .post("/vaccines/report/weekly/")
@@ -266,7 +264,7 @@ describe('Vaccine Controller',() => {
     });
 
     it("vaccines Controller - POST generateWeeklyReport() (negative)", async () => {
-        const dto = new ReportWeeklyQueryCtracingDto();
+        const dto = new ReportWeeklyQueryCtracingDto(null,null);
 
         const res = await request(app.getHttpServer())
             .post("/vaccines/report/weekly/")

@@ -108,7 +108,7 @@ describe("ctracing Service", () => {
         const testCase = new ViewCtracingDto(
             c_tracing[0].p_nric,
             c_tracing[0].location_id.toString(),
-            c_tracing[0].date.toLocaleString()
+            c_tracing[0].date.toISOString()
         );
 
         repository.findAndSortByLatestId = jest.fn().mockReturnValue(c_tracing);
