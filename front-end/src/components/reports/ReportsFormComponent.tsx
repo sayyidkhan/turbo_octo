@@ -95,7 +95,6 @@ export class ReportsFormComponent extends Component<IProps, IState> {
             const date_from_str = dateFormat(this.state.date_from, "mm/dd/yyyy");
             const date_to_str = dateFormat(this.state.date_to, "mm/dd/yyyy");
 
-            const currentYear = new Date().getFullYear().toString();
             const dateFrom : number = new Date(date_from_str).getTime();
             const dateTo : number = new Date(date_to_str).getTime();
             const diffDays = Math.floor((dateTo - dateFrom) / (1000 * 60 * 60 * 24));
