@@ -123,11 +123,10 @@ export default function AlertsPaginationTableComponent(props : any) {
             </TableContainer>
             <TablePagination
                 rowsPerPageOptions={[10, 25, 100]}
-                component="div"
                 count={createRows().length}
                 rowsPerPage={rowsPerPage}
                 page={page}
-                onChangePage={handleChangePage}
+                onPageChange={handleChangePage}
                 onChangeRowsPerPage={handleChangeRowsPerPage}
             />
         </Paper>
