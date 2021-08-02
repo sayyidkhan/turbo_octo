@@ -121,11 +121,10 @@ export default function AccountsTablePaginationComponent(props : any) {
 
       <TablePagination
         rowsPerPageOptions={[10, 50, 100]}
-        component="div"
         count={createRows().length}
         rowsPerPage={rowsPerPage}
         page={page}
-        onChangePage={handleChangePage}
+        onPageChange={handleChangePage}
         onChangeRowsPerPage={handleChangeRowsPerPage}
       />
     </Paper>
