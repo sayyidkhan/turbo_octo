@@ -103,7 +103,15 @@ describe("alertList Repository", () => {
         testObj.location_id = 123456;
         testObj['_id'] = testObj.location_id.toString();
         await service.deleteAlertListById(testObj.alertListId);
-        expect(repository.deleteAlertListById({ _id : testObj['_id'] })).toBeDefined();
+
+        let result = null;
+        try {
+            result = await repository.deleteAlertListById({ _id : testObj['_id'] });
+        }
+        catch (e) {
+            result = null;
+        }
+        expect(result).toBeDefined();
     });
 
 
