@@ -1,14 +1,13 @@
-import {Component, useState} from "react";
-import axios from 'axios';
-import {postNewUser_API} from "../../services/about/about_api";
 import * as React from "react";
+import { Component } from "react";
+import axios from 'axios';
 
 
 export class PostUserComponent extends Component {
 
-    constructor(props : any) {
-        super(props);
-    }
+    // constructor(props : any) {
+    //     super(props);
+    // }
 
     state = {
         'email': '',
